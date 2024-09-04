@@ -1,8 +1,11 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  colorSchemes: {
+    dark: true,
+  },
   palette: {
-    mode: "dark",
+    // mode: "dark",
     primary: {
       main: "#1976d2", // Blue color
     },
