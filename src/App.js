@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import NavBar from "./components/NavBar";
 import darkTheme from "./theme";
+import TopicList from "./components/TopicList";
 // import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
@@ -36,8 +37,9 @@ function App() {
             elevation={3}
             sx={{ padding: 2, height: "100%", boxSizing: "border-box" }}
           >
-            <Typography variant="h6">Left Aside</Typography>
+            <Typography variant="h6">Topics</Typography>
             {/* Add aside content here */}
+            <TopicList></TopicList>
           </Paper>
         </Grid2>
 
