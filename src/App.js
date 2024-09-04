@@ -10,6 +10,7 @@ import {
   CssBaseline,
 } from "@mui/material";
 import NavBar from "./components/NavBar";
+import darkTheme from "./theme";
 // import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
