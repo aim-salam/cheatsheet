@@ -15,7 +15,7 @@ function NavBar() {
     >
       <Stack direction={"row"} spacing={1} alignItems={"center"}>
         <Avatar alt="Sigma School Logo" src={logo} sizes="60px" />
-        <Typography>Sigma School</Typography>
+        <Typography>Cheatsheet</Typography>
       </Stack>
       <ColorModeSwitch></ColorModeSwitch>
     </Stack>
