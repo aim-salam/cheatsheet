@@ -13,11 +13,31 @@ import {
 import logo from "./../assets/logo.jpg";
 function TopicList() {
   const topics = [
-    { topic: "React", type: "parent" },
-    { topic: "Component", type: "children" },
-    { topic: "State", type: "children" },
-    { topic: "HTML", type: "parent" },
-    { topic: "CSS", type: "parent" },
+    {
+      topic: "React",
+      type: "parent",
+      imageLink: "https://images.cheatsheet.cam/images/react.webp",
+    },
+    {
+      topic: "Component",
+      type: "children",
+      imageLink: "https://images.cheatsheet.cam/images/component.webp",
+    },
+    {
+      topic: "State",
+      type: "children",
+      imageLink: "https://images.cheatsheet.cam/images/state.webp",
+    },
+    {
+      topic: "HTML",
+      type: "parent",
+      imageLink: "https://images.cheatsheet.cam/images/html.webp",
+    },
+    {
+      topic: "CSS",
+      type: "parent",
+      imageLink: "https://images.cheatsheet.cam/images/css.webp",
+    },
   ];
 
   function Header({ topic }) {
@@ -36,7 +56,11 @@ function TopicList() {
           <Header topic={topic}></Header>
           <ListItemButton key={topic.topic}>
             <ListItemAvatar>
-              <Avatar alt="Remy Sharp" src={logo} variant="rounded" />
+              <Avatar
+                alt="Remy Sharp"
+                src={topic.imageLink ? topic.imageLink : logo}
+                variant="rounded"
+              />
             </ListItemAvatar>
             <ListItemText primary={topic.topic} />
           </ListItemButton>
