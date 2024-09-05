@@ -9,6 +9,10 @@ import {
 
 function ColorModeSwitch() {
   const { mode, setMode } = useColorScheme();
+  // const { data, error } = useDatabase(
+  //   "https://images.cheatsheet.cam/databases/topic.db",
+  //   "select * from topic"
+  // );
 
   function handleChange(event) {
     setMode(event.target.checked ? "dark" : "light");
