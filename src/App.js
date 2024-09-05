@@ -12,6 +12,7 @@ import {
 import NavBar from "./components/NavBar";
 import darkTheme from "./theme";
 import TopicList from "./components/TopicList";
+import TopicTable from "./components/TopicTable";
 // import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
@@ -47,10 +48,16 @@ function App() {
         <Grid2 item xs={12} sm={9} md={10} sx={{ padding: 2 }}>
           <Paper
             elevation={3}
-            sx={{ padding: 2, height: "100%", boxSizing: "border-box" }}
+            sx={{
+              padding: 2,
+              height: "100%",
+              width: "100%",
+              boxSizing: "border-box",
+            }}
           >
             <Typography variant="h6">Main Content</Typography>
             {/* Add main content here */}
+            <TopicTable></TopicTable>
           </Paper>
         </Grid2>
       </Grid2>
