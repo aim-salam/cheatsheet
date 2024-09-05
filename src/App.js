@@ -34,31 +34,22 @@ function App() {
           md={2}
           sx={{ display: { xs: "none", sm: "block" } }}
         >
-          <Paper
-            elevation={3}
-            sx={{ padding: 2, height: "100%", boxSizing: "border-box" }}
-          >
-            <Typography variant="h6">Topics</Typography>
-            {/* Add aside content here */}
-            <TopicList></TopicList>
-          </Paper>
+          <Typography variant="h6">Topics</Typography>
+          {/* Add aside content here */}
+          <TopicList></TopicList>
         </Grid2>
 
         {/* Main Content Area */}
-        <Grid2 item xs={12} sm={9} md={10} sx={{ padding: 2 }}>
-          <Paper
-            elevation={3}
-            sx={{
-              padding: 2,
-              height: "100%",
-              width: "100%",
-              boxSizing: "border-box",
-            }}
-          >
-            <Typography variant="h6">Main Content</Typography>
-            {/* Add main content here */}
-            <TopicTable></TopicTable>
-          </Paper>
+        <Grid2
+          item
+          xs={12}
+          sm={9}
+          md={10}
+          sx={{ padding: 2, alignItems: "center" }}
+        >
+          <Typography variant="h6">Main Content</Typography>
+          {/* Add main content here */}
+          <TopicTable></TopicTable>
         </Grid2>
       </Grid2>
     </Box>

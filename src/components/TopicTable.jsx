@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Stack, Typography } from "@mui/material";
+import { useEffect } from "react";
+import { Stack, Typography, useColorScheme } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,7 +10,11 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  vscDarkPlus,
+  vs,
+  prism,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -36,12 +41,22 @@ const MyStyledSwitch = () => {
 const customCodeStyle = {
   borderRadius: "10px",
   marginTop: "0px",
+  fontSize: "13px",
+  fontFamily:
+    'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
 
 function TopicTable() {
+  const { mode } = useColorScheme();
+
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table
+        sx={{
+          minWidth: 650,
+        }}
+        aria-label="simple table"
+      >
         <TableHead>
           <TableRow>
             <TableCell>Dessert (100g serving)</TableCell>
@@ -74,7 +89,7 @@ function TopicTable() {
                 >
                   <SyntaxHighlighter
                     language="javascript"
-                    style={vscDarkPlus}
+                    style={mode === "dark" ? vscDarkPlus : prism}
                     customStyle={customCodeStyle}
                   >
                     {codeString}

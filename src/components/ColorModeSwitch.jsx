@@ -1,5 +1,11 @@
 import React from "react";
-import { Stack, Switch, Typography, useColorScheme } from "@mui/material";
+import {
+  Stack,
+  Switch,
+  Typography,
+  useColorScheme,
+  useTheme,
+} from "@mui/material";
 
 function ColorModeSwitch() {
   const { mode, setMode } = useColorScheme();
