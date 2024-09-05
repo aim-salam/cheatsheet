@@ -1,18 +1,8 @@
 import React from "react";
-import {
-  Stack,
-  Switch,
-  Typography,
-  useColorScheme,
-  useTheme,
-} from "@mui/material";
+import { Stack, Switch, Typography, useColorScheme } from "@mui/material";
 
 function ColorModeSwitch() {
   const { mode, setMode } = useColorScheme();
-  // const { data, error } = useDatabase(
-  //   "https://images.cheatsheet.cam/databases/topic.db",
-  //   "select * from topic"
-  // );
 
   function handleChange(event) {
     setMode(event.target.checked ? "dark" : "light");
