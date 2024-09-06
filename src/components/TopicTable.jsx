@@ -50,11 +50,13 @@ function TopicTable() {
   const { mode } = useColorScheme();
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ width: "100%" }}>
       <Table
-        sx={{
-          minWidth: 650,
-        }}
+        sx={
+          {
+            // minWidth: 650,
+          }
+        }
         aria-label="simple table"
       >
         <TableHead>

@@ -1,16 +1,6 @@
 import * as React from "react";
-import {
-  Grid2,
-  Paper,
-  Box,
-  Typography,
-  AppBar,
-  Toolbar,
-  IconButton,
-  CssBaseline,
-} from "@mui/material";
+import { Grid2, Box, Typography, AppBar, CssBaseline } from "@mui/material";
 import NavBar from "./components/NavBar";
-import darkTheme from "./theme";
 import TopicList from "./components/TopicList";
 import TopicTable from "./components/TopicTable";
 // import MenuIcon from "@mui/icons-material/Menu";
