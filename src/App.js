@@ -15,7 +15,14 @@ function App() {
         <NavBar></NavBar>
       </AppBar>
 
-      <Grid2 container sx={{ flexGrow: 1 }}>
+      <Grid2
+        container
+        sx={{
+          flexGrow: 1,
+          display: "flex",
+          width: "100%",
+        }}
+      >
         {/* Left Aside */}
         <Grid2
           item
@@ -35,7 +42,7 @@ function App() {
           xs={12}
           sm={9}
           md={10}
-          sx={{ padding: 2, alignItems: "center" }}
+          sx={{ paddingRight: "40px", flex: "1 1 auto" }}
         >
           <Typography variant="h6">Main Content</Typography>
           {/* Add main content here */}
