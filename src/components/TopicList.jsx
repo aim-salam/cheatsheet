@@ -42,7 +42,11 @@ function TopicList() {
   function Header({ topic }) {
     if (topic.type === "parent") {
       return (
-        <Typography marginTop={"20px"}>
+        <Typography
+          marginTop={"20px"}
+          paddingLeft={"40px"}
+          paddingRight={"20px"}
+        >
           {topic.type === "parent" ? `${topic.topic}` : null}
         </Typography>
       );
@@ -53,7 +57,10 @@ function TopicList() {
       {topics.map((topic) => (
         <Stack>
           <Header topic={topic}></Header>
-          <ListItemButton key={topic.topic}>
+          <ListItemButton
+            key={topic.topic}
+            sx={{ paddingLeft: "40px", paddingRight: "30px" }}
+          >
             <ListItemAvatar>
               <Avatar
                 alt="Remy Sharp"
