@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import NavBar from "./components/NavBar";
 import TopicList from "./components/TopicList";
-import TopicTable from "./components/TopicTable";
+import MainContent from "./components/MainContent";
 // import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
       >
         {/* Left Aside */}
         <Grid2
-          item
+          // item
           xs={12}
           sm={3}
           md={2}
@@ -58,7 +58,7 @@ function App() {
 
         {/* Main Content Area */}
         <Grid2
-          item
+          // item
           xs={12}
           sm={9}
           md={10}
@@ -66,7 +66,7 @@ function App() {
         >
           <Typography variant="h6">Main Content</Typography>
           {/* Add main content here */}
-          <TopicTable></TopicTable>
+          <MainContent></MainContent>
         </Grid2>
       </Grid2>
     </Box>

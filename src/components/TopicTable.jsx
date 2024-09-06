@@ -36,9 +36,12 @@ const customCodeStyle = {
   fontFamily:
     'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
-
 const fuse = new Fuse(cheatsheets, {
-  keys: ["name"],
+  keys: [
+    { name: "name", weight: 0.7 },
+    { name: "calories", weight: 0.3 },
+    { name: "protein", weight: 0.1 },
+  ],
   threshold: 0.3,
 });
 
@@ -47,74 +50,77 @@ function TopicTable() {
   const [rows, setRows] = useState([...cheatsheets]);
 
   useEffect(() => {
-    console.log(fuse.search("frozen"));
+    console.log(fuse.search("frozen 99"));
   }, []);
 
   return (
-    <TableContainer component={Paper} sx={{ width: "100%" }}>
-      <Table
-        sx={{
-          minWidth: 650,
-        }}
-        aria-label="simple table"
-      >
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right" component={"pre"}>
-              Carbs&nbsp;(g)
-            </TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
+    <Stack>
+      <h1>Navigation</h1>
+      <TableContainer component={Paper} sx={{ width: "100%" }}>
+        <Table
+          sx={{
+            minWidth: 650,
+          }}
+          aria-label="simple table"
+        >
+          <TableHead>
+            <TableRow>
+              <TableCell>Dessert (100g serving)</TableCell>
+              <TableCell align="right">Calories</TableCell>
+              <TableCell align="right">Fat&nbsp;(g)</TableCell>
+              <TableCell align="right" component={"pre"}>
+                Carbs&nbsp;(g)
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">
-                <Stack
-                  sx={{
-                    position: "relative",
-                    borderRadius: "10px",
-                    overflow: "hidden",
-                  }}
-                >
-                  <SyntaxHighlighter
-                    language="javascript"
-                    style={mode === "dark" ? vscDarkPlus : prism}
-                    customStyle={customCodeStyle}
-                  >
-                    {codeString}
-                  </SyntaxHighlighter>
-                  <Typography
-                    color="grey"
-                    position={"absolute"}
-                    right={0}
-                    top={0}
+              <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.name}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="right">{row.calories}</TableCell>
+                <TableCell align="right">{row.fat}</TableCell>
+                <TableCell align="right">
+                  <Stack
                     sx={{
-                      backgroundColor: "#111111",
-                      width: "100%",
+                      position: "relative",
+                      borderRadius: "10px",
+                      overflow: "hidden",
                     }}
                   >
-                    Copy
-                  </Typography>
-                </Stack>
-              </TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+                    <SyntaxHighlighter
+                      language="javascript"
+                      style={mode === "dark" ? vscDarkPlus : prism}
+                      customStyle={customCodeStyle}
+                    >
+                      {codeString}
+                    </SyntaxHighlighter>
+                    <Typography
+                      color="grey"
+                      position={"absolute"}
+                      right={0}
+                      top={0}
+                      sx={{
+                        backgroundColor: "#111111",
+                        width: "100%",
+                      }}
+                    >
+                      Copy
+                    </Typography>
+                  </Stack>
+                </TableCell>
+                <TableCell align="right">{row.protein}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Stack>
   );
 }
 

@@ -55,12 +55,9 @@ function TopicList() {
   return (
     <List>
       {topics.map((topic) => (
-        <Stack>
+        <Stack key={topic.topic}>
           <Header topic={topic}></Header>
-          <ListItemButton
-            key={topic.topic}
-            sx={{ paddingLeft: "40px", paddingRight: "30px" }}
-          >
+          <ListItemButton sx={{ paddingLeft: "40px", paddingRight: "30px" }}>
             <ListItemAvatar>
               <Avatar
                 alt="Remy Sharp"
