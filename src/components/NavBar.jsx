@@ -8,10 +8,6 @@ function NavBar() {
       direction="row"
       alignItems={"center"}
       justifyContent={"space-between"}
-      paddingRight={"20px"}
-      paddingLeft={"20px"}
-      paddingTop={"5px"}
-      paddingBottom={"5px"}
     >
       <Stack direction={"row"} spacing={1} alignItems={"center"}>
         <Avatar alt="Sigma School Logo" src={logo} sizes="60px" />

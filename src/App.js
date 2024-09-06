@@ -1,17 +1,37 @@
 import * as React from "react";
-import { Grid2, Box, Typography, AppBar, CssBaseline } from "@mui/material";
+import {
+  Grid2,
+  Box,
+  Typography,
+  AppBar,
+  CssBaseline,
+  useColorScheme,
+} from "@mui/material";
 import NavBar from "./components/NavBar";
 import TopicList from "./components/TopicList";
 import TopicTable from "./components/TopicTable";
 // import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
+  const { mode } = useColorScheme();
   return (
     <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       <CssBaseline />
 
       {/* Top Navigation Bar */}
-      <AppBar position="static" color="white">
+      <AppBar
+        position="static"
+        color="white"
+        sx={{
+          boxShadow: 0,
+          borderBottom: 1,
+          borderBottomColor: mode === "light" ? "#ddd" : "#272727",
+          paddingRight: "20px",
+          paddingLeft: "20px",
+          paddingTop: "10px",
+          paddingBottom: "10px",
+        }}
+      >
         <NavBar></NavBar>
       </AppBar>
 
