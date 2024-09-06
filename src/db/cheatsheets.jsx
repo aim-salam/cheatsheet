@@ -3,9 +3,9 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 export const cheatsheets = [
-  createData("Frozen", "99", 6.0, 12, 4.0),
+  createData("Frozens", "99", 6.0, 12, 2.0),
   createData("Frozen", "99", 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("Eclair", "99", 16.0, 24, 6.0),
+  createData("Cupcake", "99", 3.7, 67, 4.3),
+  createData("Gingerbread", "99", 16.0, 49, 3.9),
 ];

@@ -15,7 +15,6 @@ import {
   vs,
   prism,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { cheatsheets } from "../db/cheatsheets";
 
 import Fuse from "fuse.js";
 
@@ -36,21 +35,21 @@ const customCodeStyle = {
   fontFamily:
     'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
-const fuse = new Fuse(cheatsheets, {
-  keys: [
-    { name: "name", weight: 0.7 },
-    { name: "calories", weight: 0.3 },
-    { name: "protein", weight: 0.1 },
-  ],
-  threshold: 0.3,
-});
 
-function TopicTable() {
+function TopicTable({ cheatsheets }) {
+  const [rows, setRows] = useState([]);
   const { mode } = useColorScheme();
-  const [rows, setRows] = useState([...cheatsheets]);
+
+  const fuse = new Fuse(cheatsheets, {
+    keys: ["name"],
+    // threshold: 0.3,
+  });
 
   useEffect(() => {
-    console.log(fuse.search("frozen 99"));
+    const result = [...fuse.search("frozen")];
+    // do the array sorting
+    console.log(result[0]);
+    setRows(result);
   }, []);
 
   return (
@@ -77,14 +76,14 @@ function TopicTable() {
           <TableBody>
             {rows.map((row) => (
               <TableRow
-                key={row.name}
+                key={row.item.name + row.item.fat}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.name}
+                  {row.item.name}
                 </TableCell>
-                <TableCell align="right">{row.calories}</TableCell>
-                <TableCell align="right">{row.fat}</TableCell>
+                <TableCell align="right">{row.item.calories}</TableCell>
+                <TableCell align="right">{row.item.fat}</TableCell>
                 <TableCell align="right">
                   <Stack
                     sx={{
@@ -114,7 +113,7 @@ function TopicTable() {
                     </Typography>
                   </Stack>
                 </TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
+                <TableCell align="right">{row.item.protein}</TableCell>
               </TableRow>
             ))}
           </TableBody>
