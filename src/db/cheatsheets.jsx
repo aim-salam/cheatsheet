@@ -1,11 +1,23 @@
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
 export const cheatsheets = [
-  createData("Frozens", "99", 6.0, 12, 2.0),
-  createData("Frozen", "99", 9.0, 37, 4.3),
-  createData("Eclair", "99", 16.0, 24, 6.0),
-  createData("Cupcake", "99", 3.7, 67, 4.3),
-  createData("Gingerbread", "99", 16.0, 49, 3.9),
+  {
+    topic: "git",
+    table: "Basic Snapshotting",
+    action: "Check file changes",
+    gui: "https://images.cheatsheet.cam/images/Screenshot-2024-09-07-at-3.01.22-AM.webp",
+    priority: 1,
+  },
+  {
+    topic: "git",
+    table: "Basic Snapshotting",
+    action: "staging files",
+    gui: "https://images.cheatsheet.cam/images/Screenshot%202024-09-07%20at%203.08.50%20AM.webp",
+    priority: 2,
+  },
+  {
+    topic: "git",
+    table: "Basic Snapshotting",
+    action: "check staging area",
+    gui: "https://images.cheatsheet.cam/images/Screenshot%202024-09-07%20at%203.23.49%20AM.webp",
+    priority: 3,
+  },
 ];

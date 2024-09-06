@@ -8,6 +8,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import CardMedia from "@mui/material/CardMedia";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
@@ -41,12 +42,12 @@ function TopicTable({ cheatsheets }) {
   const { mode } = useColorScheme();
 
   const fuse = new Fuse(cheatsheets, {
-    keys: ["name"],
+    keys: ["table"],
     // threshold: 0.3,
   });
 
   useEffect(() => {
-    const result = [...fuse.search("frozen")];
+    const result = [...fuse.search("Basic Snapshotting")];
     // do the array sorting
     console.log(result[0]);
     setRows(result);
@@ -64,13 +65,8 @@ function TopicTable({ cheatsheets }) {
         >
           <TableHead>
             <TableRow>
-              <TableCell>Dessert (100g serving)</TableCell>
-              <TableCell align="right">Calories</TableCell>
-              <TableCell align="right">Fat&nbsp;(g)</TableCell>
-              <TableCell align="right" component={"pre"}>
-                Carbs&nbsp;(g)
-              </TableCell>
-              <TableCell align="right">Protein&nbsp;(g)</TableCell>
+              <TableCell>Action</TableCell>
+              <TableCell align="right">GUI</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -80,10 +76,15 @@ function TopicTable({ cheatsheets }) {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.item.name}
+                  {row.item.action}
                 </TableCell>
-                <TableCell align="right">{row.item.calories}</TableCell>
-                <TableCell align="right">{row.item.fat}</TableCell>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={row.item.gui}
+                  alt="Placeholder Image"
+                />
+
                 <TableCell align="right">
                   <Stack
                     sx={{
@@ -113,7 +114,6 @@ function TopicTable({ cheatsheets }) {
                     </Typography>
                   </Stack>
                 </TableCell>
-                <TableCell align="right">{row.item.protein}</TableCell>
               </TableRow>
             ))}
           </TableBody>

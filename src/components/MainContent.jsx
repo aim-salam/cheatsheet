@@ -8,18 +8,18 @@ function MainContent() {
   const [rows, setRows] = useState([...cheatsheets]);
 
   const fuse = new Fuse(cheatsheets, {
-    keys: ["calories"],
-    // threshold: 0.3,
+    keys: ["topic"],
+    threshold: 0.0,
   });
 
   useEffect(() => {
-    console.log(fuse.search("99"));
+    console.log(fuse.search("git"));
   }, []);
 
   return (
     <Stack>
       <TopicTable key={1} cheatsheets={rows}></TopicTable>
-      <TopicTable key={2} cheatsheets={rows}></TopicTable>
+      {/* <TopicTable key={2} cheatsheets={rows}></TopicTable> */}
     </Stack>
   );
 }
