@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Stack, Typography, useColorScheme } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -15,18 +15,9 @@ import {
   vs,
   prism,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { cheatsheets } from "../db/cheatsheets";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 12, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
+import Fuse from "fuse.js";
 
 const codeString = `
 const MyStyledSwitch = () => {
@@ -46,8 +37,18 @@ const customCodeStyle = {
     'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
 
+const fuse = new Fuse(cheatsheets, {
+  keys: ["name"],
+  threshold: 0.3,
+});
+
 function TopicTable() {
   const { mode } = useColorScheme();
+  const [rows, setRows] = useState([...cheatsheets]);
+
+  useEffect(() => {
+    console.log(fuse.search("frozen"));
+  }, []);
 
   return (
     <TableContainer component={Paper} sx={{ width: "100%" }}>
