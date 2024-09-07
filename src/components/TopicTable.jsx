@@ -18,6 +18,7 @@ import {
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import Fuse from "fuse.js";
+import GUICell from "./GUICell";
 
 const codeString = `
 const MyStyledSwitch = () => {
@@ -78,13 +79,7 @@ function TopicTable({ cheatsheets }) {
                 <TableCell component="th" scope="row">
                   {row.item.action}
                 </TableCell>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={row.item.gui}
-                  alt="Placeholder Image"
-                />
-
+                <GUICell gui={row.item.gui}></GUICell>
                 <TableCell align="right">
                   <Stack
                     sx={{
