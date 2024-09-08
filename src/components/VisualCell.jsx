@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { CardMedia, TableCell } from "@mui/material";
 import GUIModal from "./GUIModal";
+import VisualModal from "./VisualModal";
 
-function GUICell({ gui }) {
+function VisualCell({ visual }) {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
@@ -16,18 +17,18 @@ function GUICell({ gui }) {
             width: 200,
             objectFit: "cover",
           }}
-          // height="140"
-
-          // object-fit="cover"
-          // width={"2"}
           onClick={handleOpen}
-          image={gui}
+          image={visual}
           alt="Placeholder Image"
         />
-        <GUIModal gui={gui} open={open} handleClose={handleClose}></GUIModal>
+        <VisualModal
+          visual={visual}
+          open={open}
+          handleClose={handleClose}
+        ></VisualModal>
       </div>
     </TableCell>
   );
 }
 
-export default GUICell;
+export default VisualCell;

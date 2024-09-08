@@ -13,6 +13,7 @@ import Fuse from "fuse.js";
 import GUICell from "./GUICell";
 import CodeCell from "./CodeCell";
 import ActionCell from "./ActionCell";
+import VisualCell from "./VisualCell";
 
 function TopicTable({ cheatsheets }) {
   const [rows, setRows] = useState([]);
@@ -43,6 +44,7 @@ function TopicTable({ cheatsheets }) {
           <TableHead>
             <TableRow>
               <TableCell>Action</TableCell>
+              <TableCell>Visual</TableCell>
               <TableCell>GUI</TableCell>
               <TableCell>Code</TableCell>
             </TableRow>
@@ -50,10 +52,11 @@ function TopicTable({ cheatsheets }) {
           <TableBody>
             {rows.map((row) => (
               <TableRow
-                key={row.item.name + row.item.fat}
+                key={row.item.action}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <ActionCell action={row.item.action}></ActionCell>
+                <VisualCell visual={row.item.visual}></VisualCell>
 
                 <GUICell gui={row.item.gui}></GUICell>
                 <CodeCell mode={mode}></CodeCell>
