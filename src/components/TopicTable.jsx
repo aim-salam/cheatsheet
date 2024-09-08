@@ -34,6 +34,10 @@ function TopicTable({ cheatsheets }) {
     setRows(result);
   }, []);
 
+  function handleCreateRow(newRow) {
+    setRows([...rows, { item: newRow }]);
+  }
+
   return (
     <Stack alignItems={"flex-end"}>
       <h1>Navigation</h1>
@@ -73,7 +77,7 @@ function TopicTable({ cheatsheets }) {
         </Table>
       </TableContainer>
       {/* if admin */}
-      <CreateRowForm></CreateRowForm>
+      <CreateRowForm handleCreateRow={handleCreateRow}></CreateRowForm>
     </Stack>
   );
 }

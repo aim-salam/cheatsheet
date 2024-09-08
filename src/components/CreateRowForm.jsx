@@ -8,7 +8,7 @@ import {
   TextField,
 } from "@mui/material";
 
-function CreateRowForm() {
+function CreateRowForm({ handleCreateRow }) {
   const [open, setOpen] = useState(false);
   const [formValues, setFormValues] = useState({
     action: "",
@@ -35,8 +35,15 @@ function CreateRowForm() {
   };
 
   const handleSubmit = () => {
-    // Handle form submission logic here
-    console.log("Form submitted:", formValues);
+    handleCreateRow(formValues);
+    setFormValues({
+      action: "",
+      visual: "",
+      gui: "",
+      cli: "",
+      code: "",
+      emoji: "",
+    });
     handleClose();
   };
 
