@@ -14,6 +14,7 @@ import GUICell from "./GUICell";
 import CodeCell from "./CodeCell";
 import ActionCell from "./ActionCell";
 import VisualCell from "./VisualCell";
+import CLICell from "./CLICell";
 
 function TopicTable({ cheatsheets }) {
   const [rows, setRows] = useState([]);
@@ -46,6 +47,7 @@ function TopicTable({ cheatsheets }) {
               <TableCell>Action</TableCell>
               <TableCell>Visual</TableCell>
               <TableCell>GUI</TableCell>
+              <TableCell>CLI</TableCell>
               <TableCell>Code</TableCell>
             </TableRow>
           </TableHead>
@@ -59,6 +61,7 @@ function TopicTable({ cheatsheets }) {
                 <VisualCell visual={row.item.visual}></VisualCell>
 
                 <GUICell gui={row.item.gui}></GUICell>
+                <CLICell cli={row.item.cli}></CLICell>
                 <CodeCell mode={mode}></CodeCell>
               </TableRow>
             ))}
