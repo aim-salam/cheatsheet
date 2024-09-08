@@ -41,67 +41,23 @@ function RowForm({ row, open, setOpen, handleFinished }) {
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>Form</DialogTitle>
       <DialogContent>
-        <TextField
-          autoFocus
-          margin="dense"
-          name="action"
-          label="Action"
-          type="text"
-          fullWidth
-          variant="outlined"
-          value={formValues.item.action}
-          onChange={handleChange}
-        />
-        <TextField
-          margin="dense"
-          name="visual"
-          label="Visual"
-          type="text"
-          fullWidth
-          variant="outlined"
-          value={formValues.item.visual}
-          onChange={handleChange}
-        />
-        <TextField
-          margin="dense"
-          name="gui"
-          label="GUI"
-          type="text"
-          fullWidth
-          variant="outlined"
-          value={formValues.item.gui}
-          onChange={handleChange}
-        />
-        <TextField
-          margin="dense"
-          name="cli"
-          label="CLI"
-          type="text"
-          fullWidth
-          variant="outlined"
-          value={formValues.item.cli}
-          onChange={handleChange}
-        />
-        <TextField
-          margin="dense"
-          name="code"
-          label="Code"
-          type="text"
-          fullWidth
-          variant="outlined"
-          value={formValues.item.code}
-          onChange={handleChange}
-        />
-        <TextField
-          margin="dense"
-          name="emoji"
-          label="Emoji"
-          type="text"
-          fullWidth
-          variant="outlined"
-          value={formValues.item.emoji}
-          onChange={handleChange}
-        />
+        {Object.entries(formValues.item).map(([key, value], index) => {
+          if (key !== "id") {
+            return (
+              <TextField
+                autoFocus
+                margin="dense"
+                name={key}
+                label={key.charAt(0).toUpperCase() + key.slice(1)}
+                type="text"
+                fullWidth
+                variant="outlined"
+                value={value}
+                onChange={handleChange}
+              />
+            );
+          }
+        })}
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} color="primary">
