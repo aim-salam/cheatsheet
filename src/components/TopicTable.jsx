@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { Stack, useColorScheme } from "@mui/material";
+import { Stack, useColorScheme, Button } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -15,6 +15,8 @@ import CodeCell from "./CodeCell";
 import ActionCell from "./ActionCell";
 import VisualCell from "./VisualCell";
 import CLICell from "./CLICell";
+import EmojiCell from "./EmojiCell";
+import CreateRowForm from "./CreateRowForm";
 
 function TopicTable({ cheatsheets }) {
   const [rows, setRows] = useState([]);
@@ -33,7 +35,7 @@ function TopicTable({ cheatsheets }) {
   }, []);
 
   return (
-    <Stack>
+    <Stack alignItems={"flex-end"}>
       <h1>Navigation</h1>
       <TableContainer component={Paper} sx={{ width: "100%" }}>
         <Table
@@ -49,6 +51,7 @@ function TopicTable({ cheatsheets }) {
               <TableCell>GUI</TableCell>
               <TableCell>CLI</TableCell>
               <TableCell>Code</TableCell>
+              <TableCell>Emoji</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -63,11 +66,14 @@ function TopicTable({ cheatsheets }) {
                 <GUICell gui={row.item.gui}></GUICell>
                 <CLICell cli={row.item.cli}></CLICell>
                 <CodeCell mode={mode}></CodeCell>
+                <EmojiCell emoji={row.item.emoji}></EmojiCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
+      {/* if admin */}
+      <CreateRowForm></CreateRowForm>
     </Stack>
   );
 }
