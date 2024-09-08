@@ -1,5 +1,6 @@
 export const cheatsheets = [
   {
+    id: "dasdasdada",
     topic: "git",
     table: "Basic Snapshotting",
     action: "Check file changes",
@@ -10,6 +11,7 @@ export const cheatsheets = [
     priority: 1,
   },
   {
+    id: "dasdada",
     topic: "git",
     table: "Basic Snapshotting",
     action: "staging files",
@@ -20,6 +22,7 @@ export const cheatsheets = [
     priority: 2,
   },
   {
+    id: "dasdasdadx",
     topic: "git",
     table: "Basic Snapshotting",
     action: "check staging area",

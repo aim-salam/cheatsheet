@@ -13,7 +13,7 @@ function MainContent() {
   });
 
   useEffect(() => {
-    console.log(fuse.search("git"));
+    fuse.search("git");
   }, []);
 
   return (

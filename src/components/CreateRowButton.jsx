@@ -1,58 +1,37 @@
 import React, { useState } from "react";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import RowForm from "./RowForm";
 
-function CreateRowForm({ handleCreateRow }) {
+function CreateRowForm({ rows, setRows }) {
   const [open, setOpen] = useState(false);
-  const defaultFormValues = {
-    action: "",
-    visual: "",
-    gui: "",
-    cli: "",
-    code: "",
-    emoji: "",
-  };
-  const [formValues, setFormValues] = useState(defaultFormValues);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  function handleCreateRow(newRow) {
+    // prevent indexing problem 2024... and Z...
+    const date = new Date().toISOString();
+    const reverseDate = date.split("").reverse().join("");
+    const finalDate = reverseDate.split("Z").join("");
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleChange = (event) => {
-    setFormValues({
-      ...formValues,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleSubmit = () => {
-    handleCreateRow(formValues);
-
-    setFormValues(defaultFormValues);
-
-    handleClose();
-  };
+    // add ID
+    newRow.item.id = finalDate;
+    setRows([...rows, newRow]);
+  }
 
   return (
     <>
       <Button
         variant="contained"
         color="primary"
-        onClick={handleClickOpen}
+        onClick={() => {
+          setOpen(true);
+        }}
         sx={{ marginTop: "10px" }}
       >
-        Open Form
+        <Typography> Create row</Typography>
       </Button>
       <RowForm
         open={open}
-        formValues={formValues}
-        handleClose={handleClose}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
+        setOpen={setOpen}
+        handleFinished={handleCreateRow}
       ></RowForm>
     </>
   );
