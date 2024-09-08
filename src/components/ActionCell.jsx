@@ -1,10 +1,10 @@
 import React from "react";
-import { TableCell } from "@mui/material";
+import { TableCell, Typography } from "@mui/material";
 
 function ActionCell({ action }) {
   return (
     <TableCell component="th" scope="row">
-      {action}
+      <Typography> {action}</Typography>
     </TableCell>
   );
 }
