@@ -15,11 +15,10 @@ function GUICell({ gui }) {
           sx={{
             width: 200,
             objectFit: "cover",
+            "&:hover": {
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
+            },
           }}
-          // height="140"
-
-          // object-fit="cover"
-          // width={"2"}
           onClick={handleOpen}
           image={gui}
           alt="Placeholder Image"
