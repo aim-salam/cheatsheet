@@ -10,7 +10,15 @@ import {
 
 function RowForm({ row, open, setOpen, handleFinished }) {
   const defaultFormValues = {
-    item: { action: "", visual: "", gui: "", cli: "", code: "", emoji: "" },
+    item: {
+      action: "",
+      visual: "",
+      gui: "",
+      cli: "",
+      code: "",
+      emoji: "",
+      priority: "",
+    },
   };
   const [formValues, setFormValues] = useState(row ? row : defaultFormValues);
 
@@ -36,7 +44,7 @@ function RowForm({ row, open, setOpen, handleFinished }) {
     // RowForm keep use previous data, so everytime open state changes, insert new data
 
     setFormValues(row ? row : defaultFormValues);
-  }, []);
+  }, [open]);
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>Form</DialogTitle>

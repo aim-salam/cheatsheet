@@ -9,9 +9,12 @@ function NavBar() {
       alignItems={"center"}
       justifyContent={"space-between"}
     >
-      <Stack direction={"row"} spacing={1} alignItems={"center"}>
+      <Stack direction={"row"} spacing={2} alignItems={"center"}>
         <Avatar alt="Sigma School Logo" src={logo} sizes="60px" />
-        <Typography>Cheatsheet</Typography>
+
+        <Typography fontSize={23} fontWeight={"600"} variant="h1">
+          Cheatsheet
+        </Typography>
       </Stack>
       <ColorModeSwitch></ColorModeSwitch>
     </Stack>

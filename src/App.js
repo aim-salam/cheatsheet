@@ -51,7 +51,15 @@ function App() {
           md={2}
           sx={{ display: { xs: "none", sm: "block" } }}
         >
-          <Typography variant="h6">Topics</Typography>
+          <Typography
+            variant="h1"
+            fontWeight={"600"}
+            fontSize={25}
+            paddingLeft={"40px"}
+            paddingTop={"70px"}
+          >
+            Topics
+          </Typography>
           {/* Add aside content here */}
           <TopicList></TopicList>
         </Grid2>
@@ -64,7 +72,9 @@ function App() {
           md={10}
           sx={{ paddingRight: "40px", flex: "1 1 auto" }}
         >
-          <Typography variant="h6">Main Content</Typography>
+          <Typography fontSize={55} fontWeight={"600"} paddingTop={"40px"}>
+            Main Content
+          </Typography>
           {/* Add main content here */}
           <MainContent></MainContent>
         </Grid2>
