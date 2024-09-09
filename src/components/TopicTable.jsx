@@ -20,6 +20,8 @@ import EmojiCell from "./EmojiCell";
 import CreateRowButton from "./CreateRowButton";
 import OptionsCell from "./OptionsCell";
 
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+
 function TopicTable({ cheatsheets }) {
   const [rows, setRows] = useState([]);
   const [isOptions, setIsOptions] = useState(false);
@@ -35,6 +37,71 @@ function TopicTable({ cheatsheets }) {
     // do the array sorting
     setRows(result);
   }, []);
+
+  const reorder = (list, startIndex, endIndex) => {
+    const result = Array.from(list);
+    const [removed] = result.splice(startIndex, 1);
+    result.splice(endIndex, 0, removed);
+
+    return result;
+  };
+
+  function onDragEnd(result) {
+    console.log(result);
+    if (!result.destination) {
+      return;
+    }
+
+    if (result.destination.index === result.source.index) {
+      return;
+    }
+
+    const reRows = reorder(rows, result.source.index, result.destination.index);
+    // console.log(reRows);
+    setRows(reRows);
+  }
+
+  function Row({ row, provided, index }) {
+    return (
+      <TableRow
+        ref={provided.innerRef}
+        {...provided.draggableProps}
+        {...provided.dragHandleProps}
+        sx={{
+          "&:last-child td, &:last-child th": { border: 0 },
+        }}
+      >
+        <TableCell>
+          <ActionCell action={row.item.action} />
+        </TableCell>
+        <TableCell>
+          <VisualCell visual={row.item.visual} />
+        </TableCell>
+        <TableCell>
+          <GUICell gui={row.item.gui} />
+        </TableCell>
+        <TableCell>
+          <CLICell cli={row.item.cli} />
+        </TableCell>
+        <TableCell>
+          <EmojiCell emoji={row.item.emoji} />
+        </TableCell>
+        {isOptions && (
+          <TableCell>
+            <OptionsCell row={row} rows={rows} setRows={setRows} />
+          </TableCell>
+        )}
+      </TableRow>
+    );
+  }
+
+  function RowList({ rows, provided, index }) {
+    return rows.map((row, index) => (
+      <Draggable key={row.item.id} draggableId={row.item.id} index={index}>
+        {(provided) => <Row row={row} provided={provided} index={index}></Row>}
+      </Draggable>
+    ));
+  }
 
   return (
     <Stack alignItems={"flex-end"}>
@@ -63,30 +130,17 @@ function TopicTable({ cheatsheets }) {
               {isOptions ? <TableCell>Options</TableCell> : null}
             </TableRow>
           </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <TableRow
-                key={row.item.id}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <ActionCell action={row.item.action}></ActionCell>
-                <VisualCell visual={row.item.visual}></VisualCell>
 
-                <GUICell gui={row.item.gui}></GUICell>
-                <CLICell cli={row.item.cli}></CLICell>
-                {/* <CodeCell mode={mode}></CodeCell> */}
-                <EmojiCell emoji={row.item.emoji}></EmojiCell>
-
-                {isOptions ? (
-                  <OptionsCell
-                    row={row}
-                    rows={rows}
-                    setRows={setRows}
-                  ></OptionsCell>
-                ) : null}
-              </TableRow>
-            ))}
-          </TableBody>
+          <DragDropContext onDragEnd={onDragEnd}>
+            <Droppable droppableId="list" direction="vertical">
+              {(provided) => (
+                <TableBody ref={provided.innerRef} {...provided.droppableProps}>
+                  <RowList rows={rows} provided={provided}></RowList>
+                  {provided.placeholder}
+                </TableBody>
+              )}
+            </Droppable>
+          </DragDropContext>
         </Table>
       </TableContainer>
       {/* if admin */}
