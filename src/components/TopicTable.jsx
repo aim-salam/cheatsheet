@@ -20,8 +20,6 @@ import EmojiCell from "./EmojiCell";
 import CreateRowButton from "./CreateRowButton";
 import OptionsCell from "./OptionsCell";
 
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-
 function TopicTable({ cheatsheets }) {
   const [rows, setRows] = useState([]);
   const [isOptions, setIsOptions] = useState(false);
@@ -38,35 +36,9 @@ function TopicTable({ cheatsheets }) {
     setRows(result);
   }, []);
 
-  const reorder = (list, startIndex, endIndex) => {
-    const result = Array.from(list);
-    const [removed] = result.splice(startIndex, 1);
-    result.splice(endIndex, 0, removed);
-
-    return result;
-  };
-
-  function onDragEnd(result) {
-    console.log(result);
-    if (!result.destination) {
-      return;
-    }
-
-    if (result.destination.index === result.source.index) {
-      return;
-    }
-
-    const reRows = reorder(rows, result.source.index, result.destination.index);
-    // console.log(reRows);
-    setRows(reRows);
-  }
-
-  function Row({ row, provided, index }) {
+  function Row({ row }) {
     return (
       <TableRow
-        ref={provided.innerRef}
-        {...provided.draggableProps}
-        {...provided.dragHandleProps}
         sx={{
           "&:last-child td, &:last-child th": { border: 0 },
           "& td": {
@@ -103,9 +75,7 @@ function TopicTable({ cheatsheets }) {
 
   function RowList({ rows, provided, index }) {
     return rows.map((row, index) => (
-      <Draggable key={row.item.id} draggableId={row.item.id} index={index}>
-        {(provided) => <Row row={row} provided={provided} index={index}></Row>}
-      </Draggable>
+      <Row row={row} provided={provided} index={index}></Row>
     ));
   }
 
@@ -137,16 +107,9 @@ function TopicTable({ cheatsheets }) {
             </TableRow>
           </TableHead>
 
-          <DragDropContext onDragEnd={onDragEnd}>
-            <Droppable droppableId="list" direction="vertical">
-              {(provided) => (
-                <TableBody ref={provided.innerRef} {...provided.droppableProps}>
-                  <RowList rows={rows} provided={provided}></RowList>
-                  {provided.placeholder}
-                </TableBody>
-              )}
-            </Droppable>
-          </DragDropContext>
+          <TableBody>
+            <RowList rows={rows}></RowList>
+          </TableBody>
         </Table>
       </TableContainer>
       {/* if admin */}
