@@ -69,6 +69,12 @@ function TopicTable({ cheatsheets }) {
         {...provided.dragHandleProps}
         sx={{
           "&:last-child td, &:last-child th": { border: 0 },
+          "& td": {
+            borderBottom: "0px", // Change color and width as needed
+          },
+          "& th": {
+            borderBottom: "0px", // Change color and width as needed
+          },
         }}
       >
         <TableCell>
