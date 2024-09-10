@@ -20,7 +20,7 @@ function RowForm({ row, open, setOpen, handleFinished }) {
       priority: "",
     },
   };
-  const [formValues, setFormValues] = useState(row ? row : defaultFormValues);
+  const [formValues, setFormValues] = useState(defaultFormValues);
 
   const handleClose = () => {
     setOpen(false);
