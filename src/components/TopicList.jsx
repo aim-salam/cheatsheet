@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import logo from "./../assets/logo.jpg";
-function TopicList() {
+function TopicList({ setTopic }) {
   const topics = [
     {
       topic: "React",
@@ -52,12 +52,18 @@ function TopicList() {
       );
     }
   }
+
   return (
     <List>
       {topics.map((topic) => (
         <Stack key={topic.topic}>
           <Header topic={topic}></Header>
-          <ListItemButton sx={{ paddingLeft: "40px", paddingRight: "30px" }}>
+          <ListItemButton
+            sx={{ paddingLeft: "40px", paddingRight: "30px" }}
+            onClick={() => {
+              setTopic(topic.topic);
+            }}
+          >
             <ListItemAvatar>
               <Avatar
                 alt="Remy Sharp"
