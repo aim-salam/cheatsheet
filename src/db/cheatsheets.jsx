@@ -1,3 +1,22 @@
+const template = {
+  id: "dasdasdada",
+  //
+  topic: "git",
+  table: "Basic Snapshotting",
+  //
+  action: "Check file changes",
+  //
+  visual: "https://images.cheatsheet.cam/images/image-1725759280918.webp",
+  gui: "https://images.cheatsheet.cam/images/Screenshot-2024-09-07-at-3.01.22-AM.webp",
+  cli: "git ..",
+  //
+  emoji: "❄️",
+  priority: 1,
+  //
+  contentContributor: [],
+  githubContributor: [],
+};
+
 export const cheatsheets = [
   {
     id: "dasdasdada",
