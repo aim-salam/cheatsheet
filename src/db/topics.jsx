@@ -19,9 +19,9 @@ export const topics = [
     type: "parent",
     imageLink: "https://images.cheatsheet.cam/images/html.webp",
   },
-  //   {
-  //     topic: "CSS",
-  //     type: "parent",
-  //     imageLink: "https://images.cheatsheet.cam/images/css.webp",
-  //   },
+  {
+    topic: "CSS",
+    type: "parent",
+    imageLink: "https://images.cheatsheet.cam/images/css.webp",
+  },
 ];

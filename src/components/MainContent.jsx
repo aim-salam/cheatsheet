@@ -4,18 +4,20 @@ import TopicTable from "./Tables/TopicTable";
 import { cheatsheets } from "../db/cheatsheets";
 import Fuse from "fuse.js";
 
-function MainContent() {
-  const [rows, setRows] = useState([...cheatsheets]);
+function MainContent({ topic }) {
+  const [rows, setRows] = useState([]);
 
   const fuse = new Fuse(cheatsheets, {
     keys: ["topic"],
-    threshold: 0.5,
+    threshold: 0.1,
   });
 
   useEffect(() => {
-    console.log(cheatsheets);
-    fuse.search("HTML");
-  }, []);
+    const result = fuse.search(topic);
+    const reformatResult = result.map((item) => item);
+
+    setRows([...result]);
+  }, [topic]);
 
   return (
     <Stack>

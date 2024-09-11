@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import {
   Grid2,
   Box,
@@ -8,14 +8,14 @@ import {
   useColorScheme,
 } from "@mui/material";
 import NavBar from "./components/NavBar";
-import TopicList from "./components/Aside/TopicList";
+import TopicList from "./components/TopicList";
 import MainContent from "./components/MainContent";
 import TopicContext from "./Contexts/TopicContext";
 // import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
   const { mode } = useColorScheme();
-  const [topic, setTopic] = React.useState("HTML");
+  const [topic, setTopic] = useState("HTML");
   return (
     <TopicContext.Provider value={{ topic, setTopic }}>
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
@@ -79,7 +79,7 @@ function App() {
               {topic}
             </Typography>
             {/* Add main content here */}
-            <MainContent></MainContent>
+            <MainContent topic={topic}></MainContent>
           </Grid2>
         </Grid2>
       </Box>

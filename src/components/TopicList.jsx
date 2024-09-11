@@ -8,8 +8,8 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { topics } from "../../db/topics";
-import logo from "./../../assets/logo.jpg";
+import { topics } from "../db/topics";
+import logo from "./../assets/logo.jpg";
 function TopicList({ setTopic }) {
   function Header({ topic }) {
     if (topic.type === "parent") {

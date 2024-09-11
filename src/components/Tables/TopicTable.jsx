@@ -26,15 +26,15 @@ function TopicTable({ cheatsheets }) {
   const { mode } = useColorScheme();
 
   const fuse = new Fuse(cheatsheets, {
-    keys: ["table"],
+    keys: ["item.table"],
     threshold: 0.0,
   });
 
   useEffect(() => {
     const result = [...fuse.search("element > body childrens element")];
-    // do the array sorting
+
     setRows(result);
-  }, []);
+  }, [cheatsheets]);
 
   function Row({ row }) {
     return (
@@ -50,22 +50,22 @@ function TopicTable({ cheatsheets }) {
         }}
       >
         <TableCell>
-          <ActionCell action={row.item.action} />
+          <ActionCell action={row.item.item.action} />
         </TableCell>
         <TableCell>
-          <VisualCell visual={row.item.visual} />
-        </TableCell>
-        {/* <TableCell>
-          <GUICell gui={row.item.gui} />
-        </TableCell> */}
-        <TableCell>
-          <CodeCell code={row.item.code} />
+          <VisualCell visual={row.item.item.visual} />
         </TableCell>
         {/* <TableCell>
-          <CLICell cli={row.item.cli} />
+          <GUICell gui={row.item.item.gui} />
         </TableCell> */}
         <TableCell>
-          <EmojiCell emoji={row.item.emoji} />
+          <CodeCell code={row.item.item.code} />
+        </TableCell>
+        {/* <TableCell>
+          <CLICell cli={row.item.item.cli} />
+        </TableCell> */}
+        <TableCell>
+          <EmojiCell emoji={row.item.item.emoji} />
         </TableCell>
         {isOptions && (
           <TableCell>

@@ -1,7 +1,7 @@
 const ElementBodyChildren = [
   {
     id: "html-hyperlink",
-    topic: "html",
+    topic: "HTML",
     table: "element > body childrens element",
     action: "Hyperlink",
     explanation: "An element with link",
@@ -19,7 +19,7 @@ const ElementBodyChildren = [
   },
   {
     id: "html-title",
-    topic: "html",
+    topic: "HTML",
     table: "element > body childrens element",
     action: "Title",
     explanation: "An element with link",
@@ -31,7 +31,7 @@ const ElementBodyChildren = [
   },
   {
     id: "html-p",
-    topic: "html",
+    topic: "HTML",
     table: "element > body childrens element",
     action: "Paragraph",
     explanation: "An element with link",
