@@ -7,16 +7,6 @@ import {
   prism,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const codeString = `
-const MyStyledSwitch = () => {
-  return (
-    <FormControlLabel
-      control={<CustomSwitch />}
-      label="Styled Switch"
-    />
-  );
-};`;
-
 const customCodeStyle = {
   borderRadius: "10px",
   marginTop: "0px",
@@ -25,7 +15,7 @@ const customCodeStyle = {
     'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
 
-function CodeCell({ mode }) {
+function CodeCell({ mode, code }) {
   return (
     <TableCell align="left">
       <Stack
@@ -40,7 +30,7 @@ function CodeCell({ mode }) {
           style={mode === "dark" ? vscDarkPlus : prism}
           customStyle={customCodeStyle}
         >
-          {codeString}
+          {code}
         </SyntaxHighlighter>
         <Typography
           color="grey"

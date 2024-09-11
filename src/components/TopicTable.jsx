@@ -27,11 +27,11 @@ function TopicTable({ cheatsheets }) {
 
   const fuse = new Fuse(cheatsheets, {
     keys: ["table"],
-    // threshold: 0.3,
+    threshold: 0.0,
   });
 
   useEffect(() => {
-    const result = [...fuse.search("Basic Snapshotting")];
+    const result = [...fuse.search("element > body childrens element")];
     // do the array sorting
     setRows(result);
   }, []);
@@ -55,12 +55,15 @@ function TopicTable({ cheatsheets }) {
         <TableCell>
           <VisualCell visual={row.item.visual} />
         </TableCell>
-        <TableCell>
+        {/* <TableCell>
           <GUICell gui={row.item.gui} />
-        </TableCell>
+        </TableCell> */}
         <TableCell>
-          <CLICell cli={row.item.cli} />
+          <CodeCell code={row.item.code} />
         </TableCell>
+        {/* <TableCell>
+          <CLICell cli={row.item.cli} />
+        </TableCell> */}
         <TableCell>
           <EmojiCell emoji={row.item.emoji} />
         </TableCell>
@@ -99,9 +102,9 @@ function TopicTable({ cheatsheets }) {
             <TableRow>
               <TableCell>Action</TableCell>
               <TableCell>Visual</TableCell>
-              <TableCell>GUI</TableCell>
-              <TableCell>CLI</TableCell>
-              {/* <TableCell>Code</TableCell> */}
+              {/* <TableCell>GUI</TableCell> */}
+              {/* <TableCell>CLI</TableCell> */}
+              <TableCell>Code</TableCell>
               <TableCell>Emoji</TableCell>
               {isOptions ? <TableCell>Options</TableCell> : null}
             </TableRow>

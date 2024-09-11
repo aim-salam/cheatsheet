@@ -15,7 +15,7 @@ import TopicContext from "./Contexts/TopicContext";
 
 function App() {
   const { mode } = useColorScheme();
-  const [topic, setTopic] = React.useState("React");
+  const [topic, setTopic] = React.useState("HTML");
   return (
     <TopicContext.Provider value={{ topic, setTopic }}>
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>

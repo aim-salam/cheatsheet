@@ -9,11 +9,12 @@ function MainContent() {
 
   const fuse = new Fuse(cheatsheets, {
     keys: ["topic"],
-    threshold: 0.0,
+    threshold: 0.5,
   });
 
   useEffect(() => {
-    fuse.search("git");
+    console.log(cheatsheets);
+    fuse.search("HTML");
   }, []);
 
   return (
