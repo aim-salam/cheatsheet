@@ -5,8 +5,9 @@ const template = {
   table: "Basic Snapshotting",
   //
   action: "Check file changes",
+  explanation: "",
   //
-  visual: "https://images.cheatsheet.cam/images/image-1725759280918.webp",
+  visual: [{ text: "", link: "" }],
   gui: "https://images.cheatsheet.cam/images/Screenshot-2024-09-07-at-3.01.22-AM.webp",
   cli: "git ..",
   //
