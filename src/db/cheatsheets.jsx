@@ -1,5 +1,6 @@
 import { HTMLCheatsheet } from "./cheatsheets/HTMLCheatsheets";
 
+// Implemented class programming before, but the code are verbose. So, stick to variable.
 const templateCheatsheet = {
   id: "dasdasdada",
   //
