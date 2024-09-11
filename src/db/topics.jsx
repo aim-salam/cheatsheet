@@ -25,7 +25,6 @@ export const topics = [
       },
       {
         table: "element > body childrens element",
-
         columns: { action: true, visual: true, code: true, emoji: true },
       },
     ],
@@ -34,6 +33,12 @@ export const topics = [
     topic: "CSS",
     type: "parent",
     imageLink: "https://images.cheatsheet.cam/images/css.webp",
+    tables: [],
+  },
+  {
+    topic: "Layout",
+    type: "children",
+    imageLink: "https://images.cheatsheet.cam/images/image-1726097807593.webp",
     tables: [],
   },
 ];

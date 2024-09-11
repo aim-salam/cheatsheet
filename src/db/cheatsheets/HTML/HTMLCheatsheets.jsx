@@ -1,4 +1,4 @@
-import Cheatsheet from "./CheatsheetClass";
+import Cheatsheet from "../CheatsheetClass";
 
 const Introduction = [
   new Cheatsheet({

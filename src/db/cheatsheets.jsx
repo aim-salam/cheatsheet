@@ -1,3 +1,3 @@
-import { HTMLCheatsheet } from "./cheatsheets/HTMLCheatsheets";
+import { HTMLCheatsheet } from "./cheatsheets/HTML/HTMLCheatsheets";
 
 export const cheatsheets = [...HTMLCheatsheet];
