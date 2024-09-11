@@ -16,6 +16,7 @@ const templateCheatsheet = {
   cli: "git ..",
   code: "",
   typeCode: "",
+  exampleCode: "",
   //
   emoji: "❄️",
   priority: 1,
