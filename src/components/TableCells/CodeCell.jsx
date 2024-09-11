@@ -9,8 +9,7 @@ import {
 
 const customCodeStyle = {
   borderRadius: "10px",
-  marginTop: "0px",
-  fontSize: "13px",
+  marginTop: "20px",
   fontFamily:
     'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
@@ -31,17 +30,10 @@ function CodeCell({ mode, code }) {
       <Stack
         sx={{
           position: "relative",
-          borderRadius: "10px",
           overflow: "hidden",
+          borderRadius: "10px",
         }}
       >
-        <SyntaxHighlighter
-          language="javascript"
-          style={mode === "dark" ? vscDarkPlus : prism}
-          customStyle={customCodeStyle}
-        >
-          {code}
-        </SyntaxHighlighter>
         <Typography
           color="grey"
           position="absolute"
@@ -50,14 +42,21 @@ function CodeCell({ mode, code }) {
             width: "100%",
             textAlign: "right",
             cursor: "pointer",
-            padding: "5px",
+            // padding: "5px",
             paddingRight: "10px",
-            zIndex: 1,
+            // zIndex: 1,
           }}
           onClick={copyToClipboard}
         >
           Copy
         </Typography>
+        <SyntaxHighlighter
+          language="html"
+          style={mode === "dark" ? vscDarkPlus : prism}
+          customStyle={customCodeStyle}
+        >
+          {code}
+        </SyntaxHighlighter>
       </Stack>
     </TableCell>
   );
