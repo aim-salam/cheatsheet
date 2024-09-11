@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IconButton } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
-import RowForm from "./RowForm";
+import RowForm from "../Modals/RowFormModal";
 function EditRowButton({ row, rows, setRows }) {
   const [open, setOpen] = useState(false);
 

@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import TopicTable from "./TopicTable";
+import TopicTable from "./Tables/TopicTable";
 import { cheatsheets } from "../db/cheatsheets";
 import Fuse from "fuse.js";
 

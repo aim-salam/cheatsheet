@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Avatar, Typography } from "@mui/material";
 import logo from "./../assets/logo.jpg";
-import ColorModeSwitch from "./ColorModeSwitch";
+import ColorModeSwitch from "./Switch/ColorModeSwitch";
 function NavBar() {
   return (
     <Stack

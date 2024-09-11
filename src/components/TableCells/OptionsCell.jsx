@@ -1,8 +1,8 @@
 import React from "react";
 import { TableCell, Stack } from "@mui/material";
 
-import DeleteRowButon from "./DeleteRowButon";
-import EditRowButton from "./EditRowButton";
+import DeleteRowButon from "../Buttons/DeleteRowButon";
+import EditRowButton from "../Buttons/EditRowButton";
 
 function OptionsCell({ row, rows, setRows }) {
   return (

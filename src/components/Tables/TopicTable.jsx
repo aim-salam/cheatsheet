@@ -11,14 +11,14 @@ import Paper from "@mui/material/Paper";
 import EditIcon from "@mui/icons-material/Edit";
 
 import Fuse from "fuse.js";
-import GUICell from "./GUICell";
-import CodeCell from "./CodeCell";
-import ActionCell from "./ActionCell";
-import VisualCell from "./VisualCell";
-import CLICell from "./CLICell";
-import EmojiCell from "./EmojiCell";
-import CreateRowButton from "./CreateRowButton";
-import OptionsCell from "./OptionsCell";
+import GUICell from "../TableCells/GUICell";
+import CodeCell from "../TableCells/CodeCell";
+import ActionCell from "../TableCells/ActionCell";
+import VisualCell from "../TableCells/VisualCell";
+import CLICell from "../TableCells/CLICell";
+import EmojiCell from "../TableCells/EmojiCell";
+import CreateRowButton from "../Buttons/CreateRowButton";
+import OptionsCell from "../TableCells/OptionsCell";
 
 function TopicTable({ cheatsheets }) {
   const [rows, setRows] = useState([]);

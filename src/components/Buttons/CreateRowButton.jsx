@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Typography } from "@mui/material";
-import RowForm from "./RowForm";
+import RowForm from "../Modals/RowFormModal";
 
 function CreateRowForm({ rows, setRows }) {
   const [open, setOpen] = useState(false);

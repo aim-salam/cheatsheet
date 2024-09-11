@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CardMedia, TableCell } from "@mui/material";
-import GUIModal from "./GUIModal";
+import GUIModal from "../Modals/GUIModal";
 
 function GUICell({ gui }) {
   const [open, setOpen] = useState(false);

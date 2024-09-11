@@ -8,7 +8,7 @@ import {
   useColorScheme,
 } from "@mui/material";
 import NavBar from "./components/NavBar";
-import TopicList from "./components/TopicList";
+import TopicList from "./components/Aside/TopicList";
 import MainContent from "./components/MainContent";
 import TopicContext from "./Contexts/TopicContext";
 // import MenuIcon from "@mui/icons-material/Menu";
