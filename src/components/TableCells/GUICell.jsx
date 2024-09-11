@@ -21,7 +21,7 @@ function GUICell({ gui }) {
           }}
           onClick={handleOpen}
           image={gui}
-          alt="Placeholder Image"
+          alt="GUI Image"
         />
         <GUIModal gui={gui} open={open} handleClose={handleClose}></GUIModal>
       </div>

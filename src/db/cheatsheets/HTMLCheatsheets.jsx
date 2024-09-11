@@ -1,20 +1,22 @@
+import Cheatsheet from "./CheatsheetClass";
+
 const Introduction = [
-  {
+  new Cheatsheet({
     id: "html-definition",
     topic: "HTML",
     table: "Introduction",
     action: "Definition",
     description: "An element with link",
     visual: "https://images.cheatsheet.cam/images/image-1726073050194.webp",
-    prerequisite: [],
+    // prerequisite: [],
 
     emoji: "❄️",
     priority: 1,
-  },
+  }),
 ];
 
 const ElementBodyChildren = [
-  {
+  new Cheatsheet({
     id: "html-hyperlink",
     topic: "HTML",
     table: "element > body childrens element",
@@ -31,8 +33,8 @@ const ElementBodyChildren = [
     typeCode: "html",
     emoji: "❄️",
     priority: 1,
-  },
-  {
+  }),
+  new Cheatsheet({
     id: "html-title",
     topic: "HTML",
     table: "element > body childrens element",
@@ -43,8 +45,8 @@ const ElementBodyChildren = [
     typeCode: "html",
     emoji: "❄️",
     priority: 2,
-  },
-  {
+  }),
+  new Cheatsheet({
     id: "html-p",
     topic: "HTML",
     table: "element > body childrens element",
@@ -55,7 +57,7 @@ const ElementBodyChildren = [
     typeCode: "html",
     emoji: "❄️",
     priority: 3,
-  },
+  }),
 ];
 
 export const HTMLCheatsheet = [...ElementBodyChildren, ...Introduction];

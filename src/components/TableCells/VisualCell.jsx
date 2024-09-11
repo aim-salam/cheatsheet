@@ -21,7 +21,7 @@ function VisualCell({ visual }) {
           }}
           onClick={handleOpen}
           image={visual}
-          alt="Placeholder Image"
+          alt="Visual image"
         />
         <VisualModal
           visual={visual}

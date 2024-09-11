@@ -26,7 +26,7 @@ export default function GUIModal({ gui, open, handleClose }) {
       aria-describedby="modal-modal-description"
     >
       <Box sx={style}>
-        <CardMedia component="img" image={gui} alt="Placeholder Image" />
+        <CardMedia component="img" image={gui} alt="GUI image" />
       </Box>
     </Modal>
   );

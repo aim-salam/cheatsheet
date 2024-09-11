@@ -26,7 +26,7 @@ export default function VisualModal({ visual, open, handleClose }) {
       aria-describedby="modal-modal-description"
     >
       <Box sx={style}>
-        <CardMedia component="img" image={visual} alt="Placeholder Image" />
+        <CardMedia component="img" image={visual} alt="Visual image" />
       </Box>
     </Modal>
   );
