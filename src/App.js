@@ -15,7 +15,12 @@ import TopicContext from "./Contexts/TopicContext";
 
 function App() {
   const { mode } = useColorScheme();
-  const [topic, setTopic] = useState("HTML");
+  const [topic, setTopic] = useState({
+    topic: "CSS",
+    type: "parent",
+    imageLink: "https://images.cheatsheet.cam/images/css.webp",
+    tables: [],
+  });
   return (
     <TopicContext.Provider value={{ topic, setTopic }}>
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
@@ -76,7 +81,7 @@ function App() {
             sx={{ paddingRight: "40px", flex: "1 1 auto" }}
           >
             <Typography fontSize={55} fontWeight={"600"} paddingTop={"40px"}>
-              {topic}
+              {topic.topic}
             </Typography>
             {/* Add main content here */}
             <MainContent topic={topic}></MainContent>

@@ -1,10 +1,25 @@
+const Introduction = [
+  {
+    id: "html-definition",
+    topic: "HTML",
+    table: "Introduction",
+    action: "Definition",
+    description: "An element with link",
+    visual: "https://images.cheatsheet.cam/images/image-1726073050194.webp",
+    prerequisite: [],
+
+    emoji: "❄️",
+    priority: 1,
+  },
+];
+
 const ElementBodyChildren = [
   {
     id: "html-hyperlink",
     topic: "HTML",
     table: "element > body childrens element",
     action: "Hyperlink",
-    explanation: "An element with link",
+    description: "An element with link",
     visual: "https://images.cheatsheet.cam/images/image-1726039801639.webp",
     code: `<a href="./about.html">About me</a> //relative url
 <a href="https://www.ytube..l" >About me</a> //url
@@ -22,7 +37,7 @@ const ElementBodyChildren = [
     topic: "HTML",
     table: "element > body childrens element",
     action: "Title",
-    explanation: "An element with link",
+    description: "An element with link",
     visual: "https://images.cheatsheet.cam/images/image-1726055416648.webp",
     code: `<title>Chat</title>`,
     typeCode: "html",
@@ -34,7 +49,7 @@ const ElementBodyChildren = [
     topic: "HTML",
     table: "element > body childrens element",
     action: "Paragraph",
-    explanation: "An element with link",
+    description: "An element with link",
     visual: "https://images.cheatsheet.cam/images/image-1726057764130.webp",
     code: `<p>This is a paragraph of text.</p>`,
     typeCode: "html",
@@ -43,4 +58,4 @@ const ElementBodyChildren = [
   },
 ];
 
-export const HTMLCheatsheet = [...ElementBodyChildren];
+export const HTMLCheatsheet = [...ElementBodyChildren, ...Introduction];

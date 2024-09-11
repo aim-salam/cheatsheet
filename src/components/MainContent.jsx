@@ -13,16 +13,19 @@ function MainContent({ topic }) {
   });
 
   useEffect(() => {
-    const result = fuse.search(topic);
-    const reformatResult = result.map((item) => item);
+    const result = fuse.search(topic.topic);
+    console.log(topic);
 
     setRows([...result]);
   }, [topic]);
 
   return (
     <Stack>
-      <TopicTable key={1} cheatsheets={rows}></TopicTable>
-      {/* <TopicTable key={2} cheatsheets={rows}></TopicTable> */}
+      {topic.tables.map((table, index) => {
+        return (
+          <TopicTable key={table} table={table} cheatsheets={rows}></TopicTable>
+        );
+      })}
     </Stack>
   );
 }

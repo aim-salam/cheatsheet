@@ -33,7 +33,7 @@ function TopicList({ setTopic }) {
           <ListItemButton
             sx={{ paddingLeft: "40px", paddingRight: "30px" }}
             onClick={() => {
-              setTopic(topic.topic);
+              setTopic(topic);
             }}
           >
             <ListItemAvatar>

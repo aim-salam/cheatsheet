@@ -19,8 +19,10 @@ import CLICell from "../TableCells/CLICell";
 import EmojiCell from "../TableCells/EmojiCell";
 import CreateRowButton from "../Buttons/CreateRowButton";
 import OptionsCell from "../TableCells/OptionsCell";
+import ColumnsSwitch from "./ColumnsSwitch";
+import TableCellsSwitch from "./TableCellsSwitch";
 
-function TopicTable({ cheatsheets }) {
+function TopicTable({ table, cheatsheets }) {
   const [rows, setRows] = useState([]);
   const [isOptions, setIsOptions] = useState(false);
   const { mode } = useColorScheme();
@@ -31,48 +33,19 @@ function TopicTable({ cheatsheets }) {
   });
 
   useEffect(() => {
-    const result = [...fuse.search("element > body childrens element")];
+    const result = [...fuse.search(table.table)];
 
     setRows(result);
   }, [cheatsheets]);
 
   function Row({ row }) {
     return (
-      <TableRow
-        sx={{
-          "&:last-child td, &:last-child th": { border: 0 },
-          "& td": {
-            borderBottom: "0px", // Change color and width as needed
-          },
-          "& th": {
-            borderBottom: "0px", // Change color and width as needed
-          },
-        }}
-      >
-        <TableCell>
-          <ActionCell action={row.item.item.action} />
-        </TableCell>
-        <TableCell>
-          <VisualCell visual={row.item.item.visual} />
-        </TableCell>
-        {/* <TableCell>
-          <GUICell gui={row.item.item.gui} />
-        </TableCell> */}
-        <TableCell>
-          <CodeCell code={row.item.item.code} />
-        </TableCell>
-        {/* <TableCell>
-          <CLICell cli={row.item.item.cli} />
-        </TableCell> */}
-        <TableCell>
-          <EmojiCell emoji={row.item.item.emoji} />
-        </TableCell>
-        {isOptions && (
-          <TableCell>
-            <OptionsCell row={row} rows={rows} setRows={setRows} />
-          </TableCell>
-        )}
-      </TableRow>
+      <TableCellsSwitch
+        row={row}
+        rows={rows}
+        isOptions={isOptions}
+        setRows={setRows}
+      ></TableCellsSwitch>
     );
   }
 
@@ -83,40 +56,37 @@ function TopicTable({ cheatsheets }) {
   }
 
   return (
-    <Stack alignItems={"flex-end"}>
+    <Stack alignItems={"flex-start"}>
       <Stack flexDirection={"row"}>
-        <h1>Navigation</h1>
+        <h1>{table.table}</h1>
         {/* if admin */}
         <IconButton color="primary" onClick={() => setIsOptions(!isOptions)}>
           <EditIcon />
         </IconButton>
       </Stack>
-      <TableContainer component={Paper} sx={{ width: "100%" }}>
+      <TableContainer
+        component={Paper}
+        sx={{ width: "100%", marginBottom: "100px" }}
+      >
         <Table
           sx={{
             minWidth: 650,
           }}
           aria-label="simple table"
         >
-          <TableHead>
-            <TableRow>
-              <TableCell>Action</TableCell>
-              <TableCell>Visual</TableCell>
-              {/* <TableCell>GUI</TableCell> */}
-              {/* <TableCell>CLI</TableCell> */}
-              <TableCell>Code</TableCell>
-              <TableCell>Emoji</TableCell>
-              {isOptions ? <TableCell>Options</TableCell> : null}
-            </TableRow>
-          </TableHead>
+          <ColumnsSwitch
+            columns={table.columns}
+            isOptions={isOptions}
+          ></ColumnsSwitch>
 
           <TableBody>
             <RowList rows={rows}></RowList>
           </TableBody>
         </Table>
       </TableContainer>
+
       {/* if admin */}
-      <CreateRowButton rows={rows} setRows={setRows}></CreateRowButton>
+      {/* <CreateRowButton rows={rows} setRows={setRows}></CreateRowButton> */}
     </Stack>
   );
 }

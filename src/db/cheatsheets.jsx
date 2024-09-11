@@ -8,8 +8,8 @@ const templateCheatsheet = {
   table: "Basic Snapshotting",
   //
   action: "Check file changes",
-  explanation: "",
-  requirement: [{ text: "", link: "" }],
+  description: "",
+  prerequisite: [{ text: "", link: "" }],
   //
   visual: [{ text: "", link: "" }],
   gui: [{ text: "", link: "" }],

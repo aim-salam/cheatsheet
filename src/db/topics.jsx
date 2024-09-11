@@ -18,10 +18,22 @@ export const topics = [
     topic: "HTML",
     type: "parent",
     imageLink: "https://images.cheatsheet.cam/images/html.webp",
+    tables: [
+      {
+        table: "Introduction",
+        columns: { action: true, visual: true, emoji: true },
+      },
+      {
+        table: "element > body childrens element",
+
+        columns: { action: true, visual: true, code: true, emoji: true },
+      },
+    ],
   },
   {
     topic: "CSS",
     type: "parent",
     imageLink: "https://images.cheatsheet.cam/images/css.webp",
+    tables: [],
   },
 ];
