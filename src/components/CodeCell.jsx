@@ -16,6 +16,16 @@ const customCodeStyle = {
 };
 
 function CodeCell({ mode, code }) {
+  const copyToClipboard = () => {
+    navigator.clipboard
+      .writeText(code)
+      .then(() => {
+        // alert("Code copied to clipboard!");
+      })
+      .catch((err) => {
+        alert("Failed to copy code: ", err);
+      });
+  };
   return (
     <TableCell align="left">
       <Stack
@@ -34,13 +44,17 @@ function CodeCell({ mode, code }) {
         </SyntaxHighlighter>
         <Typography
           color="grey"
-          position={"absolute"}
-          right={0}
-          top={0}
+          position="absolute"
           sx={{
             backgroundColor: "#111111",
             width: "100%",
+            textAlign: "right",
+            cursor: "pointer",
+            padding: "5px",
+            paddingRight: "10px",
+            zIndex: 1,
           }}
+          onClick={copyToClipboard}
         >
           Copy
         </Typography>
