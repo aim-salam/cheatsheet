@@ -4,9 +4,9 @@ import { TableCell, Stack } from "@mui/material";
 import DeleteRowButon from "../Buttons/DeleteRowButon";
 import EditRowButton from "../Buttons/EditRowButton";
 
-function OptionsCell({ row, rows, setRows }) {
+function OptionsCell({ row, rows, setRows, sx }) {
   return (
-    <TableCell>
+    <TableCell sx={sx}>
       <Stack>
         <DeleteRowButon
           row={row}

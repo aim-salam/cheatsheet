@@ -8,6 +8,9 @@ import CodeCell from "../TableCells/CodeCell";
 import EmojiCell from "../TableCells/EmojiCell";
 import OptionsCell from "../TableCells/OptionsCell";
 function TableCellsSwitch({ row, rows, isOptions, setRows }) {
+  const TableCellStyle = {
+    padding: "0px",
+  };
   return (
     <TableRow
       sx={{
@@ -21,39 +24,30 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
       }}
     >
       {row.item.item.action ? (
-        <TableCell>
-          <ActionCell action={row.item.item.action} />
-        </TableCell>
+        <ActionCell action={row.item.item.action} sx={TableCellStyle} />
       ) : null}
       {row.item.item.visual ? (
-        <TableCell>
-          <VisualCell visual={row.item.item.visual} />
-        </TableCell>
+        <VisualCell visual={row.item.item.visual} sx={TableCellStyle} />
       ) : null}
       {row.item.item.gui ? (
-        <TableCell>
-          <GUICell gui={row.item.item.gui} />
-        </TableCell>
+        <GUICell gui={row.item.item.gui} sx={TableCellStyle} />
       ) : null}
       {row.item.item.cli ? (
-        <TableCell>
-          <CLICell cli={row.item.item.cli} />
-        </TableCell>
+        <CLICell cli={row.item.item.cli} sx={TableCellStyle} />
       ) : null}
       {row.item.item.code ? (
-        <TableCell>
-          <CodeCell code={row.item.item.code} />
-        </TableCell>
+        <CodeCell code={row.item.item.code} sx={TableCellStyle} />
       ) : null}
       {row.item.item.emoji ? (
-        <TableCell>
-          <EmojiCell emoji={row.item.item.emoji} />
-        </TableCell>
+        <EmojiCell emoji={row.item.item.emoji} sx={TableCellStyle} />
       ) : null}
       {isOptions && (
-        <TableCell>
-          <OptionsCell row={row} rows={rows} setRows={setRows} />
-        </TableCell>
+        <OptionsCell
+          row={row}
+          rows={rows}
+          setRows={setRows}
+          sx={TableCellStyle}
+        />
       )}
     </TableRow>
   );

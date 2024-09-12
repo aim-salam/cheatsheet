@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { CardMedia, TableCell } from "@mui/material";
 import VisualModal from "../Modals/VisualModal";
 
-function VisualCell({ visual }) {
+function VisualCell({ visual, sx }) {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
   return (
-    <TableCell>
+    <TableCell sx={sx}>
       <div>
         <CardMedia
           component="img"
