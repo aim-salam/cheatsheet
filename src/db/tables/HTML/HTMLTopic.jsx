@@ -8,7 +8,7 @@ export const HTMLTopic = {
       columns: { action: true, description: true, visual: true, emoji: true },
     },
     {
-      table: "element > body childrens element",
+      table: "Basic HTML",
       columns: {
         action: true,
         description: true,

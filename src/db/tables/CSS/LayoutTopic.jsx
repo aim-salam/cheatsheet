@@ -14,7 +14,7 @@ export const LayoutTopic = {
       },
     },
     // {
-    //   table: "element > body childrens element",
+    //   table: "Basic HTML",
     //   columns: {
     //     action: true,
     //     description: true,

@@ -24,7 +24,7 @@ const ElementBodyChildren = [
   new Cheatsheet({
     id: "html-hyperlink",
     topic: "HTML",
-    table: "element > body childrens element",
+    table: "Basic HTML",
     action: "Hyperlink",
     description: "An element with link",
     visual: [
@@ -47,7 +47,7 @@ const ElementBodyChildren = [
   new Cheatsheet({
     id: "html-title",
     topic: "HTML",
-    table: "element > body childrens element",
+    table: "Basic HTML",
     action: "Title",
     description: "An element with link",
     visual: [
@@ -64,7 +64,7 @@ const ElementBodyChildren = [
   new Cheatsheet({
     id: "html-p",
     topic: "HTML",
-    table: "element > body childrens element",
+    table: "Basic HTML",
     action: "Paragraph",
     description: "An element with link",
     visual: [
