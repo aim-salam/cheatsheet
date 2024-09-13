@@ -1,21 +1,26 @@
 import Cheatsheet from "../CheatsheetClass";
 
-const sizingElements = [
+const BOX_MODEL = [
   new Cheatsheet({
-    id: "css-sizingElements",
+    id: "box-mode-box-modell",
     topic: "Layout",
     table: "Box model",
-    action: "Sizing Elements",
-    description: "An element with link",
+    action: "Box model",
+    description: "Every element/content rendered will be put inside a box",
     visual: [
       {
-        text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726073050194.webp",
+        text: "Box Model",
+        link: "https://images.cheatsheet.cam/images/image-1726218931438.webp",
+      },
+      {
+        text: "Inspect in Browser",
+        link: "https://images.cheatsheet.cam/images/image-1726218884809.webp",
       },
     ],
+    code: "",
     emoji: "❄️",
     priority: 1,
   }),
 ];
 
-export const LayoutCheatsheets = [...sizingElements];
+export const LayoutCheatsheets = [...BOX_MODEL];
