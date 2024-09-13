@@ -5,6 +5,7 @@ function ColumnsSwitch({ columns, isOptions }) {
     <TableHead>
       <TableRow>
         {columns.action ? <TableCell>Action</TableCell> : null}
+        {columns.description ? <TableCell>Description</TableCell> : null}
         {columns.visual ? <TableCell>Visual</TableCell> : null}
         {columns.gui ? <TableCell>GUI</TableCell> : null}
         {columns.cli ? <TableCell>CLI</TableCell> : null}

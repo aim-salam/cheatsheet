@@ -21,11 +21,17 @@ export const topics = [
     tables: [
       {
         table: "Introduction",
-        columns: { action: true, visual: true, emoji: true },
+        columns: { action: true, description: true, visual: true, emoji: true },
       },
       {
         table: "element > body childrens element",
-        columns: { action: true, visual: true, code: true, emoji: true },
+        columns: {
+          action: true,
+          description: true,
+          visual: true,
+          code: true,
+          emoji: true,
+        },
       },
     ],
   },

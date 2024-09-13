@@ -7,6 +7,7 @@ import CLICell from "../TableCells/CLICell";
 import CodeCell from "../TableCells/CodeCell";
 import EmojiCell from "../TableCells/EmojiCell";
 import OptionsCell from "../TableCells/OptionsCell";
+import DescriptionCell from "../TableCells/DescriptionCell";
 function TableCellsSwitch({ row, rows, isOptions, setRows }) {
   const TableCellStyle = {
     padding: "0px",
@@ -25,6 +26,12 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
     >
       {row.item.item.action ? (
         <ActionCell action={row.item.item.action} sx={TableCellStyle} />
+      ) : null}
+      {row.item.item.description ? (
+        <DescriptionCell
+          action={row.item.item.description}
+          sx={TableCellStyle}
+        />
       ) : null}
       {row.item.item.visual ? (
         <VisualCell visual={row.item.item.visual} sx={TableCellStyle} />
