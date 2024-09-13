@@ -18,7 +18,7 @@ function TopicList({ setTopic }) {
           marginTop={"20px"}
           paddingLeft={"40px"}
           paddingRight={"20px"}
-          fontSize={"18px"}
+          fontSize={"16px"}
         >
           {topic.type === "parent" ? `${topic.topic}` : null}
         </Typography>
@@ -44,7 +44,8 @@ function TopicList({ setTopic }) {
                 variant="rounded"
               />
             </ListItemAvatar>
-            <ListItemText primary={topic.topic} />
+            {/* <ListItemText primary={topic.topic} /> */}
+            <p style={{ fontSize: "15px" }}>{topic.topic}</p>
           </ListItemButton>
         </Stack>
       ))}

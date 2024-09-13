@@ -2,7 +2,7 @@ import React from "react";
 import { TableHead, TableRow, TableCell } from "@mui/material";
 function ColumnsSwitch({ columns, isOptions }) {
   const customTableStyle = {
-    fontSize: "18px",
+    fontSize: "15px",
     fontWeight: "bold",
     borderRight: "1px solid #EDEDED",
   };

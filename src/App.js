@@ -59,7 +59,7 @@ function App() {
             md={2}
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            <Typography
+            {/* <Typography
               variant="h1"
               fontWeight={"bold"}
               fontSize={18}
@@ -67,7 +67,7 @@ function App() {
               paddingTop={"20px"}
             >
               Topics
-            </Typography>
+            </Typography> */}
             {/* Add aside content here */}
             <Aside setTopic={setTopic}></Aside>
           </Grid2>
