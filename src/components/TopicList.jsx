@@ -18,7 +18,7 @@ function TopicList({ setTopic }) {
           marginTop={"20px"}
           paddingLeft={"40px"}
           paddingRight={"20px"}
-          fontSize={"30px"}
+          fontSize={"18px"}
         >
           {topic.type === "parent" ? `${topic.topic}` : null}
         </Typography>

@@ -13,7 +13,7 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
     borderRight: "1px solid #EDEDED",
   };
 
-  const customFont = "20px";
+  const customFont = "18px";
   return (
     <TableRow
       sx={{

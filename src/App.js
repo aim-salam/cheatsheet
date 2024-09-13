@@ -61,10 +61,10 @@ function App() {
           >
             <Typography
               variant="h1"
-              fontWeight={"600"}
-              fontSize={25}
+              fontWeight={"bold"}
+              fontSize={18}
               paddingLeft={"40px"}
-              paddingTop={"70px"}
+              paddingTop={"20px"}
             >
               Topics
             </Typography>
@@ -80,7 +80,7 @@ function App() {
             md={10}
             sx={{ paddingRight: "40px", flex: "1 1 auto" }}
           >
-            <Typography fontSize={55} fontWeight={"600"} paddingTop={"40px"}>
+            <Typography fontSize={55} fontWeight={"bold"}>
               {topic.topic}
             </Typography>
             {/* Add main content here */}
