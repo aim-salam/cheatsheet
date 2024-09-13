@@ -1,4 +1,5 @@
 // Class definition for Cheatsheet Entry
+// For required to be Array dont put [] as default, it will trigger column. Let it be null
 class Cheatsheet {
   constructor({
     id,
@@ -9,10 +10,10 @@ class Cheatsheet {
     action,
     description,
     //
-    prerequisite = [], // Default to empty array if not provided
+    prerequisite,
     //
-    visual = [], // Default to empty array if not provided
-    gui = [],
+    visual,
+    gui,
     cli,
     //
     code,
@@ -22,8 +23,8 @@ class Cheatsheet {
     emoji,
     priority,
     //
-    contentContributor = [],
-    githubContributor = [],
+    contentContributor,
+    githubContributor,
   }) {
     this.id = id;
     //
@@ -33,10 +34,10 @@ class Cheatsheet {
     this.action = action;
     this.description = description;
     //
-    this.prerequisite = Array.isArray(prerequisite) ? prerequisite : [];
+    this.prerequisite = Array.isArray(prerequisite) ? prerequisite : null;
     //
-    this.visual = Array.isArray(visual) ? visual : [];
-    this.gui = Array.isArray(gui) ? gui : [];
+    this.visual = Array.isArray(visual) ? visual : null;
+    this.gui = Array.isArray(gui) ? gui : null;
     this.cli = cli;
     //
     this.code = code;
@@ -48,10 +49,10 @@ class Cheatsheet {
     //
     this.contentContributor = Array.isArray(contentContributor)
       ? contentContributor
-      : [];
+      : null;
     this.githubContributor = Array.isArray(githubContributor)
       ? githubContributor
-      : [];
+      : null;
   }
 }
 
