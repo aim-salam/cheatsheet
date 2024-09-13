@@ -14,7 +14,7 @@ const customCodeStyle = {
     'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
 
-function CodeCell({ mode, code, sx, childrenStyle }) {
+function CodeCell({ mode, code, customStyle }) {
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText(code)
@@ -26,14 +26,13 @@ function CodeCell({ mode, code, sx, childrenStyle }) {
       });
   };
   return (
-    <TableCell sx={{ ...sx }}>
+    <TableCell sx={customStyle}>
       <Stack
         sx={{
           width: "300px",
           position: "relative",
           overflow: "hidden",
           borderRadius: "10px",
-          ...childrenStyle,
         }}
       >
         <Typography

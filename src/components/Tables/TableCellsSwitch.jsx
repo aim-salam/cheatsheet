@@ -9,33 +9,61 @@ import EmojiCell from "../TableCells/EmojiCell";
 import OptionsCell from "../TableCells/OptionsCell";
 import DescriptionCell from "../TableCells/DescriptionCell";
 function TableCellsSwitch({ row, rows, isOptions, setRows }) {
+  const customTableCellStyle = {
+    borderRight: "1px solid #EDEDED",
+  };
   return (
     <TableRow
       sx={{
-        "&:last-child td, &:last-child th": { border: 0 },
-        "& td": {
-          borderBottom: "0px", // Change color and width as needed
-        },
-        "& th": {
-          borderBottom: "0px", // Change color and width as needed
-        },
         verticalAlign: "baseLine",
+
+        borderBottom: "1px solid #EDEDED", // Custom bottom border
       }}
     >
       {row.item.item.action ? (
-        <ActionCell action={row.item.item.action} />
+        <ActionCell
+          action={row.item.item.action}
+          customStyle={customTableCellStyle}
+        />
       ) : null}
       {row.item.item.description ? (
-        <DescriptionCell action={row.item.item.description} />
+        <DescriptionCell
+          action={row.item.item.description}
+          customStyle={customTableCellStyle}
+        />
       ) : null}
       {row.item.item.visual ? (
-        <VisualCell visual={row.item.item.visual} />
+        <VisualCell
+          visual={row.item.item.visual}
+          customStyle={customTableCellStyle}
+        />
       ) : null}
-      {row.item.item.gui ? <GUICell gui={row.item.item.gui} /> : null}
-      {row.item.item.cli ? <CLICell cli={row.item.item.cli} /> : null}
-      {row.item.item.code ? <CodeCell code={row.item.item.code} /> : null}
-      {row.item.item.emoji ? <EmojiCell emoji={row.item.item.emoji} /> : null}
-      {isOptions && <OptionsCell row={row} rows={rows} setRows={setRows} />}
+      {row.item.item.gui ? (
+        <GUICell gui={row.item.item.gui} customStyle={customTableCellStyle} />
+      ) : null}
+      {row.item.item.cli ? (
+        <CLICell cli={row.item.item.cli} customStyle={customTableCellStyle} />
+      ) : null}
+      {row.item.item.code ? (
+        <CodeCell
+          code={row.item.item.code}
+          customStyle={customTableCellStyle}
+        />
+      ) : null}
+      {row.item.item.emoji ? (
+        <EmojiCell
+          emoji={row.item.item.emoji}
+          customStyle={customTableCellStyle}
+        />
+      ) : null}
+      {isOptions && (
+        <OptionsCell
+          row={row}
+          rows={rows}
+          setRows={setRows}
+          customStyle={customTableCellStyle}
+        />
+      )}
     </TableRow>
   );
 }

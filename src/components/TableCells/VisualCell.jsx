@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { CardMedia, Stack, TableCell, Typography } from "@mui/material";
 import VisualModal from "../Modals/VisualModal";
 
-function VisualCell({ visual, sx, childrenStyle }) {
+function VisualCell({ visual, customStyle }) {
   const [modalUrl, setModalUrl] = useState("");
 
   return (
-    <TableCell sx={sx}>
-      <div style={childrenStyle}>
+    <TableCell sx={customStyle}>
+      <div>
         {visual.map((item) => {
           return (
             <Stack key={visual}>

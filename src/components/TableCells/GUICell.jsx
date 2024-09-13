@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { CardMedia, TableCell } from "@mui/material";
 import GUIModal from "../Modals/GUIModal";
 
-function GUICell({ gui, sx }) {
+function GUICell({ gui, customStyle }) {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
   return (
-    <TableCell sx={sx}>
+    <TableCell sx={customStyle}>
       {gui.map((item) => {
         return (
           <div key={item.link}>

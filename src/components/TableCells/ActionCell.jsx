@@ -1,9 +1,9 @@
 import React from "react";
 import { TableCell, Typography } from "@mui/material";
 
-function ActionCell({ action }) {
+function ActionCell({ action, customStyle }) {
   return (
-    <TableCell component="th" scope="row">
+    <TableCell sx={customStyle} component="th" scope="row">
       <Typography> {action}</Typography>
     </TableCell>
   );
