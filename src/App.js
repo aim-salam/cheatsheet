@@ -8,7 +8,7 @@ import {
   useColorScheme,
 } from "@mui/material";
 import NavBar from "./components/NavBar";
-import TopicList from "./components/TopicList";
+import Aside from "./components/Aside";
 import MainContent from "./components/MainContent";
 import TopicContext from "./Contexts/TopicContext";
 // import MenuIcon from "@mui/icons-material/Menu";
@@ -69,7 +69,7 @@ function App() {
               Topics
             </Typography>
             {/* Add aside content here */}
-            <TopicList setTopic={setTopic}></TopicList>
+            <Aside setTopic={setTopic}></Aside>
           </Grid2>
 
           {/* Main Content Area */}
