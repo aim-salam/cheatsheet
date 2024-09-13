@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, TableCell, Typography } from "@mui/material";
 
-function CLICell({ cli, sx }) {
+function CLICell({ cli, sx, childrenStyle }) {
   const textSx = {
     color: "white",
     backgroundColor: "black",
@@ -10,15 +10,16 @@ function CLICell({ cli, sx }) {
     paddingRight: 2,
   };
   return (
-    <TableCell component="th" scope="row" sx={sx}>
+    <TableCell component="th" scope="row">
       <Stack
         sx={{
           position: "relative",
           borderRadius: "10px",
           overflow: "hidden",
           //   position: "absolute",
-          right: 0,
-          top: 0,
+          // right: 0,
+          // top: 0,
+          ...childrenStyle,
         }}
       >
         <Typography

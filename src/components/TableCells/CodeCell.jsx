@@ -8,13 +8,13 @@ import {
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const customCodeStyle = {
+  marginTop: "0px",
   borderRadius: "10px",
-  marginTop: "20px",
   fontFamily:
     'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
 };
 
-function CodeCell({ mode, code, sx }) {
+function CodeCell({ mode, code, sx, childrenStyle }) {
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText(code)
@@ -26,33 +26,31 @@ function CodeCell({ mode, code, sx }) {
       });
   };
   return (
-    <TableCell align="left" sx={sx}>
+    <TableCell sx={{ ...sx }}>
       <Stack
         sx={{
           width: "300px",
           position: "relative",
           overflow: "hidden",
           borderRadius: "10px",
+          ...childrenStyle,
         }}
       >
         <Typography
           color="grey"
-          position="absolute"
           sx={{
             backgroundColor: "#111111",
             width: "100%",
             textAlign: "right",
             cursor: "pointer",
-            // padding: "5px",
             paddingRight: "10px",
-            // zIndex: 1,
           }}
           onClick={copyToClipboard}
         >
           Copy
         </Typography>
         <SyntaxHighlighter
-          language="html"
+          language="css"
           style={mode === "dark" ? vscDarkPlus : prism}
           customStyle={customCodeStyle}
         >

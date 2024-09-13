@@ -1,10 +1,12 @@
 import { TableCell, Typography } from "@mui/material";
 import React from "react";
 
-function EmojiCell({ emoji, sx }) {
+function EmojiCell({ emoji, sx, childrenStyle }) {
   return (
     <TableCell component="th" scope="row" sx={sx}>
-      <Typography fontSize={25}>{emoji}</Typography>
+      <Typography sx={childrenStyle} fontSize={25}>
+        {emoji}
+      </Typography>
     </TableCell>
   );
 }

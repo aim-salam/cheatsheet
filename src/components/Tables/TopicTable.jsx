@@ -1,24 +1,13 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { Stack, useColorScheme, Button, IconButton } from "@mui/material";
+import { Stack, useColorScheme, IconButton } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import EditIcon from "@mui/icons-material/Edit";
 
 import Fuse from "fuse.js";
-import GUICell from "../TableCells/GUICell";
-import CodeCell from "../TableCells/CodeCell";
-import ActionCell from "../TableCells/ActionCell";
-import VisualCell from "../TableCells/VisualCell";
-import CLICell from "../TableCells/CLICell";
-import EmojiCell from "../TableCells/EmojiCell";
-import CreateRowButton from "../Buttons/CreateRowButton";
-import OptionsCell from "../TableCells/OptionsCell";
 import ColumnsSwitch from "./ColumnsSwitch";
 import TableCellsSwitch from "./TableCellsSwitch";
 
@@ -56,7 +45,7 @@ function TopicTable({ table, cheatsheets }) {
   }
 
   return (
-    <Stack alignItems={"flex-start"}>
+    <Stack>
       <Stack flexDirection={"row"}>
         <h1>{table.table}</h1>
         {/* if admin */}

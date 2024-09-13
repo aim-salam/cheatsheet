@@ -1,10 +1,12 @@
 import React from "react";
 import { TableCell, Typography } from "@mui/material";
 
-function DescriptionCell({ action, sx }) {
+function DescriptionCell({ action, sx, childrenStyle }) {
   return (
-    <TableCell sx={{ ...sx, paddingLeft: "20px" }} component="th" scope="row">
-      <Typography> {action}</Typography>
+    <TableCell sx={sx} component="th" scope="row">
+      <Typography sx={{ width: "100px", ...childrenStyle }}>
+        {action}
+      </Typography>
     </TableCell>
   );
 }
