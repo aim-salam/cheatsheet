@@ -9,26 +9,30 @@ function VisualCell({ visual, sx }) {
   const handleOpen = () => setOpen(true);
   return (
     <TableCell sx={sx}>
-      <div>
-        <CardMedia
-          component="img"
-          sx={{
-            width: 200,
-            objectFit: "cover",
-            "&:hover": {
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
-            },
-          }}
-          onClick={handleOpen}
-          image={visual}
-          alt="Visual image"
-        />
-        <VisualModal
-          visual={visual}
-          open={open}
-          handleClose={handleClose}
-        ></VisualModal>
-      </div>
+      {visual.map((item) => {
+        return (
+          <div key={item.link}>
+            <CardMedia
+              component="img"
+              sx={{
+                width: 200,
+                objectFit: "cover",
+                "&:hover": {
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
+                },
+              }}
+              onClick={handleOpen}
+              image={item.link}
+              alt="Visual image"
+            />
+            <VisualModal
+              visual={item.link}
+              open={open}
+              handleClose={handleClose}
+            ></VisualModal>
+          </div>
+        );
+      })}
     </TableCell>
   );
 }

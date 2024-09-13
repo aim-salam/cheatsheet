@@ -9,22 +9,30 @@ function GUICell({ gui, sx }) {
   const handleOpen = () => setOpen(true);
   return (
     <TableCell sx={sx}>
-      <div>
-        <CardMedia
-          component="img"
-          sx={{
-            width: 200,
-            objectFit: "cover",
-            "&:hover": {
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
-            },
-          }}
-          onClick={handleOpen}
-          image={gui}
-          alt="GUI Image"
-        />
-        <GUIModal gui={gui} open={open} handleClose={handleClose}></GUIModal>
-      </div>
+      {gui.map((item) => {
+        return (
+          <div key={item.link}>
+            <CardMedia
+              component="img"
+              sx={{
+                width: 200,
+                objectFit: "cover",
+                "&:hover": {
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
+                },
+              }}
+              onClick={handleOpen}
+              image={item.link}
+              alt="GUI Image"
+            />
+            <GUIModal
+              gui={item.link}
+              open={open}
+              handleClose={handleClose}
+            ></GUIModal>
+          </div>
+        );
+      })}
     </TableCell>
   );
 }

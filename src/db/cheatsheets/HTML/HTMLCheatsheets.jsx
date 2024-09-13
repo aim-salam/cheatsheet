@@ -7,7 +7,12 @@ const Introduction = [
     table: "Introduction",
     action: "Definition",
     description: "An element with link",
-    visual: "https://images.cheatsheet.cam/images/image-1726073050194.webp",
+    visual: [
+      {
+        text: "lol",
+        link: "https://images.cheatsheet.cam/images/image-1726073050194.webp",
+      },
+    ],
     // prerequisite: [],
 
     emoji: "❄️",
@@ -22,7 +27,12 @@ const ElementBodyChildren = [
     table: "element > body childrens element",
     action: "Hyperlink",
     description: "An element with link",
-    visual: "https://images.cheatsheet.cam/images/image-1726039801639.webp",
+    visual: [
+      {
+        text: "lol",
+        link: "https://images.cheatsheet.cam/images/image-1726039801639.webp",
+      },
+    ],
     code: `<a href="./about.html">About me</a> //relative url
 <a href="https://www.ytube..l" >About me</a> //url
 <a href="https://www.ytube..l" target=”_blank”>About me</a> //url new tab
@@ -40,7 +50,12 @@ const ElementBodyChildren = [
     table: "element > body childrens element",
     action: "Title",
     description: "An element with link",
-    visual: "https://images.cheatsheet.cam/images/image-1726055416648.webp",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726055416648.webp",
+      },
+    ],
     code: `<title>Chat</title>`,
     typeCode: "html",
     emoji: "❄️",
@@ -52,7 +67,12 @@ const ElementBodyChildren = [
     table: "element > body childrens element",
     action: "Paragraph",
     description: "An element with link",
-    visual: "https://images.cheatsheet.cam/images/image-1726057764130.webp",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726057764130.webp",
+      },
+    ],
     code: `<p>This is a paragraph of text.</p>`,
     typeCode: "html",
     emoji: "❄️",
