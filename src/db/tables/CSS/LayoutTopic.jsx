@@ -5,7 +5,13 @@ export const LayoutTopic = {
   tables: [
     {
       table: "Box model",
-      columns: { action: true, description: true, visual: true, emoji: true },
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        emoji: true,
+      },
     },
     // {
     //   table: "element > body childrens element",
