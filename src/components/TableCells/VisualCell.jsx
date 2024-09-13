@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import { CardMedia, TableCell } from "@mui/material";
+import { CardMedia, TableCell, Typography } from "@mui/material";
 import VisualModal from "../Modals/VisualModal";
 
 function VisualCell({ visual, sx }) {
-  const [open, setOpen] = useState(false);
+  const [modalUrl, setModalUrl] = useState("");
 
-  const handleClose = () => setOpen(false);
-  const handleOpen = () => setOpen(true);
   return (
     <TableCell sx={sx}>
       {visual.map((item) => {
         return (
           <div key={item.link}>
+            <Typography>{item.text}</Typography>
             <CardMedia
               component="img"
               sx={{
@@ -21,15 +20,20 @@ function VisualCell({ visual, sx }) {
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
                 },
               }}
-              onClick={handleOpen}
+              onClick={() => {
+                setModalUrl(item.link);
+              }}
               image={item.link}
               alt="Visual image"
             />
             <VisualModal
-              visual={item.link}
-              open={open}
-              handleClose={handleClose}
+              visual={modalUrl}
+              open={modalUrl !== "" ? true : false}
+              handleClose={() => {
+                setModalUrl("");
+              }}
             ></VisualModal>
+            <br />
           </div>
         );
       })}
