@@ -1,3 +1,3 @@
 import { HTMLCheatsheet } from "./cheatsheets/HTML/HTMLCheatsheets";
-
-export const cheatsheets = [...HTMLCheatsheet];
+import { LayoutCheatsheets } from "./cheatsheets/CSS/LayoutCheatsheets";
+export const cheatsheets = [...HTMLCheatsheet, ...LayoutCheatsheets];
