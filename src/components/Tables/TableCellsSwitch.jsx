@@ -12,6 +12,8 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
   const customTableCellStyle = {
     borderRight: "1px solid #EDEDED",
   };
+
+  const customFont = "20px";
   return (
     <TableRow
       sx={{
@@ -23,37 +25,50 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
       {row.item.item.action ? (
         <ActionCell
           action={row.item.item.action}
-          customStyle={customTableCellStyle}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
         />
       ) : null}
       {row.item.item.description ? (
         <DescriptionCell
           action={row.item.item.description}
-          customStyle={customTableCellStyle}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
         />
       ) : null}
       {row.item.item.visual ? (
         <VisualCell
           visual={row.item.item.visual}
-          customStyle={customTableCellStyle}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
         />
       ) : null}
       {row.item.item.gui ? (
-        <GUICell gui={row.item.item.gui} customStyle={customTableCellStyle} />
+        <GUICell
+          gui={row.item.item.gui}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
+        />
       ) : null}
       {row.item.item.cli ? (
-        <CLICell cli={row.item.item.cli} customStyle={customTableCellStyle} />
+        <CLICell
+          cli={row.item.item.cli}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
+        />
       ) : null}
       {row.item.item.code ? (
         <CodeCell
           code={row.item.item.code}
-          customStyle={customTableCellStyle}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
         />
       ) : null}
       {row.item.item.emoji ? (
         <EmojiCell
           emoji={row.item.item.emoji}
-          customStyle={customTableCellStyle}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
         />
       ) : null}
       {isOptions && (
@@ -61,7 +76,8 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
           row={row}
           rows={rows}
           setRows={setRows}
-          customStyle={customTableCellStyle}
+          customTableCellStyle={customTableCellStyle}
+          customFont={customFont}
         />
       )}
     </TableRow>

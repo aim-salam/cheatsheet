@@ -1,10 +1,10 @@
 import React from "react";
 import { TableCell, Typography } from "@mui/material";
 
-function ActionCell({ action, customStyle }) {
+function ActionCell({ action, customTableCellStyle, customFont }) {
   return (
-    <TableCell sx={customStyle} component="th" scope="row">
-      <Typography> {action}</Typography>
+    <TableCell sx={customTableCellStyle} component="th" scope="row">
+      <Typography fontSize={customFont}> {action}</Typography>
     </TableCell>
   );
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import { Stack, TableCell, Typography } from "@mui/material";
 
-function CLICell({ cli, customStyle }) {
+function CLICell({ cli, customTableCellStyle, customFont }) {
   const textSx = {
+    fontSize: customFont,
     color: "white",
     backgroundColor: "black",
     padding: 1,
@@ -10,7 +11,7 @@ function CLICell({ cli, customStyle }) {
     paddingRight: 2,
   };
   return (
-    <TableCell component="th" scope="row" sx={customStyle}>
+    <TableCell component="th" scope="row" sx={customTableCellStyle}>
       <Stack
         sx={{
           position: "relative",
@@ -19,6 +20,7 @@ function CLICell({ cli, customStyle }) {
         }}
       >
         <Typography
+          fontSize={customFont}
           color="grey"
           sx={{
             backgroundColor: "#111111",

@@ -7,14 +7,15 @@ import {
   prism,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const customCodeStyle = {
-  marginTop: "0px",
-  borderRadius: "10px",
-  fontFamily:
-    'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
-};
+function CodeCell({ mode, code, customTableCellStyle, customFont }) {
+  const customCodeStyle = {
+    // fontSize: customFont,
+    marginTop: "0px",
+    borderRadius: "10px",
+    fontFamily:
+      'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
+  };
 
-function CodeCell({ mode, code, customStyle }) {
   const copyToClipboard = () => {
     navigator.clipboard
       .writeText(code)
@@ -26,7 +27,7 @@ function CodeCell({ mode, code, customStyle }) {
       });
   };
   return (
-    <TableCell sx={customStyle}>
+    <TableCell sx={customTableCellStyle}>
       <Stack
         sx={{
           width: "300px",
