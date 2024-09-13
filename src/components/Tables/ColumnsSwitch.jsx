@@ -4,6 +4,7 @@ function ColumnsSwitch({ columns, isOptions }) {
   const customTableStyle = {
     fontSize: "18px",
     fontWeight: "bold",
+    borderRight: "1px solid #EDEDED",
   };
   return (
     <TableHead>
