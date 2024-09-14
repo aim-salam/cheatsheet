@@ -4,7 +4,10 @@ import { TableCell, Typography } from "@mui/material";
 function ActionCell({ action, customTableCellStyle, customFont }) {
   return (
     <TableCell sx={customTableCellStyle} component="th" scope="row">
-      <Typography fontSize={customFont}> {action}</Typography>
+      <Typography fontSize={customFont} fontWeight={"bold"}>
+        {" "}
+        {action}
+      </Typography>
     </TableCell>
   );
 }
