@@ -80,7 +80,7 @@ function App() {
             md={10}
             sx={{ paddingRight: "40px", flex: "1 1 auto" }}
           >
-            <Typography fontSize={55} fontWeight={"bold"}>
+            <Typography fontSize={40} fontWeight={"bold"}>
               {topic.topic}
             </Typography>
             {/* Add main content here */}

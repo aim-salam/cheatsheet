@@ -47,7 +47,7 @@ function TopicTable({ table, cheatsheets }) {
   return (
     <Stack>
       <Stack flexDirection={"row"}>
-        <h1>{table.table}</h1>
+        <h2>{table.table}</h2>
         {/* if admin */}
         <IconButton color="primary" onClick={() => setIsOptions(!isOptions)}>
           <EditIcon />
