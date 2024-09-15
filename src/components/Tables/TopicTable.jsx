@@ -28,6 +28,7 @@ function TopicTable({ table, cheatsheets }) {
   }, [cheatsheets]);
 
   function Row({ row }) {
+    console.log(row.item.item);
     return (
       <TableCellsSwitch
         row={row}
