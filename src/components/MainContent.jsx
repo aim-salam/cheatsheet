@@ -23,7 +23,11 @@ function MainContent({ topic }) {
     <Stack>
       {topic.tables.map((table, index) => {
         return (
-          <TopicTable key={table} table={table} cheatsheets={rows}></TopicTable>
+          <TopicTable
+            key={table.table}
+            table={table}
+            cheatsheets={rows}
+          ></TopicTable>
         );
       })}
     </Stack>

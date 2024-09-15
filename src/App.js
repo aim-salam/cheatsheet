@@ -85,15 +85,6 @@ function App() {
             md={2}
             sx={{ display: { xs: "none", sm: "block" }, width: "200px" }}
           >
-            {/* <Typography
-              variant="h1"
-              fontWeight={"bold"}
-              fontSize={18}
-              paddingLeft={"40px"}
-              paddingTop={"20px"}
-            >
-              Topics
-            </Typography> */}
             {/* Add aside content here */}
             <Aside setTopic={setTopic}></Aside>
           </Grid2>

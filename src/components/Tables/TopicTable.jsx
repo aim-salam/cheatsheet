@@ -40,7 +40,12 @@ function TopicTable({ table, cheatsheets }) {
 
   function RowList({ rows, provided, index }) {
     return rows.map((row, index) => (
-      <Row row={row} provided={provided} index={index}></Row>
+      <Row
+        key={row.item.item.action}
+        row={row}
+        provided={provided}
+        index={index}
+      ></Row>
     ));
   }
 
