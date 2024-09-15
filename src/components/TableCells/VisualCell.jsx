@@ -15,7 +15,7 @@ function VisualCell({ visual, customTableCellStyle, customFont }) {
               <CardMedia
                 component="img"
                 sx={{
-                  width: "200px",
+                  width: "250px",
                   objectFit: "cover",
                   "&:hover": {
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
