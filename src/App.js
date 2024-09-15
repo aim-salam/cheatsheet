@@ -11,7 +11,7 @@ import {
 import NavBar from "./components/NavBar";
 import Aside from "./components/Aside";
 import MainContent from "./components/MainContent";
-import TopicContext from "./Contexts/TopicContext";
+import TopicContext from "./contexts/TopicContext";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
