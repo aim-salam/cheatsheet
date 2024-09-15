@@ -6,6 +6,7 @@ import {
   AppBar,
   CssBaseline,
   useColorScheme,
+  Paper,
 } from "@mui/material";
 import NavBar from "./components/NavBar";
 import Aside from "./components/Aside";
@@ -127,7 +128,13 @@ function App() {
             md={10}
             sx={{ paddingRight: "40px", flex: "1 1 auto" }}
           >
-            <Typography fontSize={40} fontWeight={"bold"}>
+            <Typography
+              fontSize={40}
+              fontWeight={"bold"}
+              align="center"
+              marginBottom={"60px"}
+              marginTop={"20px"}
+            >
               {topic.topic}
             </Typography>
             {/* Add main content here */}

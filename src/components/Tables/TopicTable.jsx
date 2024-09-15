@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { Stack, useColorScheme, IconButton } from "@mui/material";
+import { Stack, useColorScheme, IconButton, Typography } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
@@ -52,16 +52,27 @@ function TopicTable({ table, cheatsheets }) {
 
   return (
     <Stack>
-      <Stack flexDirection={"row"}>
-        <h2>{table.table}</h2>
+      <Stack flexDirection={"row"} justifyContent={"center"}>
+        <Typography
+          fontSize={"30px"}
+          // component={Paper}
+          fontWeight={"bold"}
+          sx={{
+            paddingRight: "20px",
+            paddingLeft: "20px",
+            marginBottom: "5px",
+          }}
+        >
+          {table.table}
+        </Typography>
         {/* if admin */}
-        <IconButton color="primary" onClick={() => setIsOptions(!isOptions)}>
+        {/* <IconButton color="primary" onClick={() => setIsOptions(!isOptions)}>
           <EditIcon />
-        </IconButton>
+        </IconButton> */}
       </Stack>
       <TableContainer
         component={Paper}
-        sx={{ width: "100%", marginBottom: "100px" }}
+        sx={{ width: "100%", marginBottom: "150px" }}
       >
         <Table
           sx={{
