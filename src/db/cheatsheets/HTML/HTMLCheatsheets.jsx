@@ -2,11 +2,30 @@ import Cheatsheet from "../CheatsheetClass";
 
 const INTRODUCTION = [
   new Cheatsheet({
+    id: "html-prerequisite",
+    topic: "HTML",
+    table: "Introduction",
+    action: "Prerequisite",
+    description: `What are the building blocks of a webpage? 
+Structure, styling, and logic`,
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726415526322.webp",
+      },
+    ],
+    // prerequisite: [],
+
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
     id: "html-definition",
     topic: "HTML",
     table: "Introduction",
     action: "Definition",
-    description: "A language to create structure/markup of a webpage.",
+    description: `What language is used to write webpage structure/markup?
+HTML`,
     visual: [
       {
         text: "",
