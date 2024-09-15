@@ -28,7 +28,10 @@ function AttentionCell({ attention, customTableCellStyle, customFont }) {
         })}
 
         {attention.length > 0 ? (
-          <Button onClick={() => setShowMore(!showMore)} sx={{ color: "grey" }}>
+          <Button
+            onClick={() => setShowMore(!showMore)}
+            sx={{ color: "grey", textTransform: "none" }}
+          >
             {showMore ? "See less" : "See more"}
           </Button>
         ) : null}

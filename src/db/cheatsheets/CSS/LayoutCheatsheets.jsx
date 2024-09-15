@@ -42,7 +42,8 @@ const BOX_MODEL = [
         link: "https://images.cheatsheet.cam/images/image-1726359876376.webp",
       },
     ],
-    code: `border: 5px solid #3435ff; /* width style color */
+    code: `/* current element CSS */
+border: 5px solid #3435ff; /* width style color */
 border-color:  #3435ff;`,
     attention: [],
     emoji: "❄️",
@@ -60,7 +61,8 @@ border-color:  #3435ff;`,
         link: "https://images.cheatsheet.cam/images/image-1726359955413.webp",
       },
     ],
-    code: `padding :10px; /* all side */
+    code: `/* current element CSS */
+padding :10px; /* all side */
 padding: 10px 20px;  /* vertical horizontal */
 padding: 10px 20px 30px 40px; /* top right bottom left */
 
@@ -250,7 +252,8 @@ const MEASUREMENT_UNIT = [
         link: "https://images.cheatsheet.cam/images/image-1726361377347.webp",
       },
     ],
-    code: `px`,
+    code: `/* current element CSS */
+px`,
     attention: ` `,
     emoji: "❄️",
     priority: 1,
@@ -312,7 +315,8 @@ const MEASUREMENT_UNIT = [
         link: "https://images.cheatsheet.cam/images/image-1726361619818.webp",
       },
     ],
-    code: `/* 1-100*/
+    code: `/* current element CSS */
+/* 1-100*/
 50vw
 50vh
 `,
@@ -383,7 +387,8 @@ const POSITIONING = [
         link: "https://images.cheatsheet.cam/images/image-1726370088051.webp",
       },
     ],
-    code: `position: relative;
+    code: `/* current element CSS */
+position: relative;
 left: 30px;`,
     attention: [],
     emoji: "❄️❄️",
@@ -424,7 +429,8 @@ left: 30px;`,
         link: "https://images.cheatsheet.cam/images/image-1726370454417.webp",
       },
     ],
-    code: `position: fixed;
+    code: `/* current element CSS */
+position: fixed;
 top: 0px;`,
     attention: [],
     emoji: "❄️❄️",
@@ -446,7 +452,8 @@ top: 0px;`,
         link: "https://images.cheatsheet.cam/images/image-1726370617670.webp",
       },
     ],
-    code: `z-index: -1`,
+    code: `/* current element CSS */
+z-index: -1`,
     attention: [],
     emoji: "❄️❄️",
     priority: 1,
@@ -473,7 +480,8 @@ const FLEXBOX = [
     action: "Flexbox",
     description: "Laying out children elements in one direction.",
     visual: [],
-    code: `display: flex;`,
+    code: `/* current element CSS */
+display: flex;`,
     attention: [],
     emoji: "❄️❄️",
     priority: 1,
@@ -490,7 +498,8 @@ const FLEXBOX = [
         link: "https://images.cheatsheet.cam/images/image-1726370953322.webp",
       },
     ],
-    code: `display: flex;
+    code: `/* current element CSS */
+display: flex;
 flex-direction: row;`,
     attention: [],
     emoji: "❄️❄️",
@@ -508,7 +517,8 @@ flex-direction: row;`,
         link: "https://images.cheatsheet.cam/images/image-1726371076921.webp",
       },
     ],
-    code: `display: flex;
+    code: `/* current element CSS */
+display: flex;
 flex-direction: column;`,
     attention: [],
     emoji: "❄️❄️",
@@ -531,7 +541,7 @@ flex-direction: column;`,
         link: "https://images.cheatsheet.cam/images/image-1726371408729.webp",
       },
     ],
-    code: ``,
+    code: ` `,
     attention: [],
     emoji: "❄️❄️",
     priority: 1,
@@ -564,7 +574,8 @@ flex-direction: column;`,
         link: "https://images.cheatsheet.cam/images/image-1726371836302.webp",
       },
     ],
-    code: `display: flex;
+    code: `/* current element CSS */
+display: flex;
 flex-direction: row;
 
 ..
@@ -609,7 +620,8 @@ justify-content: space-between`,
         link: "https://images.cheatsheet.cam/images/image-1726371991977.webp",
       },
     ],
-    code: `display: flex;
+    code: `/* current element CSS */
+display: flex;
 flex-direction: row;
 
 ..

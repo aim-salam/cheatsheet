@@ -28,35 +28,37 @@ function CodeCell({ mode, code, customTableCellStyle, customFont }) {
   };
   return (
     <TableCell sx={customTableCellStyle}>
-      <Stack
-        sx={{
-          width: "300px",
-          position: "relative",
-          overflow: "hidden",
-          borderRadius: "10px",
-        }}
-      >
-        <Typography
-          color="grey"
+      {code !== " " ? (
+        <Stack
           sx={{
-            backgroundColor: "#111111",
-            width: "100%",
-            textAlign: "right",
-            cursor: "pointer",
-            paddingRight: "10px",
+            width: "300px",
+            position: "relative",
+            overflow: "hidden",
+            borderRadius: "10px",
           }}
-          onClick={copyToClipboard}
         >
-          Copy
-        </Typography>
-        <SyntaxHighlighter
-          language="css"
-          style={mode === "dark" ? vscDarkPlus : prism}
-          customStyle={customCodeStyle}
-        >
-          {code}
-        </SyntaxHighlighter>
-      </Stack>
+          <Typography
+            color="grey"
+            sx={{
+              backgroundColor: "#111111",
+              width: "100%",
+              textAlign: "right",
+              cursor: "pointer",
+              paddingRight: "10px",
+            }}
+            onClick={copyToClipboard}
+          >
+            Copy
+          </Typography>
+          <SyntaxHighlighter
+            language="css"
+            style={mode === "dark" ? vscDarkPlus : prism}
+            customStyle={customCodeStyle}
+          >
+            {code}
+          </SyntaxHighlighter>
+        </Stack>
+      ) : null}
     </TableCell>
   );
 }
