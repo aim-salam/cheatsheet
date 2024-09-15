@@ -23,6 +23,9 @@ function ColumnsSwitch({ columns, isOptions }) {
         {columns.code ? (
           <TableCell sx={customTableStyle}>Code</TableCell>
         ) : null}
+        {columns.attention ? (
+          <TableCell sx={customTableStyle}>Attention</TableCell>
+        ) : null}
         {columns.emoji ? (
           <TableCell sx={customTableStyle}>Emoji</TableCell>
         ) : null}

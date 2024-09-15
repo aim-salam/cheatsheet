@@ -22,6 +22,7 @@ const BOX_MODEL = [
       },
     ],
     code: " ",
+    attention: `1. Padding, border, margin will never affect element/content size`,
     emoji: "❄️",
     priority: 1,
   }),
@@ -40,6 +41,7 @@ const BOX_MODEL = [
     code: `border: 5px solid #3435ff; /* width style color */
 border-color:  #3435ff;`,
     emoji: "❄️",
+    attention: `1. Padding, border, margin will never affect element/content size`,
     priority: 1,
   }),
   new Cheatsheet({
