@@ -6,10 +6,10 @@ const INTRODUCTION = [
     topic: "React",
     table: "Introduction",
     action: "Prerequisite",
-    description: `How do you edit videos? By using video editors like CapCut.`,
+    description: `A video editor is a framework used to create videos.`,
     visual: [
       {
-        text: "",
+        text: "Video editor :",
         link: "https://images.cheatsheet.cam/images/image-1726417562619.webp",
       },
     ],
@@ -22,13 +22,10 @@ const INTRODUCTION = [
     topic: "React",
     table: "Introduction",
     action: "Definition",
-    description: `
-React is like a video editor, but for websites.
-
-A framework is a platform that provides an environment, tools, features, templates, etc.`,
+    description: `React is a library/framework used to build user interfaces for webpages.`,
     visual: [
       {
-        text: "",
+        text: "React: ",
         link: "https://images.cheatsheet.cam/images/image-1726417831933.webp",
       },
     ],

@@ -6,8 +6,7 @@ const INTRODUCTION = [
     topic: "HTML",
     table: "Introduction",
     action: "Prerequisite",
-    description: `What are the building blocks of a webpage? 
-Structure, styling, and logic`,
+    description: `The building blocks of a website are structure, style, and logic.`,
     visual: [
       {
         text: "",
@@ -24,8 +23,7 @@ Structure, styling, and logic`,
     topic: "HTML",
     table: "Introduction",
     action: "Definition",
-    description: `What language is used to write webpage structure/markup?
-HTML`,
+    description: `HTML is a language used to write the markup/structure of a webpage.`,
     visual: [
       {
         text: "",
