@@ -23,7 +23,7 @@ const BOX_MODEL = [
     ],
     code: " ",
     attention: `1. Padding, border, margin will never affect element/content size`,
-    emoji: "❄️",
+    emoji: "❄️❄️",
     priority: 1,
   }),
   new Cheatsheet({
@@ -40,8 +40,8 @@ const BOX_MODEL = [
     ],
     code: `border: 5px solid #3435ff; /* width style color */
 border-color:  #3435ff;`,
+    attention: ` `,
     emoji: "❄️",
-    attention: `1. Padding, border, margin will never affect element/content size`,
     priority: 1,
   }),
   new Cheatsheet({
@@ -64,6 +64,7 @@ padding: 10px 20px 30px 40px; /* top right bottom left */
 padding-left: 10px;/* only left */
 padding-right: 10px;/* only right */
 padding-top: 10px;/* only top */`,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -81,6 +82,18 @@ padding-top: 10px;/* only top */`,
     ],
     code: `/* same like padding */`,
     emoji: "❄️",
+    attention: `1. Default vertical margin.
+Vertical margin will be default at 16px
+
+
+2. Margin collapsing.
+If two elements have margins that meet each other, the margin will collapse.
+Element A : 20px margin
+Element B : 20px margin
+Equal : The space between should be 40px right? Nope, it will collapse into 20px
+
+3. Margin not increase box model size. It is just to get away.
+ `,
     priority: 1,
   }),
 ];
@@ -100,6 +113,7 @@ const OVERFLOW = [
       },
     ],
     code: " ",
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -117,6 +131,7 @@ const OVERFLOW = [
     ],
     code: `/* parent element CSS */
 overflow: hidden;`,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -134,6 +149,7 @@ overflow: hidden;`,
     ],
     code: `/* parent element CSS */
 overflow: scroll;`,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -151,6 +167,7 @@ overflow: scroll;`,
     ],
     code: `/* parent element CSS */
 overflow: auto;`,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -164,6 +181,7 @@ overflow: auto;`,
     code: `/* parent element CSS */
 /* vertical horizontal */
 overflow: auto hidden;`,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -186,6 +204,7 @@ const MEASUREMENT_UNIT = [
       // },
     ],
     code: ` `,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -202,6 +221,7 @@ const MEASUREMENT_UNIT = [
       // },
     ],
     code: ` `,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -222,6 +242,7 @@ const MEASUREMENT_UNIT = [
       },
     ],
     code: `px`,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -238,6 +259,7 @@ const MEASUREMENT_UNIT = [
       // },
     ],
     code: ` `,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -261,6 +283,7 @@ const MEASUREMENT_UNIT = [
 /* 1-100*/
 50%
 `,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -284,6 +307,7 @@ const MEASUREMENT_UNIT = [
 50vw
 50vh
 `,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),
@@ -306,6 +330,7 @@ const MEASUREMENT_UNIT = [
     description: ` `,
     visual: [],
     code: ` `,
+    attention: ` `,
     emoji: "❄️",
     priority: 1,
   }),

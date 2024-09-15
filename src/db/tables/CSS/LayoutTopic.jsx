@@ -11,7 +11,7 @@ export const LayoutTopic = {
         visual: true,
         code: true,
         attention: true,
-        emoji: true,
+        // emoji: true,
       },
     },
     {
@@ -22,7 +22,7 @@ export const LayoutTopic = {
         visual: true,
         code: true,
         attention: true,
-        emoji: true,
+        // emoji: true,
       },
     },
     {
@@ -33,7 +33,7 @@ export const LayoutTopic = {
         visual: true,
         code: true,
         attention: true,
-        emoji: true,
+        // emoji: true,
       },
     },
   ],

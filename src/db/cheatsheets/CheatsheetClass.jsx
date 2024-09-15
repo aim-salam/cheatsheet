@@ -20,7 +20,9 @@ class Cheatsheet {
     typeCode,
     exampleCode,
     //
-    emoji,
+    attention,
+    //
+    // emoji,
     priority,
     //
     contentContributor,
@@ -44,7 +46,9 @@ class Cheatsheet {
     this.typeCode = typeCode;
     this.exampleCode = exampleCode;
     //
-    this.emoji = emoji;
+    this.attention = attention;
+    //
+    // this.emoji = emoji;
     this.priority = priority;
     //
     this.contentContributor = Array.isArray(contentContributor)
