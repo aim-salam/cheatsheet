@@ -46,7 +46,7 @@ class Cheatsheet {
     this.typeCode = typeCode;
     this.exampleCode = exampleCode;
     //
-    this.attention = attention;
+    this.attention = Array.isArray(attention) ? attention : null;
     //
     // this.emoji = emoji;
     this.priority = priority;

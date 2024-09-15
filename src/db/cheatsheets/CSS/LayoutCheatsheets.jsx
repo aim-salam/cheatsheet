@@ -22,7 +22,11 @@ const BOX_MODEL = [
       },
     ],
     code: " ",
-    attention: `1. Padding, border, margin will never affect element/content size`,
+    attention: [
+      {
+        text: `1. Padding, border, margin will never affect element/content size`,
+      },
+    ],
     emoji: "❄️❄️",
     priority: 1,
   }),
@@ -40,7 +44,7 @@ const BOX_MODEL = [
     ],
     code: `border: 5px solid #3435ff; /* width style color */
 border-color:  #3435ff;`,
-    attention: ` `,
+    attention: [],
     emoji: "❄️",
     priority: 1,
   }),
@@ -64,7 +68,7 @@ padding: 10px 20px 30px 40px; /* top right bottom left */
 padding-left: 10px;/* only left */
 padding-right: 10px;/* only right */
 padding-top: 10px;/* only top */`,
-    attention: ` `,
+    attention: [],
     emoji: "❄️",
     priority: 1,
   }),
@@ -82,18 +86,23 @@ padding-top: 10px;/* only top */`,
     ],
     code: `/* same like padding */`,
     emoji: "❄️",
-    attention: `1. Default vertical margin.
-Vertical margin will be default at 16px
-
-
-2. Margin collapsing.
+    attention: [
+      {
+        text: "1. Vertical margin will be default at 16px.",
+      },
+      {
+        text: `2. Margin collapsing.
 If two elements have margins that meet each other, the margin will collapse.
-Element A : 20px margin
-Element B : 20px margin
-Equal : The space between should be 40px right? Nope, it will collapse into 20px
+Example:
+Element A: 20px margin.
+Element B: 20px margin.
+Equal: The space between should be 40px right? Nope, it will collapse into 20px.`,
+      },
+      {
+        text: `3. Margin not increase box model size. It is just to get away.`,
+      },
+    ],
 
-3. Margin not increase box model size. It is just to get away.
- `,
     priority: 1,
   }),
 ];
@@ -307,7 +316,11 @@ const MEASUREMENT_UNIT = [
 50vw
 50vh
 `,
-    attention: ` `,
+    attention: [
+      {
+        text: `1. Default. Viewport height default is 0. So, ...`,
+      },
+    ],
     emoji: "❄️",
     priority: 1,
   }),
