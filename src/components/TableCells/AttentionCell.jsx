@@ -7,10 +7,9 @@ function AttentionCell({ attention, customTableCellStyle, customFont }) {
     <TableCell sx={customTableCellStyle} component="th" scope="row">
       <Typography
         fontSize={customFont}
-        fontWeight={"bold"}
-        sx={{ width: "80px" }}
+        sx={{ width: "100px", color: "#821131" }}
       >
-        sjskj
+        {attention}
       </Typography>
     </TableCell>
   );
