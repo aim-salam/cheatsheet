@@ -38,36 +38,62 @@ const analytics = getAnalytics(app);
 function App() {
   const { mode } = useColorScheme();
   const [topic, setTopic] = useState({
-    topic: "HTML",
-    type: "parent",
-    imageLink: "https://images.cheatsheet.cam/images/html.webp",
+    topic: "Layout",
+    type: "children",
+    imageLink: "https://images.cheatsheet.cam/images/image-1726097807593.webp",
     tables: [
       {
-        table: "Introduction",
-        columns: {
-          action: true,
-          description: true,
-          visual: true,
-          // emoji: true
-        },
-      },
-      {
-        table: "Head",
+        table: "Box model",
         columns: {
           action: true,
           description: true,
           visual: true,
           code: true,
+          attention: true,
           // emoji: true,
         },
       },
       {
-        table: "Text",
+        table: "Overflow",
         columns: {
           action: true,
           description: true,
           visual: true,
           code: true,
+          attention: true,
+          // emoji: true,
+        },
+      },
+      {
+        table: "Measurement Unit",
+        columns: {
+          action: true,
+          description: true,
+          visual: true,
+          code: true,
+          attention: true,
+          // emoji: true,
+        },
+      },
+      {
+        table: "Positioning",
+        columns: {
+          action: true,
+          description: true,
+          visual: true,
+          code: true,
+          attention: true,
+          // emoji: true,
+        },
+      },
+      {
+        table: "Flexbox",
+        columns: {
+          action: true,
+          description: true,
+          visual: true,
+          code: true,
+          attention: true,
           // emoji: true,
         },
       },

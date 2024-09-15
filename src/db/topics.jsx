@@ -20,4 +20,8 @@
 import { HTMLTopic } from "./tables/HTML/HTMLTopic";
 import { CSSTopic } from "./tables/CSS/CSSTopic";
 import { LayoutTopic } from "./tables/CSS/LayoutTopic";
-export const topics = [HTMLTopic, CSSTopic, LayoutTopic];
+export const topics = [
+  // HTMLTopic,
+  CSSTopic,
+  LayoutTopic,
+];
