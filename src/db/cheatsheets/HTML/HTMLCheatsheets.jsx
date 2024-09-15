@@ -1,16 +1,33 @@
 import Cheatsheet from "../CheatsheetClass";
 
-const Introduction = [
+const INTRODUCTION = [
   new Cheatsheet({
     id: "html-definition",
     topic: "HTML",
     table: "Introduction",
     action: "Definition",
-    description: "An element with link",
+    description: "A language to create structure/markup of a webpage.",
     visual: [
       {
-        text: "lol",
+        text: "",
         link: "https://images.cheatsheet.cam/images/image-1726073050194.webp",
+      },
+    ],
+    // prerequisite: [],
+
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "html-bb",
+    topic: "HTML",
+    table: "Introduction",
+    action: "Building-block",
+    description: "Element, Attribute, Tag",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726375367455.webp",
       },
     ],
     // prerequisite: [],
@@ -20,64 +37,162 @@ const Introduction = [
   }),
 ];
 
-const ElementBodyChildren = [
+const HEAD = [
   new Cheatsheet({
-    id: "html-hyperlink",
+    id: "html-head",
     topic: "HTML",
-    table: "Basic HTML",
-    action: "Hyperlink",
-    description: "An element with link",
-    visual: [
-      {
-        text: "lol",
-        link: "https://images.cheatsheet.cam/images/image-1726039801639.webp",
-      },
-    ],
-    code: `<a href="./about.html">About me</a> //relative url
-<a href="https://www.ytube..l" >About me</a> //url
-<a href="https://www.ytube..l" target=”_blank”>About me</a> //url new tab
-<a href="./lol.jpg">About me</a> //image new tab
-<a href="./lol.jpg" download>About me</a> //image aut-download
-<a href="#id">About me</a> //jump
-<a href="mailto:xxxxx@gmail.com">About me</a> //email`,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 1,
-  }),
-  new Cheatsheet({
-    id: "html-title",
-    topic: "HTML",
-    table: "Basic HTML",
-    action: "Title",
-    description: "An element with link",
-    visual: [
-      {
-        text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726055416648.webp",
-      },
-    ],
-    code: `<title>Chat</title>`,
+    table: "Head",
+    action: "head",
+    description: "Tell Browser and Search Engine about this page",
+    visual: [],
+    code: `<head>
+
+</head>  `,
     typeCode: "html",
     emoji: "❄️",
     priority: 2,
   }),
   new Cheatsheet({
-    id: "html-p",
+    id: "html-meta",
     topic: "HTML",
-    table: "Basic HTML",
-    action: "Paragraph",
-    description: "An element with link",
+    table: "Head",
+    action: "meta",
+    description: "Information about this page.",
+    visual: [],
+    code: `<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="keyword" content="HTML, CSS, cheatsheet" />
+<meta name="description" content="A website with full of cheatsheets" />
+</head>`,
+    typeCode: "html",
+    emoji: "❄️",
+    priority: 2,
+  }),
+  new Cheatsheet({
+    id: "html-title",
+    topic: "HTML",
+    table: "Head",
+    action: "title",
+    description: "Name on browser tab",
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726057764130.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726376355741.webp",
       },
     ],
-    code: `<p>This is a paragraph of text.</p>`,
+    code: `<head>
+<title>Title</title>
+</head>`,
     typeCode: "html",
     emoji: "❄️",
-    priority: 3,
+    priority: 2,
   }),
 ];
 
-export const HTMLCheatsheet = [...ElementBodyChildren, ...Introduction];
+const TEXT = [
+  new Cheatsheet({
+    id: "html-text",
+    topic: "HTML",
+    table: "Text",
+    action: "text",
+    description: " ",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726377955757.webp",
+      },
+    ],
+    code: ` `,
+    typeCode: "html",
+    emoji: "❄️",
+    priority: 2,
+  }),
+  new Cheatsheet({
+    id: "html-header",
+    topic: "HTML",
+    table: "Text",
+    action: "header: h1, h2, h3",
+    description:
+      "The header is used to create hierarchy. Avoid applying styling to it.",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726377755954.webp",
+      },
+    ],
+    code: `<body>
+<h1>Example of HTML Header 1</h1>
+<h2>Example of HTML Header 2</h2>
+<h3>Example of HTML Header 3</h3>
+</body>`,
+    typeCode: "html",
+    emoji: "❄️",
+    priority: 2,
+  }),
+  new Cheatsheet({
+    id: "html-paragraph",
+    topic: "HTML",
+    table: "Text",
+    action: "paragrahph",
+    description: " ",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726377508775.webp",
+      },
+    ],
+    code: `<body>
+<p>This is the paragraph</p>
+</body>`,
+    typeCode: "html",
+    emoji: "❄️",
+    priority: 2,
+  }),
+  new Cheatsheet({
+    id: "html-deprecated",
+    topic: "HTML",
+    table: "Text",
+    action: "emphasize, italic, strong, bold",
+    description: "Deprecated, HTML is not meant for styling",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726377389128.webp",
+      },
+    ],
+    code: `<!-- deprecated -->`,
+    typeCode: "html",
+    emoji: "❄️",
+    priority: 2,
+  }),
+];
+
+const ENTITIES = [
+  new Cheatsheet({
+    id: "html-entities",
+    topic: "HTML",
+    table: "Entities",
+    action: "entities",
+    description:
+      "Some characters are reserved by HTML. To display them, we need to use special notation",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726379077381.webp",
+      },
+    ],
+    code: `<body>
+<!-- Not working -->
+<p>This is the entities. <HTML></p> 
+
+<!-- Working -->
+<p>This is the entities. &lt;HTML&gt;</p>
+</body>`,
+    typeCode: "html",
+    emoji: "❄️",
+    priority: 2,
+  }),
+];
+
+export const HTMLCheatsheet = [...INTRODUCTION, ...HEAD, ...TEXT, ...ENTITIES];

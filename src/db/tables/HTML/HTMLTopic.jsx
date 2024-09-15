@@ -5,16 +5,41 @@ export const HTMLTopic = {
   tables: [
     {
       table: "Introduction",
-      columns: { action: true, description: true, visual: true, emoji: true },
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        // emoji: true
+      },
     },
     {
-      table: "Basic HTML",
+      table: "Head",
       columns: {
         action: true,
         description: true,
         visual: true,
         code: true,
-        emoji: true,
+        // emoji: true,
+      },
+    },
+    {
+      table: "Text",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        // emoji: true,
+      },
+    },
+    {
+      table: "Entities",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        // emoji: true,
       },
     },
   ],
