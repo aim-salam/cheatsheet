@@ -19,6 +19,7 @@ function TopicList({ setTopic }) {
           paddingLeft={"40px"}
           paddingRight={"20px"}
           fontSize={"18px"}
+          fontWeight={"bold"}
         >
           {topic.type === "parent" ? `${topic.topic}` : null}
         </Typography>
@@ -32,7 +33,12 @@ function TopicList({ setTopic }) {
         <Stack key={topic.topic}>
           <Header topic={topic}></Header>
           <ListItemButton
-            sx={{ paddingLeft: "40px", paddingRight: "30px" }}
+            sx={{
+              paddingLeft: "40px",
+              paddingRight: "30px",
+              paddingTop: "1px",
+              paddingBottom: "1px",
+            }}
             onClick={() => {
               setTopic(topic);
             }}

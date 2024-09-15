@@ -83,7 +83,7 @@ function App() {
             xs={12}
             sm={3}
             md={2}
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{ display: { xs: "none", sm: "block" }, width: "200px" }}
           >
             {/* <Typography
               variant="h1"
