@@ -1,3 +1,8 @@
 import { HTMLCheatsheet } from "./cheatsheets/HTML/HTMLCheatsheets";
 import { LayoutCheatsheets } from "./cheatsheets/CSS/LayoutCheatsheets";
-export const cheatsheets = [...HTMLCheatsheet, ...LayoutCheatsheets];
+import { ReactCheatsheet } from "./cheatsheets/React/ReactCheatsheet";
+export const cheatsheets = [
+  ...HTMLCheatsheet,
+  ...LayoutCheatsheets,
+  ...ReactCheatsheet,
+];
