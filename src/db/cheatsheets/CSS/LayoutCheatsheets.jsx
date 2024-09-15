@@ -349,8 +349,313 @@ const MEASUREMENT_UNIT = [
   }),
 ];
 
+const POSITIONING = [
+  new Cheatsheet({
+    id: "positioning-positioning",
+    topic: "Layout",
+    table: "Positioning",
+    action: "1. Positioning",
+    description: " ",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726369974022.webp",
+      },
+    ],
+    code: " ",
+    attention: [
+      {
+        text: `1. Default. All element position default is static`,
+      },
+    ],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-relative",
+    topic: "Layout",
+    table: "Positioning",
+    action: "relative",
+    description: "Relate to current position.",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726370088051.webp",
+      },
+    ],
+    code: `position: relative;
+left: 30px;`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-absolute",
+    topic: "Layout",
+    table: "Positioning",
+    action: "absolute",
+    description:
+      "Out of current flow,a nd relate to container/ parent element.",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726370435020.webp",
+      },
+    ],
+    code: `/* parent element */
+position:relative
+
+/* current element */
+position: absolute;
+left: 30px;`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-fixed",
+    topic: "Layout",
+    table: "Positioning",
+    action: "fixed",
+    description: "Out of current flow,and relate to viewport.",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726370454417.webp",
+      },
+    ],
+    code: `position: fixed;
+top: 0px;`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-zindex",
+    topic: "Layout",
+    table: "Positioning",
+    action: "2. z-index",
+    description: "If an element overlap the element, change the z-axis",
+    visual: [
+      {
+        text: "Overlap:",
+        link: "https://images.cheatsheet.cam/images/image-1726370568911.webp",
+      },
+      {
+        text: "z-index:",
+        link: "https://images.cheatsheet.cam/images/image-1726370617670.webp",
+      },
+    ],
+    code: `z-index: -1`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-widthAuto",
+    topic: "Layout",
+    table: "Positioning",
+    action: "3. Width auto",
+    description: " ",
+    visual: [],
+    code: ` `,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+];
+
+const FLEXBOX = [
+  new Cheatsheet({
+    id: "positioning-flexbox",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "Flexbox",
+    description: "Laying out children elements in one direction.",
+    visual: [],
+    code: `display: flex;`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-row",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "row",
+    description: " ",
+    visual: [
+      {
+        text: " ",
+        link: "https://images.cheatsheet.cam/images/image-1726370953322.webp",
+      },
+    ],
+    code: `display: flex;
+flex-direction: row;`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-column",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "column",
+    description: " ",
+    visual: [
+      {
+        text: " ",
+        link: "https://images.cheatsheet.cam/images/image-1726371076921.webp",
+      },
+    ],
+    code: `display: flex;
+flex-direction: column;`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-alignment",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "Alignment",
+    description:
+      "Two axes:\n 1.Main ( justify-content )\n2.Cross( align-items)",
+    visual: [
+      {
+        text: " ",
+        link: "https://images.cheatsheet.cam/images/image-1726371372535.webp",
+      },
+      {
+        text: " ",
+        link: "https://images.cheatsheet.cam/images/image-1726371408729.webp",
+      },
+    ],
+    code: ``,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-justifycontent",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "justify-content",
+    description: " ",
+    visual: [
+      {
+        text: "flex-start:",
+        link: "https://images.cheatsheet.cam/images/image-1726371722853.webp",
+      },
+      {
+        text: "center:",
+        link: "https://images.cheatsheet.cam/images/image-1726371750432.webp",
+      },
+      {
+        text: "flex-end:",
+        link: "https://images.cheatsheet.cam/images/image-1726371772530.webp",
+      },
+      {
+        text: "space-evenly:",
+        link: "https://images.cheatsheet.cam/images/image-1726371800959.webp",
+      },
+      {
+        text: "space-between:",
+        link: "https://images.cheatsheet.cam/images/image-1726371836302.webp",
+      },
+    ],
+    code: `display: flex;
+flex-direction: row;
+
+..
+justify-content: flex-start
+
+
+..
+justify-content: center
+
+
+..
+justify-content: flex-end
+
+
+..
+justify-content: space-evenly
+
+
+..
+justify-content: space-between`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-alignitems",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "align-items",
+    description: " ",
+    visual: [
+      {
+        text: "flex-start:",
+        link: "https://images.cheatsheet.cam/images/image-1726371722853.webp",
+      },
+      {
+        text: "center:",
+        link: "https://images.cheatsheet.cam/images/image-1726371981653.webp",
+      },
+      {
+        text: "flex-end:",
+        link: "https://images.cheatsheet.cam/images/image-1726371991977.webp",
+      },
+    ],
+    code: `display: flex;
+flex-direction: row;
+
+..
+align-items: flex-start
+
+
+..
+align-items: center
+
+
+..
+align-items: flex-end`,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-aligncontent",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "align-content",
+    description: " ",
+    visual: [],
+    code: ``,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "positioning-flexwrap",
+    topic: "Layout",
+    table: "Flexbox",
+    action: "flex-wrap",
+    description: " ",
+    visual: [],
+    code: ``,
+    attention: [],
+    emoji: "❄️❄️",
+    priority: 1,
+  }),
+];
+
 export const LayoutCheatsheets = [
   ...BOX_MODEL,
   ...OVERFLOW,
   ...MEASUREMENT_UNIT,
+  ...POSITIONING,
+  ...FLEXBOX,
 ];

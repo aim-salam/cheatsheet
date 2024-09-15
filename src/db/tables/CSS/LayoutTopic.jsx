@@ -36,5 +36,27 @@ export const LayoutTopic = {
         // emoji: true,
       },
     },
+    {
+      table: "Positioning",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        attention: true,
+        // emoji: true,
+      },
+    },
+    {
+      table: "Flexbox",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        attention: true,
+        // emoji: true,
+      },
+    },
   ],
 };
