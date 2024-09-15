@@ -29,12 +29,8 @@ const BOX_MODEL = [
     description: " ",
     visual: [
       {
-        text: "Before:",
-        link: "https://images.cheatsheet.cam/images/image-1726219780955.webp",
-      },
-      {
-        text: "After:",
-        link: "https://images.cheatsheet.cam/images/image-1726219793700.webp",
+        text: " ",
+        link: "https://images.cheatsheet.cam/images/image-1726359876376.webp",
       },
     ],
     code: `border: 5px solid #3435ff; /* width style color */
@@ -50,12 +46,8 @@ border-color:  #3435ff;`,
     description: " ",
     visual: [
       {
-        text: "Before:",
-        link: "https://images.cheatsheet.cam/images/image-1726219793700.webp",
-      },
-      {
-        text: "After:",
-        link: "https://images.cheatsheet.cam/images/image-1726219983411.webp",
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726359955413.webp",
       },
     ],
     code: `padding :10px; /* all side */
@@ -78,11 +70,7 @@ padding-top: 10px;/* only top */`,
     visual: [
       {
         text: "Before:",
-        link: "https://images.cheatsheet.cam/images/image-1726220205859.webp",
-      },
-      {
-        text: "After:",
-        link: "https://images.cheatsheet.cam/images/image-1726220218776.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726360018984.webp",
       },
     ],
     code: `/* same like padding */`,
@@ -91,4 +79,234 @@ padding-top: 10px;/* only top */`,
   }),
 ];
 
-export const LayoutCheatsheets = [...BOX_MODEL];
+const OVERFLOW = [
+  new Cheatsheet({
+    id: "overflow-overflow",
+    topic: "Layout",
+    table: "Overflow",
+    action: "Overflow",
+    description:
+      "Parent size is fixed, but children are bigger than parents = overflow.",
+    visual: [
+      {
+        text: "Overflow",
+        link: "https://images.cheatsheet.cam/images/image-1726357762233.webp",
+      },
+    ],
+    code: " ",
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "overflow-hidden",
+    topic: "Layout",
+    table: "Overflow",
+    action: "hidden",
+    description: " ",
+    visual: [
+      {
+        text: "Overflow",
+        link: "https://images.cheatsheet.cam/images/image-1726357886442.webp",
+      },
+    ],
+    code: `/* parent element CSS */
+overflow: hidden;`,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "overflow-scroll",
+    topic: "Layout",
+    table: "Overflow",
+    action: "scroll",
+    description: " ",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726357984071.webp",
+      },
+    ],
+    code: `/* parent element CSS */
+overflow: scroll;`,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "overflow-auto",
+    topic: "Layout",
+    table: "Overflow",
+    action: "auto",
+    description: "Same like scroll, but only appear when overflow happened",
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726357984071.webp",
+      },
+    ],
+    code: `/* parent element CSS */
+overflow: auto;`,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "overflow-xy",
+    topic: "Layout",
+    table: "Overflow",
+    action: "overflow-x,overflow-y",
+    description: " ",
+    visual: [],
+    code: `/* parent element CSS */
+/* vertical horizontal */
+overflow: auto hidden;`,
+    emoji: "❄️",
+    priority: 1,
+  }),
+];
+
+const MEASUREMENT_UNIT = [
+  new Cheatsheet({
+    id: "measurement-unit-measurement-unit",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "Measurement Unit",
+    description: `Two categories:
+1.Absolute 
+2.Relative
+`,
+    visual: [
+      // {
+      //   text: "",
+      //   link: "",
+      // },
+    ],
+    code: ` `,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "measurement-unit-absolute",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "1. Absolute",
+    description: `Fix, never changes`,
+    visual: [
+      // {
+      //   text: "",
+      //   link: "",
+      // },
+    ],
+    code: ` `,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "measurement-unit-px",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "px",
+    description: `Fix`,
+    visual: [
+      {
+        text: "Big browser size:",
+        link: "https://images.cheatsheet.cam/images/image-1726358711051.webp",
+      },
+      {
+        text: "Smaller browser size",
+        link: "https://images.cheatsheet.cam/images/image-1726358688365.webp",
+      },
+    ],
+    code: `px`,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "measurement-unit-relative",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "2. Relative",
+    description: `Relate to something.`,
+    visual: [
+      // {
+      //   text: "",
+      //   link: "",
+      // },
+    ],
+    code: ` `,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "measurement-unit-%",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "%",
+    description: `Relate to size of parent element`,
+    visual: [
+      {
+        text: "Big parent size:",
+        link: "https://images.cheatsheet.cam/images/image-1726359204868.webp",
+      },
+      {
+        text: "Smaller parent element:",
+        link: "https://images.cheatsheet.cam/images/image-1726359188518.webp",
+      },
+    ],
+    code: `/* current element CSS */
+/* 1-100*/
+50%
+`,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "measurement-unit-%",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "vw,vh",
+    description: `Relate to size of viewport/browser`,
+    visual: [
+      {
+        text: "Big browser size:",
+        link: "https://images.cheatsheet.cam/images/image-1726359011518.webp",
+      },
+      {
+        text: "Smaller browser size:",
+        link: "https://images.cheatsheet.cam/images/image-1726359025439.webp",
+      },
+    ],
+    code: `/* 1-100*/
+50vw
+50vh
+`,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "measurement-unit-em",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "em",
+    description: ` `,
+    visual: [],
+    code: ``,
+    emoji: "❄️",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "measurement-unit-rem",
+    topic: "Layout",
+    table: "Measurement Unit",
+    action: "rem",
+    description: ` `,
+    visual: [],
+    code: ``,
+    emoji: "❄️",
+    priority: 1,
+  }),
+];
+
+export const LayoutCheatsheets = [
+  ...BOX_MODEL,
+  ...OVERFLOW,
+  ...MEASUREMENT_UNIT,
+];

@@ -13,15 +13,25 @@ export const LayoutTopic = {
         emoji: true,
       },
     },
-    // {
-    //   table: "Basic HTML",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     emoji: true,
-    //   },
-    // },
+    {
+      table: "Overflow",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        emoji: true,
+      },
+    },
+    {
+      table: "Measurement Unit",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        emoji: true,
+      },
+    },
   ],
 };
