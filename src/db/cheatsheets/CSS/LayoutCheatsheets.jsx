@@ -16,6 +16,10 @@ const BOX_MODEL = [
         text: "Inspect in Browser",
         link: "https://images.cheatsheet.cam/images/image-1726218884809.webp",
       },
+      {
+        text: "Example:",
+        link: "https://images.cheatsheet.cam/images/image-1726360547706.webp",
+      },
     ],
     code: " ",
     emoji: "❄️",
@@ -105,7 +109,7 @@ const OVERFLOW = [
     description: " ",
     visual: [
       {
-        text: "Overflow",
+        text: "",
         link: "https://images.cheatsheet.cam/images/image-1726357886442.webp",
       },
     ],
@@ -208,11 +212,11 @@ const MEASUREMENT_UNIT = [
     visual: [
       {
         text: "Big browser size:",
-        link: "https://images.cheatsheet.cam/images/image-1726358711051.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726361421455.webp",
       },
       {
         text: "Smaller browser size",
-        link: "https://images.cheatsheet.cam/images/image-1726358688365.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726361377347.webp",
       },
     ],
     code: `px`,
@@ -244,11 +248,11 @@ const MEASUREMENT_UNIT = [
     visual: [
       {
         text: "Big parent size:",
-        link: "https://images.cheatsheet.cam/images/image-1726359204868.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726361472454.webp",
       },
       {
         text: "Smaller parent element:",
-        link: "https://images.cheatsheet.cam/images/image-1726359188518.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726361517597.webp",
       },
     ],
     code: `/* current element CSS */
@@ -267,11 +271,11 @@ const MEASUREMENT_UNIT = [
     visual: [
       {
         text: "Big browser size:",
-        link: "https://images.cheatsheet.cam/images/image-1726359011518.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726361578865.webp",
       },
       {
         text: "Smaller browser size:",
-        link: "https://images.cheatsheet.cam/images/image-1726359025439.webp",
+        link: "https://images.cheatsheet.cam/images/image-1726361619818.webp",
       },
     ],
     code: `/* 1-100*/
