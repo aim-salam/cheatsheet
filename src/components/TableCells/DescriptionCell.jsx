@@ -1,12 +1,21 @@
 import React from "react";
-import { TableCell, Typography } from "@mui/material";
+import { Stack, TableCell, Typography } from "@mui/material";
 
 function DescriptionCell({ action, customTableCellStyle, customFont }) {
   return (
     <TableCell sx={customTableCellStyle} component="th" scope="row">
-      <Typography fontSize={customFont} sx={{ width: "150px" }}>
-        {action}
-      </Typography>
+      <div>
+        {action.map((item) => {
+          return (
+            <Stack>
+              <Typography fontSize={customFont} sx={{ width: "150px" }}>
+                {item}
+              </Typography>
+              <br />
+            </Stack>
+          );
+        })}
+      </div>
     </TableCell>
   );
 }

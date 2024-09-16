@@ -6,7 +6,7 @@ const INTRODUCTION = [
     topic: "Memory",
     table: "Introduction",
     action: "Definition",
-    description: `Memory is a component building-block to hold data.`,
+    description: [`Memory is a component building-block to hold data.`],
     visual: [],
 
     emoji: "❄️",
@@ -18,7 +18,7 @@ const INTRODUCTION = [
     topic: "Memory",
     table: "Introduction",
     action: "Types",
-    description: `variable, state, reference`,
+    description: [`variable, state, reference`],
     visual: [
       {
         text: "Component memories :",
@@ -35,7 +35,12 @@ const INTRODUCTION = [
     topic: "Memory",
     table: "Introduction",
     action: "Variable",
-    description: `Variable can hold data, but it can't trigger React to re-render the component.`,
+    description: [
+      `1. Variable can hold data.`,
+      ` `,
+      ` `,
+      `2. but it can't trigger React to re-render the component.`,
+    ],
     visual: [
       {
         text: "Component memories :",
@@ -55,7 +60,9 @@ const STATE = [
     topic: "Memory",
     table: "State",
     action: "Definition",
-    description: `State can hold data and it can trigger React to re-render the component.`,
+    description: [
+      `State can hold data and it can trigger React to re-render the component.`,
+    ],
     visual: [
       {
         text: "Component memories :",
@@ -72,7 +79,7 @@ const STATE = [
     topic: "Memory",
     table: "State",
     action: "Building-block",
-    description: ` `,
+    description: [` `],
     visual: [
       {
         text: "",
@@ -94,7 +101,7 @@ const [movies, setMovies] = useState({}) // object
     topic: "Memory",
     table: "State",
     action: "Update a primitive values",
-    description: `string, integer, boolean, null`,
+    description: [`string, integer, boolean, null`],
     visual: [
       {
         text: "",
@@ -115,7 +122,7 @@ const [movies, setMovies] = useState({}) // object
     topic: "Memory",
     table: "State",
     action: "Update an array value.",
-    description: ` `,
+    description: [` `],
     visual: [
       {
         text: "",
@@ -147,7 +154,7 @@ setMembers(members.filter(member => member !== 'Aiman'))
     topic: "Memory",
     table: "State",
     action: "Update an object value.",
-    description: ` `,
+    description: [` `],
     visual: [
       {
         text: "",
@@ -175,7 +182,9 @@ setMembers(members.filter(member => member !== 'Aiman'))
     topic: "State",
     table: "Update",
     action: "Batch",
-    description: `One event will have many series of state updates before next render`,
+    description: [
+      `One event will have many series of state updates before next render`,
+    ],
     visual: [
       {
         text: "",
@@ -212,8 +221,11 @@ const REFERENCE = [
     topic: "Memory",
     table: "Reference",
     action: "Definition",
-    description: `1. Ref can hold data 2. but it can't trigger React to re-render the component.
-        3. The data is not inside the component but outside, so the value remain across re-renders`,
+    description: [
+      `1. Ref can hold data `,
+      `2. but it can't trigger React to re-render the component.`,
+      `3. The data is not inside the component but outside, so the value remain across re-renders`,
+    ],
     visual: [
       {
         text: "Component memories :",
@@ -231,7 +243,7 @@ const REFERENCE = [
     topic: "Memory",
     table: "Reference",
     action: "Building-block",
-    description: ` `,
+    description: [` `],
     visual: [
       {
         text: "",
@@ -250,7 +262,7 @@ const REFERENCE = [
     topic: "Memory",
     table: "Reference",
     action: "Access the value",
-    description: ` `,
+    description: [` `],
     visual: [],
     code: ` // Access value
 const countRef = useRef(0);
@@ -275,7 +287,7 @@ const value = inputEl.current.focus();
     topic: "Memory",
     table: "Reference",
     action: "Update the value",
-    description: `string, integer, boolean, null`,
+    description: [`string, integer, boolean, null`],
     visual: [],
     code: ` // Storing value
 const countRef = useRef(0);

@@ -6,7 +6,7 @@ const INTRODUCTION = [
     topic: "React",
     table: "Introduction",
     action: "Prerequisite",
-    description: `Video and video editor`,
+    description: [`Video and video editor`],
     visual: [
       {
         text: "Video editor :",
@@ -23,7 +23,7 @@ const INTRODUCTION = [
     topic: "React",
     table: "Introduction",
     action: "Definition",
-    description: `React is a library/framework used to build webpages.`,
+    description: [`React is a library/framework used to build webpages.`],
     visual: [
       {
         text: "React: ",
@@ -40,8 +40,9 @@ const INTRODUCTION = [
     topic: "React",
     table: "Introduction",
     action: "Building-block",
-    description:
+    description: [
       "Components, JSX, Props, State, Hooks, Handling events, Virtual DOM, Router",
+    ],
     visual: [
       {
         text: "",

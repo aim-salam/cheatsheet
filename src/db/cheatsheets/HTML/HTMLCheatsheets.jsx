@@ -6,7 +6,9 @@ const INTRODUCTION = [
     topic: "HTML",
     table: "Introduction",
     action: "Prerequisite",
-    description: `The building blocks of a website are structure, style, and logic.`,
+    description: [
+      `The building blocks of a website are structure, style, and logic.`,
+    ],
     visual: [
       {
         text: "",
@@ -24,7 +26,9 @@ const INTRODUCTION = [
     topic: "HTML",
     table: "Introduction",
     action: "Definition",
-    description: `HTML is a language used to write the markup/structure of a webpage.`,
+    description: [
+      `HTML is a language used to write the markup/structure of a webpage.`,
+    ],
     visual: [
       {
         text: "",
@@ -42,7 +46,7 @@ const INTRODUCTION = [
     topic: "HTML",
     table: "Introduction",
     action: "Building-block",
-    description: "Element, Attribute, Tag",
+    description: ["Element, Attribute, Tag"],
     visual: [
       {
         text: "",
@@ -63,7 +67,7 @@ const HEAD = [
     topic: "HTML",
     table: "Head",
     action: "head",
-    description: "Tell Browser and Search Engine about this page",
+    description: ["Tell Browser and Search Engine about this page"],
     visual: [],
     code: `<head>
 
@@ -77,7 +81,7 @@ const HEAD = [
     topic: "HTML",
     table: "Head",
     action: "meta",
-    description: "Information about this page.",
+    description: ["Information about this page."],
     visual: [],
     code: `<head>
 <meta charset="UTF-8" />
@@ -94,7 +98,7 @@ const HEAD = [
     topic: "HTML",
     table: "Head",
     action: "title",
-    description: "Name on browser tab",
+    description: ["Name on browser tab"],
     visual: [
       {
         text: "",
@@ -116,7 +120,7 @@ const TEXT = [
     topic: "HTML",
     table: "Text",
     action: "text",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "",
@@ -133,8 +137,9 @@ const TEXT = [
     topic: "HTML",
     table: "Text",
     action: "header: h1, h2, h3",
-    description:
+    description: [
       "The header is used to create hierarchy. Avoid applying styling to it.",
+    ],
     visual: [
       {
         text: "",
@@ -155,7 +160,7 @@ const TEXT = [
     topic: "HTML",
     table: "Text",
     action: "paragrahph",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "",
@@ -174,7 +179,7 @@ const TEXT = [
     topic: "HTML",
     table: "Text",
     action: "emphasize, italic, strong, bold",
-    description: "Deprecated, HTML is not meant for styling",
+    description: ["Deprecated, HTML is not meant for styling"],
     visual: [
       {
         text: "",
@@ -194,8 +199,9 @@ const ENTITIES = [
     topic: "HTML",
     table: "Entities",
     action: "entities",
-    description:
+    description: [
       "Some characters are reserved by HTML. To display them, we need to use special notation",
+    ],
     visual: [
       {
         text: "",

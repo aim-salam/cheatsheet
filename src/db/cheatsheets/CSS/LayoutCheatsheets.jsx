@@ -6,7 +6,7 @@ const BOX_MODEL = [
     topic: "Layout",
     table: "Box model",
     action: "Box model",
-    description: "Every element/content rendered will be put inside a box",
+    description: ["Every element/content rendered will be put inside a box"],
     visual: [
       {
         text: "Box Model",
@@ -36,7 +36,7 @@ const BOX_MODEL = [
     topic: "Layout",
     table: "Box model",
     action: "Border",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: " ",
@@ -56,7 +56,7 @@ border-color:  #3435ff;`,
     topic: "Layout",
     table: "Box model",
     action: "Padding",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "",
@@ -82,7 +82,7 @@ padding-top: 10px;/* only top */`,
     topic: "Layout",
     table: "Box model",
     action: "Margin",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "Before:",
@@ -119,8 +119,9 @@ const OVERFLOW = [
     topic: "Layout",
     table: "Overflow",
     action: "Overflow",
-    description:
+    description: [
       "Parent size is fixed, but children are bigger than parents = overflow.",
+    ],
     visual: [
       {
         text: "Overflow",
@@ -138,7 +139,7 @@ const OVERFLOW = [
     topic: "Layout",
     table: "Overflow",
     action: "hidden",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "",
@@ -157,7 +158,7 @@ overflow: hidden;`,
     topic: "Layout",
     table: "Overflow",
     action: "scroll",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "",
@@ -176,7 +177,7 @@ overflow: scroll;`,
     topic: "Layout",
     table: "Overflow",
     action: "auto",
-    description: "Same like scroll, but only appear when overflow happened",
+    description: ["Same like scroll, but only appear when overflow happened"],
     visual: [
       {
         text: "",
@@ -195,7 +196,7 @@ overflow: auto;`,
     topic: "Layout",
     table: "Overflow",
     action: "overflow-x,overflow-y",
-    description: " ",
+    description: [" "],
     visual: [],
     code: `/* parent element CSS */
 /* vertical horizontal */
@@ -213,10 +214,12 @@ const MEASUREMENT_UNIT = [
     topic: "Layout",
     table: "Measurement Unit",
     action: "Measurement Unit",
-    description: `Two categories:
+    description: [
+      `Two categories:
 1.Absolute 
 2.Relative
 `,
+    ],
     visual: [
       // {
       //   text: "",
@@ -234,7 +237,7 @@ const MEASUREMENT_UNIT = [
     topic: "Layout",
     table: "Measurement Unit",
     action: "1. Absolute",
-    description: `Fix, never changes`,
+    description: [`Fix, never changes`],
     visual: [
       // {
       //   text: "",
@@ -252,7 +255,7 @@ const MEASUREMENT_UNIT = [
     topic: "Layout",
     table: "Measurement Unit",
     action: "px",
-    description: `Fix`,
+    description: [`Fix`],
     visual: [
       {
         text: "Big browser size:",
@@ -275,7 +278,7 @@ px`,
     topic: "Layout",
     table: "Measurement Unit",
     action: "2. Relative",
-    description: `Relate to something.`,
+    description: [`Relate to something.`],
     visual: [
       // {
       //   text: "",
@@ -293,7 +296,7 @@ px`,
     topic: "Layout",
     table: "Measurement Unit",
     action: "%",
-    description: `Relate to size of parent element`,
+    description: [`Relate to size of parent element`],
     visual: [
       {
         text: "Big parent size:",
@@ -318,7 +321,7 @@ px`,
     topic: "Layout",
     table: "Measurement Unit",
     action: "vw,vh",
-    description: `Relate to size of viewport/browser`,
+    description: [`Relate to size of viewport/browser`],
     visual: [
       {
         text: "Big browser size:",
@@ -348,7 +351,7 @@ px`,
     topic: "Layout",
     table: "Measurement Unit",
     action: "em",
-    description: ` `,
+    description: [` `],
     visual: [],
     code: ` `,
     emoji: "❄️",
@@ -360,7 +363,7 @@ px`,
     topic: "Layout",
     table: "Measurement Unit",
     action: "rem",
-    description: ` `,
+    description: [` `],
     visual: [],
     code: ` `,
     attention: ` `,
@@ -376,7 +379,7 @@ const POSITIONING = [
     topic: "Layout",
     table: "Positioning",
     action: "1. Positioning",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "",
@@ -398,7 +401,7 @@ const POSITIONING = [
     topic: "Layout",
     table: "Positioning",
     action: "relative",
-    description: "Relate to current position.",
+    description: ["Relate to current position."],
     visual: [
       {
         text: "",
@@ -418,8 +421,9 @@ left: 30px;`,
     topic: "Layout",
     table: "Positioning",
     action: "absolute",
-    description:
+    description: [
       "Out of current flow,a nd relate to container/ parent element.",
+    ],
     visual: [
       {
         text: "",
@@ -442,7 +446,7 @@ left: 30px;`,
     topic: "Layout",
     table: "Positioning",
     action: "fixed",
-    description: "Out of current flow,and relate to viewport.",
+    description: ["Out of current flow,and relate to viewport."],
     visual: [
       {
         text: "",
@@ -462,7 +466,7 @@ top: 0px;`,
     topic: "Layout",
     table: "Positioning",
     action: "2. z-index",
-    description: "If an element overlap the element, change the z-axis",
+    description: ["If an element overlap the element, change the z-axis"],
     visual: [
       {
         text: "Overlap:",
@@ -485,7 +489,7 @@ z-index: -1`,
     topic: "Layout",
     table: "Positioning",
     action: "3. Width auto",
-    description: " ",
+    description: [" "],
     visual: [],
     code: ` `,
     attention: [],
@@ -501,7 +505,7 @@ const FLEXBOX = [
     topic: "Layout",
     table: "Flexbox",
     action: "Flexbox",
-    description: "Laying out children elements in one direction.",
+    description: ["Laying out children elements in one direction."],
     visual: [],
     code: `/* current element CSS */
 display: flex;`,
@@ -515,7 +519,7 @@ display: flex;`,
     topic: "Layout",
     table: "Flexbox",
     action: "row",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: " ",
@@ -535,7 +539,7 @@ flex-direction: row;`,
     topic: "Layout",
     table: "Flexbox",
     action: "column",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: " ",
@@ -555,8 +559,9 @@ flex-direction: column;`,
     topic: "Layout",
     table: "Flexbox",
     action: "Alignment",
-    description:
+    description: [
       "Two axes:\n 1.Main ( justify-content )\n2.Cross( align-items)",
+    ],
     visual: [
       {
         text: " ",
@@ -578,7 +583,7 @@ flex-direction: column;`,
     topic: "Layout",
     table: "Flexbox",
     action: "justify-content",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "flex-start:",
@@ -633,7 +638,7 @@ justify-content: space-between`,
     topic: "Layout",
     table: "Flexbox",
     action: "align-items",
-    description: " ",
+    description: [" "],
     visual: [
       {
         text: "flex-start:",
@@ -672,7 +677,7 @@ align-items: flex-end`,
     topic: "Layout",
     table: "Flexbox",
     action: "align-content",
-    description: " ",
+    description: [" "],
     visual: [],
     code: ``,
     attention: [],
@@ -685,7 +690,7 @@ align-items: flex-end`,
     topic: "Layout",
     table: "Flexbox",
     action: "flex-wrap",
-    description: " ",
+    description: [" "],
     visual: [],
     code: ``,
     attention: [],

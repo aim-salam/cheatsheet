@@ -6,7 +6,7 @@ const INTRODUCTION = [
     topic: "Pass Data",
     table: "Introduction",
     action: "Definition",
-    description: `Ways to pass data from one component to another.`,
+    description: [`Ways to pass data from one component to another.`],
     visual: [],
 
     emoji: "❄️",
@@ -18,7 +18,12 @@ const INTRODUCTION = [
     topic: "Pass Data",
     table: "Introduction",
     action: "Types",
-    description: `1. chidlrens-parent 2. children-children 3. grandchildrens-grandparent 4. grandchildrens-grandchildrens`,
+    description: [
+      `1. chidlrens-parent`,
+      ` 2. children-children `,
+      `3. grandchildrens-grandparent `,
+      `4. grandchildrens-grandchildrens`,
+    ],
     visual: [],
 
     emoji: "❄️",
@@ -30,7 +35,7 @@ const INTRODUCTION = [
     topic: "Pass Data",
     table: "Introduction",
     action: "1. children-parent",
-    description: `1. Props 2. Callback`,
+    description: [`1. Props `, `2. Callback`],
     visual: [
       {
         text: "",
@@ -47,7 +52,7 @@ const INTRODUCTION = [
     topic: "Pass Data",
     table: "Introduction",
     action: "2. children-children",
-    description: `1. lift-up`,
+    description: [`1. lift-up`],
     visual: [
       {
         text: "",
@@ -64,7 +69,7 @@ const INTRODUCTION = [
     topic: "Pass Data",
     table: "Introduction",
     action: "3. grandchildren-grandparent",
-    description: `1. useContext`,
+    description: [`1. useContext`],
     visual: [
       {
         text: "",
@@ -81,7 +86,7 @@ const INTRODUCTION = [
     topic: "Pass Data",
     table: "Introduction",
     action: "4. grandchildren-grandchildren",
-    description: `1. Redux`,
+    description: [`1. Redux`],
     visual: [
       {
         text: "",
