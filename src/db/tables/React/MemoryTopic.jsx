@@ -1,7 +1,7 @@
-export const StateTopic = {
-  topic: "State",
+export const MemoryTopic = {
+  topic: "Memory",
   type: "children",
-  imageLink: "https://images.cheatsheet.cam/images/state.webp",
+  imageLink: "https://images.cheatsheet.cam/images/image-1726470454377.webp",
   tables: [
     {
       table: "Introduction",
@@ -13,7 +13,7 @@ export const StateTopic = {
       },
     },
     {
-      table: "Hooks",
+      table: "State",
       columns: {
         action: true,
         description: true,
@@ -23,7 +23,7 @@ export const StateTopic = {
       },
     },
     {
-      table: "Update",
+      table: "Reference",
       columns: {
         action: true,
         description: true,
