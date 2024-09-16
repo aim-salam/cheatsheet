@@ -7,12 +7,12 @@ import { CSSTopic } from "./tables/CSS/CSSTopic";
 import { LayoutTopic } from "./tables/CSS/LayoutTopic";
 import { ReactTopic } from "./tables/React/ReactTopic";
 import { MemoryTopic } from "./tables/React/MemoryTopic";
-import { PropsTopic } from "./tables/React/PropsTopic";
+import { PassDataTopic } from "./tables/React/PassDataTopic";
 export const topics = [
   ReactTopic,
   // ComponentTopic,
   MemoryTopic,
-  PropsTopic,
+  PassDataTopic,
   // HTMLTopic,
   CSSTopic,
   LayoutTopic,
