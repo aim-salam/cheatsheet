@@ -6,7 +6,7 @@ const INTRODUCTION = [
     topic: "State",
     table: "Introduction",
     action: "Prerequisite",
-    description: `In JavaScript, a 'variable' holds data. But it can’t trigger React to re-render.`,
+    description: `variable, React building-block`,
     visual: [
       {
         text: "Component memories :",
@@ -22,7 +22,7 @@ const INTRODUCTION = [
     topic: "State",
     table: "Introduction",
     action: "Definition",
-    description: `Similar to a 'variable', state can hold data and can also trigger React to re-render.`,
+    description: `State can hold data and it can trigger React to re-render the component.`,
     visual: [
       {
         text: "Component memories :",
@@ -35,4 +35,143 @@ const INTRODUCTION = [
   }),
 ];
 
-export const StateCheatsheet = [...INTRODUCTION];
+const MEMORY = [
+  new Cheatsheet({
+    id: "state-hooks",
+    topic: "State",
+    table: "Hooks",
+    action: "Hooks",
+    description: ` `,
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726459325361.webp",
+      },
+    ],
+    code: `const [number,setNumber] = useState(0) // integer/string
+const [isLoading,setIsLoading] = useState(false) // bool
+const [members, setMembers] = useState([]) // array
+const [movies, setMovies] = useState({}) // object
+`,
+
+    emoji: "❄️",
+    priority: 1,
+  }),
+];
+
+const UPDATE = [
+  new Cheatsheet({
+    id: "state-primitive",
+    topic: "State",
+    table: "Update",
+    action: "Primitive values",
+    description: `string, integer, boolean, null`,
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726460443383.webp",
+      },
+    ],
+    code: ` const [name, setName] = useState('');
+    
+ setName('Sam');
+;`,
+
+    emoji: "🔥",
+    priority: 1,
+  }),
+
+  new Cheatsheet({
+    id: "array-hooks",
+    topic: "State",
+    table: "Update",
+    action: "Array",
+    description: ` `,
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726459542742.webp",
+      },
+    ],
+    code: ` const [members, setMembers] = useState([]);
+
+
+ //Create new object ✅
+ setMembers([ ...members, 'Sam' ]);
+
+
+ //Array methods that return new array ✅
+setMembers(members.filter(member => member !== 'Aiman'))
+
+
+
+
+ //Mutate ❌
+ members.push('Sam');`,
+
+    emoji: "🔥",
+    priority: 1,
+  }),
+  new Cheatsheet({
+    id: "object-hooks",
+    topic: "State",
+    table: "Update",
+    action: "Object",
+    description: ` `,
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726459668006.webp",
+      },
+    ],
+    code: `const [movie, setMovie] = useState({});
+ 
+
+
+//Create new object ✅
+ setMovie({ ...movie, rate: 4.5 });
+
+
+ //Mutate ❌
+ movie.rate = 4.5;`,
+
+    emoji: "🔥",
+    priority: 1,
+  }),
+
+  new Cheatsheet({
+    id: "state-bactching",
+    topic: "State",
+    table: "Update",
+    action: "Batch",
+    description: `One event will have many series of state updates before next render`,
+    visual: [
+      {
+        text: "",
+        link: "https://images.cheatsheet.cam/images/image-1726459887861.webp",
+      },
+    ],
+    code: ` const [score, setScore] = useState(0);
+
+
+ function handleClick1() {
+   setScore(score + 5); // state = 5
+   setScore(score + 5); // state = 5
+   //final score will be rendered as 5
+ }
+
+
+ function handleClick2() {
+   setScore(score + 5); // state = 5
+   setScore((sc) => sc + 1); // state = 6
+   setScore((sc) => sc + 1); // state = 7
+   //score will be 7
+ }
+`,
+
+    emoji: "🔥",
+    priority: 1,
+  }),
+];
+
+export const StateCheatsheet = [...INTRODUCTION, ...MEMORY, ...UPDATE];

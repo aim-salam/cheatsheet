@@ -1,7 +1,7 @@
-export const StateTopic = {
-  topic: "State",
+export const RefTopic = {
+  topic: "Reference",
   type: "children",
-  imageLink: "https://images.cheatsheet.cam/images/state.webp",
+  imageLink: "https://images.cheatsheet.cam/images/image-1726462300507.webp",
   tables: [
     {
       table: "Introduction",
@@ -14,6 +14,16 @@ export const StateTopic = {
     },
     {
       table: "Hooks",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        // emoji: true
+      },
+    },
+    {
+      table: "Access",
       columns: {
         action: true,
         description: true,

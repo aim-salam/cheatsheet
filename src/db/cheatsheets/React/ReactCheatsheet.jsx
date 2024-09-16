@@ -6,7 +6,7 @@ const INTRODUCTION = [
     topic: "React",
     table: "Introduction",
     action: "Prerequisite",
-    description: `A video editor is a framework used to create videos.`,
+    description: `Video and video editor`,
     visual: [
       {
         text: "Video editor :",
@@ -22,7 +22,7 @@ const INTRODUCTION = [
     topic: "React",
     table: "Introduction",
     action: "Definition",
-    description: `React is a library/framework used to build user interfaces for webpages.`,
+    description: `React is a library/framework used to build webpages.`,
     visual: [
       {
         text: "React: ",

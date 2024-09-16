@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 function Greeting({ name }) {
-  const [isMorning, setIsMorning] = useState(false);
+  const myRef = useRef("");
 
+  console.log(myRef);
   return (
     <div>
       <h1>Hello {name}, welcome to React!</h1>
