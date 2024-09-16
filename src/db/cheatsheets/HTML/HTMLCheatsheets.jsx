@@ -17,6 +17,7 @@ const INTRODUCTION = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "html",
   }),
   new Cheatsheet({
     id: "html-definition",
@@ -34,6 +35,7 @@ const INTRODUCTION = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "html",
   }),
   new Cheatsheet({
     id: "html-bb",
@@ -51,6 +53,7 @@ const INTRODUCTION = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "html",
   }),
 ];
 

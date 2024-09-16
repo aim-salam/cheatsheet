@@ -16,6 +16,7 @@ const INTRODUCTION = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "js",
   }),
   new Cheatsheet({
     id: "ref-definition",
@@ -33,6 +34,7 @@ const INTRODUCTION = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "js",
   }),
 ];
 
@@ -53,6 +55,7 @@ const MEMORY = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "js",
   }),
 ];
 
@@ -85,6 +88,7 @@ const value = inputEl.current.focus();
 
     emoji: "🔥",
     priority: 1,
+    codeType: "js",
   }),
 ];
 const UPDATE = [
@@ -108,6 +112,7 @@ countRef.current = count + 1;`,
 
     emoji: "🔥",
     priority: 1,
+    codeType: "js",
   }),
 ];
 

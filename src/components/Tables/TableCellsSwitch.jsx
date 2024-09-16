@@ -69,6 +69,7 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
         <CodeCell
           key={row.item.item.action + "code"}
           code={row.item.item.code}
+          codeType={row.item.item.codeType}
           customTableCellStyle={customTableCellStyle}
           customFont={customFont}
         />

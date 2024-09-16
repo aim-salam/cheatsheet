@@ -16,6 +16,7 @@ const INTRODUCTION = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "js",
   }),
   new Cheatsheet({
     id: "state-definition",
@@ -32,6 +33,7 @@ const INTRODUCTION = [
 
     emoji: "❄️",
     priority: 1,
+    codeType: "js",
   }),
 ];
 
@@ -56,6 +58,7 @@ const [movies, setMovies] = useState({}) // object
 
     emoji: "❄️",
     priority: 1,
+    codeType: "js",
   }),
 ];
 
@@ -79,6 +82,7 @@ const UPDATE = [
 
     emoji: "🔥",
     priority: 1,
+    codeType: "js",
   }),
 
   new Cheatsheet({
@@ -111,6 +115,7 @@ setMembers(members.filter(member => member !== 'Aiman'))
 
     emoji: "🔥",
     priority: 1,
+    codeType: "js",
   }),
   new Cheatsheet({
     id: "object-hooks",
@@ -137,6 +142,7 @@ setMembers(members.filter(member => member !== 'Aiman'))
 
     emoji: "🔥",
     priority: 1,
+    codeType: "js",
   }),
 
   new Cheatsheet({
@@ -171,6 +177,7 @@ setMembers(members.filter(member => member !== 'Aiman'))
 
     emoji: "🔥",
     priority: 1,
+    codeType: "js",
   }),
 ];
 

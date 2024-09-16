@@ -17,7 +17,7 @@ class Cheatsheet {
     cli,
     //
     code,
-    typeCode,
+    codeType,
     exampleCode,
     //
     attention,
@@ -43,7 +43,7 @@ class Cheatsheet {
     this.cli = cli;
     //
     this.code = code;
-    this.typeCode = typeCode;
+    this.codeType = codeType;
     this.exampleCode = exampleCode;
     //
     this.attention = Array.isArray(attention) ? attention : null;
