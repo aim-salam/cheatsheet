@@ -7,7 +7,7 @@ import {
   prism,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-function CodeCell({ mode, code, customTableCellStyle, customFont }) {
+function CodeCell({ mode, code, codeType, customTableCellStyle, customFont }) {
   const customCodeStyle = {
     // fontSize: customFont,
     marginTop: "0px",
@@ -51,7 +51,7 @@ function CodeCell({ mode, code, customTableCellStyle, customFont }) {
             Copy
           </Typography>
           <SyntaxHighlighter
-            language="css"
+            language={codeType}
             style={mode === "dark" ? vscDarkPlus : prism}
             customStyle={customCodeStyle}
           >
