@@ -12,5 +12,15 @@ export const MemoryTopic = {
         // emoji: true
       },
     },
+    {
+      table: "Variable",
+      columns: {
+        action: true,
+        description: true,
+        visual: true,
+        code: true,
+        // emoji: true
+      },
+    },
   ],
 };

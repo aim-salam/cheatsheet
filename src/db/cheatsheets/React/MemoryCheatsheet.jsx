@@ -5,8 +5,20 @@ const INTRODUCTION = [
     id: "memory-prerequisite",
     topic: "Memory",
     table: "Introduction",
+    action: "Prerequisite",
+    description: [`React building-block`],
+    visual: [],
+
+    emoji: "❄️",
+    priority: 1,
+    codeType: "js",
+  }),
+  new Cheatsheet({
+    id: "memory-def",
+    topic: "Memory",
+    table: "Introduction",
     action: "Definition",
-    description: [`Memory is a component building-block to hold data.`],
+    description: [`Memory is a feature to hold data.`],
     visual: [],
 
     emoji: "❄️",
@@ -30,10 +42,13 @@ const INTRODUCTION = [
     priority: 1,
     codeType: "js",
   }),
+];
+
+const VARIABLE = [
   new Cheatsheet({
     id: "memory-variable",
     topic: "Memory",
-    table: "Introduction",
+    table: "Variable",
     action: "Variable",
     description: [
       `1. Variable can hold data.`,
@@ -47,6 +62,8 @@ const INTRODUCTION = [
         link: "https://images.cheatsheet.cam/images/image-1726424143343.webp",
       },
     ],
+    code: `let name = 'Sam'`,
+    codeType: "javascript",
 
     emoji: "❄️",
     priority: 1,
@@ -54,4 +71,4 @@ const INTRODUCTION = [
   }),
 ];
 
-export const MemoryCheatsheet = [...INTRODUCTION];
+export const MemoryCheatsheet = [...INTRODUCTION, ...VARIABLE];
