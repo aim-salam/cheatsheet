@@ -1,15 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+// Import ThemeContext
+import { ThemeContext } from "./ThemeContext";
 
-function Greeting({ name }) {
-  const myRef = useRef("");
+export function GrandparentComponent() {
+  const [theme, setTheme] = useState(false); // Manage state here
 
-  console.log(myRef);
   return (
-    <div>
-      <h1>Hello {name}, welcome to React!</h1>
-      <p>This is a simple React component.</p>
-    </div>
+    // set value on provider/grandparent
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
   );
 }
-
-export default Greeting;

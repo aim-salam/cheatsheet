@@ -1,7 +1,7 @@
-export const MemoryTopic = {
-  topic: "Memory",
+export const PropsTopic = {
+  topic: "Props",
   type: "children",
-  imageLink: "https://images.cheatsheet.cam/images/image-1726470454377.webp",
+  imageLink: "https://images.cheatsheet.cam/images/react.webp",
   tables: [
     {
       table: "Introduction",
