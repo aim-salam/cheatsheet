@@ -18,7 +18,7 @@ export const topics = [
   StateTopic,
   RefTopic,
   PassDataTopic,
-  PropsTopic,
+  // PropsTopic,
   // HTMLTopic,
   CSSTopic,
   LayoutTopic,
