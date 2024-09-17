@@ -51,7 +51,12 @@ function TopicList({ setTopic }) {
               />
             </ListItemAvatar>
             {/* <ListItemText primary={topic.topic} /> */}
-            <p style={{ fontSize: "15px" }}>{topic.topic}</p>
+            <Typography
+              fontWeight={topic.type === "children" ? "bold" : null}
+              fontSize={"15px"}
+            >
+              {topic.topic}
+            </Typography>
           </ListItemButton>
         </Stack>
       ))}

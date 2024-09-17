@@ -1,6 +1,6 @@
 export const PropsTopic = {
   topic: "Props",
-  type: "children",
+  type: "grandchildren",
   imageLink: "https://images.cheatsheet.cam/images/react.webp",
   tables: [
     {

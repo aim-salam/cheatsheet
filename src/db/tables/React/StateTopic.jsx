@@ -1,6 +1,6 @@
 export const StateTopic = {
   topic: "State",
-  type: "children",
+  type: "grandchildren",
   imageLink: "https://images.cheatsheet.cam/images/state.webp",
   tables: [
     {
