@@ -30,8 +30,13 @@ function TopicList({ setTopic }) {
   return (
     <List>
       {topics.map((topic) => (
-        <Stack key={topic.topic}>
-          <Header topic={topic}></Header>
+        <Stack
+          key={topic.topic}
+          marginTop={topic.type === "parent" ? "40px" : null}
+          marginBottom={topic.type === "parent" ? "10px" : null}
+          height={"40px"}
+        >
+          {/* <Header topic={topic}></Header> */}
           <ListItemButton
             sx={{
               paddingLeft: "40px",
@@ -45,15 +50,19 @@ function TopicList({ setTopic }) {
           >
             <ListItemAvatar>
               <Avatar
+                sx={{
+                  width: topic.type === "parent" ? "30px" : "25px",
+                  height: topic.type === "parent" ? "30px" : "25px",
+                }}
                 alt="Remy Sharp"
                 src={topic.imageLink ? topic.imageLink : logo}
                 variant="rounded"
               />
             </ListItemAvatar>
-            {/* <ListItemText primary={topic.topic} /> */}
+
             <Typography
-              fontWeight={topic.type === "children" ? "bold" : null}
-              fontSize={"15px"}
+              fontWeight={topic.type === "grandchildren" ? null : "bold"}
+              fontSize={topic.type === "parent" ? "25px" : "17px"}
             >
               {topic.topic}
             </Typography>

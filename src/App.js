@@ -140,7 +140,7 @@ function App() {
             xs={12}
             sm={3}
             md={2}
-            sx={{ display: { xs: "none", sm: "block" }, width: "200px" }}
+            sx={{ display: { xs: "none", sm: "block" }, width: "250px" }}
           >
             {/* Add aside content here */}
             <Aside setTopic={setTopic}></Aside>
