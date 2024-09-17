@@ -159,7 +159,7 @@ function App() {
               fontWeight={"bold"}
               align="center"
               marginBottom={"60px"}
-              marginTop={"20px"}
+              marginTop={"40px"}
             >
               {topic.topic}
             </Typography>
