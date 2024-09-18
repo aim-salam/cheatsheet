@@ -22,6 +22,7 @@ function HomePage() {
   return (
     <TopicContext.Provider value={{ topic, setTopic }}>
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+        <CssBaseline></CssBaseline>
         <NavBar mode={mode}></NavBar>
         <Grid2
           container
