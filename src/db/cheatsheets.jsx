@@ -5,6 +5,7 @@ import { MemoryCheatsheet } from "./cheatsheets/React/MemoryCheatsheet";
 import { PassDataCheatsheet } from "./cheatsheets/React/PassDataCheatsheet";
 import { RefCheatsheet } from "./cheatsheets/React/RefCheatsheet";
 import { StateCheatsheet } from "./cheatsheets/React/StateCheatsheet";
+import { PropsCheatsheet } from "./cheatsheets/React/PropsCheatsheet";
 export const cheatsheets = [
   ...HTMLCheatsheet,
   ...LayoutCheatsheets,
@@ -13,4 +14,5 @@ export const cheatsheets = [
   ...StateCheatsheet,
   ...RefCheatsheet,
   ...PassDataCheatsheet,
+  ...PropsCheatsheet,
 ];
