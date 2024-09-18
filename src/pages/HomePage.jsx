@@ -13,91 +13,12 @@ import NavBar from "../components/NavBar";
 import Aside from "../components/Aside";
 import MainContent from "../components/MainContent";
 import TopicContext from "../contexts/TopicContext";
+import useHomePage from "../hooks/useHomePage";
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics, logEvent } from "firebase/analytics";
-const firebaseConfig = {
-  apiKey: "AIzaSyCBvTQGABIdbUweZnoZu3K3fSZ8tcYuUhU",
-  authDomain: "cheatsheet-1b79b.firebaseapp.com",
-  projectId: "cheatsheet-1b79b",
-  storageBucket: "cheatsheet-1b79b.appspot.com",
-  messagingSenderId: "455671111697",
-  appId: "1:455671111697:web:5fd68a3f7d7a44348391b0",
-  measurementId: "G-NMEXYV70SV",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 function HomePage() {
   const { mode } = useColorScheme();
-  const [topic, setTopic] = useState({
-    topic: "Layout",
-    type: "children",
-    imageLink: "https://images.cheatsheet.cam/images/image-1726097807593.webp",
-    tables: [
-      {
-        table: "Box model",
-        columns: {
-          action: true,
-          description: true,
-          visual: true,
-          code: true,
-          attention: true,
-          // emoji: true,
-        },
-      },
-      {
-        table: "Overflow",
-        columns: {
-          action: true,
-          description: true,
-          visual: true,
-          code: true,
-          attention: true,
-          // emoji: true,
-        },
-      },
-      {
-        table: "Measurement Unit",
-        columns: {
-          action: true,
-          description: true,
-          visual: true,
-          code: true,
-          attention: true,
-          // emoji: true,
-        },
-      },
-      {
-        table: "Positioning",
-        columns: {
-          action: true,
-          description: true,
-          visual: true,
-          code: true,
-          attention: true,
-          // emoji: true,
-        },
-      },
-      {
-        table: "Flexbox",
-        columns: {
-          action: true,
-          description: true,
-          visual: true,
-          code: true,
-          attention: true,
-          // emoji: true,
-        },
-      },
-    ],
-  });
+  const { topic, setTopic } = useHomePage();
 
-  useEffect(() => {
-    console.log("page_view: Home");
-    logEvent(analytics, "page_view: Home");
-  }, []);
   return (
     <TopicContext.Provider value={{ topic, setTopic }}>
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
