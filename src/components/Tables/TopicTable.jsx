@@ -6,8 +6,8 @@ import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
 import Paper from "@mui/material/Paper";
 
-import ColumnsSwitch from "./ColumnsSwitch";
-import TableCellsSwitch from "./TableCellsSwitch";
+import ColumnsSwitch from "./TopicColumn";
+import TableCellsSwitch from "./TopicRow";
 import useTable from "../../hooks/useTable";
 
 function TopicTable({ table, cheatsheets }) {
@@ -40,7 +40,9 @@ function TopicTable({ table, cheatsheets }) {
         sx={{ width: "100%", marginBottom: "150px" }}
       >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          {/* Column */}
           <ColumnsSwitch columns={table.columns} isOptions={isOptions} />
+          {/* Row */}
           <TableBody>
             {rows.map((row, index) => (
               <TableCellsSwitch

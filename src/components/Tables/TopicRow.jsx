@@ -9,7 +9,7 @@ import EmojiCell from "../TableCells/EmojiCell";
 import OptionsCell from "../TableCells/OptionsCell";
 import DescriptionCell from "../TableCells/DescriptionCell";
 import AttentionCell from "../TableCells/AttentionCell";
-function TableCellsSwitch({ row, rows, isOptions, setRows }) {
+function TopicRow({ row, rows, isOptions, setRows }) {
   const customTableCellStyle = {
     borderRight: "1px solid #EDEDED",
   };
@@ -104,4 +104,4 @@ function TableCellsSwitch({ row, rows, isOptions, setRows }) {
   );
 }
 
-export default TableCellsSwitch;
+export default TopicRow;
