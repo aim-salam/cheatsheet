@@ -101,25 +101,7 @@ function HomePage() {
   return (
     <TopicContext.Provider value={{ topic, setTopic }}>
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-        <CssBaseline />
-
-        {/* Top Navigation Bar */}
-        <AppBar
-          position="static"
-          color="white"
-          sx={{
-            boxShadow: 0,
-            borderBottom: 1,
-            borderBottomColor: mode === "light" ? "#ddd" : "#272727",
-            paddingRight: "20px",
-            paddingLeft: "20px",
-            paddingTop: "10px",
-            paddingBottom: "10px",
-          }}
-        >
-          <NavBar></NavBar>
-        </AppBar>
-
+        <NavBar mode={mode}></NavBar>
         <Grid2
           container
           sx={{
@@ -128,38 +110,8 @@ function HomePage() {
             width: "100%",
           }}
         >
-          {/* Left Aside */}
-          <Grid2
-            // item
-            xs={12}
-            sm={3}
-            md={2}
-            sx={{ display: { xs: "none", sm: "block" }, width: "250px" }}
-          >
-            {/* Add aside content here */}
-            <Aside setTopic={setTopic}></Aside>
-          </Grid2>
-
-          {/* Main Content Area */}
-          <Grid2
-            // item
-            xs={12}
-            sm={9}
-            md={10}
-            sx={{ paddingRight: "40px", flex: "1 1 auto" }}
-          >
-            <Typography
-              fontSize={40}
-              fontWeight={"bold"}
-              align="center"
-              marginBottom={"60px"}
-              marginTop={"40px"}
-            >
-              {topic.topic}
-            </Typography>
-            {/* Add main content here */}
-            <MainContent topic={topic}></MainContent>
-          </Grid2>
+          <Aside setTopic={setTopic}></Aside>
+          <MainContent topic={topic}></MainContent>
         </Grid2>
       </Box>
     </TopicContext.Provider>
