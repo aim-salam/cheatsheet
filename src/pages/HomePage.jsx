@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import NavBar from "../components/NavBar";
-import Aside from "../components/Aside";
+import Aside from "../components/Aside/Aside";
 import MainContent from "../components/MainContent";
 import TopicContext from "../contexts/TopicContext";
 import useHomePage from "../hooks/useHomePage";

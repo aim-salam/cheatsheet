@@ -8,8 +8,8 @@ import {
   Typography,
   Grid2,
 } from "@mui/material";
-import { topics } from "../db/topics";
-import logo from "./../assets/logo.jpg";
+import { topics } from "../../db/topics";
+import logo from "./../../assets/logo.jpg";
 function TopicList({ setTopic }) {
   const parentStyle = {
     marginTop: "40px",
