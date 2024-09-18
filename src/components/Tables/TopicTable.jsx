@@ -12,7 +12,7 @@ import useTable from "../../hooks/useTable";
 
 function TopicTable({ table, cheatsheets }) {
   const { rows, setRows } = useTable({ table, cheatsheets });
-  const [isOptions, setIsOptions] = useState(false);
+  const [isEditable, setIsEditable] = useState(false);
 
   return (
     <Stack>
@@ -41,14 +41,14 @@ function TopicTable({ table, cheatsheets }) {
       >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           {/* Column */}
-          <ColumnsSwitch columns={table.columns} isOptions={isOptions} />
+          <ColumnsSwitch columns={table.columns} isEditable={isEditable} />
           {/* Row */}
           <TableBody>
             {rows.map((row, index) => (
               <TableCellsSwitch
                 row={row}
                 rows={rows}
-                isOptions={isOptions}
+                isEditable={isEditable}
                 setRows={setRows}
               />
             ))}

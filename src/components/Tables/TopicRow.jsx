@@ -9,88 +9,58 @@ import EmojiCell from "../TableCells/EmojiCell";
 import OptionsCell from "../TableCells/OptionsCell";
 import DescriptionCell from "../TableCells/DescriptionCell";
 import AttentionCell from "../TableCells/AttentionCell";
-function TopicRow({ row, rows, isOptions, setRows }) {
+function TopicRow({ row, rows, isEditable, setRows }) {
   const customTableCellStyle = {
     borderRight: "1px solid #EDEDED",
   };
-
-  console.log(row.item.item.attention);
-
   const customFont = "17px";
+
+  const cellData = [
+    { key: "action", component: ActionCell, value: row.item.item.action },
+    {
+      key: "description",
+      component: DescriptionCell,
+      value: row.item.item.description,
+    },
+    { key: "visual", component: VisualCell, value: row.item.item.visual },
+    { key: "gui", component: GUICell, value: row.item.item.gui },
+    { key: "cli", component: CLICell, value: row.item.item.cli },
+    {
+      key: "code",
+      component: CodeCell,
+      value: row.item.item.code,
+      extraProps: { codeType: row.item.item.codeType },
+    },
+    {
+      key: "attention",
+      component: AttentionCell,
+      value: row.item.item.attention,
+    },
+    { key: "emoji", component: EmojiCell, value: row.item.item.emoji },
+  ];
+
   return (
     <TableRow
       sx={{
-        verticalAlign: "baseLine",
-
-        borderBottom: "1px solid #EDEDED", // Custom bottom border
+        verticalAlign: "baseline",
+        borderBottom: "1px solid #EDEDED",
       }}
     >
-      {row.item.item.action ? (
-        <ActionCell
-          key={row.item.item.action + "action"}
-          action={row.item.item.action}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {row.item.item.description ? (
-        <DescriptionCell
-          key={row.item.item.action + "desctiption"}
-          action={row.item.item.description}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {row.item.item.visual ? (
-        <VisualCell
-          key={row.item.item.action + "visual"}
-          visual={row.item.item.visual}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {row.item.item.gui ? (
-        <GUICell
-          key={row.item.item.action + "gui"}
-          gui={row.item.item.gui}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {row.item.item.cli ? (
-        <CLICell
-          key={row.item.item.action + "cli"}
-          cli={row.item.item.cli}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {row.item.item.code ? (
-        <CodeCell
-          key={row.item.item.action + "code"}
-          code={row.item.item.code}
-          codeType={row.item.item.codeType}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {row.item.item.attention ? (
-        <AttentionCell
-          key={row.item.item.action + "attention"}
-          attention={row.item.item.attention}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {row.item.item.emoji ? (
-        <EmojiCell
-          key={row.item.item.action + "emoji"}
-          emoji={row.item.item.emoji}
-          customTableCellStyle={customTableCellStyle}
-          customFont={customFont}
-        />
-      ) : null}
-      {isOptions && (
+      {cellData.map(
+        ({ key, component: CellComponent, value, extraProps = {} }) =>
+          value && (
+            <CellComponent
+              key={row.item.item.action + key}
+              {...extraProps}
+              customTableCellStyle={customTableCellStyle}
+              customFont={customFont}
+              {...{ [key]: value }} // Spread dynamic prop
+            />
+          )
+      )}
+
+      {/* Render options cell if isOptions is true */}
+      {isEditable && (
         <OptionsCell
           key={row.item.item.action + "isOption"}
           row={row}

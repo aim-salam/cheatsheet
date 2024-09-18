@@ -1,6 +1,6 @@
 import React from "react";
 import { TableHead, TableRow, TableCell } from "@mui/material";
-function TopicColumn({ columns, isOptions }) {
+function TopicColumn({ columns, isEditable }) {
   const customTableStyle = {
     fontSize: "17px",
     fontWeight: "bold",
@@ -28,7 +28,7 @@ function TopicColumn({ columns, isOptions }) {
               </TableCell>
             )
         )}
-        {isOptions && <TableCell sx={customTableStyle}>Options</TableCell>}
+        {isEditable && <TableCell sx={customTableStyle}>Options</TableCell>}
       </TableRow>
     </TableHead>
   );
