@@ -12,10 +12,11 @@ const fuse = new Fuse(cheatsheets, {
 
 function MainContent({ topic }) {
   const [rows, setRows] = useState([]);
+  const { topic: topicName, tables } = topic;
 
   useEffect(() => {
-    if (topic?.topic) {
-      const result = fuse.search(topic.topic);
+    if (topicName) {
+      const result = fuse.search(topicName);
       setRows(result);
     }
   }, [topic]);
@@ -35,11 +36,11 @@ function MainContent({ topic }) {
         marginBottom={"60px"}
         marginTop={"40px"}
       >
-        {topic.topic}
+        {topicName}
       </Typography>
       {/* Add main content here */}
       <Stack>
-        {topic.tables.map((table, index) => {
+        {tables.map((table, index) => {
           return (
             <TopicTable
               key={table}
