@@ -1,7 +1,7 @@
 import { Stack, Grid2, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import TopicTable from "./Tables/TopicTable";
-import { cheatsheets } from "../db/cheatsheets";
+import TopicTable from "../Tables/TopicTable";
+import { cheatsheets } from "../../db/cheatsheets";
 import Fuse from "fuse.js";
 
 // Initialize Fuse.js outside the component to avoid unnecessary re-initialization on every render

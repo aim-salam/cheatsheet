@@ -11,7 +11,7 @@ import {
 
 import NavBar from "../components/NavBar/NavBar";
 import Aside from "../components/Aside/Aside";
-import MainContent from "../components/MainContent";
+import MainContent from "../components/MainContent/MainContent";
 import TopicContext from "../contexts/TopicContext";
 import useHomePage from "../hooks/useHomePage";
 
