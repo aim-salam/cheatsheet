@@ -15,7 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-function useWindowWidth() {
+function useHomePage() {
   const [topic, setTopic] = useState({
     topic: "Layout",
     type: "children",
@@ -89,4 +89,4 @@ function useWindowWidth() {
   return { topic, setTopic };
 }
 
-export default useWindowWidth;
+export default useHomePage;
