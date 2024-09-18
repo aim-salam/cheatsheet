@@ -4,24 +4,25 @@ import TopicTable from "./Tables/TopicTable";
 import { cheatsheets } from "../db/cheatsheets";
 import Fuse from "fuse.js";
 
+// Initialize Fuse.js outside the component to avoid unnecessary re-initialization on every render
+const fuse = new Fuse(cheatsheets, {
+  keys: ["topic"],
+  threshold: 0.1,
+});
+
 function MainContent({ topic }) {
   const [rows, setRows] = useState([]);
 
-  const fuse = new Fuse(cheatsheets, {
-    keys: ["topic"],
-    threshold: 0.1,
-  });
-
   useEffect(() => {
-    const result = fuse.search(topic.topic);
-    console.log(topic);
-
-    setRows([...result]);
+    if (topic?.topic) {
+      const result = fuse.search(topic.topic);
+      setRows(result);
+    }
   }, [topic]);
 
   return (
     <Grid2
-      // item
+      item
       xs={12}
       sm={9}
       md={10}
@@ -41,7 +42,7 @@ function MainContent({ topic }) {
         {topic.tables.map((table, index) => {
           return (
             <TopicTable
-              key={table.table}
+              key={table}
               table={table}
               cheatsheets={rows}
             ></TopicTable>
