@@ -1,10 +1,12 @@
-export default function Parent() {
-  // return (
-  //   <Children>
-  //     <div>
-  //       <p>{person}</p>
-  //       <p>{size}</p>
-  //     </div>
-  //   </Children>
-  // );
+export default function Child({ sendMessage }) {
+  const handleClick = () => {
+    sendMessage("Hello, Parent!");
+  };
+
+  return (
+    <div>
+      <h2>Child Component</h2>
+      <button onClick={handleClick}>Send Message to Parent</button>
+    </div>
+  );
 }

@@ -11,6 +11,7 @@ import { PassDataTopic } from "./topics/React/PassDataTopic";
 import { PropsTopic } from "./topics/React/PropsTopic";
 import { RefTopic } from "./topics/React/RefTopic";
 import { StateTopic } from "./topics/React/StateTopic";
+import { CallbackTopic } from "./topics/React/CallbackTopic";
 export const topics = [
   ReactTopic,
   // ComponentTopic,
@@ -19,6 +20,7 @@ export const topics = [
   RefTopic,
   PassDataTopic,
   PropsTopic,
+  CallbackTopic,
   // HTMLTopic,
   CSSTopic,
   LayoutTopic,
