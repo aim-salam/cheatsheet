@@ -9,7 +9,7 @@ import {
   Paper,
 } from "@mui/material";
 
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 import Aside from "../components/Aside/Aside";
 import MainContent from "../components/MainContent";
 import TopicContext from "../contexts/TopicContext";
