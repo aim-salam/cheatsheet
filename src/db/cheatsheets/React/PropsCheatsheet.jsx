@@ -39,7 +39,7 @@ const INTRODUCTION = [
     visual: [
       {
         text: "",
-        link: "",
+        link: "https://images.cheatsheet.cam/images/image-1726651336158.webp",
       },
     ],
     code: `// Pass value
