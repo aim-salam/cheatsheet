@@ -8,7 +8,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { topics } from "../db/topics";
+import { topics } from "../../db/topics";
 import logo from "./../assets/logo.jpg";
 function TopicList({ setTopic }) {
   function Header({ topic }) {
