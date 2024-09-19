@@ -35,9 +35,9 @@ function TopicTable({ table, cheatsheets }) {
           {table.table}
         </Typography>
         {/* Admin icon button */}
-        <IconButton color="primary" onClick={() => setIsEditable(!isEditable)}>
+        {/* <IconButton color="primary" onClick={() => setIsEditable(!isEditable)}>
           <EditIcon />
-        </IconButton>
+        </IconButton> */}
       </Stack>
       {/* Table Contens */}
       <TableContainer
@@ -62,7 +62,7 @@ function TopicTable({ table, cheatsheets }) {
       </TableContainer>
 
       {/* Admin create row button */}
-      <CreateRowButton rows={rows} setRows={setRows} />
+      {/* <CreateRowButton rows={rows} setRows={setRows} /> */}
     </Stack>
   );
 }
