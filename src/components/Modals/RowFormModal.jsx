@@ -8,16 +8,20 @@ import {
   TextField,
 } from "@mui/material";
 
-function RowForm({ row, open, setOpen, handleFinished }) {
+function RowForm({ row, type, open, setOpen, handleFinished }) {
   const defaultFormValues = {
     item: {
-      action: "",
-      visual: "",
-      gui: "",
-      cli: "",
-      code: "",
-      emoji: "",
-      priority: "",
+      item: {
+        action: "",
+        description: [" "],
+        visual: [{ text: "", link: "" }],
+        gui: "",
+        cli: "",
+        code: "",
+        codeType: "",
+        emoji: "",
+        priority: "",
+      },
     },
   };
   const [formValues, setFormValues] = useState(defaultFormValues);
@@ -27,9 +31,34 @@ function RowForm({ row, open, setOpen, handleFinished }) {
   };
 
   const handleChange = (event) => {
-    setFormValues({
-      item: { ...formValues.item, [event.target.name]: event.target.value },
-    });
+    if (event.target.name === "description") {
+      setFormValues({
+        item: {
+          item: {
+            ...formValues.item.item,
+            [event.target.name]: [event.target.value],
+          },
+        },
+      });
+    } else if (event.target.name === "visual") {
+      setFormValues({
+        item: {
+          item: {
+            ...formValues.item.item,
+            [event.target.name]: [{ text: "", link: event.target.value }],
+          },
+        },
+      });
+    } else {
+      setFormValues({
+        item: {
+          item: {
+            ...formValues.item.item,
+            [event.target.name]: event.target.value,
+          },
+        },
+      });
+    }
   };
 
   const handleSubmit = () => {
@@ -43,17 +72,31 @@ function RowForm({ row, open, setOpen, handleFinished }) {
   useEffect(() => {
     // RowForm keep use previous data, so everytime open state changes, insert new data
 
-    setFormValues(row ? row : defaultFormValues);
+    if (row) {
+      for (const key in row.item.item) {
+        console.log("key");
+        console.log(`${row[key]}  ${row[key]}`);
+        if (!row[key]) {
+          delete row[key];
+        }
+      }
+
+      setFormValues(row);
+    } else {
+      setFormValues(defaultFormValues);
+    }
   }, [open]);
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>Form</DialogTitle>
       <DialogContent>
-        {Object.entries(formValues.item).map(([key, value], index) => {
+        {Object.entries(formValues.item.item).map(([key, value], index) => {
           if (key !== "id") {
+            console.log(key);
+
             return (
               <TextField
-                autoFocus
+                // autoFocus
                 margin="dense"
                 name={key}
                 label={key.charAt(0).toUpperCase() + key.slice(1)}

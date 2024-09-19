@@ -9,6 +9,7 @@ export const CallbackTopic = {
         action: true,
         description: true,
         visual: true,
+        code: true,
         // emoji: true
       },
     },

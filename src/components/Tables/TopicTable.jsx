@@ -1,15 +1,20 @@
 import * as React from "react";
 import { useState } from "react";
-import { Stack, Typography } from "@mui/material";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableContainer from "@mui/material/TableContainer";
-import Paper from "@mui/material/Paper";
+import {
+  Stack,
+  Typography,
+  Table,
+  TableBody,
+  TableContainer,
+  Paper,
+  IconButton,
+} from "@mui/material";
 
 import ColumnsSwitch from "./TopicColumn";
 import TableCellsSwitch from "./TopicRow";
+import EditIcon from "@mui/icons-material/Edit";
 import useTable from "../../hooks/useTable";
-
+import CreateRowButton from "../Buttons/CreateRowButton";
 function TopicTable({ table, cheatsheets }) {
   const { rows, setRows } = useTable({ table, cheatsheets });
   const [isEditable, setIsEditable] = useState(false);
@@ -30,9 +35,9 @@ function TopicTable({ table, cheatsheets }) {
           {table.table}
         </Typography>
         {/* Admin icon button */}
-        {/* <IconButton color="primary" onClick={() => setIsOptions(!isOptions)}>
+        <IconButton color="primary" onClick={() => setIsEditable(!isEditable)}>
           <EditIcon />
-        </IconButton> */}
+        </IconButton>
       </Stack>
       {/* Table Contens */}
       <TableContainer
@@ -57,7 +62,7 @@ function TopicTable({ table, cheatsheets }) {
       </TableContainer>
 
       {/* Admin create row button */}
-      {/* <CreateRowButton rows={rows} setRows={setRows} /> */}
+      <CreateRowButton rows={rows} setRows={setRows} />
     </Stack>
   );
 }

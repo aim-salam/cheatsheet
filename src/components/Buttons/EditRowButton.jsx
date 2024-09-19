@@ -6,8 +6,9 @@ function EditRowButton({ row, rows, setRows }) {
   const [open, setOpen] = useState(false);
 
   function handleEditRow(newRow) {
+    console.log(newRow);
     const newRows = rows.map((row) => {
-      return row.item.id === newRow.item.id ? newRow : row;
+      return row.item.item.id === newRow.item.item.id ? newRow : row;
     });
 
     setRows([...newRows]);

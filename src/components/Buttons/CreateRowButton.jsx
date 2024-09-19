@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Typography } from "@mui/material";
 import RowForm from "../Modals/RowFormModal";
 
-function CreateRowForm({ rows, setRows }) {
+function CreateRowButton({ rows, setRows }) {
   const [open, setOpen] = useState(false);
 
   function handleCreateRow(newRow) {
@@ -12,7 +12,9 @@ function CreateRowForm({ rows, setRows }) {
     const finalDate = reverseDate.split("Z").join("");
 
     // add ID
-    newRow.item.id = finalDate;
+    newRow.item.item.id = finalDate;
+    console.log("new row");
+    console.log(newRow);
     setRows([...rows, newRow]);
   }
 
@@ -29,6 +31,8 @@ function CreateRowForm({ rows, setRows }) {
         <Typography> Create row</Typography>
       </Button>
       <RowForm
+        // row={rows[0]}
+        type="create"
         open={open}
         setOpen={setOpen}
         handleFinished={handleCreateRow}
@@ -37,4 +41,4 @@ function CreateRowForm({ rows, setRows }) {
   );
 }
 
-export default CreateRowForm;
+export default CreateRowButton;
