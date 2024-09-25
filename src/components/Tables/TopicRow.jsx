@@ -15,7 +15,7 @@ function TopicRow({ row, rows, isEditable, setRows }) {
   };
   const customFont = "17px";
 
-  const cellData = [
+  const keyData = [
     { key: "action", component: ActionCell, value: row.item.item.action },
     {
       key: "description",
@@ -46,7 +46,9 @@ function TopicRow({ row, rows, isEditable, setRows }) {
         borderBottom: "1px solid #EDEDED",
       }}
     >
-      {cellData.map(
+      {/* New Design: many cell will return UniversalCell */}
+      {/* if row have keys represent columns is true, map will UniversalCell  */}
+      {keyData.map(
         ({ key, component: CellComponent, value, extraProps = {} }) =>
           value && (
             <CellComponent
