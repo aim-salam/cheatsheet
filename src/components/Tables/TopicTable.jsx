@@ -7,21 +7,16 @@ import {
   TableBody,
   TableContainer,
   Paper,
-  IconButton,
 } from "@mui/material";
-
-import ColumnsSwitch from "./TopicColumn";
-import TableCellsSwitch from "./TopicRow";
-import EditIcon from "@mui/icons-material/Edit";
+import TopicColumn from "./TopicColumn";
+import TopicRow from "./TopicRow";
 import useTable from "../../hooks/useTable";
-import CreateRowButton from "../Buttons/CreateRowButton";
 function TopicTable({ table, cheatsheets }) {
   const { rows, setRows } = useTable({ table, cheatsheets });
   const [isEditable, setIsEditable] = useState(false);
 
   return (
     <Stack>
-      {/* Table name */}
       <Stack flexDirection="row" justifyContent="center">
         <Typography
           fontSize="30px"
@@ -34,23 +29,19 @@ function TopicTable({ table, cheatsheets }) {
         >
           {table.table}
         </Typography>
-        {/* Admin icon button */}
         {/* <IconButton color="primary" onClick={() => setIsEditable(!isEditable)}>
           <EditIcon />
         </IconButton> */}
       </Stack>
-      {/* Table Contens */}
       <TableContainer
         component={Paper}
         sx={{ width: "100%", marginBottom: "150px" }}
       >
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          {/* Column */}
-          <ColumnsSwitch columns={table.columns} isEditable={isEditable} />
-          {/* Row */}
+          <TopicColumn columns={table.columns} isEditable={isEditable} />
           <TableBody>
             {rows.map((row, index) => (
-              <TableCellsSwitch
+              <TopicRow
                 row={row}
                 rows={rows}
                 isEditable={isEditable}
@@ -60,8 +51,6 @@ function TopicTable({ table, cheatsheets }) {
           </TableBody>
         </Table>
       </TableContainer>
-
-      {/* Admin create row button */}
       {/* <CreateRowButton rows={rows} setRows={setRows} /> */}
     </Stack>
   );
