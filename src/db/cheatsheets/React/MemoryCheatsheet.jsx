@@ -5,7 +5,7 @@ const INTRODUCTION = [
     id: "memory-prerequisite",
     topic: "Memory",
     table: "Introduction",
-    action: "Prerequisite",
+    action: ["Prerequisite"],
     description: [`React building-block`],
     visual: [],
 
@@ -49,26 +49,49 @@ const VARIABLE = [
     id: "memory-variable",
     topic: "Memory",
     table: "Variable",
-    action: "Variable",
+    action: [
+      {
+        text: "Variable",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      `1. Variable can hold data.`,
-      ` `,
-      ` `,
-      `2. but it can't trigger React to re-render the component.`,
+      {
+        text: "1. Variable can hold data.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "2. but it can't trigger React to re-render the component.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "Component memories :",
-        link: "https://images.cheatsheet.cam/images/image-1726424143343.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726424143343.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `let name = 'Sam'`,
-    codeType: "javascript",
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: "let name = 'Sam'",
+        code_type: "javascript",
+      },
+    ],
   }),
 ];
 
-export const MemoryCheatsheet = [...INTRODUCTION, ...VARIABLE];
+export const MemoryCheatsheet = [
+  // ...INTRODUCTION,
+  ...VARIABLE,
+];

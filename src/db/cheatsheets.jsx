@@ -8,13 +8,13 @@ import { StateCheatsheet } from "./cheatsheets/React/StateCheatsheet";
 import { PropsCheatsheet } from "./cheatsheets/React/PropsCheatsheet";
 import { CallbackCheatsheet } from "./cheatsheets/React/CallbackCheatsheet";
 export const cheatsheets = [
-  ...HTMLCheatsheet,
-  ...LayoutCheatsheets,
-  ...ReactCheatsheet,
+  // ...HTMLCheatsheet,
+  // ...LayoutCheatsheets,
+  // ...ReactCheatsheet,
   ...MemoryCheatsheet,
-  ...StateCheatsheet,
-  ...RefCheatsheet,
-  ...PassDataCheatsheet,
-  ...PropsCheatsheet,
-  ...CallbackCheatsheet,
+  // ...StateCheatsheet,
+  // ...RefCheatsheet,
+  // ...PassDataCheatsheet,
+  // ...PropsCheatsheet,
+  // ...CallbackCheatsheet,
 ];

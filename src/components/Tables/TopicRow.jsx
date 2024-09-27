@@ -9,6 +9,7 @@ import EmojiCell from "../TableCells/EmojiCell";
 import OptionsCell from "../TableCells/OptionsCell";
 import DescriptionCell from "../TableCells/DescriptionCell";
 import AttentionCell from "../TableCells/AttentionCell";
+import UniversalCell from "../TableCells/UniversalCell";
 function TopicRow({ row, rows, isEditable, setRows }) {
   const customTableCellStyle = {
     borderRight: "1px solid #EDEDED",
@@ -16,27 +17,24 @@ function TopicRow({ row, rows, isEditable, setRows }) {
   const customFont = "17px";
 
   const keyData = [
-    { key: "action", component: ActionCell, value: row.item.item.action },
+    { key: "action", value: row.item.item.action },
     {
       key: "description",
-      component: DescriptionCell,
       value: row.item.item.description,
     },
-    { key: "visual", component: VisualCell, value: row.item.item.visual },
-    { key: "gui", component: GUICell, value: row.item.item.gui },
-    { key: "cli", component: CLICell, value: row.item.item.cli },
+    { key: "visual", value: row.item.item.visual },
+    // { key: "gui", component: GUICell, value: row.item.item.gui },
+    // { key: "cli", component: CLICell, value: row.item.item.cli },
     {
       key: "code",
-      component: CodeCell,
       value: row.item.item.code,
-      extraProps: { codeType: row.item.item.codeType },
     },
-    {
-      key: "attention",
-      component: AttentionCell,
-      value: row.item.item.attention,
-    },
-    { key: "emoji", component: EmojiCell, value: row.item.item.emoji },
+    // {
+    //   key: "attention",
+    //   component: AttentionCell,
+    //   value: row.item.item.attention,
+    // },
+    // { key: "emoji", component: EmojiCell, value: row.item.item.emoji },
   ];
 
   return (
@@ -49,15 +47,14 @@ function TopicRow({ row, rows, isEditable, setRows }) {
       {/* New Design: many cell will return UniversalCell */}
       {/* if row have keys represent columns is true, map will UniversalCell  */}
       {keyData.map(
-        ({ key, component: CellComponent, value, extraProps = {} }) =>
+        ({ key, value, extraProps = {} }) =>
           value && (
-            <CellComponent
-              key={row.item.item.action + key}
-              {...extraProps}
+            <UniversalCell
+              key={value}
+              data={value}
               customTableCellStyle={customTableCellStyle}
               customFont={customFont}
-              {...{ [key]: value }} // Spread dynamic prop
-            />
+            ></UniversalCell>
           )
       )}
 
