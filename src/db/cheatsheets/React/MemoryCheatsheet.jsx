@@ -5,42 +5,76 @@ const INTRODUCTION = [
     id: "memory-prerequisite",
     topic: "Memory",
     table: "Introduction",
-    action: ["Prerequisite"],
-    description: [`React building-block`],
+    action: [
+      {
+        text: "Prerequisite",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "React building-block",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "memory-def",
     topic: "Memory",
     table: "Introduction",
-    action: "Definition",
-    description: [`Memory is a feature to hold data.`],
+    action: [
+      {
+        text: "Definition",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Memory is a feature to hold data.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "memory-type",
     topic: "Memory",
     table: "Introduction",
-    action: "Types",
-    description: [`variable, state, reference`],
-    visual: [
+    action: [
       {
-        text: "Component memories :",
-        link: "https://images.cheatsheet.cam/images/image-1726470941134.webp",
+        text: "Types",
+        image_link: "",
+        code: "",
+        code_type: "",
       },
     ],
 
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
+    description: [
+      {
+        text: "variable, state, reference",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "Variable",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726470941134.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
   }),
 ];
 
@@ -91,7 +125,4 @@ const VARIABLE = [
   }),
 ];
 
-export const MemoryCheatsheet = [
-  // ...INTRODUCTION,
-  ...VARIABLE,
-];
+export const MemoryCheatsheet = [...INTRODUCTION, ...VARIABLE];

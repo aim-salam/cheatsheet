@@ -5,55 +5,94 @@ const INTRODUCTION = [
     id: "state-prerequisite",
     topic: "State",
     table: "Introduction",
-    action: "Prerequisite",
-    description: ["Memory"],
+    action: [
+      {
+        text: "Prerequisite",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Memory",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "state-definition",
     topic: "State",
     table: "Introduction",
-    action: "Definition",
+    action: [
+      {
+        text: "Definition",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      `1. State can hold data`,
-      `2. and it can trigger React to re-render the component.`,
+      {
+        text: "1. State can hold data",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "2. and it can trigger React to re-render the component.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "Component memories :",
-        link: "https://images.cheatsheet.cam/images/image-1726424168846.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726424168846.webp",
+        code: "",
+        code_type: "",
       },
     ],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "state-bb",
     topic: "State",
     table: "Introduction",
-    action: "Building-block",
-    description: [` `],
+    action: [
+      {
+        text: "Building-block",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726459325361.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726459325361.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `const [number,setNumber] = useState(0) // integer/string
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `const [number,setNumber] = useState(0) // integer/string
 const [isLoading,setIsLoading] = useState(false) // bool
 const [members, setMembers] = useState([]) // array
 const [movies, setMovies] = useState({}) // object
 `,
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
+        code_type: "javascript",
+      },
+    ],
   }),
 ];
 
@@ -64,37 +103,71 @@ const UPDATE = [
     id: "state-primitive",
     topic: "State",
     table: "Update",
-    action: "Primitive values",
-    description: [`string, integer, boolean, null`],
+    action: [
+      {
+        text: "Primitive values",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "string, integer, boolean, null",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726460443383.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726460443383.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: ` const [name, setName] = useState('');
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: ` const [name, setName] = useState('');
     
  setName('Sam');
 ;`,
-
-    emoji: "🔥",
-    priority: 1,
-    codeType: "js",
+        code_type: "javascript",
+      },
+    ],
   }),
 
   new Cheatsheet({
     id: "array-hooks",
     topic: "State",
     table: "Update",
-    action: "Array",
-    description: [` `],
+    action: [
+      {
+        text: "Array",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726459542742.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726459542742.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: ` const [members, setMembers] = useState([]);
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: ` const [members, setMembers] = useState([]);
 
 
  //Create new object ✅
@@ -109,24 +182,37 @@ setMembers(members.filter(member => member !== 'Aiman'))
 
  //Mutate ❌
  members.push('Sam');`,
-
-    emoji: "🔥",
-    priority: 1,
-    codeType: "js",
+        code_type: "javascript",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "object-hooks",
     topic: "State",
     table: "Update",
-    action: "Object",
-    description: [` `],
+    action: [
+      {
+        text: "Object",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726459668006.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726459668006.webp",
+        code: "",
+        code_type: "javascript",
       },
     ],
-    code: `const [movie, setMovie] = useState({});
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `const [movie, setMovie] = useState({});
  
 
 
@@ -136,27 +222,45 @@ setMembers(members.filter(member => member !== 'Aiman'))
 
  //Mutate ❌
  movie.rate = 4.5;`,
-
-    emoji: "🔥",
-    priority: 1,
-    codeType: "js",
+        code_type: "javascript",
+      },
+    ],
   }),
 
   new Cheatsheet({
     id: "state-var",
     topic: "State",
     table: "Update",
-    action: "Batch",
+    action: [
+      {
+        text: "Batch",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      `One event will have many series of state updates before next render`,
+      {
+        text: "One event will have many series of state updates before next render",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726459887861.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726459887861.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: ` const [score, setScore] = useState(0);
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: ` const [score, setScore] = useState(0);
 
 
  function handleClick1() {
@@ -173,10 +277,9 @@ setMembers(members.filter(member => member !== 'Aiman'))
    //score will be 7
  }
 `,
-
-    emoji: "🔥",
-    priority: 1,
-    codeType: "js",
+        code_type: "javascript",
+      },
+    ],
   }),
 ];
 

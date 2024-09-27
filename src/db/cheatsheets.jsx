@@ -10,11 +10,11 @@ import { CallbackCheatsheet } from "./cheatsheets/React/CallbackCheatsheet";
 export const cheatsheets = [
   // ...HTMLCheatsheet,
   // ...LayoutCheatsheets,
-  // ...ReactCheatsheet,
+  ...ReactCheatsheet,
   ...MemoryCheatsheet,
-  // ...StateCheatsheet,
-  // ...RefCheatsheet,
-  // ...PassDataCheatsheet,
-  // ...PropsCheatsheet,
-  // ...CallbackCheatsheet,
+  ...StateCheatsheet,
+  ...RefCheatsheet,
+  ...PassDataCheatsheet,
+  ...PropsCheatsheet,
+  ...CallbackCheatsheet,
 ];

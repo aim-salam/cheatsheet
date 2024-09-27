@@ -5,54 +5,91 @@ const INTRODUCTION = [
     id: "react-prerequisite",
     topic: "React",
     table: "Introduction",
-    action: "Prerequisite",
-    description: [`Video and video editor`],
+    action: [
+      {
+        text: "Prerequisite",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Video and video editor",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "Video editor :",
-        link: "https://images.cheatsheet.cam/images/image-1726417562619.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726417562619.webp",
+        code: "",
+        code_type: "",
       },
     ],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "react-definition",
     topic: "React",
     table: "Introduction",
-    action: "Definition",
-    description: [`React is a library/framework used to build webpages.`],
+    action: [
+      {
+        text: "Definition",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "React is a library/framework used to build webpages.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "React: ",
-        link: "https://images.cheatsheet.cam/images/image-1726417831933.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726417831933.webp",
+        code: "",
+        code_type: "",
       },
     ],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "react-bb",
     topic: "React",
     table: "Introduction",
-    action: "Building-block",
+    action: [
+      {
+        text: "Building-block",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      "Components, JSX, Props, State, Hooks, Handling events, Virtual DOM, Router",
+      {
+        text: "Components, JSX, Props, State, Hooks, Handling events, Virtual DOM, Router",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726418761530.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726418761530.webp",
+        code: "",
+        code_type: "",
       },
     ],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
 ];
 

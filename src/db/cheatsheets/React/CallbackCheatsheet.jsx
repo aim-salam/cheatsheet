@@ -5,15 +5,30 @@ const INTRODUCTION = [
     id: "Callback-bb",
     topic: "Callback",
     table: "Introduction",
-    action: "Building-block",
-    description: [` `],
+    action: [
+      {
+        text: "Building-block",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726661256402.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726661256402.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `export default function Parent() {
+
+    code: [
+      {
+        text: "Variable",
+        image_link: "",
+        code: `export default function Parent() {
 
   const handleMoney = (childrenMoney) => {
     console.log(childrenMoney)
@@ -41,10 +56,9 @@ export default function Children({ receiveMoney }) {
 }
 
 `,
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
+        code_type: "javascript",
+      },
+    ],
   }),
 ];
 

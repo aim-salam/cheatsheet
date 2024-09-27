@@ -5,52 +5,97 @@ const INTRODUCTION = [
     id: "ref-prerequisite",
     topic: "Reference",
     table: "Introduction",
-    action: "Prerequisite",
-    description: [`Memory`],
+    action: [
+      {
+        text: "Prerequisite",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Memory",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [],
-
-    emoji: "❄️",
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "ref-definition",
     topic: "Reference",
     table: "Introduction",
-    action: "Definition",
+    action: [
+      {
+        text: "Definition",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      `1. Ref can hold data`,
-      `2. but it can't trigger React to re-render the component.`,
-      `3. The data is not inside the component but outside, so the value remain across re-renders.`,
+      {
+        text: "1. Ref can hold data",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "2. but it can't trigger React to re-render the component.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "3. The data is not inside the component but outside, so the value remain across re-renders.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "Component memories :",
-        link: "https://images.cheatsheet.cam/images/image-1726462745644.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726462745644.webp",
+        code: "",
+        code_type: "javascript",
       },
     ],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "javascript",
-    codeType: "js",
   }),
   new Cheatsheet({
     id: "ref-bb",
     topic: "Reference",
     table: "Introduction",
-    action: "Building-block",
-    description: [` `],
+    action: [
+      {
+        text: "Building-block",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726463732585.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726463732585.webp",
+        code: "",
+        code_type: "javascript",
       },
     ],
-    code: `const myRef = useRef(initialValue);`,
 
-    emoji: "❄️",
-    priority: 1,
-    codeType: "javascript",
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `const myRef = useRef(initialValue);`,
+        code_type: "javascript",
+      },
+    ],
   }),
 ];
 
@@ -61,15 +106,21 @@ const ACCESS = [
     id: "ref-access-value",
     topic: "Reference",
     table: "Access",
-    action: "Value",
-    description: [` `],
-    visual: [
+    action: [
       {
-        text: "",
-        link: "",
+        text: "Value",
+        image_link: "",
+        code: "",
+        code_type: "javascript",
       },
     ],
-    code: ` // Access value
+    description: [],
+    visual: [],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: ` // Access value
 const countRef = useRef(0);
       
 const value = countRef.current
@@ -82,10 +133,9 @@ const value = inputEl.current.focus();
 
 <input ref={inputEl} type="text" />
   `,
-
-    emoji: "🔥",
-    priority: 1,
-    codeType: "javascript",
+        code_type: "javascript",
+      },
+    ],
   }),
 ];
 const UPDATE = [
@@ -93,23 +143,35 @@ const UPDATE = [
     id: "ref-update-value",
     topic: "Reference",
     table: "Update",
-    action: "Value",
-    description: [`string, integer, boolean, null`],
-    visual: [
+    action: [
       {
-        text: "",
-        link: "",
+        text: "Value",
+        image_link: "",
+        code: "",
+        code_type: "javascript",
       },
     ],
-    code: ` // Storing value
+    description: [
+      {
+        text: "string, integer, boolean, null",
+        image_link: "",
+        code: ``,
+        code_type: "javascript",
+      },
+    ],
+    visual: [],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: ` // Storing value
 const countRef = useRef(0);
     
 
 countRef.current = count + 1;`,
-
-    emoji: "🔥",
-    priority: 1,
-    codeType: "javascript",
+        code_type: "javascript",
+      },
+    ],
   }),
 ];
 

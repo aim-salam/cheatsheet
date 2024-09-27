@@ -34,15 +34,36 @@ const INTRODUCTION = [
     id: "Props-bb",
     topic: "Props",
     table: "Introduction",
-    action: "Building-block",
-    description: [` `],
+    action: [
+      {
+        text: "Building-block",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726651336158.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726651336158.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `// Pass value
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `// Pass value
 export default function Parent() {
  return (
    <Children
@@ -65,6 +86,9 @@ export default function Children({
   );
 }
   `,
+        code_type: "javascript",
+      },
+    ],
     // //Pass children
     //   function Children({ children }) {
     //     return (
@@ -73,10 +97,6 @@ export default function Children({
     //       </div>
     //     );
     //   }
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "js",
   }),
 ];
 
