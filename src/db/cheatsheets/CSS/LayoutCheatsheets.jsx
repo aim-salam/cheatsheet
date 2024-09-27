@@ -5,111 +5,170 @@ const BOX_MODEL = [
     id: "box-mode-box-modell",
     topic: "Layout",
     table: "Box model",
-    action: "Box model",
-    description: ["Every element/content rendered will be put inside a box"],
+    action: [
+      {
+        text: "Box model",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Every element/content rendered will be put inside a box",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "Box Model",
-        link: "https://images.cheatsheet.cam/images/image-1726218931438.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726218931438.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "Inspect in Browser",
-        link: "https://images.cheatsheet.cam/images/image-1726218884809.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726218884809.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "Example:",
-        link: "https://images.cheatsheet.cam/images/image-1726360547706.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726360547706.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: " ",
-    attention: [
-      {
-        text: `1. Padding, border, margin will never affect element/content size`,
-      },
-    ],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+
+    // attention: [
+    //   {
+    //     text: `1. Padding, border, margin will never affect element/content size`,
+    //   },
+    // ],
   }),
   new Cheatsheet({
     id: "box-mode-border",
     topic: "Layout",
     table: "Box model",
-    action: "Border",
-    description: [" "],
-    visual: [
+    action: [
       {
-        text: " ",
-        link: "https://images.cheatsheet.cam/images/image-1726359876376.webp",
+        text: "Border",
+        image_link: "",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
-border: 5px solid #3435ff; /* width style color */
-border-color:  #3435ff;`,
-    attention: [],
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+    description: [],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726359876376.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
+  border: 5px solid #3435ff; /* width style color */
+  border-color:  #3435ff;`,
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "box-mode-padding",
     topic: "Layout",
     table: "Box model",
-    action: "Padding",
-    description: [" "],
+    action: [
+      {
+        text: "Padding",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726359955413.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726359955413.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
-padding :10px; /* all side */
-padding: 10px 20px;  /* vertical horizontal */
-padding: 10px 20px 30px 40px; /* top right bottom left */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
+  padding :10px; /* all side */
+  padding: 10px 20px;  /* vertical horizontal */
+  padding: 10px 20px 30px 40px; /* top right bottom left */
 
-
-padding-left: 10px;/* only left */
-padding-right: 10px;/* only right */
-padding-top: 10px;/* only top */`,
-    attention: [],
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+  padding-left: 10px;/* only left */
+  padding-right: 10px;/* only right */
+  padding-top: 10px;/* only top */`,
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "box-mode-margin",
     topic: "Layout",
     table: "Box model",
-    action: "Margin",
-    description: [" "],
+    action: [
+      {
+        text: "Margin",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "Before:",
-        link: "https://images.cheatsheet.cam/images/image-1726360018984.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726360018984.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* same like padding */`,
-    emoji: "❄️",
-    attention: [
+    code: [
       {
-        text: "1. Vertical margin will be default at 16px.",
-      },
-      {
-        text: `2. Margin collapsing.
-If two elements have margins that meet each other, the margin will collapse.
-Example:
-Element A: 20px margin.
-Element B: 20px margin.
-Equal: The space between should be 40px right? Nope, it will collapse into 20px.`,
-      },
-      {
-        text: `3. Margin not increase box model size. It is just to get away.`,
+        text: "",
+        image_link: "",
+        code: `/* same like padding */`,
+        code_type: "css",
       },
     ],
 
-    priority: 1,
-    codeType: "css",
+    //   attention: [
+    //     {
+    //       text: "1. Vertical margin will be default at 16px.",
+    //     },
+    //     {
+    //       text: `2. Margin collapsing.
+    // If two elements have margins that meet each other, the margin will collapse.
+    // Example:
+    // Element A: 20px margin.
+    // Element B: 20px margin.
+    // Equal: The space between should be 40px right? Nope, it will collapse into 20px.`,
+    //     },
+    //     {
+    //       text: `3. Margin not increase box model size. It is just to get away.`,
+    //     },
+    //   ],
   }),
 ];
 
@@ -118,93 +177,159 @@ const OVERFLOW = [
     id: "overflow-overflow",
     topic: "Layout",
     table: "Overflow",
-    action: "Overflow",
+    action: [
+      {
+        text: "Overflow",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      "Parent size is fixed, but children are bigger than parents = overflow.",
+      {
+        text: "Parent size is fixed, but children are bigger than parents = overflow.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "Overflow",
-        link: "https://images.cheatsheet.cam/images/image-1726357762233.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726357762233.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: " ",
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
   }),
   new Cheatsheet({
     id: "overflow-hidden",
     topic: "Layout",
     table: "Overflow",
-    action: "hidden",
-    description: [" "],
+    action: [
+      {
+        text: "hidden",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726357886442.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726357886442.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* parent element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* parent element CSS */
 overflow: hidden;`,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "overflow-scroll",
     topic: "Layout",
     table: "Overflow",
-    action: "scroll",
-    description: [" "],
+    action: [
+      {
+        text: "scroll",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726357984071.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726357984071.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* parent element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* parent element CSS */
 overflow: scroll;`,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "overflow-auto",
     topic: "Layout",
     table: "Overflow",
-    action: "auto",
-    description: ["Same like scroll, but only appear when overflow happened"],
+    action: [
+      {
+        text: "auto",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Same like scroll, but only appear when overflow happened",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726357984071.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726357984071.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* parent element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* parent element CSS */
 overflow: auto;`,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "overflow-xy",
     topic: "Layout",
     table: "Overflow",
-    action: "overflow-x,overflow-y",
-    description: [" "],
+    action: [
+      {
+        text: "overflow-x,overflow-y",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [],
-    code: `/* parent element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* parent element CSS */
 /* vertical horizontal */
 overflow: auto hidden;`,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
 ];
 
@@ -213,163 +338,257 @@ const MEASUREMENT_UNIT = [
     id: "measurement-unit-measurement-unit",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "Measurement Unit",
+    action: [
+      {
+        text: "Measurement Unit",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      `Two categories:
-1.Absolute 
+      {
+        text: `Two categories:
+1.Absolute
 2.Relative
 `,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
-    visual: [
-      // {
-      //   text: "",
-      //   link: "",
-      // },
-    ],
-    code: ` `,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
   }),
   new Cheatsheet({
     id: "measurement-unit-absolute",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "1. Absolute",
-    description: [`Fix, never changes`],
+    action: [
+      {
+        text: "1. Absolute",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Fix, never changes",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       // {
       //   text: "",
       //   link: "",
       // },
     ],
-    code: ` `,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
   }),
   new Cheatsheet({
     id: "measurement-unit-px",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "px",
-    description: [`Fix`],
+    action: [
+      {
+        text: "px",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Fix",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "Big browser size:",
-        link: "https://images.cheatsheet.cam/images/image-1726361421455.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726361421455.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "Smaller browser size",
-        link: "https://images.cheatsheet.cam/images/image-1726361377347.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726361377347.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 px`,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "measurement-unit-relative",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "2. Relative",
-    description: [`Relate to something.`],
+    action: [
+      {
+        text: "2. Relative",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Relate to something.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       // {
       //   text: "",
       //   link: "",
       // },
     ],
-    code: ` `,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
   }),
   new Cheatsheet({
     id: "measurement-unit-%",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "%",
-    description: [`Relate to size of parent element`],
+    action: [
+      {
+        text: "%",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Relate to size of parent element",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "Big parent size:",
-        link: "https://images.cheatsheet.cam/images/image-1726361472454.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726361472454.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "Smaller parent element:",
-        link: "https://images.cheatsheet.cam/images/image-1726361517597.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726361517597.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 /* 1-100*/
 50%
 `,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "measurement-unit-%",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "vw,vh",
-    description: [`Relate to size of viewport/browser`],
+    action: [
+      {
+        text: "vw,vh",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Relate to size of viewport/browser",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "Big browser size:",
-        link: "https://images.cheatsheet.cam/images/image-1726361578865.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726361578865.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "Smaller browser size:",
-        link: "https://images.cheatsheet.cam/images/image-1726361619818.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726361619818.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 /* 1-100*/
 50vw
 50vh
 `,
-    attention: [
-      {
-        text: `1. Default. Viewport height default is 0. So, ...`,
+        code_type: "css",
       },
     ],
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
+    // attention: [
+    //   {
+    //     text: `1. Default. Viewport height default is 0. So, ...`,
+    //   },
+    // ],
   }),
   new Cheatsheet({
     id: "measurement-unit-em",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "em",
-    description: [` `],
+    action: [
+      {
+        text: "em",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [],
-    code: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
   }),
   new Cheatsheet({
     id: "measurement-unit-rem",
     topic: "Layout",
     table: "Measurement Unit",
-    action: "rem",
-    description: [` `],
+    action: [
+      {
+        text: "rem",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [],
-    code: ` `,
-    attention: ` `,
-    emoji: "❄️",
-    priority: 1,
-    codeType: "css",
   }),
 ];
 
@@ -378,124 +597,214 @@ const POSITIONING = [
     id: "positioning-positioning",
     topic: "Layout",
     table: "Positioning",
-    action: "1. Positioning",
-    description: [" "],
+    action: [
+      {
+        text: "1. Positioning",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726369974022.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726369974022.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: " ",
-    attention: [
-      {
-        text: `1. Default. All element position default is static`,
-      },
-    ],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+
+    // attention: [
+    //   {
+    //     text: `1. Default. All element position default is static`,
+    //   },
+    // ],
   }),
   new Cheatsheet({
     id: "positioning-relative",
     topic: "Layout",
     table: "Positioning",
-    action: "relative",
-    description: ["Relate to current position."],
+    action: [
+      {
+        text: "relative",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Relate to current position.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726370088051.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726370088051.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 position: relative;
 left: 30px;`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-absolute",
     topic: "Layout",
     table: "Positioning",
-    action: "absolute",
+    action: [
+      {
+        text: "absolute",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      "Out of current flow,a nd relate to container/ parent element.",
+      {
+        text: "Out of current flow,a nd relate to container/ parent element.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726370435020.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726370435020.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* parent element */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* parent element */
 position:relative
 
 /* current element */
 position: absolute;
 left: 30px;`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-fixed",
     topic: "Layout",
     table: "Positioning",
-    action: "fixed",
-    description: ["Out of current flow,and relate to viewport."],
+    action: [
+      {
+        text: "fixed",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Out of current flow,and relate to viewport.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726370454417.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726370454417.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 position: fixed;
 top: 0px;`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-zindex",
     topic: "Layout",
     table: "Positioning",
-    action: "2. z-index",
-    description: ["If an element overlap the element, change the z-axis"],
+    action: [
+      {
+        text: "2. z-index",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "If an element overlap the element, change the z-axis",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "Overlap:",
-        link: "https://images.cheatsheet.cam/images/image-1726370568911.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726370568911.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "z-index:",
-        link: "https://images.cheatsheet.cam/images/image-1726370617670.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726370617670.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 z-index: -1`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-widthAuto",
     topic: "Layout",
     table: "Positioning",
-    action: "3. Width auto",
-    description: [" "],
+    action: [
+      {
+        text: "3. Width auto",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [],
-    code: ` `,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
   }),
 ];
 
@@ -504,199 +813,293 @@ const FLEXBOX = [
     id: "positioning-flexbox",
     topic: "Layout",
     table: "Flexbox",
-    action: "Flexbox",
-    description: ["Laying out children elements in one direction."],
+    action: [
+      {
+        text: "Flexbox",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Laying out children elements in one direction.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 display: flex;`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-row",
     topic: "Layout",
     table: "Flexbox",
-    action: "row",
-    description: [" "],
-    visual: [
+    action: [
       {
-        text: " ",
-        link: "https://images.cheatsheet.cam/images/image-1726370953322.webp",
+        text: "row",
+        image_link: "",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    description: [],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726370953322.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 display: flex;
 flex-direction: row;`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-column",
     topic: "Layout",
     table: "Flexbox",
-    action: "column",
-    description: [" "],
-    visual: [
+    action: [
       {
-        text: " ",
-        link: "https://images.cheatsheet.cam/images/image-1726371076921.webp",
+        text: "column",
+        image_link: "",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    description: [],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371076921.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 display: flex;
 flex-direction: column;`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-alignment",
     topic: "Layout",
     table: "Flexbox",
-    action: "Alignment",
+    action: [
+      {
+        text: "Alignment",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      "Two axes:\n 1.Main ( justify-content )\n2.Cross( align-items)",
+      {
+        text: "Two axes:\n 1.Main ( justify-content )\n2.Cross( align-items)",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
-        text: " ",
-        link: "https://images.cheatsheet.cam/images/image-1726371372535.webp",
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371372535.webp",
+        code: "",
+        code_type: "",
       },
       {
-        text: " ",
-        link: "https://images.cheatsheet.cam/images/image-1726371408729.webp",
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371408729.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: ` `,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
   }),
   new Cheatsheet({
     id: "positioning-justifycontent",
     topic: "Layout",
     table: "Flexbox",
-    action: "justify-content",
-    description: [" "],
+    action: [
+      {
+        text: "justify-content",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "flex-start:",
-        link: "https://images.cheatsheet.cam/images/image-1726371722853.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371722853.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "center:",
-        link: "https://images.cheatsheet.cam/images/image-1726371750432.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371750432.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "flex-end:",
-        link: "https://images.cheatsheet.cam/images/image-1726371772530.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371772530.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "space-evenly:",
-        link: "https://images.cheatsheet.cam/images/image-1726371800959.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371800959.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "space-between:",
-        link: "https://images.cheatsheet.cam/images/image-1726371836302.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371836302.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 display: flex;
 flex-direction: row;
 
 ..
 justify-content: flex-start
 
-
 ..
 justify-content: center
-
 
 ..
 justify-content: flex-end
 
-
 ..
 justify-content: space-evenly
 
-
 ..
 justify-content: space-between`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-alignitems",
     topic: "Layout",
     table: "Flexbox",
-    action: "align-items",
-    description: [" "],
+    action: [
+      {
+        text: "align-items",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "flex-start:",
-        link: "https://images.cheatsheet.cam/images/image-1726371722853.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371722853.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "center:",
-        link: "https://images.cheatsheet.cam/images/image-1726371981653.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371981653.webp",
+        code: "",
+        code_type: "",
       },
       {
         text: "flex-end:",
-        link: "https://images.cheatsheet.cam/images/image-1726371991977.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726371991977.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `/* current element CSS */
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `/* current element CSS */
 display: flex;
 flex-direction: row;
 
 ..
 align-items: flex-start
 
-
 ..
 align-items: center
 
-
 ..
 align-items: flex-end`,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+        code_type: "css",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-aligncontent",
     topic: "Layout",
     table: "Flexbox",
-    action: "align-content",
-    description: [" "],
-    visual: [],
-    code: ``,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+    action: [
+      {
+        text: "align-content",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "positioning-flexwrap",
     topic: "Layout",
     table: "Flexbox",
-    action: "flex-wrap",
-    description: [" "],
-    visual: [],
-    code: ``,
-    attention: [],
-    emoji: "❄️❄️",
-    priority: 1,
-    codeType: "css",
+    action: [
+      {
+        text: "flex-wrap",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
   }),
 ];
 

@@ -9,7 +9,7 @@ import { PropsCheatsheet } from "./cheatsheets/React/PropsCheatsheet";
 import { CallbackCheatsheet } from "./cheatsheets/React/CallbackCheatsheet";
 export const cheatsheets = [
   // ...HTMLCheatsheet,
-  // ...LayoutCheatsheets,
+  ...LayoutCheatsheets,
   ...ReactCheatsheet,
   ...MemoryCheatsheet,
   ...StateCheatsheet,
