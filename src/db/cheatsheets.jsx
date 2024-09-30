@@ -8,7 +8,7 @@ import { StateCheatsheet } from "./cheatsheets/React/StateCheatsheet";
 import { PropsCheatsheet } from "./cheatsheets/React/PropsCheatsheet";
 import { CallbackCheatsheet } from "./cheatsheets/React/CallbackCheatsheet";
 export const cheatsheets = [
-  // ...HTMLCheatsheet,
+  ...HTMLCheatsheet,
   ...LayoutCheatsheets,
   ...ReactCheatsheet,
   ...MemoryCheatsheet,

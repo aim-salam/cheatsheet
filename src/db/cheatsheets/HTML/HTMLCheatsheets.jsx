@@ -5,7 +5,14 @@ const INTRODUCTION = [
     id: "html-prerequisite",
     topic: "HTML",
     table: "Introduction",
-    action: "Prerequisite",
+    action: [
+      {
+        text: "Prerequisite",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
       `The building blocks of a website are structure, style, and logic.`,
     ],
@@ -25,39 +32,61 @@ const INTRODUCTION = [
     id: "html-definition",
     topic: "HTML",
     table: "Introduction",
-    action: "Definition",
+    action: [
+      {
+        text: "Definition",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      `HTML is a language used to write the markup/structure of a webpage.`,
+      {
+        text: "HTML is a language used to write the markup/structure of a webpage.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726073050194.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726073050194.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    // prerequisite: [],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "html",
   }),
   new Cheatsheet({
     id: "html-bb",
     topic: "HTML",
     table: "Introduction",
-    action: "Building-block",
-    description: ["Element, Attribute, Tag"],
+    action: [
+      {
+        text: "Building-block",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Element, Attribute, Tag",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726375367455.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726375367455.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    // prerequisite: [],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "html",
   }),
 ];
 
@@ -66,51 +95,108 @@ const HEAD = [
     id: "html-head",
     topic: "HTML",
     table: "Head",
-    action: "head",
-    description: ["Tell Browser and Search Engine about this page"],
+    action: [
+      {
+        text: "head",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Tell Browser and Search Engine about this page",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [],
-    code: `<head>
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<head>
 
 </head>  `,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+        code_type: "html",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "html-meta",
     topic: "HTML",
     table: "Head",
-    action: "meta",
-    description: ["Information about this page."],
+    action: [
+      {
+        text: "meta",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Information about this page.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [],
-    code: `<head>
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="keyword" content="HTML, CSS, cheatsheet" />
 <meta name="description" content="A website with full of cheatsheets" />
 </head>`,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+        code_type: "html",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "html-title",
     topic: "HTML",
     table: "Head",
-    action: "title",
-    description: ["Name on browser tab"],
+    action: [
+      {
+        text: "title",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Name on browser tab",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726376355741.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726376355741.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `<head>
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<head>
 <title>Title</title>
 </head>`,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+        code_type: "html",
+      },
+    ],
   }),
 ];
 
@@ -119,77 +205,138 @@ const TEXT = [
     id: "html-text",
     topic: "HTML",
     table: "Text",
-    action: "text",
-    description: [" "],
+    action: [
+      {
+        text: "text",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726377955757.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726377955757.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: ` `,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+    code: [],
   }),
   new Cheatsheet({
     id: "html-header",
     topic: "HTML",
     table: "Text",
-    action: "header: h1, h2, h3",
+    action: [
+      {
+        text: "header: h1, h2, h3",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      "The header is used to create hierarchy. Avoid applying styling to it.",
+      {
+        text: "The header is used to create hierarchy. Avoid applying styling to it.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726377755954.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726377755954.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `<body>
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<body>
 <h1>Example of HTML Header 1</h1>
 <h2>Example of HTML Header 2</h2>
 <h3>Example of HTML Header 3</h3>
 </body>`,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+        code_type: "",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "html-paragraph",
     topic: "HTML",
     table: "Text",
-    action: "paragrahph",
-    description: [" "],
+    action: [
+      {
+        text: "paragrahph",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726377508775.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726377508775.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `<body>
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<body>
 <p>This is the paragraph</p>
 </body>`,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+        code_type: "html",
+      },
+    ],
   }),
   new Cheatsheet({
     id: "html-deprecated",
     topic: "HTML",
     table: "Text",
-    action: "emphasize, italic, strong, bold",
-    description: ["Deprecated, HTML is not meant for styling"],
+    action: [
+      {
+        text: "emphasize, italic, strong, bold",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Deprecated, HTML is not meant for styling",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726377389128.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726377389128.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `<!-- deprecated -->`,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<!-- deprecated -->`,
+        code_type: "html",
+      },
+    ],
   }),
 ];
 
@@ -198,26 +345,45 @@ const ENTITIES = [
     id: "html-entities",
     topic: "HTML",
     table: "Entities",
-    action: "entities",
+    action: [
+      {
+        text: "entities",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
     description: [
-      "Some characters are reserved by HTML. To display them, we need to use special notation",
+      {
+        text: "Some characters are reserved by HTML. To display them, we need to use special notation",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
     ],
     visual: [
       {
         text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726379077381.webp",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1726379077381.webp",
+        code: "",
+        code_type: "",
       },
     ],
-    code: `<body>
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<body>
 <!-- Not working -->
-<p>This is the entities. <HTML></p> 
+<p>This is the entities. <HTML></p>
 
 <!-- Working -->
 <p>This is the entities. &lt;HTML&gt;</p>
 </body>`,
-    typeCode: "html",
-    emoji: "❄️",
-    priority: 2,
+        code_type: "html",
+      },
+    ],
   }),
 ];
 

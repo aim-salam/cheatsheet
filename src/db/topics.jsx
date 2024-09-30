@@ -14,14 +14,13 @@ import { StateTopic } from "./topics/React/StateTopic";
 import { CallbackTopic } from "./topics/React/CallbackTopic";
 export const topics = [
   ReactTopic,
-  // ComponentTopic,
   MemoryTopic,
   StateTopic,
   RefTopic,
   PassDataTopic,
   PropsTopic,
   CallbackTopic,
-  // HTMLTopic,
+  HTMLTopic,
   CSSTopic,
   LayoutTopic,
 ];
