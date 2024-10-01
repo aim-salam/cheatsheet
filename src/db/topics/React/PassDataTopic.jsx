@@ -5,12 +5,6 @@ export const PassDataTopic = {
   tables: [
     {
       table: "Introduction",
-      columns: {
-        action: true,
-        description: true,
-        visual: true,
-        // emoji: true
-      },
     },
   ],
 };

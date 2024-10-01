@@ -5,22 +5,9 @@ export const MemoryTopic = {
   tables: [
     {
       table: "Introduction",
-      columns: {
-        action: true,
-        description: true,
-        visual: true,
-        // emoji: true
-      },
     },
     {
       table: "Variable",
-      columns: {
-        action: true,
-        description: true,
-        visual: true,
-        code: true,
-        // emoji: true
-      },
     },
   ],
 };

@@ -5,24 +5,9 @@ export const StateTopic = {
   tables: [
     {
       table: "Introduction",
-      columns: {
-        action: true,
-        description: true,
-        visual: true,
-        code: true,
-        // emoji: true
-      },
     },
-
     {
       table: "Update",
-      columns: {
-        action: true,
-        description: true,
-        visual: true,
-        code: true,
-        // emoji: true
-      },
     },
   ],
 };
