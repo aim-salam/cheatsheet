@@ -10,10 +10,11 @@ function TopicRow({ row, rows, isEditable, setRows }) {
   const rowData = [
     { key: "action", value: action, width: "100px" },
     { key: "description", value: description, width: "100px" },
-    { key: "visual", value: visual, width: "100px" },
+
     { key: "gui", value: gui, width: "100px" },
     { key: "cli", value: cli, width: "100px" },
     { key: "code", value: code, width: "100px" },
+    { key: "visual", value: visual, width: "100px" },
     { key: "attention", value: attention, width: "100px" },
     { key: "emoji", value: emoji, width: "100px" },
   ];

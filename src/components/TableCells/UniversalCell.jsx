@@ -11,6 +11,7 @@ function UniversalCell({ data, width }) {
   const [modalUrl, setModalUrl] = useState("");
 
   const customCodeStyle = {
+    width: "300px",
     marginTop: "0px",
     borderRadius: "10px",
     fontFamily:
@@ -23,25 +24,23 @@ function UniversalCell({ data, width }) {
   return (
     <TableCell sx={{ alignContent: "flex-start", width: width }}>
       <div>
-        {data.map((item, index) => (
-          <Stack key={index}>
-            {item.text && (
-              <Typography fontSize={"17px"}>{item.text}</Typography>
-            )}
+        {data.map(({ text, image_link, code, code_type }, index) => (
+          <Stack key={text + image_link + code + code_type}>
+            {text && <Typography fontSize={"17px"}>{text}</Typography>}
 
-            {item.image_link && (
+            {image_link && (
               <>
                 <CardMedia
                   component="img"
                   sx={{
-                    width: "200px",
+                    width: "300px",
                     objectFit: "cover",
                     "&:hover": {
                       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
                     },
                   }}
-                  onClick={() => handleImageClick(item.image_link)}
-                  image={item.image_link}
+                  onClick={() => handleImageClick(image_link)}
+                  image={image_link}
                   alt="Visual image"
                 />
                 <VisualModal
@@ -52,13 +51,13 @@ function UniversalCell({ data, width }) {
               </>
             )}
 
-            {item.code && (
+            {code && (
               <SyntaxHighlighter
-                language={item.code_type}
+                language={code_type}
                 style={vscDarkPlus} // You can switch between dark and light themes here
                 customStyle={customCodeStyle}
               >
-                {item.code}
+                {code}
               </SyntaxHighlighter>
             )}
           </Stack>
