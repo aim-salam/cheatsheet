@@ -21,11 +21,20 @@ const INTRODUCTION = [
         code_type: "",
       },
     ],
+    code: [],
     visual: [
       {
         text: "Video editor :",
         image_link:
           "https://images.cheatsheet.cam/images/image-1726417562619.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    emoji: [
+      {
+        text: "🔥",
+        image_link: "",
         code: "",
         code_type: "",
       },
@@ -51,11 +60,20 @@ const INTRODUCTION = [
         code_type: "",
       },
     ],
+    code: [],
     visual: [
       {
         text: "React: ",
         image_link:
           "https://images.cheatsheet.cam/images/image-1726417831933.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    emoji: [
+      {
+        text: "🔥",
+        image_link: "",
         code: "",
         code_type: "",
       },
@@ -81,11 +99,20 @@ const INTRODUCTION = [
         code_type: "",
       },
     ],
+    code: [],
     visual: [
       {
         text: "",
         image_link:
           "https://images.cheatsheet.cam/images/image-1726418761530.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    emoji: [
+      {
+        text: "🔥",
+        image_link: "",
         code: "",
         code_type: "",
       },

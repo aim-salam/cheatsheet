@@ -9,21 +9,9 @@ class Cheatsheet {
     //
     action,
     description,
-    //
-    prerequisite,
-    //
-    visual,
-    gui,
-    cli,
-    //
     code,
-    codeType,
-    exampleCode,
-    //
-    attention,
-    //
-    // emoji,
-    priority,
+    visual,
+    emoji,
     //
     contentContributor,
     githubContributor,
@@ -33,23 +21,12 @@ class Cheatsheet {
     this.topic = topic;
     this.table = table;
     //
-    this.action = action;
-    this.description = description;
-    //
-    this.prerequisite = Array.isArray(prerequisite) ? prerequisite : null;
-    //
-    this.visual = Array.isArray(visual) ? visual : null;
-    this.gui = Array.isArray(gui) ? gui : null;
-    this.cli = cli;
-    //
-    this.code = code;
-    this.codeType = codeType;
-    this.exampleCode = exampleCode;
-    //
-    this.attention = Array.isArray(attention) ? attention : null;
-    //
-    // this.emoji = emoji;
-    this.priority = priority;
+    this.action = Array.isArray(action) ? action : [];
+    this.description = Array.isArray(description) ? description : [];
+    this.code = Array.isArray(code) ? code : [];
+    this.visual = Array.isArray(visual) ? visual : [];
+    this.emoji = Array.isArray(emoji) ? emoji : [];
+
     //
     this.contentContributor = Array.isArray(contentContributor)
       ? contentContributor
