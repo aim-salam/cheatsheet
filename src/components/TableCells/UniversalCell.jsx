@@ -22,7 +22,13 @@ function UniversalCell({ data, width }) {
   const handleCloseModal = () => setModalUrl("");
 
   return (
-    <TableCell sx={{ alignContent: "flex-start", width: width }}>
+    <TableCell
+      sx={{
+        alignContent: "flex-start",
+        // borderRight: "1px solid #EDEDED",
+        width: width,
+      }}
+    >
       <div>
         {data.map(({ text, image_link, code, code_type }, index) => (
           <Stack key={text + image_link + code + code_type}>

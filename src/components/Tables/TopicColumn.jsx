@@ -4,14 +4,14 @@ function TopicColumn({ columns, isEditable }) {
   const customTableStyle = {
     fontSize: "17px",
     fontWeight: "bold",
-    borderRight: "1px solid #EDEDED",
+    // borderRight: "1px solid #EDEDED",
   };
 
   const columnData = [
     { key: "action", label: "Action" },
     { key: "description", label: "Description" },
-    { key: "visual", label: "Visual" },
     { key: "code", label: "Code" },
+    { key: "visual", label: "Visual" },
     { key: "emoji", label: "Emoji" },
   ];
   return (
