@@ -24,10 +24,16 @@ function MainContent({ topic }) {
   return (
     <Grid2
       item
-      xs={12}
-      sm={9}
-      md={10}
-      sx={{ paddingRight: "40px", flex: "1 1 auto" }}
+      xs={12} // Full width for extra small screens
+      sm={9} // 75% width for small screens
+      md={10} // 83% width for medium screens and above
+      sx={{
+        paddingRight: { xs: "20px", sm: "40px" }, // Adjust padding based on screen size
+        flex: "1 1 auto",
+        minWidth: "320px", // Prevent shrinking below a certain width
+        maxWidth: "1200px", // Optional: Set a max width if needed
+        margin: "0 auto", // Center the content
+      }}
     >
       <Typography
         fontSize={40}

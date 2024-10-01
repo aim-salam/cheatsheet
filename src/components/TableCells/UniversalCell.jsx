@@ -33,7 +33,7 @@ function UniversalCell({ data, width }) {
                 <CardMedia
                   component="img"
                   sx={{
-                    width: "300px",
+                    // width: "300px",
                     objectFit: "cover",
                     "&:hover": {
                       boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
