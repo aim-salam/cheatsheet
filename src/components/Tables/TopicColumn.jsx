@@ -11,23 +11,18 @@ function TopicColumn({ columns, isEditable }) {
     { key: "action", label: "Action" },
     { key: "description", label: "Description" },
     { key: "visual", label: "Visual" },
-    { key: "gui", label: "GUI" },
-    { key: "cli", label: "CLI" },
     { key: "code", label: "Code" },
-    { key: "attention", label: "Attention" },
     { key: "emoji", label: "Emoji" },
   ];
   return (
     <TableHead>
       <TableRow>
-        {columnData.map(
-          (col) =>
-            columns[col.key] && (
-              <TableCell key={col.key} sx={customTableStyle}>
-                {col.label}
-              </TableCell>
-            )
-        )}
+        {columnData.map((col) => (
+          // columns[col.key] &&
+          <TableCell key={col.key} sx={customTableStyle}>
+            {col.label}
+          </TableCell>
+        ))}
         {isEditable && <TableCell sx={customTableStyle}>Options</TableCell>}
       </TableRow>
     </TableHead>
