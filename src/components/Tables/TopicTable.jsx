@@ -17,14 +17,17 @@ function TopicTable({ table, cheatsheets }) {
 
   return (
     <Stack>
-      <Stack flexDirection="row" justifyContent="center">
+      <Stack
+        flexDirection="row"
+        // justifyContent="center"
+      >
         <Typography
           fontSize="30px"
           fontWeight="bold"
           sx={{
             paddingRight: "20px",
             paddingLeft: "20px",
-            marginBottom: "5px",
+            marginBottom: "20px",
           }}
         >
           {table.table}
