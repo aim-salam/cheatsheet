@@ -24,65 +24,32 @@ export const HTMLTopic = {
     {
       table: "Image",
     },
-    // {
-    //   table: "Image",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     // emoji: true,
-    //   },
-    // },
-    // {
-    //   table: "Video and Audio",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     // emoji: true,
-    //   },
-    // },
-    // {
-    //   table: "List",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     // emoji: true,
-    //   },
-    // },
-    // {
-    //   table: "Table",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     // emoji: true,
-    //   },
-    // },
-    // {
-    //   table: "Container",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     // emoji: true,
-    //   },
-    // },
-    // {
-    //   table: "Semantic Elements",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     // emoji: true,
-    //   },
-    // },
+    {
+      table: "Video",
+    },
+    {
+      table: "List",
+    },
+    {
+      table: "Table",
+    },
+    {
+      table: "Container",
+    },
+    {
+      table: "Semantic Elements",
+    },
+    {
+      table: "Structuring a web page",
+    },
+    {
+      table: "Behaviour elements",
+    },
+    {
+      table: "Shortcuts",
+    },
+    {
+      table: "Tools",
+    },
   ],
 };

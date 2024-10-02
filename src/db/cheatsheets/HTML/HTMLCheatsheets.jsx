@@ -574,6 +574,948 @@ const IMAGE = [
   }),
 ];
 
+//Video
+const VIDEO = [
+  new Cheatsheet({
+    id: "video-intro",
+    topic: "HTML",
+    table: "Video",
+    action: [
+      {
+        text: "Video",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Element with link.`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727877318444.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727877334701.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727877348722.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727877389108.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "Video",
+        image_link: "",
+        code: `<video src="./sky.mp4"></video>
+<video src="./sky.mp4" height="200px"></video>
+<video src="./sky.mp4" height="200px" controls></video>
+<video src="./sky.mp4" height="200px" controls autoplay></video>`,
+        code_type: "html",
+      },
+    ],
+  }),
+];
+
+//List
+const LIST = [
+  new Cheatsheet({
+    id: "list-intro",
+    topic: "HTML",
+    table: "List",
+    action: [
+      {
+        text: "ul",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Unordered list/
+bullet point.
+`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727877622054.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<ul>
+  <li>About me</li>
+  <li>Product</li>
+</ul>`,
+        code_type: "html",
+      },
+    ],
+  }),
+  new Cheatsheet({
+    id: "list-intro",
+    topic: "HTML",
+    table: "List",
+    action: [
+      {
+        text: "ol",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Ordered list.
+
+Auto generated number.
+`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727877913813.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<ol>
+  <li>Open wrap</li>
+  <li>Eat</li>
+  <li>Close wrap</li>
+</ol>`,
+        code_type: "html",
+      },
+    ],
+  }),
+  new Cheatsheet({
+    id: "list-dl",
+    topic: "HTML",
+    table: "List",
+    action: [
+      {
+        text: "dl",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Description list.`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727878054529.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<dl>
+  <dt>HTML</dt>
+  <dd>Hyperter Markup Language</dd>
+  <dt>CSS</dt>
+  <dd>Casecade Style Sheet</dd>
+</dl>`,
+        code_type: "html",
+      },
+    ],
+  }),
+];
+
+//Table
+const TABLE = [
+  new Cheatsheet({
+    id: "table-intro",
+    topic: "HTML",
+    table: "Table",
+    action: [
+      {
+        text: "Table",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: ``,
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727878343638.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: ``,
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727878365139.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: ``,
+        image_link: "",
+        code: `<table>
+  <tr>
+    <th>Category</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>Budget</td>
+    <td>$100</td>
+  </tr>
+</table>`,
+        code_type: "html",
+      },
+      {
+        text: ``,
+        image_link: "",
+        code: `<table>
+  <tr>
+    <th colspan="2">Expenses</th>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>Budget</td>
+    <td>$100</td>
+  </tr>
+</table>`,
+        code_type: "html",
+      },
+    ],
+  }),
+];
+
+//Container
+const CONTAINER = [
+  new Cheatsheet({
+    id: "container-intro",
+    topic: "HTML",
+    table: "Container",
+    action: [
+      {
+        text: "Container",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Grouping elements`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "container-div",
+    topic: "HTML",
+    table: "Container",
+    action: [
+      {
+        text: "div",
+        image_link: "",
+        code: ``,
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [
+      {
+        text: ``,
+        image_link: "",
+        code: `<div>
+  <p>This is a paragraph inside a div.</p>
+  <p>Another paragraph inside the same div.</p>
+</div>`,
+        code_type: "html",
+      },
+    ],
+  }),
+  new Cheatsheet({
+    id: "container-span",
+    topic: "HTML",
+    table: "Container",
+    action: [
+      {
+        text: "span",
+        image_link: "",
+        code: ``,
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [
+      {
+        text: ``,
+        image_link: "",
+        code: `<p>
+  This is a <span style="color: red">highlighted</span> word in a sentence.
+</p>`,
+        code_type: "html",
+      },
+    ],
+  }),
+];
+
+//Semantic
+const SEMANTIC_ELEMENTS = [
+  new Cheatsheet({
+    id: "semantic-intro",
+    topic: "HTML",
+    table: "Semantic Elements",
+    action: [
+      {
+        text: "Generic elements",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `div, span`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "semantic-sementic",
+    topic: "HTML",
+    table: "Semantic Elements",
+    action: [
+      {
+        text: "Sementic elements",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `SEO friendly
+        
+Semantic = meaningful`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "semantic-article",
+    topic: "HTML",
+    table: "Semantic Elements",
+    action: [
+      {
+        text: "article",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "semantic-figure",
+    topic: "HTML",
+    table: "Semantic Elements",
+    action: [
+      {
+        text: "figure",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "semantic-mark",
+    topic: "HTML",
+    table: "Semantic Elements",
+    action: [
+      {
+        text: "mark",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "semantic-time",
+    topic: "HTML",
+    table: "Semantic Elements",
+    action: [
+      {
+        text: "time",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "semantic-container",
+    topic: "HTML",
+    table: "Semantic Elements",
+    action: [
+      {
+        text: "header, main, footer, aside, section, nav",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+];
+
+//structuing
+const STRUCTURING = [
+  new Cheatsheet({
+    id: "structuring-intro",
+    topic: "HTML",
+    table: "Structuring a web page",
+    action: [
+      {
+        text: "",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Use semantic element to structure a web page`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: ``,
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727879823422.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: ``,
+        image_link: "",
+        code: `   <header>
+     <h1>Welcome to My Website</h1>
+     <nav>
+       <ul>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#services">Services</a></li>
+         <li><a href="#contact">Contact</a></li>
+       </ul>
+     </nav>
+   </header>
+
+   <main>
+     <section id="home">
+       <h2>Home</h2>
+       <p>This is the homepage content.</p>
+     </section>
+
+     <section id="about">
+       <h2>About Us</h2>
+       <p>Information about us goes here.</p>
+     </section>
+
+     <section id="services">
+       <h2>Our Services</h2>
+       <article>
+         <h3>Service 1</h3>
+         <p>Details about service 1.</p>
+       </article>
+       <article>
+         <h3>Service 2</h3>
+         <p>Details about service 2.</p>
+       </article>
+     </section>
+
+     <section id="contact">
+       <h2>Contact Us</h2>
+       <form>
+         <label for="name">Name:</label>
+         <input type="text" id="name" name="name" required />
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required />
+         <button type="submit">Submit</button>
+       </form>
+     </section>
+   </main>
+
+   <footer>
+     <p>&copy; 2024 My Website. All rights reserved.</p>
+   </footer>
+`,
+        code_type: "html",
+      },
+    ],
+  }),
+  new Cheatsheet({
+    id: "structuring-header",
+    topic: "HTML",
+    table: "Structuring a web page",
+    action: [
+      {
+        text: "header",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "structuring-nav",
+    topic: "HTML",
+    table: "Structuring a web page",
+    action: [
+      {
+        text: "nav",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "structuring-aside",
+    topic: "HTML",
+    table: "Structuring a web page",
+    action: [
+      {
+        text: "aside",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "structuring-main",
+    topic: "HTML",
+    table: "Structuring a web page",
+    action: [
+      {
+        text: "main",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "structuring-section",
+    topic: "HTML",
+    table: "Structuring a web page",
+    action: [
+      {
+        text: "section",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "structuring-footer",
+    topic: "HTML",
+    table: "Structuring a web page",
+    action: [
+      {
+        text: "footer",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: ``,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+];
+
+//Behavioud
+const BEHAVIOUR_ELEMENTS = [
+  new Cheatsheet({
+    id: "behaviour-intro",
+    topic: "HTML",
+    table: "Behaviour elements",
+    action: [
+      {
+        text: "Block-level elements",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Space takes a full width viewport.
+
+div, p, h1, table`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727880391798.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "behaviour-inline",
+    topic: "HTML",
+    table: "Behaviour elements",
+    action: [
+      {
+        text: "Inline elements",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Space takes just nice for the element.
+
+span, a, img, br,`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727880479481.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [],
+  }),
+];
+
+//Shortcut
+const SHORTCUTS = [
+  new Cheatsheet({
+    id: "hyperlink-shortcuts",
+    topic: "HTML",
+    table: "Shortcuts",
+    action: [
+      {
+        text: "Template / boilerplate",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
+    visual: [
+      {
+        text: ``,
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727880828572.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: ``,
+        image_link: "",
+        code: `<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>`,
+        code_type: "html",
+      },
+    ],
+  }),
+  new Cheatsheet({
+    id: "hyperlink-emmit",
+    topic: "HTML",
+    table: "Shortcuts",
+    action: [
+      {
+        text: "Emmit",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
+    visual: [],
+    code: [],
+  }),
+];
+
+//Tools
+const TOOLS = [
+  new Cheatsheet({
+    id: "hyperlink-tools",
+    topic: "HTML",
+    table: "Tools",
+    action: [
+      {
+        text: "Live server",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: "Local dev server to run web app.",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727881142974.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `VScode > extension > live server
+
+.html file > right click > Open with Live Server
+`,
+        code_type: "",
+      },
+    ],
+  }),
+];
+
 export const HTMLCheatsheet = [
   ...INTRODUCTION,
   ...HEAD_SECTION,
@@ -582,4 +1524,13 @@ export const HTMLCheatsheet = [
   ...ENTITIES,
   ...HYPERLINK,
   ...IMAGE,
+  ...VIDEO,
+  ...LIST,
+  ...TABLE,
+  ...CONTAINER,
+  ...SEMANTIC_ELEMENTS,
+  ...STRUCTURING,
+  ...BEHAVIOUR_ELEMENTS,
+  ...SHORTCUTS,
+  ...TOOLS,
 ];
