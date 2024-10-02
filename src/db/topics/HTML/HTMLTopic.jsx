@@ -7,7 +7,10 @@ export const HTMLTopic = {
       table: "Introduction",
     },
     {
-      table: "Head",
+      table: "Head Section",
+    },
+    {
+      table: "Body Section",
     },
     {
       table: "Text",
@@ -15,16 +18,12 @@ export const HTMLTopic = {
     {
       table: "Entities",
     },
-    // {
-    //   table: "Hyperlink",
-    //   columns: {
-    //     action: true,
-    //     description: true,
-    //     visual: true,
-    //     code: true,
-    //     // emoji: true,
-    //   },
-    // },
+    {
+      table: "Hyperlink",
+    },
+    {
+      table: "Image",
+    },
     // {
     //   table: "Image",
     //   columns: {

@@ -31,12 +31,24 @@ function UniversalCell({ data, width }) {
     >
       <div>
         {data.map(({ text, image_link, code, code_type }, index) => (
-          <Stack key={text + image_link + code + code_type}>
-            {text && <Typography fontSize={"17px"}>{text}</Typography>}
+          <Stack
+            key={text + image_link + code + code_type}
+            marginBottom={"20px"}
+          >
+            {text && (
+              <Typography
+                key={text}
+                style={{ whiteSpace: "pre-wrap" }}
+                fontSize={"17px"}
+              >
+                {text}
+              </Typography>
+            )}
 
             {image_link && (
               <>
                 <CardMedia
+                  key={image_link}
                   component="img"
                   sx={{
                     // width: "300px",
@@ -50,6 +62,7 @@ function UniversalCell({ data, width }) {
                   alt="Visual image"
                 />
                 <VisualModal
+                  key={image_link}
                   visual={modalUrl}
                   open={modalUrl !== ""}
                   handleClose={handleCloseModal}
@@ -59,6 +72,7 @@ function UniversalCell({ data, width }) {
 
             {code && (
               <SyntaxHighlighter
+                key={code}
                 language={code_type}
                 style={vscDarkPlus} // You can switch between dark and light themes here
                 customStyle={customCodeStyle}

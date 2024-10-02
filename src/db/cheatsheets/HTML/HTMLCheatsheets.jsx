@@ -2,33 +2,6 @@ import Cheatsheet from "../CheatsheetClass";
 
 const INTRODUCTION = [
   new Cheatsheet({
-    id: "html-prerequisite",
-    topic: "HTML",
-    table: "Introduction",
-    action: [
-      {
-        text: "Prerequisite",
-        image_link: "",
-        code: "",
-        code_type: "",
-      },
-    ],
-    description: [
-      `The building blocks of a website are structure, style, and logic.`,
-    ],
-    visual: [
-      {
-        text: "",
-        link: "https://images.cheatsheet.cam/images/image-1726415526322.webp",
-      },
-    ],
-    // prerequisite: [],
-
-    emoji: "❄️",
-    priority: 1,
-    codeType: "html",
-  }),
-  new Cheatsheet({
     id: "html-definition",
     topic: "HTML",
     table: "Introduction",
@@ -71,12 +44,12 @@ const INTRODUCTION = [
       },
     ],
     description: [
-      {
-        text: "Element, Attribute, Tag",
-        image_link: "",
-        code: "",
-        code_type: "",
-      },
+      // {
+      //   text: "Element, Attribute, Tag",
+      //   image_link: "",
+      //   code: "",
+      //   code_type: "",
+      // },
     ],
     visual: [
       {
@@ -90,14 +63,14 @@ const INTRODUCTION = [
   }),
 ];
 
-const HEAD = [
+const HEAD_SECTION = [
   new Cheatsheet({
     id: "html-head",
     topic: "HTML",
-    table: "Head",
+    table: "Head Section",
     action: [
       {
-        text: "head",
+        text: "Head Section",
         image_link: "",
         code: "",
         code_type: "",
@@ -105,7 +78,7 @@ const HEAD = [
     ],
     description: [
       {
-        text: "Tell Browser and Search Engine about this page",
+        text: "Search Engine : tell them about our web page.",
         image_link: "",
         code: "",
         code_type: "",
@@ -116,44 +89,19 @@ const HEAD = [
       {
         text: "",
         image_link: "",
-        code: `<head>
+        code: `<!-- Code -->
+<head></head>
 
-</head>  `,
-        code_type: "html",
-      },
-    ],
-  }),
-  new Cheatsheet({
-    id: "html-meta",
-    topic: "HTML",
-    table: "Head",
-    action: [
-      {
-        text: "meta",
-        image_link: "",
-        code: "",
-        code_type: "",
-      },
-    ],
-    description: [
-      {
-        text: "Information about this page.",
-        image_link: "",
-        code: "",
-        code_type: "",
-      },
-    ],
-    visual: [],
-    code: [
-      {
-        text: "",
-        image_link: "",
-        code: `<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="keyword" content="HTML, CSS, cheatsheet" />
-<meta name="description" content="A website with full of cheatsheets" />
-</head>`,
+<!-- Full code -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+ </head>
+ <body></body>
+</html>`,
         code_type: "html",
       },
     ],
@@ -161,7 +109,7 @@ const HEAD = [
   new Cheatsheet({
     id: "html-title",
     topic: "HTML",
-    table: "Head",
+    table: "Head Section",
     action: [
       {
         text: "title",
@@ -172,7 +120,7 @@ const HEAD = [
     ],
     description: [
       {
-        text: "Name on browser tab",
+        text: "",
         image_link: "",
         code: "",
         code_type: "",
@@ -191,15 +139,127 @@ const HEAD = [
       {
         text: "",
         image_link: "",
-        code: `<head>
-<title>Title</title>
-</head>`,
+        code: `<!-- Code -->
+<title>Intro Page</title>`,
+        code_type: "html",
+      },
+    ],
+  }),
+  new Cheatsheet({
+    id: "html-meta",
+    topic: "HTML",
+    table: "Head Section",
+    action: [
+      {
+        text: "meta",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `- keywords
+- description
+- 
+`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727869803002.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<!-- Code -->
+<meta name="description" content="Details about webpage" />
+<meta name="keywords" content="autotask, ai, cheap" />`,
         code_type: "html",
       },
     ],
   }),
 ];
 
+//Body Section
+const BODY_SECTION = [
+  new Cheatsheet({
+    id: "html-body-section",
+    topic: "HTML",
+    table: "Body Section",
+    action: [
+      {
+        text: `Body Section`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
+    visual: [],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<!-- Code -->
+<body></body>
+
+<!-- Full code -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+ </head>
+ <body></body>
+</html>`,
+        code_type: "html",
+      },
+    ],
+  }),
+  new Cheatsheet({
+    id: "html-body-section-list",
+    topic: "HTML",
+    table: "Body Section",
+    action: [
+      {
+        text: `- text
+- entities
+- hyperlink
+- image
+- video 
+- audio
+- list
+- table`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
+    visual: [],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: ``,
+        code_type: "html",
+      },
+    ],
+  }),
+];
+
+// TEXT
 const TEXT = [
   new Cheatsheet({
     id: "html-text",
@@ -231,7 +291,7 @@ const TEXT = [
     table: "Text",
     action: [
       {
-        text: "header: h1, h2, h3",
+        text: "header",
         image_link: "",
         code: "",
         code_type: "",
@@ -258,12 +318,11 @@ const TEXT = [
       {
         text: "",
         image_link: "",
-        code: `<body>
-<h1>Example of HTML Header 1</h1>
+        code: `<h1>Example of HTML Header 1</h1>
 <h2>Example of HTML Header 2</h2>
 <h3>Example of HTML Header 3</h3>
-</body>`,
-        code_type: "",
+`,
+        code_type: "html",
       },
     ],
   }),
@@ -293,9 +352,7 @@ const TEXT = [
       {
         text: "",
         image_link: "",
-        code: `<body>
-<p>This is the paragraph</p>
-</body>`,
+        code: `<p>This is the paragraph</p>`,
         code_type: "html",
       },
     ],
@@ -340,6 +397,7 @@ const TEXT = [
   }),
 ];
 
+// entities
 const ENTITIES = [
   new Cheatsheet({
     id: "html-entities",
@@ -374,17 +432,154 @@ const ENTITIES = [
       {
         text: "",
         image_link: "",
-        code: `<body>
-<!-- Not working -->
+        code: `<!-- Not working -->
 <p>This is the entities. <HTML></p>
 
 <!-- Working -->
-<p>This is the entities. &lt;HTML&gt;</p>
-</body>`,
+<p>This is the entities. &lt;HTML&gt;</p>`,
         code_type: "html",
       },
     ],
   }),
 ];
 
-export const HTMLCheatsheet = [...INTRODUCTION, ...HEAD, ...TEXT, ...ENTITIES];
+//hyperlink
+const HYPERLINK = [
+  new Cheatsheet({
+    id: "hyperlink-intro",
+    topic: "HTML",
+    table: "Hyperlink",
+    action: [
+      {
+        text: "Hyperlink",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [
+      {
+        text: `Element with link.`,
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    visual: [],
+    code: [],
+  }),
+  new Cheatsheet({
+    id: "hyperlink-anchor",
+    topic: "HTML",
+    table: "Hyperlink",
+    action: [
+      {
+        text: "anchor",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
+    visual: [
+      {
+        text: ``,
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727870980136.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: ``,
+        image_link: "",
+        code: `<a href="./about.html">About me</a><!-- Link to a local page called about.html -->
+<a href="https://www.ytube..l">About me</a><!-- Link to an external website (incorrect URL as placeholder) -->
+<a href="https://www.ytube..l" target="_blank">About me</a><!-- Link to an external website (incorrect URL) that opens in a new tab/window -->
+<a href="./lol.jpg">About me</a><!-- Link to a local image file called lol.jpg -->
+<a href="./lol.jpg" download>About me</a><!-- Link to download a local image file called lol.jpg when clicked -->
+<a href="#id">About me</a><!-- Link to a specific section on the same page with id="id" -->
+<a href="mailto:xxxxx@gmail.com">About me</a><!-- Link to open an email client with a pre-filled recipient address -->`,
+        code_type: "html",
+      },
+    ],
+  }),
+];
+
+// image
+const IMAGE = [
+  new Cheatsheet({
+    id: "html-image",
+    topic: "HTML",
+    table: "Image",
+    action: [
+      {
+        text: "img",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+    ],
+    description: [],
+    visual: [
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727871717851.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727871808237.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727871973687.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727872139964.webp",
+        code: "",
+        code_type: "",
+      },
+      {
+        text: "",
+        image_link:
+          "https://images.cheatsheet.cam/images/image-1727872152213.webp",
+        code: "",
+        code_type: "",
+      },
+    ],
+    code: [
+      {
+        text: "",
+        image_link: "",
+        code: `<img src="./mario.jpg" /><!-- Displays the image 'mario.jpg' with no specific height, width, or alt text -->
+<img src="./mariio.jpg" alt="Mario and Luigi." /><!-- Displays the image 'mariio.jpg' (note the typo in the filename) with alt text 'Mario and Luigi' -->
+<img src="./mario.jpg" height="200px" /><!-- Displays the image 'mario.jpg' with a height of 200px, width is not specified so it adjusts automatically -->
+<img src="./mario.jpg" height="200px" width="200px" /><!-- Displays the image 'mario.jpg' with both height and width set to 200px -->
+<img src="./mario.jpg" height="200px" width="200px" style="object-fit: cover;" /><!-- Displays the image 'mario.jpg' with height and width set to 200px, using object-fit: cover to maintain aspect ratio while filling the box -->`,
+        code_type: "html",
+      },
+    ],
+  }),
+];
+
+export const HTMLCheatsheet = [
+  ...INTRODUCTION,
+  ...HEAD_SECTION,
+  ...BODY_SECTION,
+  ...TEXT,
+  ...ENTITIES,
+  ...HYPERLINK,
+  ...IMAGE,
+];

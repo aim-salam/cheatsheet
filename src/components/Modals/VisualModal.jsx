@@ -21,6 +21,7 @@ export default function VisualModal({ visual, open, handleClose }) {
   console.log(visual);
   return (
     <Modal
+      key={visual}
       open={open}
       onClose={handleClose}
       aria-labelledby="modal-modal-title"
