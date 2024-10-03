@@ -10,8 +10,9 @@ function TopicColumn({ columns, isEditable }) {
   const columnData = [
     { key: "action", label: "" },
     { key: "description", label: "Description" },
-    { key: "code", label: "Code" },
     { key: "visual", label: "Visual" },
+    { key: "code", label: "Code" },
+
     // { key: "emoji", label: "Emoji" },
   ];
   return (

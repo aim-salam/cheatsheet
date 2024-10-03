@@ -22,11 +22,11 @@ function TopicTable({ table, cheatsheets }) {
         // justifyContent="center"
       >
         <Typography
-          fontSize="30px"
+          fontSize="25px"
           fontWeight="bold"
           sx={{
-            paddingRight: "20px",
-            paddingLeft: "20px",
+            // paddingRight: "20px",
+            // paddingLeft: "20px",
             marginBottom: "20px",
           }}
         >

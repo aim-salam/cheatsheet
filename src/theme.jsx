@@ -7,7 +7,7 @@ const theme = createTheme({
   palette: {
     // mode: "dark",
     primary: {
-      main: "#1976d2", // Blue color
+      main: "#FFFFFF", // Blue color
     },
     secondary: {
       main: "#dc004e", // Pink color

@@ -6,12 +6,15 @@ import {
   vscDarkPlus,
   prism,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useColorScheme } from "@mui/material";
 
 function UniversalCell({ data, width }) {
   const [modalUrl, setModalUrl] = useState("");
+  const { mode, setMode } = useColorScheme();
 
   const customCodeStyle = {
-    width: "300px",
+    width: "200px",
+    // overflow: "auto",
     marginTop: "0px",
     borderRadius: "10px",
     fontFamily:
@@ -74,8 +77,9 @@ function UniversalCell({ data, width }) {
               <SyntaxHighlighter
                 key={code}
                 language={code_type}
-                style={vscDarkPlus} // You can switch between dark and light themes here
+                style={mode === "light" ? prism : vscDarkPlus} // You can switch between dark and light themes here
                 customStyle={customCodeStyle}
+                showLineNumbers
               >
                 {code}
               </SyntaxHighlighter>

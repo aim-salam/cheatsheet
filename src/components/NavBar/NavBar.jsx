@@ -5,8 +5,9 @@ import ColorModeSwitch from "./../Switch/ColorModeSwitch";
 function NavBar({ mode }) {
   return (
     <AppBar
-      position="static"
-      color="white"
+      // position="static"
+      position="fixed"
+      color="primary"
       sx={{
         boxShadow: 0,
         borderBottom: 1,
