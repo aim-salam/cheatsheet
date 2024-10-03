@@ -32,8 +32,8 @@ function TopicList({ setTopic }) {
         display: {
           xs: "none",
           sm: "none",
-          md: "block",
-          // lg: "block",
+          md: "none",
+          lg: "block",
           // xl: "block",
         },
         // width: "250px",
