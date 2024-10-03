@@ -28,10 +28,16 @@ function TopicList({ setTopic }) {
   return (
     <Grid2
       item
-      xs={12}
-      sm={3}
-      md={2}
-      sx={{ display: { xs: "none", sm: "block" }, width: "250px" }}
+      sx={{
+        display: {
+          xs: "none",
+          sm: "none",
+          md: "block",
+          // lg: "block",
+          // xl: "block",
+        },
+        // width: "250px",
+      }}
     >
       <List>
         {topics.map((topic) => {
