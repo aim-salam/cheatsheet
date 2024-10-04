@@ -4,14 +4,17 @@ import OptionsCell from "../TableCells/OptionsCell";
 import UniversalCell from "../TableCells/UniversalCell";
 
 function TopicRow({ row, rows, isEditable, setRows }) {
-  const { action, description, visual, gui, cli, code, attention, emoji } =
-    row.item.item;
+  const { action, description, visual, code, emoji } = row.item.item;
 
   const rowData = [
-    { key: "action", value: action, width: "15%" },
-    { key: "description", value: description, width: "30%" },
-    { key: "visual", value: visual, width: "30%" },
-    { key: "code", value: code, width: "25%" },
+    { key: "action", value: action, width: "100%" },
+    { key: "description", value: description, width: "100%" },
+    { key: "visual", value: visual, width: { xs: "200px", sm: "200px" } },
+    {
+      key: "code",
+      value: code,
+      width: { xs: "500px", sm: "200px" },
+    },
     // { key: "emoji", value: emoji, width: "5%" },
   ];
 
@@ -23,7 +26,7 @@ function TopicRow({ row, rows, isEditable, setRows }) {
       }}
     >
       {rowData.map(({ key, value, width }) =>
-        value ? <UniversalCell key={key} data={value} width={width} /> : null
+        value ? <UniversalCell column={key} data={value} width={width} /> : null
       )}
 
       {/* Render OptionsCell if isEditable is true */}

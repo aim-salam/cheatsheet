@@ -40,7 +40,14 @@ function TopicTable({ table, cheatsheets }) {
         component={Paper}
         sx={{ width: "100%", marginBottom: "150px" }}
       >
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table
+          sx={
+            {
+              // minWidth: 650
+            }
+          }
+          aria-label="simple table"
+        >
           <TopicColumn columns={table.columns} isEditable={isEditable} />
           <TableBody>
             {rows.map((row, index) => (

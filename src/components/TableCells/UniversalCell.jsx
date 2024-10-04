@@ -8,12 +8,12 @@ import {
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useColorScheme } from "@mui/material";
 
-function UniversalCell({ data, width }) {
+function UniversalCell({ column, data, width }) {
   const [modalUrl, setModalUrl] = useState("");
   const { mode, setMode } = useColorScheme();
 
   const customCodeStyle = {
-    width: "200px",
+    // width: ,
     // overflow: "auto",
     marginTop: "0px",
     borderRadius: "10px",
@@ -23,6 +23,7 @@ function UniversalCell({ data, width }) {
 
   const handleImageClick = (url) => setModalUrl(url);
   const handleCloseModal = () => setModalUrl("");
+  console.log(column);
 
   return (
     <TableCell
@@ -30,6 +31,8 @@ function UniversalCell({ data, width }) {
         alignContent: "flex-start",
         // borderRight: "1px solid #EDEDED",
         width: width,
+        display: { xs: "block", sm: "table-cell" },
+        borderBottom: { xs: "0px", sm: "1px solid #EDEDED" },
       }}
     >
       <div>
@@ -42,7 +45,8 @@ function UniversalCell({ data, width }) {
               <Typography
                 key={text}
                 style={{ whiteSpace: "pre-wrap" }}
-                fontSize={"17px"}
+                fontSize={"16px"}
+                // fontWeight={column === "action" ? "bold" : "normal"}
               >
                 {text}
               </Typography>

@@ -5,6 +5,7 @@ function TopicColumn({ columns, isEditable }) {
     fontSize: "17px",
     fontWeight: "bold",
     // borderRight: "1px solid #EDEDED",
+    display: { xs: "none", sm: "table-cell" },
   };
 
   const columnData = [
