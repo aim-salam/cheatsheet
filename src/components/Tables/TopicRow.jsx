@@ -2,9 +2,11 @@ import React from "react";
 import { TableRow } from "@mui/material";
 import OptionsCell from "../TableCells/OptionsCell";
 import UniversalCell from "../TableCells/UniversalCell";
+import { useColorScheme } from "@mui/material";
 
-function TopicRow({ row, rows, isEditable, setRows }) {
+function TopicRow({ row, rows, isEditable, setRows, index }) {
   const { action, description, visual, code, emoji } = row.item.item;
+  const { mode } = useColorScheme();
 
   const rowData = [
     {
@@ -31,10 +33,11 @@ function TopicRow({ row, rows, isEditable, setRows }) {
       sx={{
         // verticalAlign: "baseline",
         borderBottom: "1px solid #EDEDED",
+        // marginBottom: "20px",
       }}
     >
       {rowData.map(({ key, value, width }) =>
-        value ? <UniversalCell column={key} data={value} /> : null
+        value ? <UniversalCell column={key} data={value} index={index} /> : null
       )}
 
       {/* Render OptionsCell if isEditable is true */}

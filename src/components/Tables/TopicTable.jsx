@@ -56,6 +56,7 @@ function TopicTable({ table, cheatsheets }) {
                 rows={rows}
                 isEditable={isEditable}
                 setRows={setRows}
+                index={index}
               />
             ))}
           </TableBody>

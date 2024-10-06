@@ -8,7 +8,8 @@ import {
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useColorScheme } from "@mui/material";
 
-function UniversalCell({ column, data }) {
+function UniversalCell({ column, data, index }) {
+  console.log(index);
   const [modalUrl, setModalUrl] = useState("");
   const { mode, setMode } = useColorScheme();
 
@@ -23,6 +24,8 @@ function UniversalCell({ column, data }) {
     // cursor: "pointer",
 
     // width: "100%",
+
+    // marginBottom: "20px",
   };
 
   const handleImageClick = (url) => setModalUrl(url);
@@ -33,7 +36,10 @@ function UniversalCell({ column, data }) {
       sx={{
         alignContent: "flex-start",
         display: { xs: "block", sm: "table-cell" },
-        borderBottom: { xs: "0px", sm: "1px solid #EDEDED" },
+        borderBottom: {
+          xs: "0px",
+          sm: mode === "light" ? "1px solid #EDEDED" : "1px solid #4a4949",
+        },
         padding: "0px",
         paddingLeft: "20px",
         paddingTop: { xs: "0px", sm: "10px" },
@@ -41,7 +47,7 @@ function UniversalCell({ column, data }) {
         paddingRight: column === "code" ? "20px" : "0px",
       }}
     >
-      {data.map(({ text, image_link, code, code_type }, index) => (
+      {data.map(({ text, image_link, code, code_type }) => (
         <Stack key={text + image_link + code + code_type}>
           {text && (
             <Typography
@@ -67,6 +73,10 @@ function UniversalCell({ column, data }) {
               fontWeight={{
                 xs: column === "action" ? "bold" : "normal",
                 sm: "normal",
+              }}
+              paddingTop={{
+                xs: column === "action" ? "20px" : "0px",
+                sm: "0px",
               }}
             >
               {text}

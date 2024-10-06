@@ -9,9 +9,9 @@ function TopicColumn({ columns, isEditable }) {
   };
 
   const columnData = [
-    { key: "action", label: "" },
-    { key: "description", label: "Description" },
-    { key: "visual", label: "Visual" },
+    { key: "action", label: "", width: "120px" },
+    { key: "description", label: "Description", width: "200px" },
+    { key: "visual", label: "Visual", width: "200px" },
     { key: "code", label: "Code" },
 
     // { key: "emoji", label: "Emoji" },
@@ -19,10 +19,10 @@ function TopicColumn({ columns, isEditable }) {
   return (
     <TableHead>
       <TableRow>
-        {columnData.map((col) => (
+        {columnData.map(({ key, label, width }) => (
           // columns[col.key] &&
-          <TableCell key={col.key} sx={customTableStyle}>
-            {col.label}
+          <TableCell key={key} sx={{ ...customTableStyle, width: width }}>
+            {label}
           </TableCell>
         ))}
         {isEditable && <TableCell sx={customTableStyle}>Options</TableCell>}
