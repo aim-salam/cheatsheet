@@ -7,13 +7,21 @@ function TopicRow({ row, rows, isEditable, setRows }) {
   const { action, description, visual, code, emoji } = row.item.item;
 
   const rowData = [
-    { key: "action", value: action, width: "100%" },
-    { key: "description", value: description, width: "100%" },
-    { key: "visual", value: visual, width: { xs: "200px", sm: "200px" } },
+    {
+      key: "action",
+      value: action,
+    },
+    {
+      key: "description",
+      value: description,
+    },
+    {
+      key: "visual",
+      value: visual,
+    },
     {
       key: "code",
       value: code,
-      width: { xs: "500px", sm: "200px" },
     },
     // { key: "emoji", value: emoji, width: "5%" },
   ];
@@ -21,12 +29,12 @@ function TopicRow({ row, rows, isEditable, setRows }) {
   return (
     <TableRow
       sx={{
-        verticalAlign: "baseline",
+        // verticalAlign: "baseline",
         borderBottom: "1px solid #EDEDED",
       }}
     >
       {rowData.map(({ key, value, width }) =>
-        value ? <UniversalCell column={key} data={value} width={width} /> : null
+        value ? <UniversalCell column={key} data={value} /> : null
       )}
 
       {/* Render OptionsCell if isEditable is true */}

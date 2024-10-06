@@ -30,6 +30,7 @@ function HomePage() {
             flexGrow: 1,
             display: "flex",
             width: "100%",
+            alignContent: "center",
           }}
         >
           <Aside setTopic={setTopic}></Aside>
