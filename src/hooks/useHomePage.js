@@ -1,20 +1,7 @@
 import { useState, useEffect } from "react";
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics, logEvent } from "firebase/analytics";
-const firebaseConfig = {
-  apiKey: "AIzaSyCBvTQGABIdbUweZnoZu3K3fSZ8tcYuUhU",
-  authDomain: "cheatsheet-1b79b.firebaseapp.com",
-  projectId: "cheatsheet-1b79b",
-  storageBucket: "cheatsheet-1b79b.appspot.com",
-  messagingSenderId: "455671111697",
-  appId: "1:455671111697:web:5fd68a3f7d7a44348391b0",
-  measurementId: "G-NMEXYV70SV",
-};
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../firebase";
 function useHomePage() {
   const [topic, setTopic] = useState({
     topic: "Layout",

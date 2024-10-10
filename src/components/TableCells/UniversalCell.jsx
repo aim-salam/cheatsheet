@@ -19,13 +19,6 @@ function UniversalCell({ column, data, index }) {
     borderRadius: "10px",
     fontFamily:
       'Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace',
-
-    // overflow: "auto hidden",
-    // cursor: "pointer",
-
-    // width: "100%",
-
-    // marginBottom: "20px",
   };
 
   const handleImageClick = (url) => setModalUrl(url);
