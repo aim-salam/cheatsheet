@@ -14,6 +14,7 @@ function UniversalCell({ column, data, index }) {
   const { mode, setMode } = useColorScheme();
 
   const customCodeStyle = {
+    width: "400px",
     // overflow: "auto",
     marginTop: "0px",
     borderRadius: "10px",

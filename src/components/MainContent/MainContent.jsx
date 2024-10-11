@@ -33,7 +33,7 @@ function MainContent({ topic }) {
         paddingLeft: { xs: "20px", lg: "250px" }, // Adjust padding based on screen size
         flex: "1 1 auto",
         minWidth: "320px", // Prevent shrinking below a certain width
-        // maxWidth: "960px", // Optional: Set a max width if needed
+        maxWidth: "1200px", // Optional: Set a max width if needed
 
         margin: "0 auto", // Center the contenth
         marginTop: "30px",
