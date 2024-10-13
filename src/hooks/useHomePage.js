@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import { logEvent } from "firebase/analytics";
-import { analytics } from "../firebase";
+// import { logEvent } from "firebase/analytics";
+// import { analytics } from "../firebase";
 function useHomePage() {
   const [topic, setTopic] = useState({
     topic: "Layout",
@@ -67,9 +67,8 @@ function useHomePage() {
   });
 
   useEffect(() => {
-    console.log("page_view: Home");
-    logEvent(analytics, "page_view: Home");
-
+    // console.log("page_view: Home");
+    // logEvent(analytics, "page_view: Home");
     // Cleanup the event listener on component unmount
   }, []);
 
