@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-function BookingItem({ data, index, handleDeleteBooking, handleEditBooking }) {
+function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
   return (
     <>
       <ListItem key={index}>
@@ -69,4 +69,4 @@ function BookingItem({ data, index, handleDeleteBooking, handleEditBooking }) {
   );
 }
 
-export default BookingItem;
+export default CommentItem;

@@ -4,10 +4,10 @@ import { Box, Button, Typography, List } from "@mui/material";
 import DateInputButton from "./DateInputButton";
 import FileInputButton from "./FileInputButton";
 import TextFields from "./TextFields";
-import BookingItem from "./BookingItem";
-import useBooking from "./hooks/useBooking";
+import CommentItem from "./CommentItem";
+import useComment from "./hooks/useComment";
 
-const BookingSection = () => {
+const CommentSection = () => {
   const {
     bookings,
     setBookings,
@@ -28,7 +28,7 @@ const BookingSection = () => {
     handleBookingSubmit,
     handleEditBooking,
     handleDeleteBooking,
-  } = useBooking();
+  } = useComment();
 
   return (
     <Box
@@ -39,7 +39,7 @@ const BookingSection = () => {
       }}
     >
       <Typography variant="h5" mb={"20px"}>
-        Schedule Your Discussion Session
+        Leave Comments
       </Typography>
       <TextFields
         description={description}
@@ -58,9 +58,9 @@ const BookingSection = () => {
           justifyContent: "space-between",
         }}
       >
-        <DateInputButton setTime={setTime} setDate={setDate}></DateInputButton>
+        {/* <DateInputButton setTime={setTime} setDate={setDate}></DateInputButton> */}
 
-        {/* <FileInputButton></FileInputButton> */}
+        <FileInputButton></FileInputButton>
         <Button
           variant="text"
           onClick={handleBookingSubmit}
@@ -71,16 +71,16 @@ const BookingSection = () => {
       </Box>
       <List sx={{ mt: 3 }}>
         {bookings.map((data, index) => (
-          <BookingItem
+          <CommentItem
             data={data}
             index={index}
             handleDeleteBooking={handleDeleteBooking}
             handleEditBooking={handleEditBooking}
-          ></BookingItem>
+          ></CommentItem>
         ))}
       </List>
     </Box>
   );
 };
 
-export default BookingSection;
+export default CommentSection;
