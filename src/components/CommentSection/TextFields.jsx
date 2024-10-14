@@ -27,14 +27,6 @@ function TextFields({
     <>
       {/* <TextField
         fullWidth
-        label="Email"
-        variant="outlined"
-        value={email}
-        onChange={handleEmailChange}
-        sx={{ mb: 2 }}
-      />
-      <TextField
-        fullWidth
         label="Phone"
         variant="outlined"
         value={phone}
@@ -55,6 +47,14 @@ function TextFields({
         variant="outlined"
         value={description}
         onChange={handleDescriptionChange}
+        sx={{ mb: 2 }}
+      />
+      <TextField
+        fullWidth
+        label="Reply to"
+        variant="outlined"
+        value={email}
+        onChange={handleEmailChange}
         sx={{ mb: 2 }}
       />
     </>
