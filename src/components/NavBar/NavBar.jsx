@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Avatar, Typography, AppBar } from "@mui/material";
 import logo from "./../../assets/logo.jpg";
 import ColorModeSwitch from "./../Switch/ColorModeSwitch";
+import LogoutButton from "./LogoutButton";
 function NavBar({ mode }) {
   return (
     <AppBar
@@ -30,7 +31,10 @@ function NavBar({ mode }) {
             Cheatsheet
           </Typography>
         </Stack>
-        <ColorModeSwitch></ColorModeSwitch>
+        <Stack flexDirection={"row"}>
+          <LogoutButton></LogoutButton>
+          <ColorModeSwitch></ColorModeSwitch>
+        </Stack>
       </Stack>
     </AppBar>
   );
