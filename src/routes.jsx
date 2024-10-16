@@ -4,8 +4,8 @@ import AuthPage from "./pages/AuthPage";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
-    // element: <AuthPage />,
+    // element: <HomePage />,
+    element: <AuthPage />,
   },
   //  {
   //    path: "/profile",
