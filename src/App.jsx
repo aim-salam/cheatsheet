@@ -1,10 +1,19 @@
 import React from "react";
 
-import { RouterProvider } from "react-router-dom";
-import router from "./routes";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import AuthPage from "./pages/AuthPage";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  return <RouterProvider router={router}></RouterProvider>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        {/* <Route path="*" element={<AuthPage />} /> */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
