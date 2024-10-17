@@ -37,18 +37,20 @@ function TopicRow({ row, rows, isEditable, setRows, index }) {
       }}
     >
       {rowData.map(({ key, value, width }) =>
-        value ? <UniversalCell column={key} data={value} index={index} /> : null
+        value ? (
+          <UniversalCell key={key} column={key} data={value} index={index} />
+        ) : null
       )}
 
       {/* Render OptionsCell if isEditable is true */}
-      {isEditable && (
+      {/* {isEditable && (
         <OptionsCell
           key={`${action}-options`}
           row={row}
           rows={rows}
           setRows={setRows}
         />
-      )}
+      )} */}
     </TableRow>
   );
 }

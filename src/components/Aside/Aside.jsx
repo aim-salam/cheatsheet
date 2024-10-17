@@ -28,7 +28,7 @@ function TopicList({ setTopic }) {
   return (
     <Grid2
       position={"fixed"}
-      item
+      // item
       sx={{
         marginTop: "30px",
         display: {

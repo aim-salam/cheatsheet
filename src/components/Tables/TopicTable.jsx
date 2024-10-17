@@ -52,6 +52,7 @@ function TopicTable({ table, cheatsheets }) {
           <TableBody>
             {rows.map((row, index) => (
               <TopicRow
+                key={row.item.item.action + row.item.item.description + index}
                 row={row}
                 rows={rows}
                 isEditable={isEditable}

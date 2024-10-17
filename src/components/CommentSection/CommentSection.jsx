@@ -72,6 +72,7 @@ const CommentSection = () => {
       <List sx={{ mt: 3 }}>
         {bookings.map((data, index) => (
           <CommentItem
+            key={data.id}
             data={data}
             index={index}
             handleDeleteBooking={handleDeleteBooking}

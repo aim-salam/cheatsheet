@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../contexts/AuthContext";
 
 function useAuthentication() {
   const [openSignUp, setOpenSignUp] = useState(false);
@@ -14,7 +15,7 @@ function useAuthentication() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [user, setUser] = useState(null);
+  const { user, setUser } = useAuth();
 
   const handleOpenSignUp = () => setOpenSignUp(true);
   const handleCloseSignUp = () => setOpenSignUp(false);
@@ -83,6 +84,7 @@ function useAuthentication() {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
+      console.log(user);
       if (user) {
         setUser(user);
         navigate("/");

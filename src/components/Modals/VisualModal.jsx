@@ -18,7 +18,6 @@ const style = {
 };
 
 export default function VisualModal({ visual, open, handleClose }) {
-  console.log(visual);
   return (
     <Modal
       key={visual}

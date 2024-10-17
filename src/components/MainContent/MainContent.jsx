@@ -24,7 +24,7 @@ function MainContent({ topic }) {
 
   return (
     <Grid2
-      item
+      // item
       // xs={12} // Full width for extra small screens
       // sm={9} // 75% width for small screens
       // md={10} // 83% width for medium screens and above
@@ -53,7 +53,7 @@ function MainContent({ topic }) {
         {tables.map((table, index) => {
           return (
             <TopicTable
-              key={table}
+              key={table + index}
               table={table}
               cheatsheets={rows}
             ></TopicTable>

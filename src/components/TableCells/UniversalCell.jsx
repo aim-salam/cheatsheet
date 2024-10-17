@@ -9,7 +9,6 @@ import {
 import { useColorScheme } from "@mui/material";
 
 function UniversalCell({ column, data, index }) {
-  console.log(index);
   const [modalUrl, setModalUrl] = useState("");
   const { mode, setMode } = useColorScheme();
 
@@ -41,7 +40,7 @@ function UniversalCell({ column, data, index }) {
         paddingRight: column === "code" ? "20px" : "0px",
       }}
     >
-      {data.map(({ text, image_link, code, code_type }) => (
+      {data.map(({ text, image_link, code, code_type }, index) => (
         <Stack key={text + image_link + code + code_type}>
           {text && (
             <Typography
@@ -95,7 +94,7 @@ function UniversalCell({ column, data, index }) {
                 alt="Visual image"
               />
               <VisualModal
-                key={image_link}
+                key={image_link + text + code + index}
                 visual={modalUrl}
                 open={modalUrl !== ""}
                 handleClose={handleCloseModal}
