@@ -1,34 +1,30 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import useHomePage from "../../../hooks/useHomePage";
 function useBooking() {
   const [bookings, setBookings] = useState([]);
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [booking_date, setDate] = useState("");
-  const [booking_time, setTime] = useState("");
+  const [receiver_id, setReceiver] = useState("");
+  const [comment, setComment] = useState("");
+
   const [editingIndex, setEditingIndex] = useState(null);
 
+  const { topic, setTopic } = useHomePage();
+
   const handleBookingSubmit = () => {
-    if (description.trim()) {
+    if (comment.trim()) {
       if (editingIndex !== null) {
         const updatedBookings = [...bookings];
         const updatedData = {
           ...updatedBookings[editingIndex],
-          email,
-          phone,
-          description,
-          title,
-          booking_date,
-          booking_time,
+          comment,
         };
         updatedBookings[editingIndex] = updatedData;
         setBookings(updatedBookings);
         axios
           .put(
-            `https://a44ad0e3-6688-40ea-8856-e9dcfc763cb4-00-2yr7oz1fvtf1.sisko.replit.dev/bookings/${updatedBookings[editingIndex].id}`,
+            `https://5ddde656-d855-4f06-b5d0-ae67e1119489-00-1831yo3lmus36.sisko.replit.dev/comment/${updatedBookings[editingIndex].id}`,
             updatedData
           )
           .then((response) => {
@@ -40,13 +36,13 @@ function useBooking() {
         setEditingIndex(null);
       } else {
         const newData = {
-          email,
-          phone,
-          description,
-          title,
-          booking_date,
-          booking_time,
-          id: new Date().toISOString(),
+          id: uuidv4(),
+          comment,
+          receiver_id,
+          date: new Date().toISOString().split("").reverse().join(""),
+          topic: topic.topic,
+          //image_url
+          //random
           user_id: "U001",
         };
 
@@ -54,7 +50,7 @@ function useBooking() {
 
         axios
           .post(
-            "https://a44ad0e3-6688-40ea-8856-e9dcfc763cb4-00-2yr7oz1fvtf1.sisko.replit.dev/bookings",
+            "https://5ddde656-d855-4f06-b5d0-ae67e1119489-00-1831yo3lmus36.sisko.replit.dev/comment",
             newData
           )
           .then((response) => {
@@ -64,19 +60,15 @@ function useBooking() {
             console.error("Error", error);
           });
       }
-      setTitle("");
-      setDescription("");
-      setEmail("");
-      setPhone("");
+      setComment("");
+      setReceiver("");
     }
   };
 
   const handleEditBooking = (index) => {
     console.log(bookings[index]);
-    setTitle(bookings[index].title);
-    setDescription(bookings[index].description);
-    setEmail(bookings[index].email);
-    setPhone(bookings[index].phone);
+    setComment(bookings[index].comment);
+    setReceiver(bookings[index].receiver_id);
     setEditingIndex(index);
   };
 
@@ -86,7 +78,7 @@ function useBooking() {
 
     axios
       .delete(
-        `https://a44ad0e3-6688-40ea-8856-e9dcfc763cb4-00-2yr7oz1fvtf1.sisko.replit.dev/bookings/${bookings[index].id}`
+        `https://5ddde656-d855-4f06-b5d0-ae67e1119489-00-1831yo3lmus36.sisko.replit.dev/comment/${bookings[index].id}`
       )
       .then((response) => {
         console.log("Success:", response.data);
@@ -115,18 +107,10 @@ function useBooking() {
   return {
     bookings,
     setBookings,
-    email,
-    setEmail,
-    phone,
-    setPhone,
-    title,
-    setTitle,
-    description,
-    setDescription,
-    booking_date,
-    setDate,
-    booking_time,
-    setTime,
+    receiver_id,
+    setReceiver,
+    comment,
+    setComment,
     editingIndex,
     setEditingIndex,
     handleBookingSubmit,

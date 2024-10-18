@@ -35,10 +35,8 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
             }}
           >
             <Stack>
-              <Typography>{data.email}</Typography>
-              <Typography>{data.phone}</Typography>
-              <Typography>{data.title}</Typography>
-              <Typography>{data.description}</Typography>
+              <Typography>{data.receiver_id}</Typography>
+              <Typography>{data.comment}</Typography>
               {/* <Box
                 component="img"
                 src={
@@ -48,11 +46,11 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 sx={{ height: "50px", width: "50px", mr: 2 }}
               /> */}
             </Stack>
-            <Stack>
+            {/* <Stack>
               <Typography sx={{ fontSize: "15px", mt: "5px" }}>
                 {data.booking_date + "  . " + data.booking_time}
               </Typography>
-            </Stack>
+            </Stack> */}
           </Stack>
         </Stack>
 

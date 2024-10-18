@@ -1,51 +1,21 @@
 import React from "react";
 import { TextField } from "@mui/material";
-function TextFields({
-  description,
-  setDescription,
-  title,
-  setTitle,
-  email,
-  setEmail,
-  phone,
-  setPhone,
-}) {
+function TextFields({ comment, setComment, receiver_id, setReceiver }) {
   const handleDescriptionChange = (event) => {
-    setDescription(event.target.value);
+    setComment(event.target.value);
   };
 
-  const handleTitleChange = (event) => {
-    setTitle(event.target.value);
-  };
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+    setReceiver(event.target.value);
   };
-  const handlePhoneChange = (event) => {
-    setPhone(event.target.value);
-  };
+
   return (
     <>
-      {/* <TextField
-        fullWidth
-        label="Phone"
-        variant="outlined"
-        value={phone}
-        onChange={handlePhoneChange}
-        sx={{ mb: 2 }}
-      />
       <TextField
         fullWidth
-        label="Title"
+        label="Comment"
         variant="outlined"
-        value={title}
-        onChange={handleTitleChange}
-        sx={{ mb: 2 }}
-      /> */}
-      <TextField
-        fullWidth
-        label="Description"
-        variant="outlined"
-        value={description}
+        value={comment}
         onChange={handleDescriptionChange}
         sx={{ mb: 2 }}
       />
@@ -53,7 +23,7 @@ function TextFields({
         fullWidth
         label="Reply to"
         variant="outlined"
-        value={email}
+        value={receiver_id}
         onChange={handleEmailChange}
         sx={{ mb: 2 }}
       />

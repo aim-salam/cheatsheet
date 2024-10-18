@@ -11,18 +11,10 @@ const CommentSection = () => {
   const {
     bookings,
     setBookings,
-    email,
-    setEmail,
-    phone,
-    setPhone,
-    title,
-    setTitle,
-    description,
-    setDescription,
-    booking_date,
-    setDate,
-    booking_time,
-    setTime,
+    receiver_id,
+    setReceiver,
+    comment,
+    setComment,
     editingIndex,
     setEditingIndex,
     handleBookingSubmit,
@@ -42,14 +34,10 @@ const CommentSection = () => {
         Leave Comments
       </Typography>
       <TextFields
-        description={description}
-        setDescription={setDescription}
-        title={title}
-        setTitle={setTitle}
-        email={email}
-        setEmail={setEmail}
-        phone={phone}
-        setPhone={setPhone}
+        comment={comment}
+        setComment={setComment}
+        receiver_id={receiver_id}
+        setReceiver={setReceiver}
       ></TextFields>
 
       <Box
