@@ -13,7 +13,7 @@ function UniversalCell({ column, data, index }) {
   const { mode, setMode } = useColorScheme();
 
   const customCodeStyle = {
-    width: "400px",
+    width: "300px",
     // overflow: "auto",
     marginTop: "0px",
     borderRadius: "10px",
@@ -28,20 +28,31 @@ function UniversalCell({ column, data, index }) {
     <TableCell
       sx={{
         alignContent: "flex-start",
-        display: { xs: "block", sm: "table-cell" },
+
+        display: { xs: "flex", sm: "table-cell" },
+        flexWrap: "wrap",
         borderBottom: {
           xs: "0px",
-          sm: mode === "light" ? "1px solid #EDEDED" : "1px solid #4a4949",
+          sm: mode === "light" ? "2px solid #EDEDED" : "2px solid #333232",
         },
         padding: "0px",
         paddingLeft: "20px",
-        paddingTop: { xs: "0px", sm: "10px" },
-        paddingBottom: { xs: "0px", sm: "10px" },
+        paddingTop: { xs: column === "visual" ? "10px" : "0px", sm: "10px" },
+        paddingBottom: {
+          xs: column === "visual" ? "50px" : "0px",
+          sm: column === "visual" ? "20px" : "0px",
+        },
+
         paddingRight: column === "code" ? "20px" : "0px",
       }}
     >
       {data.map(({ text, image_link, code, code_type }, index) => (
-        <Stack key={text + image_link + code + code_type}>
+        <Stack
+          key={text + image_link + code + code_type}
+          sx={{
+            marginRight: { xs: "10px", sm: "0px" },
+          }}
+        >
           {text && (
             <Typography
               key={text}
@@ -71,6 +82,7 @@ function UniversalCell({ column, data, index }) {
                 xs: column === "action" ? "20px" : "0px",
                 sm: "0px",
               }}
+              paddingBottom={"5px"}
             >
               {text}
             </Typography>
@@ -87,7 +99,6 @@ function UniversalCell({ column, data, index }) {
                   "&:hover": {
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
                   },
-                  paddingBottom: "10px",
                 }}
                 onClick={() => handleImageClick(image_link)}
                 image={image_link}

@@ -19,7 +19,7 @@ function TopicTable({ table, cheatsheets }) {
     <Stack>
       <Stack
         flexDirection="row"
-        // justifyContent="center"
+        sx={{ justifyContent: { xs: "center", sm: "flex-start" } }}
       >
         <Typography
           fontSize="25px"

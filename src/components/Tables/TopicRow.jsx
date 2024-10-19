@@ -18,22 +18,23 @@ function TopicRow({ row, rows, isEditable, setRows, index }) {
       value: description,
     },
     {
-      key: "visual",
-      value: visual,
-    },
-    {
       key: "code",
       value: code,
     },
+    {
+      key: "visual",
+      value: visual,
+    },
+
     // { key: "emoji", value: emoji, width: "5%" },
   ];
 
   return (
     <TableRow
       sx={{
-        // verticalAlign: "baseline",
+        verticalAlign: "baseline",
         borderBottom: "1px solid #EDEDED",
-        // marginBottom: "20px",
+        backgroundColor: mode === "light" ? "#f5f5f5" : "#1a1a1a",
       }}
     >
       {rowData.map(({ key, value, width }) =>

@@ -11,8 +11,8 @@ function TopicColumn({ columns, isEditable }) {
   const columnData = [
     { key: "action", label: "", width: "120px" },
     { key: "description", label: "Description", width: "200px" },
-    { key: "visual", label: "Visual", width: "200px" },
     { key: "code", label: "Code" },
+    { key: "visual", label: "Visual", width: "200px" },
 
     // { key: "emoji", label: "Emoji" },
   ];
