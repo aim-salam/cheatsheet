@@ -40,7 +40,12 @@ const AuthPage = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: {
+            xs: "center",
+            sm: "center",
+            md: "center",
+            lg: "flex-start",
+          },
         }}
       >
         {/* Title */}
