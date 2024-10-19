@@ -10,11 +10,10 @@ import { useColorScheme } from "@mui/material";
 
 function UniversalCell({ column, data, index }) {
   const [modalUrl, setModalUrl] = useState("");
-  const { mode, setMode } = useColorScheme();
+  const { mode } = useColorScheme();
 
   const customCodeStyle = {
     width: "300px",
-    // overflow: "auto",
     marginTop: "0px",
     borderRadius: "10px",
     fontFamily:
@@ -97,7 +96,7 @@ function UniversalCell({ column, data, index }) {
                   width: "150px",
                   objectFit: "cover",
                   "&:hover": {
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Shadow effect on hover
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
                   },
                 }}
                 onClick={() => handleImageClick(image_link)}
@@ -114,14 +113,7 @@ function UniversalCell({ column, data, index }) {
           )}
 
           {code && (
-            <Stack
-              sx={
-                {
-                  // width: { xs: "400px", sm: "200px" },
-                  // paddingBottom: { xs: "100px", sm: "0px" },
-                }
-              }
-            >
+            <Stack>
               <SyntaxHighlighter
                 key={code}
                 language={code_type}

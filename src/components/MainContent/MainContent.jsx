@@ -24,18 +24,14 @@ function MainContent({ topic }) {
 
   return (
     <Grid2
-      // item
-      // xs={12} // Full width for extra small screens
-      // sm={9} // 75% width for small screens
-      // md={10} // 83% width for medium screens and above
       sx={{
-        paddingRight: { xs: "20px" }, // Adjust padding based on screen size
-        paddingLeft: { xs: "20px", lg: "250px" }, // Adjust padding based on screen size
+        paddingRight: { xs: "20px" },
+        paddingLeft: { xs: "20px", lg: "250px" },
         flex: "1 1 auto",
-        minWidth: "320px", // Prevent shrinking below a certain width
-        maxWidth: "1200px", // Optional: Set a max width if needed
+        minWidth: "320px",
+        maxWidth: "1200px",
 
-        margin: "0 auto", // Center the contenth
+        margin: "0 auto",
         marginTop: "30px",
       }}
     >

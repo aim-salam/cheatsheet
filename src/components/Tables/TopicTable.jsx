@@ -25,16 +25,11 @@ function TopicTable({ table, cheatsheets }) {
           fontSize="25px"
           fontWeight="bold"
           sx={{
-            // paddingRight: "20px",
-            // paddingLeft: "20px",
             marginBottom: "20px",
           }}
         >
           {table.table}
         </Typography>
-        {/* <IconButton color="primary" onClick={() => setIsEditable(!isEditable)}>
-          <EditIcon />
-        </IconButton> */}
       </Stack>
       <TableContainer
         component={Paper}
@@ -63,7 +58,6 @@ function TopicTable({ table, cheatsheets }) {
           </TableBody>
         </Table>
       </TableContainer>
-      {/* <CreateRowButton rows={rows} setRows={setRows} /> */}
     </Stack>
   );
 }

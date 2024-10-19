@@ -1,13 +1,4 @@
-import React, { useEffect, useState } from "react";
-import {
-  Grid2,
-  Box,
-  Typography,
-  AppBar,
-  CssBaseline,
-  useColorScheme,
-  Paper,
-} from "@mui/material";
+import { Grid2, Box, CssBaseline } from "@mui/material";
 
 import NavBar from "../components/NavBar/NavBar";
 import Aside from "../components/Aside/Aside";
@@ -16,14 +7,13 @@ import TopicContext from "../contexts/TopicContext";
 import useHomePage from "../hooks/useHomePage";
 
 function HomePage() {
-  const { mode } = useColorScheme();
   const { topic, setTopic } = useHomePage();
 
   return (
     <TopicContext.Provider value={{ topic, setTopic }}>
       <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
         <CssBaseline></CssBaseline>
-        <NavBar mode={mode}></NavBar>
+        <NavBar></NavBar>
         <Grid2
           container
           sx={{

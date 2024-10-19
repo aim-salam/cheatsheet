@@ -1,4 +1,3 @@
-import React from "react";
 import {
   List,
   ListItemButton,
@@ -36,7 +35,6 @@ function TopicList({ setTopic }) {
           sm: "none",
           md: "none",
           lg: "block",
-          // xl: "block",
         },
         width: "250px",
       }}

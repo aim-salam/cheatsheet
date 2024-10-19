@@ -1,9 +1,10 @@
-import React from "react";
 import { Stack, Avatar, Typography, AppBar } from "@mui/material";
 import logo from "./../../assets/logo.jpg";
 import ColorModeSwitch from "./../Switch/ColorModeSwitch";
 import LogoutButton from "./LogoutButton";
-function NavBar({ mode }) {
+import { useColorScheme } from "@mui/material";
+function NavBar() {
+  const { mode } = useColorScheme();
   return (
     <AppBar
       // position="static"
