@@ -7,11 +7,14 @@ import {
   Typography,
   Grid2,
   Box,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
 import { topics } from "../../db/topics";
 import logo from "./../../assets/logo.jpg";
 import { useState } from "react";
 import { useAside } from "../../contexts/AsideContext";
+import LogoutButton from "../Buttons/LogoutButton";
 function TopicList({ setTopic }) {
   const { isAside, setIsAside } = useAside();
   const parentStyle = {
@@ -32,16 +35,12 @@ function TopicList({ setTopic }) {
     <Box
       sx={{
         position: "fixed",
-        height: "100vh",
-        marginTop: "30px",
         display: {
           xs: isAside ? "block" : "none",
           sm: isAside ? "block" : "none",
           md: isAside ? "block" : "none",
           lg: "block",
         },
-        width: "250px",
-        backgroundColor: "white",
       }}
     >
       <Box
@@ -53,12 +52,25 @@ function TopicList({ setTopic }) {
           opacity: 0.5,
           position: "absolute",
           display: { lg: "none" },
+          zIndex: "-1",
         }}
       ></Box>
-      <Grid2
-      // item
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+
+          paddingTop: "30px",
+
+          width: "250px",
+          backgroundColor: "white",
+
+          paddingBottom: "20px",
+        }}
       >
-        <List sx={{ backgroundColor: "white", height: "100vh" }}>
+        <List sx={{ flexGrow: 1 }}>
           {topics.map((topic) => {
             const { topic: topicName, type, imageLink } = topic;
             const { marginTop, marginBottom, fontSize, avatarSize } =
@@ -102,9 +114,27 @@ function TopicList({ setTopic }) {
             );
           })}
         </List>
-      </Grid2>
+
+        <Box
+          sx={{
+            display: { xs: "block", sm: "none" },
+            marginLeft: "65px",
+          }}
+        >
+          <LogoutButton></LogoutButton>
+        </Box>
+      </Box>
     </Box>
   );
 }
 
 export default TopicList;
+
+{
+  /* <List sx={{ flexGrow: 1 }}>
+
+<ListItem sx={{ marginTop: "auto" }}>
+  <ListItemText primary="Bottom Item" />
+</ListItem>
+</List> */
+}

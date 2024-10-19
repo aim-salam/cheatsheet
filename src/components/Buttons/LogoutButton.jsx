@@ -7,7 +7,11 @@ function LogoutButton() {
   const { handleLogout } = useAuthentication();
   return (
     <Button
-      sx={{ marginLeft: "20px" }}
+      sx={{
+        paddingLeft: "20px",
+        paddingRight: "20px",
+        marginLeft: "20px",
+      }}
       variant="contained"
       onClick={() => {
         handleLogout();

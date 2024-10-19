@@ -1,10 +1,17 @@
-import { Stack, Avatar, Typography, AppBar, IconButton } from "@mui/material";
+import {
+  Stack,
+  Avatar,
+  Typography,
+  AppBar,
+  IconButton,
+  Box,
+} from "@mui/material";
 import logo from "./../../assets/logo.jpg";
 import ColorModeSwitch from "./../Switch/ColorModeSwitch";
-import LogoutButton from "./LogoutButton";
 import { useColorScheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useAside } from "../../contexts/AsideContext";
+import LogoutButton from "../Buttons/LogoutButton";
 
 function NavBar() {
   const { mode } = useColorScheme();
@@ -44,8 +51,14 @@ function NavBar() {
           </Typography>
         </Stack>
         <Stack flexDirection={"row"}>
-          <LogoutButton></LogoutButton>
           <ColorModeSwitch></ColorModeSwitch>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block" },
+            }}
+          >
+            <LogoutButton></LogoutButton>
+          </Box>
         </Stack>
       </Stack>
     </AppBar>

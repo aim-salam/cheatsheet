@@ -5,7 +5,7 @@ const AsideContext = createContext();
 
 // 2. Create the provider component
 export const AsideProvider = ({ children }) => {
-  const [isAside, setIsAside] = useState(true);
+  const [isAside, setIsAside] = useState(false);
 
   return (
     <AsideContext.Provider value={{ isAside, setIsAside }}>
