@@ -10,7 +10,9 @@ import {
 } from "@mui/material";
 import { topics } from "../../db/topics";
 import logo from "./../assets/logo.jpg";
-function TopicList({ setTopic }) {
+import { useTopic } from "../../contexts/TopicContext";
+function TopicList() {
+  const { setTopic } = useTopic();
   function Header({ topic }) {
     if (topic.type === "parent") {
       return (

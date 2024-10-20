@@ -2,7 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-import useHomePage from "../../../hooks/useHomePage";
+import { useTopic } from "../../../contexts/TopicContext";
+import { useAuth } from "./../../../contexts/AuthContext";
 function useBooking() {
   const [bookings, setBookings] = useState([]);
   const [receiver_id, setReceiver] = useState("");
@@ -10,7 +11,8 @@ function useBooking() {
 
   const [editingIndex, setEditingIndex] = useState(null);
 
-  const { topic, setTopic } = useHomePage();
+  const { topic, setTopic } = useTopic();
+  const { user } = useAuth();
 
   const handleBookingSubmit = () => {
     if (comment.trim()) {
@@ -24,7 +26,7 @@ function useBooking() {
         setBookings(updatedBookings);
         axios
           .put(
-            `https://5ddde656-d855-4f06-b5d0-ae67e1119489-00-1831yo3lmus36.sisko.replit.dev/comment/${updatedBookings[editingIndex].id}`,
+            `http://localhost:3000/comment/${updatedBookings[editingIndex].id}`,
             updatedData
           )
           .then((response) => {
@@ -43,16 +45,14 @@ function useBooking() {
           topic: topic.topic,
           //image_url
           //random
-          user_id: "U001",
+          user_id: user.uid,
         };
+        console.log(topic);
 
         setBookings([...bookings, newData]);
 
         axios
-          .post(
-            "https://5ddde656-d855-4f06-b5d0-ae67e1119489-00-1831yo3lmus36.sisko.replit.dev/comment",
-            newData
-          )
+          .post("http://localhost:3000/comment", newData)
           .then((response) => {
             console.log("Success:", response.data);
           })
@@ -77,9 +77,7 @@ function useBooking() {
     setBookings(updatedBookings);
 
     axios
-      .delete(
-        `https://5ddde656-d855-4f06-b5d0-ae67e1119489-00-1831yo3lmus36.sisko.replit.dev/comment/${bookings[index].id}`
-      )
+      .delete(`http://localhost:3000/comment/${bookings[index].id}`)
       .then((response) => {
         console.log("Success:", response.data);
       })
@@ -102,7 +100,8 @@ function useBooking() {
 
   useEffect(() => {
     fetchPosts();
-  }, []);
+    console.log(topic);
+  }, [topic]);
 
   return {
     bookings,

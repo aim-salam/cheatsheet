@@ -15,8 +15,10 @@ import logo from "./../../assets/logo.jpg";
 import { useState } from "react";
 import { useAside } from "../../contexts/AsideContext";
 import LogoutButton from "../Buttons/LogoutButton";
-function TopicList({ setTopic }) {
+import { useTopic } from "../../contexts/TopicContext";
+function TopicList() {
   const { isAside, setIsAside } = useAside();
+  const { topic, setTopic } = useTopic();
   const parentStyle = {
     marginTop: "40px",
     marginBottom: "10px",

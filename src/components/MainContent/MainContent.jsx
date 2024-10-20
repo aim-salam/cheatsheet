@@ -4,15 +4,16 @@ import TopicTable from "../Tables/TopicTable";
 import { cheatsheets } from "../../db/cheatsheets";
 import Fuse from "fuse.js";
 import CommentSection from "../CommentSection/CommentSection";
-
+import { useTopic } from "../../contexts/TopicContext";
 // Initialize Fuse.js outside the component to avoid unnecessary re-initialization on every render
 const fuse = new Fuse(cheatsheets, {
   keys: ["topic"],
   threshold: 0.1,
 });
 
-function MainContent({ topic }) {
+function MainContent() {
   const [rows, setRows] = useState([]);
+  const { topic, setTopic } = useTopic();
   const { topic: topicName, tables } = topic;
 
   useEffect(() => {

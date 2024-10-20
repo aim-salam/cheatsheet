@@ -3,15 +3,12 @@ import { Grid2, Box, CssBaseline } from "@mui/material";
 import NavBar from "../components/NavBar/NavBar";
 import Aside from "../components/Aside/Aside";
 import MainContent from "../components/MainContent/MainContent";
-import TopicContext from "../contexts/TopicContext";
-import useHomePage from "../hooks/useHomePage";
+import { TopicProvider } from "../contexts/TopicContext";
 import { AsideProvider } from "../contexts/AsideContext";
 
 function HomePage() {
-  const { topic, setTopic } = useHomePage();
-
   return (
-    <TopicContext.Provider value={{ topic, setTopic }}>
+    <TopicProvider>
       <AsideProvider>
         <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
           <CssBaseline></CssBaseline>
@@ -25,12 +22,12 @@ function HomePage() {
               alignContent: "center",
             }}
           >
-            <Aside setTopic={setTopic}></Aside>
-            <MainContent topic={topic}></MainContent>
+            <Aside></Aside>
+            <MainContent></MainContent>
           </Grid2>
         </Box>
       </AsideProvider>
-    </TopicContext.Provider>
+    </TopicProvider>
   );
 }
 
