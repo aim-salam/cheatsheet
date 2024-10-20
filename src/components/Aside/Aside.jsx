@@ -5,17 +5,15 @@ import {
   Avatar,
   Stack,
   Typography,
-  Grid2,
   Box,
-  ListItem,
-  ListItemText,
 } from "@mui/material";
 import { topics } from "../../db/topics";
 import logo from "./../../assets/logo.jpg";
-import { useState } from "react";
 import { useAside } from "../../contexts/AsideContext";
 import LogoutButton from "../Buttons/LogoutButton";
 import { useTopic } from "../../contexts/TopicContext";
+import { useColorScheme } from "@mui/material/styles";
+import { useEffect } from "react";
 function TopicList() {
   const { isAside, setIsAside } = useAside();
   const { topic, setTopic } = useTopic();
@@ -32,6 +30,12 @@ function TopicList() {
   };
 
   const getStyle = (type) => (type === "parent" ? parentStyle : childStyle);
+
+  const { mode } = useColorScheme();
+
+  useEffect(() => {
+    console.log(mode);
+  }, [mode]);
 
   return (
     <Box
@@ -67,8 +71,7 @@ function TopicList() {
           paddingTop: "30px",
 
           width: "250px",
-          backgroundColor: "white",
-
+          backgroundColor: mode === "dark" ? "#121212" : "white",
           paddingBottom: "20px",
         }}
       >
