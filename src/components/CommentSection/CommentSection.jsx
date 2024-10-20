@@ -20,6 +20,11 @@ const CommentSection = () => {
     handleBookingSubmit,
     handleEditBooking,
     handleDeleteBooking,
+    uploading,
+    progress,
+    setImage,
+    preview,
+    setPreview,
   } = useComment();
 
   return (
@@ -48,7 +53,13 @@ const CommentSection = () => {
       >
         {/* <DateInputButton setTime={setTime} setDate={setDate}></DateInputButton> */}
 
-        <FileInputButton></FileInputButton>
+        <FileInputButton
+          uploading={uploading}
+          progress={progress}
+          setImage={setImage}
+          preview={preview}
+          setPreview={setPreview}
+        ></FileInputButton>
         <Button
           variant="text"
           onClick={handleBookingSubmit}

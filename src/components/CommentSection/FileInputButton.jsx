@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, LinearProgress, TextField } from "@mui/material";
 
-export default function FileInputButton() {
-  const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState(null);
-
+export default function FileInputButton({
+  uploading,
+  progress,
+  setImage,
+  preview,
+  setPreview,
+}) {
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -23,15 +25,13 @@ export default function FileInputButton() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: "row",
-        mr: 2,
-        // ml: 2,
+        flexDirection: "column",
         alignItems: "center",
       }}
     >
       <TextField
         type="file"
-        inputProps={{ accept: "image/*" }} // Accept only image files
+        inputProps={{ accept: "image/*" }}
         onChange={handleImageUpload}
       />
       {preview && (
@@ -39,9 +39,15 @@ export default function FileInputButton() {
           component="img"
           src={preview}
           alt="Uploaded Image Preview"
-          sx={{ height: "50px", mr: 2 }}
+          sx={{ height: "100px", my: 2 }}
         />
       )}
+
+      {uploading ? (
+        <Box sx={{ width: "100%", my: 2 }}>
+          <LinearProgress variant="determinate" value={progress} />
+        </Box>
+      ) : null}
     </Box>
   );
 }
