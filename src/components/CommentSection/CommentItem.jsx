@@ -13,6 +13,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import VisualModal from "../Modals/VisualModal";
 import { useAuth } from "../../contexts/AuthContext";
+import duration from "../../utils/duration";
 function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
   const { mode } = useColorScheme();
   const [modalUrl, setModalUrl] = useState("");
@@ -51,8 +52,14 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 {data.sender_email}
               </Typography>
               <Typography fontSize={"14px"} marginBottom={"5px"}>
-                to : {data.receiver_email}
+                <Typography component="span" color="black">
+                  to :
+                </Typography>
+                <Typography component="span" color="#1f85de">
+                  {data.receiver_email}
+                </Typography>
               </Typography>
+
               <Typography>{data.comment}</Typography>
 
               {data.image_url && (
@@ -80,6 +87,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 </>
               )}
             </Stack>
+            <Typography fontSize={"13px"}>{duration(data.date)}</Typography>
           </Stack>
         </Stack>
 
