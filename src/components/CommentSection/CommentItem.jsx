@@ -28,7 +28,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
         <Stack flexDirection={"row"} width={"100%"}>
           <Avatar
             alt="Remy Sharp"
-            src="https://images.cheatsheet.cam/images/image-1727880828572.webp"
+            src={data.profile_url}
             sx={{
               width: 30,
               height: 30,
