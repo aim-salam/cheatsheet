@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -6,10 +6,19 @@ import {
   Stack,
   Avatar,
   IconButton,
+  useColorScheme,
+  CardMedia,
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import VisualModal from "../Modals/VisualModal";
 function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
+  const { mode } = useColorScheme();
+  const [modalUrl, setModalUrl] = useState("");
+
+  const handleImageClick = (url) => setModalUrl(url);
+  const handleCloseModal = () => setModalUrl("");
+
   return (
     <>
       <ListItem key={index}>
@@ -26,7 +35,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
           />
           <Stack
             sx={{
-              backgroundColor: "#f5f5f5",
+              backgroundColor: mode === "light" ? "#f5f5f5" : "#1e1e1e",
               p: "10px",
               borderRadius: "10px",
               width: "100%",
@@ -45,6 +54,31 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 alt="Uploaded Image Preview"
                 sx={{ height: "50px", width: "50px", mr: 2 }}
               /> */}
+
+              {data.image_url && (
+                <>
+                  <CardMedia
+                    key={data.image_url + "preview"}
+                    component="img"
+                    sx={{
+                      width: "150px",
+                      objectFit: "cover",
+                      "&:hover": {
+                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+                      },
+                    }}
+                    onClick={() => handleImageClick(data.image_url)}
+                    image={data.image_url}
+                    alt="Visual image"
+                  />
+                  <VisualModal
+                    key={data.image_url + "visualmodal"}
+                    visual={modalUrl}
+                    open={modalUrl !== ""}
+                    handleClose={handleCloseModal}
+                  />
+                </>
+              )}
             </Stack>
             {/* <Stack>
               <Typography sx={{ fontSize: "15px", mt: "5px" }}>

@@ -64,6 +64,8 @@ function useBooking() {
         const updatedData = {
           ...updatedBookings[editingIndex],
           comment,
+          receiver_id,
+          image_url,
         };
         updatedBookings[editingIndex] = updatedData;
         setBookings(updatedBookings);
