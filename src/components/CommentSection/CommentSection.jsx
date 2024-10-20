@@ -11,7 +11,7 @@ const CommentSection = () => {
   const {
     bookings,
     setBookings,
-    receiver_id,
+    receiver_email,
     setReceiver,
     comment,
     setComment,
@@ -41,7 +41,7 @@ const CommentSection = () => {
       <TextFields
         comment={comment}
         setComment={setComment}
-        receiver_id={receiver_id}
+        receiver_id={receiver_email}
         setReceiver={setReceiver}
       ></TextFields>
 
@@ -53,13 +53,15 @@ const CommentSection = () => {
       >
         {/* <DateInputButton setTime={setTime} setDate={setDate}></DateInputButton> */}
 
-        <FileInputButton
-          uploading={uploading}
-          progress={progress}
-          setImage={setImage}
-          preview={preview}
-          setPreview={setPreview}
-        ></FileInputButton>
+        {editingIndex === null ? (
+          <FileInputButton
+            uploading={uploading}
+            progress={progress}
+            setImage={setImage}
+            preview={preview}
+            setPreview={setPreview}
+          ></FileInputButton>
+        ) : null}
         <Button
           variant="text"
           onClick={handleBookingSubmit}

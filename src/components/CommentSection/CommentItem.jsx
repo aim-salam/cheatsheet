@@ -12,9 +12,12 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import VisualModal from "../Modals/VisualModal";
+import { useAuth } from "../../contexts/AuthContext";
 function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
   const { mode } = useColorScheme();
   const [modalUrl, setModalUrl] = useState("");
+
+  const { user, setUser } = useAuth();
 
   const handleImageClick = (url) => setModalUrl(url);
   const handleCloseModal = () => setModalUrl("");
@@ -45,17 +48,12 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
           >
             <Stack>
               <Typography fontWeight={"bold"} fontSize={"14px"}>
-                {data.user_id}
+                {data.sender_email}
+              </Typography>
+              <Typography fontSize={"14px"} marginBottom={"5px"}>
+                to : {data.receiver_email}
               </Typography>
               <Typography>{data.comment}</Typography>
-              {/* <Box
-                component="img"
-                src={
-                  "https://images.cheatsheet.cam/images/image-1727881142974.webp"
-                }
-                alt="Uploaded Image Preview"
-                sx={{ height: "50px", width: "50px", mr: 2 }}
-              /> */}
 
               {data.image_url && (
                 <>
@@ -85,14 +83,16 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
           </Stack>
         </Stack>
 
-        <Stack>
-          <IconButton edge="end" onClick={() => handleEditBooking(index)}>
-            <EditIcon />
-          </IconButton>
-          <IconButton edge="end" onClick={() => handleDeleteBooking(index)}>
-            <DeleteIcon />
-          </IconButton>
-        </Stack>
+        {data.sender_email === user.email ? (
+          <Stack>
+            <IconButton edge="end" onClick={() => handleEditBooking(index)}>
+              <EditIcon />
+            </IconButton>
+            <IconButton edge="end" onClick={() => handleDeleteBooking(index)}>
+              <DeleteIcon />
+            </IconButton>
+          </Stack>
+        ) : null}
       </ListItem>
     </>
   );

@@ -8,7 +8,7 @@ import { storage } from "../../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 function useBooking() {
   const [bookings, setBookings] = useState([]);
-  const [receiver_id, setReceiver] = useState("");
+  const [receiver_email, setReceiver] = useState("");
   const [comment, setComment] = useState("");
 
   const [editingIndex, setEditingIndex] = useState(null);
@@ -64,7 +64,7 @@ function useBooking() {
         const updatedData = {
           ...updatedBookings[editingIndex],
           comment,
-          receiver_id,
+          receiver_email,
           image_url,
         };
         updatedBookings[editingIndex] = updatedData;
@@ -85,12 +85,12 @@ function useBooking() {
         const newData = {
           id: uuidv4(),
           comment,
-          receiver_id,
+          receiver_email,
           date: new Date().toISOString(),
           topic: topic.topic,
           image_url: image_url,
           //random
-          user_id: user.uid,
+          sender_email: user.email,
         };
         console.log(topic);
 
@@ -118,7 +118,7 @@ function useBooking() {
   const handleEditBooking = (index) => {
     console.log(bookings[index]);
     setComment(bookings[index].comment);
-    setReceiver(bookings[index].receiver_id);
+    setReceiver(bookings[index].receiver_email);
     setImageURL(bookings[index].image_url);
     setEditingIndex(index);
   };
@@ -155,7 +155,7 @@ function useBooking() {
   return {
     bookings,
     setBookings,
-    receiver_id,
+    receiver_email,
     setReceiver,
     comment,
     setComment,
