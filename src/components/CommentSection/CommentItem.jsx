@@ -52,9 +52,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 {data.sender_email}
               </Typography>
               <Typography fontSize={"14px"} marginBottom={"5px"}>
-                <Typography component="span" color="black">
-                  to :
-                </Typography>
+                <Typography component="span">to :</Typography>
                 <Typography component="span" color="#1f85de">
                   {data.receiver_email}
                 </Typography>
