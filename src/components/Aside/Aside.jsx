@@ -46,6 +46,7 @@ function TopicList() {
           sm: isAside ? "block" : "none",
           md: isAside ? "block" : "none",
           lg: "block",
+          zIndex: 2,
         },
       }}
     >
