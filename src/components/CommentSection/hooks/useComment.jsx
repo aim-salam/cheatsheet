@@ -86,7 +86,7 @@ function useBooking() {
           id: uuidv4(),
           comment,
           receiver_id,
-          date: new Date().toISOString().split("").reverse().join(""),
+          date: new Date().toISOString(),
           topic: topic.topic,
           image_url: image_url,
           //random

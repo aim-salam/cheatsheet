@@ -44,7 +44,9 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
             }}
           >
             <Stack>
-              <Typography>{data.receiver_id}</Typography>
+              <Typography fontWeight={"bold"} fontSize={"14px"}>
+                {data.user_id}
+              </Typography>
               <Typography>{data.comment}</Typography>
               {/* <Box
                 component="img"
@@ -80,11 +82,6 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 </>
               )}
             </Stack>
-            {/* <Stack>
-              <Typography sx={{ fontSize: "15px", mt: "5px" }}>
-                {data.booking_date + "  . " + data.booking_time}
-              </Typography>
-            </Stack> */}
           </Stack>
         </Stack>
 
