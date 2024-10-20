@@ -86,16 +86,14 @@ function useBooking() {
       });
   };
 
-  const fetchPosts = (userId) => {
-    // fetch(
-    //   `https://a44ad0e3-6688-40ea-8856-e9dcfc763cb4-00-2yr7oz1fvtf1.sisko.replit.dev/bookings`
-    // )
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     setBookings([...data]);
-    //     console.log(data);
-    //   })
-    //   .catch((error) => console.error("Error:", error));
+  const fetchPosts = () => {
+    fetch(`http://localhost:3000/comment/topic/${topic.topic}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setBookings([...data]);
+        console.log(data);
+      })
+      .catch((error) => console.error("Error:", error));
   };
 
   useEffect(() => {
