@@ -13,11 +13,12 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import VisualModal from "../Modals/VisualModal";
 import { useAuth } from "../../contexts/AuthContext";
 import duration from "../../utils/duration";
+// eslint-disable-next-line react/prop-types
 function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
   const { mode } = useColorScheme();
   const [modalUrl, setModalUrl] = useState("");
 
-  const { user, setUser } = useAuth();
+  const { user } = useAuth();
 
   const handleImageClick = (url) => setModalUrl(url);
   const handleCloseModal = () => setModalUrl("");
