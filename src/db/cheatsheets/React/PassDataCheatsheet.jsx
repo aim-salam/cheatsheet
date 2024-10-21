@@ -81,14 +81,13 @@ const INTRODUCTION = [
     topic: "Pass Data",
     table: "Introduction",
     action: [
-      [
-        {
-          text: "2. children-children",
-          image_link: "",
-          code: "",
-          code_type: "",
-        },
-      ],
+      {
+        text: "2. children-children",
+        image_link: "",
+        code: "",
+        code_type: "",
+      },
+      ,
     ],
     description: [
       {
