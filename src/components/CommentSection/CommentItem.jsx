@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
-  Box,
   Typography,
   ListItem,
   Stack,
@@ -89,7 +88,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
           </Stack>
         </Stack>
 
-        {data.sender_email === user.email ? (
+        {user && data.sender_email === user.email ? (
           <Stack>
             <IconButton edge="end" onClick={() => handleEditBooking(index)}>
               <EditIcon />
