@@ -98,7 +98,7 @@ function useBooking() {
           image_url: image_url,
           //random
           sender_email: user.email,
-          profile_url: user.photoURL,
+          profile_url: user.photoURL || "",
         };
         console.log(topic);
 
