@@ -76,7 +76,9 @@ function useBooking() {
         setBookings(updatedBookings);
         axios
           .put(
-            `http://localhost:3000/comment/${updatedBookings[editingIndex].id}`,
+            `${import.meta.env.VITE_COMMENT_URL}/comment/${
+              updatedBookings[editingIndex].id
+            }`,
             updatedData
           )
           .then((response) => {
@@ -103,7 +105,7 @@ function useBooking() {
         setBookings([...bookings, newData]);
 
         axios
-          .post("http://localhost:3000/comment", newData)
+          .post("${import.meta.env.VITE_COMMENT_URL}/comment", newData)
           .then((response) => {
             console.log("Success:", response.data);
           })
@@ -135,7 +137,9 @@ function useBooking() {
     setBookings(updatedBookings);
 
     axios
-      .delete(`http://localhost:3000/comment/${bookings[index].id}`)
+      .delete(
+        `${import.meta.env.VITE_COMMENT_URL}/comment/${bookings[index].id}`
+      )
       .then((response) => {
         const fileRef = ref(storage, `${deletedBookings.image_url}`);
         deleteObject(fileRef);
@@ -148,7 +152,8 @@ function useBooking() {
   };
 
   const fetchPosts = () => {
-    fetch(`http://localhost:3000/comment/topic/${topic.topic}`)
+    console.log("hello");
+    fetch(`${import.meta.env.VITE_COMMENT_URL}/comment/topic/${topic.topic}`)
       .then((response) => response.json())
       .then((data) => {
         setBookings([...data]);
