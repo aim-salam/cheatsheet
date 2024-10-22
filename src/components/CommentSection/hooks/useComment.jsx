@@ -5,7 +5,12 @@ import { v4 as uuidv4 } from "uuid";
 import { useTopic } from "../../../contexts/TopicContext";
 import { useAuth } from "./../../../contexts/AuthContext";
 import { storage } from "../../../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import {
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+  deleteObject,
+} from "firebase/storage";
 function useBooking() {
   const [bookings, setBookings] = useState([]);
   const [receiver_email, setReceiver] = useState("");
@@ -124,13 +129,17 @@ function useBooking() {
     setEditingIndex(index);
   };
 
-  const handleDeleteBooking = (index) => {
+  const handleDeleteBooking = async (index) => {
+    const deletedBookings = bookings[index];
     const updatedBookings = bookings.filter((_, i) => i !== index);
     setBookings(updatedBookings);
 
     axios
       .delete(`http://localhost:3000/comment/${bookings[index].id}`)
       .then((response) => {
+        const fileRef = ref(storage, `${deletedBookings.image_url}`);
+        deleteObject(fileRef);
+
         console.log("Success:", response.data);
       })
       .catch((error) => {
