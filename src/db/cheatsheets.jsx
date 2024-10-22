@@ -1,12 +1,12 @@
-import { HTMLCheatsheet } from "./cheatsheets/HTML/HTMLCheatsheets";
-import { LayoutCheatsheets } from "./cheatsheets/CSS/LayoutCheatsheets";
-import { ReactCheatsheet } from "./cheatsheets/React/ReactCheatsheet";
-import { MemoryCheatsheet } from "./cheatsheets/React/MemoryCheatsheet";
-import { PassDataCheatsheet } from "./cheatsheets/React/PassDataCheatsheet";
-import { RefCheatsheet } from "./cheatsheets/React/RefCheatsheet";
-import { StateCheatsheet } from "./cheatsheets/React/StateCheatsheet";
-import { PropsCheatsheet } from "./cheatsheets/React/PropsCheatsheet";
-import { CallbackCheatsheet } from "./cheatsheets/React/CallbackCheatsheet";
+import { HTMLCheatsheet } from "./HTML/HTMLDB";
+import { LayoutCheatsheets } from "./CSS/LayoutDB";
+import { ReactCheatsheet } from "./React/ReactDB";
+import { MemoryCheatsheet } from "./React/MemoryDB";
+import { PassDataCheatsheet } from "./React/PassDataDB";
+import { RefCheatsheet } from "./React/RefDB";
+import { StateCheatsheet } from "./React/StateDB";
+import { PropsCheatsheet } from "./React/PropsDB";
+import { CallbackCheatsheet } from "./React/CallbackDB";
 export const cheatsheets = [
   ...HTMLCheatsheet,
   ...LayoutCheatsheets,

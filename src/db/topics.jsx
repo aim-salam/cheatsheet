@@ -2,16 +2,16 @@
 
 // ];
 
-import { HTMLTopic } from "./topics/HTML/HTMLTopic";
-import { CSSTopic } from "./topics/CSS/CSSTopic";
-import { LayoutTopic } from "./topics/CSS/LayoutTopic";
-import { ReactTopic } from "./topics/React/ReactTopic";
-import { MemoryTopic } from "./topics/React/MemoryTopic";
-import { PassDataTopic } from "./topics/React/PassDataTopic";
-import { PropsTopic } from "./topics/React/PropsTopic";
-import { RefTopic } from "./topics/React/RefTopic";
-import { StateTopic } from "./topics/React/StateTopic";
-import { CallbackTopic } from "./topics/React/CallbackTopic";
+import { HTMLTopic } from "./HTML/HTMLDB";
+import { CSSTopic } from "./CSS/CSSDB";
+import { LayoutTopic } from "./CSS/LayoutDB";
+import { ReactTopic } from "./React/ReactDB";
+import { MemoryTopic } from "./React/MemoryDB";
+import { PassDataTopic } from "./React/PassDataDB";
+import { PropsTopic } from "./React/PropsDB";
+import { RefTopic } from "./React/RefDB";
+import { StateTopic } from "./React/StateDB";
+import { CallbackTopic } from "./React/CallbackDB";
 export const topics = [
   ReactTopic,
   MemoryTopic,

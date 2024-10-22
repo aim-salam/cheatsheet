@@ -1,5 +1,4 @@
 import Cheatsheet from "../CheatsheetClass";
-
 const INTRODUCTION = [
   new Cheatsheet({
     id: "ref-prerequisite",
@@ -174,5 +173,22 @@ countRef.current = count + 1;`,
     ],
   }),
 ];
+
+export const RefTopic = {
+  topic: "Reference",
+  type: "grandchildren",
+  imageLink: "https://images.cheatsheet.cam/images/image-1726462300507.webp",
+  tables: [
+    {
+      table: "Introduction",
+    },
+    {
+      table: "Access",
+    },
+    {
+      table: "Update",
+    },
+  ],
+};
 
 export const RefCheatsheet = [...INTRODUCTION, ...MEMORY, ...UPDATE, ...ACCESS];

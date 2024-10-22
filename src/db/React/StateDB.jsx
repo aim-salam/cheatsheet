@@ -1,5 +1,4 @@
 import Cheatsheet from "../CheatsheetClass";
-
 const INTRODUCTION = [
   new Cheatsheet({
     id: "state-prerequisite",
@@ -282,5 +281,19 @@ setMembers(members.filter(member => member !== 'Aiman'))
     ],
   }),
 ];
+
+export const StateTopic = {
+  topic: "State",
+  type: "grandchildren",
+  imageLink: "https://images.cheatsheet.cam/images/state.webp",
+  tables: [
+    {
+      table: "Introduction",
+    },
+    {
+      table: "Update",
+    },
+  ],
+};
 
 export const StateCheatsheet = [...INTRODUCTION, ...MEMORY, ...UPDATE];

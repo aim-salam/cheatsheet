@@ -1,5 +1,4 @@
 import Cheatsheet from "../CheatsheetClass";
-
 const INTRODUCTION = [
   //   new Cheatsheet({
   //     id: "Props-prerequisite",
@@ -99,5 +98,16 @@ export default function Children({
     //   }
   }),
 ];
+
+export const PropsTopic = {
+  topic: "Props",
+  type: "grandchildren",
+  imageLink: "https://images.cheatsheet.cam/images/image-1726661830405.webp",
+  tables: [
+    {
+      table: "Introduction",
+    },
+  ],
+};
 
 export const PropsCheatsheet = [...INTRODUCTION];

@@ -1,5 +1,4 @@
 import Cheatsheet from "../CheatsheetClass";
-
 const INTRODUCTION = [
   new Cheatsheet({
     id: "Callback-bb",
@@ -61,5 +60,16 @@ export default function Children({ receiveMoney }) {
     ],
   }),
 ];
+
+export const CallbackTopic = {
+  topic: "Callback",
+  type: "grandchildren",
+  imageLink: "https://images.cheatsheet.cam/images/image-1726661465665.webp",
+  tables: [
+    {
+      table: "Introduction",
+    },
+  ],
+};
 
 export const CallbackCheatsheet = [...INTRODUCTION];
