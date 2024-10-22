@@ -43,6 +43,7 @@ const CommentSection = () => {
         setComment={setComment}
         receiver_id={receiver_email}
         setReceiver={setReceiver}
+        editingIndex={editingIndex}
       ></TextFields>
 
       <Box

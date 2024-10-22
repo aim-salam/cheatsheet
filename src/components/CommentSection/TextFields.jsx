@@ -1,6 +1,12 @@
 import React from "react";
 import { TextField } from "@mui/material";
-function TextFields({ comment, setComment, receiver_id, setReceiver }) {
+function TextFields({
+  comment,
+  setComment,
+  receiver_id,
+  setReceiver,
+  editingIndex,
+}) {
   const handleDescriptionChange = (event) => {
     setComment(event.target.value);
   };
@@ -26,6 +32,7 @@ function TextFields({ comment, setComment, receiver_id, setReceiver }) {
         value={receiver_id}
         onChange={handleEmailChange}
         sx={{ mb: 2 }}
+        disabled={editingIndex !== null}
       />
     </>
   );
