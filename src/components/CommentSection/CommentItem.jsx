@@ -53,7 +53,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
               </Typography>
               <Typography fontSize={"14px"} marginBottom={"5px"}>
                 <Typography component="span">to :</Typography>
-                <Typography component="span" color="#1f85de">
+                <Typography component="span" color="#1f85de" fontSize={"14px"}>
                   {data.receiver_email}
                 </Typography>
               </Typography>
@@ -85,20 +85,32 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 </>
               )}
             </Stack>
-            <Typography fontSize={"13px"}>{duration(data.date)}</Typography>
+            <Stack justifyContent={"space-between"}>
+              <Typography fontSize={"13px"}>{duration(data.date)}</Typography>
+              {user && data.sender_email === user.email ? (
+                <Stack flexDirection={"row"}>
+                  <Typography
+                    variant="body1"
+                    fontSize={"13px"}
+                    onClick={() => handleEditBooking(index)}
+                    style={{ cursor: "pointer", color: "#B7B7B7" }}
+                    marginRight={"10px"}
+                  >
+                    Edit
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    fontSize={"13px"}
+                    onClick={() => handleDeleteBooking(index)}
+                    style={{ cursor: "pointer", color: "#B7B7B7" }}
+                  >
+                    Delete
+                  </Typography>
+                </Stack>
+              ) : null}
+            </Stack>
           </Stack>
         </Stack>
-
-        {user && data.sender_email === user.email ? (
-          <Stack>
-            <IconButton edge="end" onClick={() => handleEditBooking(index)}>
-              <EditIcon />
-            </IconButton>
-            <IconButton edge="end" onClick={() => handleDeleteBooking(index)}>
-              <DeleteIcon />
-            </IconButton>
-          </Stack>
-        ) : null}
       </ListItem>
     </>
   );
