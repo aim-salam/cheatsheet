@@ -105,7 +105,7 @@ function useBooking() {
         setBookings([...bookings, newData]);
 
         axios
-          .post("${import.meta.env.VITE_COMMENT_URL}/comment", newData)
+          .post(`${import.meta.env.VITE_COMMENT_URL}/comment`, newData)
           .then((response) => {
             console.log("Success:", response.data);
           })
