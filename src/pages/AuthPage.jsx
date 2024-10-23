@@ -42,34 +42,45 @@ const AuthPage = () => {
           flexDirection: "column",
           alignItems: {
             xs: "center",
-            sm: "center",
-            md: "center",
-            lg: "flex-start",
+            sm: "flex-start",
           },
         }}
       >
         {/* Title */}
+
         <Typography
-          sx={{ marginTop: "40px", marginBottom: "40px" }}
+          sx={{
+            marginTop: "40px",
+            marginBottom: "40px",
+            textAlign: {
+              xs: "center",
+              sm: "start",
+            },
+          }}
           variant="h2"
           component="h2"
           gutterBottom
-          align="center"
           fontWeight={"bold"}
         >
-          Welcome to Our App
+          Fullstack Cheatsheet
         </Typography>
 
         {/* Title */}
         <Typography
-          sx={{ marginTop: "40px", marginBottom: "40px" }}
+          sx={{
+            marginTop: "40px",
+            marginBottom: "40px",
+            textAlign: {
+              xs: "center",
+              sm: "start",
+            },
+          }}
           variant="h4"
           component="h4"
           gutterBottom
-          align="center"
           fontWeight={"bold"}
         >
-          Join Today
+          Enjoy visualization and copy-paste code.
         </Typography>
         {/* Buttons for Authentication */}
 
