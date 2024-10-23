@@ -29,15 +29,18 @@ const CommentSection = () => {
 
   return (
     <Box
+      id="target-component"
       sx={{
         maxWidth: 600,
-        mt: 4,
+        // mt: 4,
         marginBottom: "100px",
+        paddingTop: "80px",
       }}
     >
       <Typography variant="h5" mb={"20px"}>
         Leave Comments
       </Typography>
+
       <TextFields
         comment={comment}
         setComment={setComment}

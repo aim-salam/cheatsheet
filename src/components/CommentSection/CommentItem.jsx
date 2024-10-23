@@ -90,6 +90,8 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
               {user && data.sender_email === user.email ? (
                 <Stack flexDirection={"row"}>
                   <Typography
+                    href="#target-component"
+                    component="a"
                     variant="body1"
                     fontSize={"13px"}
                     onClick={() => handleEditBooking(index)}

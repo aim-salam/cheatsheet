@@ -40,7 +40,6 @@ function MainContent() {
         fontSize={40}
         fontWeight={"bold"}
         align="center"
-        marginBottom={"60px"}
         marginTop={"40px"}
       >
         {topicName}
