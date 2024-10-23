@@ -7,6 +7,8 @@ import {
   prism,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useColorScheme } from "@mui/material";
+import TypographyCell from "./TypographyCell";
+import ImageCell from "./ImageCell";
 
 function UniversalCell({ column, data, index }) {
   const [modalUrl, setModalUrl] = useState("");
@@ -26,83 +28,31 @@ function UniversalCell({ column, data, index }) {
   return (
     <TableCell
       sx={{
-        alignContent: "flex-start",
-
-        display: { xs: "flex", sm: "table-cell" },
-        flexWrap: "wrap",
+        ...styles.tableCell,
         borderBottom: {
           xs: "0px",
           sm: mode === "light" ? "2px solid #EDEDED" : "2px solid #333232",
         },
-        padding: "0px",
-        paddingLeft: "20px",
         paddingTop: { xs: column === "visual" ? "10px" : "0px", sm: "10px" },
         paddingBottom: {
           xs: column === "visual" ? "50px" : "0px",
           sm: column === "visual" ? "20px" : "0px",
         },
-
         paddingRight: column === "code" ? "20px" : "0px",
       }}
     >
       {data.map(({ text, image_link, code, code_type }, index) => (
-        <Stack
-          key={text + image_link + code + code_type}
-          sx={{
-            marginRight: { xs: "10px", sm: "0px" },
-          }}
-        >
+        <Stack key={text + image_link + code + code_type} sx={styles.stack}>
           {text && (
-            <Typography
-              key={text}
-              style={{ whiteSpace: "pre-wrap" }}
-              fontSize={{
-                xs: column === "action" ? "20px" : "15px",
-                sm: column === "action" ? "16px" : "15px",
-              }}
-              width={{
-                xs:
-                  column === "action" || column === "description"
-                    ? "100%"
-                    : "100%",
-                sm:
-                  column === "action"
-                    ? "80px"
-                    : column === "description"
-                    ? "150px"
-                    : "100%",
-              }}
-              // fontWeight={}
-              fontWeight={{
-                xs: column === "action" ? "bold" : "normal",
-                sm: "normal",
-              }}
-              paddingTop={{
-                xs: column === "action" ? "20px" : "0px",
-                sm: "0px",
-              }}
-              paddingBottom={"5px"}
-            >
-              {text}
-            </Typography>
+            <TypographyCell column={column} text={text}></TypographyCell>
           )}
 
           {image_link && (
             <>
-              <CardMedia
-                key={image_link}
-                component="img"
-                sx={{
-                  width: "150px",
-                  objectFit: "cover",
-                  "&:hover": {
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-                  },
-                }}
-                onClick={() => handleImageClick(image_link)}
-                image={image_link}
-                alt="Visual image"
-              />
+              <ImageCell
+                image_link={image_link}
+                handleImageClick={handleImageClick}
+              ></ImageCell>
               <VisualModal
                 key={image_link + text + code + index}
                 visual={modalUrl}
@@ -130,5 +80,18 @@ function UniversalCell({ column, data, index }) {
     </TableCell>
   );
 }
+
+const styles = {
+  tableCell: {
+    alignContent: "flex-start",
+    padding: "0px",
+    paddingLeft: "20px",
+    display: { xs: "flex", sm: "table-cell" },
+    flexWrap: "wrap",
+  },
+  stack: {
+    marginRight: { xs: "10px", sm: "0px" },
+  },
+};
 
 export default UniversalCell;

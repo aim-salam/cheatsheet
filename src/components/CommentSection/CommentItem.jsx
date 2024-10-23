@@ -4,16 +4,13 @@ import {
   ListItem,
   Stack,
   Avatar,
-  IconButton,
   useColorScheme,
   CardMedia,
 } from "@mui/material";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
 import VisualModal from "../Modals/VisualModal";
 import { useAuth } from "../../contexts/AuthContext";
 import duration from "../../utils/duration";
-// eslint-disable-next-line react/prop-types
+
 function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
   const { mode } = useColorScheme();
   const [modalUrl, setModalUrl] = useState("");
@@ -27,24 +24,11 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
     <>
       <ListItem key={index}>
         <Stack flexDirection={"row"} width={"100%"}>
-          <Avatar
-            alt="Remy Sharp"
-            src={data.profile_url}
-            sx={{
-              width: 30,
-              height: 30,
-              marginRight: "10px",
-              mt: "10px",
-            }}
-          />
+          <Avatar alt="Remy Sharp" src={data.profile_url} sx={styles.avatar} />
           <Stack
             sx={{
               backgroundColor: mode === "light" ? "#f5f5f5" : "#1e1e1e",
-              p: "10px",
-              borderRadius: "10px",
-              width: "100%",
-              flexDirection: "row",
-              justifyContent: "space-between",
+              ...styles.stack,
             }}
           >
             <Stack>
@@ -65,13 +49,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                   <CardMedia
                     key={data.image_url + "preview"}
                     component="img"
-                    sx={{
-                      width: "150px",
-                      objectFit: "cover",
-                      "&:hover": {
-                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-                      },
-                    }}
+                    sx={styles.cardMedia}
                     onClick={() => handleImageClick(data.image_url)}
                     image={data.image_url}
                     alt="Visual image"
@@ -117,5 +95,28 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
     </>
   );
 }
+
+const styles = {
+  avatar: {
+    width: 30,
+    height: 30,
+    marginRight: "10px",
+    mt: "10px",
+  },
+  stack: {
+    p: "10px",
+    borderRadius: "10px",
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  cardMedia: {
+    width: "150px",
+    objectFit: "cover",
+    "&:hover": {
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+    },
+  },
+};
 
 export default CommentItem;

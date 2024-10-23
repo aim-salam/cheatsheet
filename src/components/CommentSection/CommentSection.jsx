@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Box, Button, Typography, List } from "@mui/material";
 
-import DateInputButton from "./DateInputButton";
 import FileInputButton from "./FileInputButton";
 import TextFields from "./TextFields";
 import CommentItem from "./CommentItem";
@@ -28,15 +27,7 @@ const CommentSection = () => {
   } = useComment();
 
   return (
-    <Box
-      id="target-component"
-      sx={{
-        maxWidth: 600,
-        // mt: 4,
-        marginBottom: "100px",
-        paddingTop: "80px",
-      }}
-    >
+    <Box id="target-component" sx={styles.box1}>
       <Typography variant="h5" mb={"20px"}>
         Leave Comments
       </Typography>
@@ -49,12 +40,7 @@ const CommentSection = () => {
         editingIndex={editingIndex}
       ></TextFields>
 
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
+      <Box sx={styles.box2}>
         {/* <DateInputButton setTime={setTime} setDate={setDate}></DateInputButton> */}
 
         {editingIndex === null ? (
@@ -66,11 +52,7 @@ const CommentSection = () => {
             setPreview={setPreview}
           ></FileInputButton>
         ) : null}
-        <Button
-          variant="text"
-          onClick={handleBookingSubmit}
-          sx={{ backgroundColor: "#e6e3e3", color: "black", width: "100px" }}
-        >
+        <Button variant="text" onClick={handleBookingSubmit} sx={styles.button}>
           {editingIndex !== null ? "Update" : "Submit"}
         </Button>
       </Box>
@@ -87,6 +69,20 @@ const CommentSection = () => {
       </List>
     </Box>
   );
+};
+
+const styles = {
+  box1: {
+    maxWidth: 600,
+    marginBottom: "100px",
+    paddingTop: "80px",
+  },
+
+  box2: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  button: { backgroundColor: "#e6e3e3", color: "black", width: "100px" },
 };
 
 export default CommentSection;

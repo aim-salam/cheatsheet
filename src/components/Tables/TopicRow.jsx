@@ -28,9 +28,8 @@ function TopicRow({ row, rows, isEditable, setRows, index }) {
   return (
     <TableRow
       sx={{
-        verticalAlign: "baseline",
-        borderBottom: "1px solid #EDEDED",
-        backgroundColor: mode === "dark" ?   "#1a1a1a":"#f5f5f5",
+        backgroundColor: mode === "dark" ? "#1a1a1a" : "#f5f5f5",
+        ...styles.tableRow,
       }}
     >
       {rowData.map(({ key, value }) =>
@@ -41,5 +40,12 @@ function TopicRow({ row, rows, isEditable, setRows, index }) {
     </TableRow>
   );
 }
+
+const styles = {
+  tableRow: {
+    verticalAlign: "baseline",
+    borderBottom: "1px solid #EDEDED",
+  },
+};
 
 export default TopicRow;

@@ -1,46 +1,19 @@
-import {
-  List,
-  ListItemButton,
-  ListItemAvatar,
-  Avatar,
-  Stack,
-  Typography,
-  Box,
-} from "@mui/material";
-import { topics } from "../../db/topics";
-import logo from "./../../assets/logo.jpg";
+import { Box } from "@mui/material";
 import { useAside } from "../../contexts/AsideContext";
 import LogoutButton from "../Buttons/LogoutButton";
 import { useTopic } from "../../contexts/TopicContext";
 import { useColorScheme } from "@mui/material/styles";
 import { useEffect } from "react";
-function TopicList() {
+import TopicList from "./TopicList";
+function Aside() {
   const { isAside, setIsAside } = useAside();
   const { topic, setTopic } = useTopic();
-  const parentStyle = {
-    marginTop: "40px",
-    marginBottom: "10px",
-    fontSize: "25px",
-    avatarSize: "30px",
-  };
-
-  const childStyle = {
-    fontSize: "17px",
-    avatarSize: "25px",
-  };
-
-  const getStyle = (type) => (type === "parent" ? parentStyle : childStyle);
 
   const { mode } = useColorScheme();
-
-  useEffect(() => {
-    console.log(mode);
-  }, [mode]);
 
   return (
     <Box
       sx={{
-        position: "fixed",
         display: {
           xs: isAside ? "block" : "none",
           sm: isAside ? "block" : "none",
@@ -48,85 +21,18 @@ function TopicList() {
           lg: "block",
           zIndex: 2,
         },
+        ...styles.box1,
       }}
     >
-      <Box
-        onClick={() => setIsAside(false)}
-        sx={{
-          width: "100vw",
-          height: "100vh",
-          backgroundColor: "black",
-          opacity: 0.5,
-          position: "absolute",
-          display: { lg: "none" },
-          zIndex: "-1",
-        }}
-      ></Box>
-
+      <Box onClick={() => setIsAside(false)} sx={styles.box2}></Box>
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          height: "100vh",
-
-          paddingTop: "30px",
-
-          width: "250px",
           backgroundColor: mode === "dark" ? "#121212" : "white",
-          paddingBottom: "20px",
+          ...styles.box3,
         }}
       >
-        <List sx={{ flexGrow: 1 }}>
-          {topics.map((topic) => {
-            const { topic: topicName, type, imageLink } = topic;
-            const { marginTop, marginBottom, fontSize, avatarSize } =
-              getStyle(type);
-
-            return (
-              <Stack
-                key={topicName}
-                marginTop={marginTop}
-                marginBottom={marginBottom}
-                height={"40px"}
-              >
-                <ListItemButton
-                  sx={{
-                    paddingLeft: "40px",
-                    paddingRight: "30px",
-                    paddingTop: "1px",
-                    paddingBottom: "1px",
-                  }}
-                  onClick={() => {
-                    setTopic(topic);
-                  }}
-                >
-                  <ListItemAvatar>
-                    <Avatar
-                      sx={{ width: avatarSize, height: avatarSize }}
-                      alt={topicName}
-                      src={imageLink || logo}
-                      variant="rounded"
-                    />
-                  </ListItemAvatar>
-
-                  <Typography
-                    fontWeight={type !== "grandchildren" ? "bold" : "normal"}
-                    fontSize={fontSize}
-                  >
-                    {topic.topic}
-                  </Typography>
-                </ListItemButton>
-              </Stack>
-            );
-          })}
-        </List>
-
-        <Box
-          sx={{
-            display: { xs: "block", sm: "none" },
-            marginLeft: "65px",
-          }}
-        >
+        <TopicList></TopicList>
+        <Box sx={styles.box4}>
           <LogoutButton></LogoutButton>
         </Box>
       </Box>
@@ -134,13 +40,33 @@ function TopicList() {
   );
 }
 
-export default TopicList;
+const styles = {
+  box1: {
+    position: "fixed",
+  },
+  box2: {
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "black",
+    opacity: 0.5,
+    position: "absolute",
+    display: { lg: "none" },
+    zIndex: "-1",
+  },
+  box3: {
+    display: "flex",
+    flexDirection: "column",
+    height: "100vh",
 
-{
-  /* <List sx={{ flexGrow: 1 }}>
+    paddingTop: "30px",
 
-<ListItem sx={{ marginTop: "auto" }}>
-  <ListItemText primary="Bottom Item" />
-</ListItem>
-</List> */
-}
+    width: "250px",
+    paddingBottom: "20px",
+  },
+  box4: {
+    display: { xs: "block", sm: "none" },
+    marginLeft: "65px",
+  },
+};
+
+export default Aside;

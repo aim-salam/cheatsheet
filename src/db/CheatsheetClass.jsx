@@ -1,5 +1,3 @@
-// Class definition for Cheatsheet Entry
-// For required to be Array dont put [] as default, it will trigger column. Let it be null
 class Cheatsheet {
   constructor({
     id,

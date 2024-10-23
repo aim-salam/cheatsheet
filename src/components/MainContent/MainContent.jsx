@@ -5,7 +5,7 @@ import { cheatsheets } from "../../db/cheatsheets";
 import Fuse from "fuse.js";
 import CommentSection from "../CommentSection/CommentSection";
 import { useTopic } from "../../contexts/TopicContext";
-// Initialize Fuse.js outside the component to avoid unnecessary re-initialization on every render
+
 const fuse = new Fuse(cheatsheets, {
   keys: ["topic"],
   threshold: 0.1,
@@ -24,27 +24,10 @@ function MainContent() {
   }, [topic]);
 
   return (
-    <Grid2
-      sx={{
-        paddingRight: { xs: "20px" },
-        paddingLeft: { xs: "20px", lg: "250px" },
-        flex: "1 1 auto",
-        minWidth: "320px",
-        maxWidth: "1200px",
-
-        margin: "0 auto",
-        marginTop: "30px",
-      }}
-    >
-      <Typography
-        fontSize={40}
-        fontWeight={"bold"}
-        align="center"
-        marginTop={"40px"}
-      >
+    <Grid2 sx={styles.grid}>
+      <Typography align="center" sx={styles.typography}>
         {topicName}
       </Typography>
-      {/* Add main content here */}
       <Stack>
         {tables.map((table, index) => {
           return (
@@ -60,5 +43,23 @@ function MainContent() {
     </Grid2>
   );
 }
+
+const styles = {
+  grid: {
+    paddingRight: { xs: "20px" },
+    paddingLeft: { xs: "20px", lg: "250px" },
+    flex: "1 1 auto",
+    minWidth: "320px",
+    maxWidth: "1200px",
+
+    margin: "0 auto",
+    marginTop: "30px",
+  },
+  typography: {
+    fontSize: "40px",
+    fontWeight: "bold",
+    marginTop: "40px",
+  },
+};
 
 export default MainContent;

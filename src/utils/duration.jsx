@@ -15,7 +15,3 @@ export default function duration(isoString) {
   if (minutes > 0) return `${minutes} minute(s) ago`;
   return `${seconds} second(s) ago`;
 }
-
-// Example usage:
-//   const isoString = "2023-10-10T12:34:56.000Z";
-//   console.log(timeSince(isoString));

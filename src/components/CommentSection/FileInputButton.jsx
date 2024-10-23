@@ -22,13 +22,7 @@ export default function FileInputButton({
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <Box sx={styles.box1}>
       <TextField
         type="file"
         inputProps={{ accept: "image/*" }}
@@ -39,15 +33,25 @@ export default function FileInputButton({
           component="img"
           src={preview}
           alt="Uploaded Image Preview"
-          sx={{ height: "100px", my: 2 }}
+          sx={styles.box2}
         />
       )}
 
       {uploading ? (
-        <Box sx={{ width: "100%", my: 2 }}>
+        <Box sx={styles.box3}>
           <LinearProgress variant="determinate" value={progress} />
         </Box>
       ) : null}
     </Box>
   );
 }
+
+const styles = {
+  box1: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  box2: { height: "100px", my: 2 },
+  box3: { width: "100%", my: 2 },
+};

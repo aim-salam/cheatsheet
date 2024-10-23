@@ -8,8 +8,8 @@ import SignInButton from "../features/authentication/components/SignInButton";
 import GoogleSignInButton from "../features/authentication/components/GoogleSignInButton";
 import AuthCardMedia from "../features/authentication/components/AuthCardMedia";
 import AuthTypography from "../features/authentication/components/AuthTypography";
-// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-// import { auth } from './firebaseConfig'; // Ensure Firebase is set up properly
+import AuthHeader from "../features/authentication/components/AuthHeader";
+import AuthButtons from "../features/authentication/components/AuthButtons";
 
 const AuthPage = () => {
   const {
@@ -29,82 +29,17 @@ const AuthPage = () => {
   } = useAuthentication();
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-      }}
-    >
+    <Box sx={styles.box1}>
       <AuthCardMedia></AuthCardMedia>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: {
-            xs: "center",
-            sm: "flex-start",
-          },
-        }}
-      >
-        {/* Title */}
+      <Box sx={styles.box2}>
+        <AuthHeader></AuthHeader>
 
-        <Typography
-          sx={{
-            marginTop: "40px",
-            marginBottom: "40px",
-            textAlign: {
-              xs: "center",
-              sm: "start",
-            },
-          }}
-          variant="h2"
-          component="h2"
-          gutterBottom
-          fontWeight={"bold"}
-        >
-          Fullstack Cheatsheet
-        </Typography>
+        <AuthButtons
+          handleLoginWithGmail={handleLoginWithGmail}
+          handleOpenSignUp={handleOpenSignUp}
+          handleOpenSignIn={handleOpenSignIn}
+        ></AuthButtons>
 
-        {/* Title */}
-        <Typography
-          sx={{
-            marginTop: "40px",
-            marginBottom: "40px",
-            textAlign: {
-              xs: "center",
-              sm: "start",
-            },
-          }}
-          variant="h4"
-          component="h4"
-          gutterBottom
-          fontWeight={"bold"}
-        >
-          Enjoy visualization and copy-paste code.
-        </Typography>
-        {/* Buttons for Authentication */}
-
-        <Stack sx={{ width: "250px" }}>
-          <GoogleSignInButton
-            handleLoginWithGmail={handleLoginWithGmail}
-          ></GoogleSignInButton>
-          <Typography
-            sx={{
-              alignSelf: "center",
-              paddingTop: "5px",
-              paddingBottom: "5px",
-            }}
-          >
-            or
-          </Typography>
-          <SignUpButton handleOpenSignUp={handleOpenSignUp}></SignUpButton>
-
-          <AuthTypography></AuthTypography>
-
-          <SignInButton handleOpenSignIn={handleOpenSignIn}></SignInButton>
-        </Stack>
-
-        {/* Sign Up Modal */}
         <SignUpModal
           openSignUp={openSignUp}
           handleCloseSignUp={handleCloseSignUp}
@@ -115,7 +50,6 @@ const AuthPage = () => {
           setPassword={setPassword}
         />
 
-        {/* Sign In Modal */}
         <SignInModal
           openSignIn={openSignIn}
           handleCloseSignIn={handleCloseSignIn}
@@ -128,6 +62,21 @@ const AuthPage = () => {
       </Box>
     </Box>
   );
+};
+
+const styles = {
+  box1: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  box2: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: {
+      xs: "center",
+      sm: "flex-start",
+    },
+  },
 };
 
 export default AuthPage;

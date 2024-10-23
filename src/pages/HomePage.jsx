@@ -10,18 +10,10 @@ function HomePage() {
   return (
     <TopicProvider>
       <AsideProvider>
-        <Box sx={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+        <Box sx={styles.box1}>
           <CssBaseline></CssBaseline>
           <NavBar></NavBar>
-          <Grid2
-            container
-            sx={{
-              flexGrow: 1,
-              display: "flex",
-              width: "100%",
-              alignContent: "center",
-            }}
-          >
+          <Grid2 container sx={styles.grid}>
             <Aside></Aside>
             <MainContent></MainContent>
           </Grid2>
@@ -30,5 +22,15 @@ function HomePage() {
     </TopicProvider>
   );
 }
+
+const styles = {
+  box1: { display: "flex", flexDirection: "column", height: "100vh" },
+  grid: {
+    flexGrow: 1,
+    display: "flex",
+    width: "100%",
+    alignContent: "center",
+  },
+};
 
 export default HomePage;

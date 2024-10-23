@@ -74,13 +74,6 @@ function useAuthentication() {
   };
 
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (user) {
-  //     navigate("/");
-  //   } else {
-  //     navigate("/auth");
-  //   }
-  // }, [user, navigate]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {

@@ -1,7 +1,3 @@
-// export const topics = [
-
-// ];
-
 import { HTMLTopic } from "./HTML/HTMLDB";
 import { CSSTopic } from "./CSS/CSSDB";
 import { LayoutTopic } from "./CSS/LayoutDB";

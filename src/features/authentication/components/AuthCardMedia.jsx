@@ -4,18 +4,22 @@ import { CardMedia } from "@mui/material";
 function AuthCardMedia() {
   return (
     <CardMedia
-      sx={{
-        width: "50%",
-        backgroundColor: "#e6e3e3",
-        display: {
-          xs: "none",
-          sm: "block",
-        },
-      }}
+      sx={styles.cardMedia}
       component="img"
       image="https://images.cheatsheet.cam/images/state.webp"
     ></CardMedia>
   );
 }
+
+const styles = {
+  cardMedia: {
+    width: "50%",
+    backgroundColor: "#e6e3e3",
+    display: {
+      xs: "none",
+      sm: "block",
+    },
+  },
+};
 
 export default AuthCardMedia;

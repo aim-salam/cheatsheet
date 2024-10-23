@@ -8,15 +8,19 @@ function SignUpButton({ handleOpenSignUp }) {
       color="secondary"
       fullWidth
       onClick={handleOpenSignUp}
-      sx={{
-        padding: "10px",
-        fontSize: "0.8rem",
-        borderRadius: "50px",
-      }}
+      sx={styles.button}
     >
       Create an account
     </Button>
   );
 }
+
+const styles = {
+  button: {
+    padding: "10px",
+    fontSize: "0.8rem",
+    borderRadius: "50px",
+  },
+};
 
 export default SignUpButton;

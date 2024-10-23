@@ -8,15 +8,22 @@ function GoogleSignInButton({ handleLoginWithGmail }) {
       color="inherit"
       fullWidth
       onClick={handleLoginWithGmail}
-      sx={{
-        padding: "10px",
-        fontSize: "0.8rem",
-        borderRadius: "50px",
-      }}
+      sx={styles.button}
     >
-      <GoogleIcon sx={{ marginRight: "10px" }}></GoogleIcon> Sign up with Google
+      <GoogleIcon sx={styles.icon}></GoogleIcon> Sign up with Google
     </Button>
   );
 }
+
+const styles = {
+  button: {
+    padding: "10px",
+    fontSize: "0.8rem",
+    borderRadius: "50px",
+  },
+  icon: {
+    marginRight: "10px",
+  },
+};
 
 export default GoogleSignInButton;

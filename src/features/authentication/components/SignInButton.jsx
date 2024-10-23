@@ -8,15 +8,19 @@ function SignInButton({ handleOpenSignIn }) {
       color="primary"
       fullWidth
       onClick={handleOpenSignIn}
-      sx={{
-        padding: "10px",
-        fontSize: "0.8rem",
-        borderRadius: "50px",
-      }}
+      sx={styles.button}
     >
       Sign In
     </Button>
   );
 }
+
+const styles = {
+  button: {
+    padding: "10px",
+    fontSize: "0.8rem",
+    borderRadius: "50px",
+  },
+};
 
 export default SignInButton;

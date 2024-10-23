@@ -2,59 +2,82 @@ import React from "react";
 import {
   List,
   ListItemButton,
-  ListItemText,
   ListItemAvatar,
   Avatar,
   Stack,
   Typography,
 } from "@mui/material";
 import { topics } from "../../db/topics";
-import logo from "./../assets/logo.jpg";
+import logo from "./../../assets/logo.jpg";
 import { useTopic } from "../../contexts/TopicContext";
+import { useAside } from "../../contexts/AsideContext";
+
+const getStyle = (type) =>
+  type === "parent" ? styles.parentStyle : styles.childStyle;
+
 function TopicList() {
-  const { setTopic } = useTopic();
-  function Header({ topic }) {
-    if (topic.type === "parent") {
-      return (
-        <Typography
-          marginTop={"20px"}
-          paddingLeft={"40px"}
-          paddingRight={"20px"}
-          fontSize={"18px"}
-        >
-          {topic.type === "parent" ? `${topic.topic}` : null}
-        </Typography>
-      );
-    }
-  }
-
+  const { isAside, setIsAside } = useAside();
+  const { topic, setTopic } = useTopic();
   return (
-    <List>
-      {topics.map((topic) => (
-        <Stack key={topic.topic}>
-          <Header topic={topic}></Header>
-          <ListItemButton
-            sx={{ paddingLeft: "40px", paddingRight: "30px" }}
-            onClick={() => {
-              setTopic(topic);
-            }}
-          >
-            <ListItemAvatar>
-              <Avatar
-                alt="Remy Sharp"
-                src={topic.imageLink ? topic.imageLink : logo}
-                variant="rounded"
-              />
-            </ListItemAvatar>
-            <ListItemText primary={topic.topic} />
-          </ListItemButton>
-        </Stack>
-      ))}
-    </List>
-    // <ul>
+    <List sx={{ flexGrow: 1 }}>
+      {topics.map((topic) => {
+        const { topic: topicName, type, imageLink } = topic;
+        const { marginTop, marginBottom, fontSize, avatarSize } =
+          getStyle(type);
 
-    // </ul>
+        return (
+          <Stack
+            key={topicName}
+            marginTop={marginTop}
+            marginBottom={marginBottom}
+            height={"40px"}
+          >
+            <ListItemButton
+              sx={styles.listItemButton}
+              onClick={() => {
+                setTopic(topic);
+              }}
+            >
+              <ListItemAvatar>
+                <Avatar
+                  sx={{ width: avatarSize, height: avatarSize }}
+                  alt={topicName}
+                  src={imageLink || logo}
+                  variant="rounded"
+                />
+              </ListItemAvatar>
+
+              <Typography
+                fontWeight={type !== "grandchildren" ? "bold" : "normal"}
+                fontSize={fontSize}
+              >
+                {topic.topic}
+              </Typography>
+            </ListItemButton>
+          </Stack>
+        );
+      })}
+    </List>
   );
 }
+
+const styles = {
+  parentStyle: {
+    marginTop: "40px",
+    marginBottom: "10px",
+    fontSize: "25px",
+    avatarSize: "30px",
+  },
+  childStyle: {
+    fontSize: "17px",
+    avatarSize: "25px",
+  },
+  listItemButton: {
+    paddingLeft: "40px",
+    paddingRight: "30px",
+    paddingTop: "1px",
+    paddingBottom: "1px",
+  },
+};
 
 export default TopicList;

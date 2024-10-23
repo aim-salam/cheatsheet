@@ -18,17 +18,10 @@ function NavBar() {
   const { setIsAside } = useAside();
   return (
     <AppBar
-      // position="static"
-      position="fixed"
-      color="primary"
       sx={{
-        boxShadow: 0,
         borderBottom: 1,
         borderBottomColor: mode === "light" ? "#ddd" : "#272727",
-        paddingRight: "20px",
-        paddingLeft: "20px",
-        paddingTop: "10px",
-        paddingBottom: "10px",
+        ...styles.appBar,
       }}
     >
       <Stack
@@ -52,11 +45,7 @@ function NavBar() {
         </Stack>
         <Stack flexDirection={"row"}>
           <ColorModeSwitch></ColorModeSwitch>
-          <Box
-            sx={{
-              display: { xs: "none", sm: "block" },
-            }}
-          >
+          <Box sx={styles.box1}>
             <LogoutButton></LogoutButton>
           </Box>
         </Stack>
@@ -64,5 +53,21 @@ function NavBar() {
     </AppBar>
   );
 }
+
+const styles = {
+  appBar: {
+    position: "fixed",
+    color: "primary",
+
+    paddingRight: "20px",
+    paddingLeft: "20px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
+    boxShadow: 0,
+  },
+  box1: {
+    display: { xs: "none", sm: "block" },
+  },
+};
 
 export default NavBar;

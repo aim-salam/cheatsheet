@@ -17,32 +17,11 @@ function TopicTable({ table, cheatsheets }) {
 
   return (
     <Stack>
-      <Stack
-        flexDirection="row"
-        sx={{ justifyContent: { xs: "center", sm: "flex-start" } }}
-      >
-        <Typography
-          fontSize="25px"
-          fontWeight="bold"
-          sx={{
-            marginBottom: "20px",
-          }}
-        >
-          {table.table}
-        </Typography>
+      <Stack flexDirection="row" sx={styles.stack}>
+        <Typography sx={styles.typography}>{table.table}</Typography>
       </Stack>
-      <TableContainer
-        component={Paper}
-        sx={{ width: "100%", marginBottom: "150px" }}
-      >
-        <Table
-          sx={
-            {
-              // minWidth: 650
-            }
-          }
-          aria-label="simple table"
-        >
+      <TableContainer component={Paper} sx={styles.tableContainer}>
+        <Table aria-label="simple table">
           <TopicColumn columns={table.columns} isEditable={isEditable} />
           <TableBody>
             {rows.map((row, index) => (
@@ -61,5 +40,11 @@ function TopicTable({ table, cheatsheets }) {
     </Stack>
   );
 }
+
+const styles = {
+  stack: { justifyContent: { xs: "center", sm: "flex-start" } },
+  typography: { marginBottom: "20px", fontSize: "25px", fontWeight: "bold" },
+  tableContainer: { width: "100%", marginBottom: "150px" },
+};
 
 export default TopicTable;
