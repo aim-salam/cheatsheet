@@ -2,10 +2,13 @@
 
 **cheatsheet.cam** is a full-stack cheatsheet that allows you to **visualize** and easily **copy-paste** the code snippets for your projects.
 
+<br>
+
 ## 🌐 Production
 
 Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
+<br>
 <br>
 
 ## 🖥️ Running Locally
@@ -38,9 +41,10 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
    ```bash
    git fetch
 
-** ⚠️ Reminder**:   
+### ⚠️ Reminder:   
 Authentication and Comment Section will not work because you don't have access to the API_KEY.
 
+<br>
 <br>
 
 ## 🤝 Collaboration
@@ -53,6 +57,6 @@ Authentication and Comment Section will not work because you don't have access t
    - After making changes, commit them to the main branch and create a pull request.
   
 
-
-
+<br>
+<br>
 Thank you for contributing to cheatsheet.cam!
