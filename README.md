@@ -6,7 +6,7 @@
 
 Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
----
+<br>
 
 ## 🖥️ Running Locally
 
@@ -41,6 +41,8 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 ** ⚠️ Reminder**:   
 Authentication and Comment Section will not work because you don't have access to the API_KEY.
 
+<br>
+
 ## 🤝 Collaboration
 
 1. **Issues**:
@@ -50,5 +52,7 @@ Authentication and Comment Section will not work because you don't have access t
 2. **Pull request**:
    - After making changes, commit them to the main branch and create a pull request.
   
+
+
 
 Thank you for contributing to cheatsheet.cam!
