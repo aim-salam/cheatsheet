@@ -30,7 +30,7 @@ function TopicRow({ row, rows, isEditable, setRows, index }) {
       sx={{
         verticalAlign: "baseline",
         borderBottom: "1px solid #EDEDED",
-        backgroundColor: mode === "light" ? "#f5f5f5" : "#1a1a1a",
+        backgroundColor: mode === "dark" ?   "#1a1a1a":"#f5f5f5",
       }}
     >
       {rowData.map(({ key, value }) =>
