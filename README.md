@@ -54,7 +54,9 @@ Authentication and Comment Section will not work because you don't have access t
    - To take an issue, comment using this format:
 
 2. **Pull request**:
-   - After making changes, commit them to the main branch and create a pull request.
+   - After making changes, make sure you have your own repository on GitHub by clicking **Fork**. Then, create **a new branch**.
+   - Commit them to the new branch and create a pull request.
+   - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
   
 
 <br>
