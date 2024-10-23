@@ -1,33 +1,47 @@
-# Welcome to cheatsheet.cam
+# Welcome to cheatsheet.cam 🎨
 
-A full stack cheat that you can visualize and copy-paste the code.
+**cheatsheet.cam** is a full-stack cheatsheet that allows you to **visualize** and easily **copy-paste** the code snippets for your projects.
 
-## Production
+## 🌐 Production
+
 Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
-## Local Machine
-How to reproduce the project on your local machine:
+---
+
+## 🖥️ Running Locally
+
+### Steps to reproduce the project on your local machine:
 
 1. **Clone the repository**:
-   Click on the clone or download button to get the repository.
+   Download or clone the repository by clicking the clone button or running:
+   ```bash
+   git clone <repository-url>
 
 2. **Navigate to the project directory**:
    Open your terminal and `cd` into the project directory.
+      ```bash
+   cd <project-directory>
+   code .
 
-3. **Build the project**:
-   Run the following command in your terminal:
+3. **Install dependencies**:
+   Install all required dependencies:
+   ```bash
+   npm install
+   
+4. **Build the project**:
+   Build the project using:
    ```bash
    npm run build
 
-3. **Keep up with new changes:**:
-   To stay up-to-date with the latest codebase, click Fetch or run:
+3. **Stay up-to-date with the latest code**:
+   Fetch the latest codebase to keep up with new changes:
    ```bash
    git fetch
 
-**Reminder**:   
+** ⚠️ Reminder**:   
 Authentication and Comment Section will not work because you don't have access to the API_KEY.
 
-## Collaboration
+## 🤝 Collaboration
 
 1. **Issues**:
    - You can see all the issues that need to be fixed in the [Issues section](https://github.com/aim-salam/cheatsheet/issues).
