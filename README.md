@@ -37,10 +37,12 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
 3. **Install dependencies**:
    Install all required dependencies:
+
    ```bash
    npm install
 
    ```
+
 4. **Build the project**:
    Build the project using:
 
@@ -48,7 +50,6 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
    npm run build
 
    ```
-
 
 ### ⚠️ Reminder:
 
@@ -77,13 +78,16 @@ Authentication and Comment Section will not work because you don't have access t
    - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
 
 3. **More contributions**:
+
    - Synchronize your main remote repository with the production remote main repository by clicking **Sync fork**.
    - In your local repository, switch to main branch. Then, update to the latest codebase to stay up to date with new changes.
+
    ```bash
    git pull
    ```
 
    - Create a new branch for each issue and repeat step 2.
+   - ///
 
 <br>
 <br>
