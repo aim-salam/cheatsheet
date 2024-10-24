@@ -22,14 +22,13 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
    Make sure you have your own repository on GitHub by clicking **Fork**.
 
 2. **Download the forked repository**:
-   Download the forked repository by clicking the **Code** button, then **Download ZIP*** button:
+   Download the forked repository by clicking the **Code** button, then **Download ZIP** button:
    Then, unzip the file.
 
-3. **Navigate to the project directory**:
+3. **Visual Studio Code**:
    Open Visual Studio Code and choose the file.
 
 4. **Install dependencies**:
-   Install all required dependencies:
 
    ```bash
    npm install
@@ -37,7 +36,6 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
    ```
 
 5. **Run the project**:
-   Run the project using:
 
    ```bash
    npm run dev
@@ -46,8 +44,7 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
 ### ⚠️ Attention:
 
-You may encounter different authentication and comments in production and development; this is because they have separate backends and databases.
-
+You may encounter different data for authentication and comments in production and development; this is because they have separate backends and databases.
 <br>
 <br>
 
