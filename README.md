@@ -73,7 +73,7 @@ Authentication and Comment Section will not work because you don't have access t
 
 3. **More contributions**:
    - Synchronize your main remote repository with the production remote main repository by clicking **Sync fork**.
-   - In your local main repository, update to the latest codebase to stay up to date with new changes.
+   - In your local main repository, switch to main branch. Then, update to the latest codebase to stay up to date with new changes.
    ```bash
    git pull
    ```
