@@ -3,19 +3,24 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import useAuthentication from "../../features/authentication/hooks/useAuthentication";
 
-function LogoutButton() {
+function AuthButton() {
   const navigate = useNavigate();
-  const { handleLogout } = useAuthentication();
+  const { user, handleLogout } = useAuthentication();
   return (
     <Button
       sx={styles.button}
       variant="contained"
       onClick={() => {
-        handleLogout();
-        navigate("/");
+        console.log(user);
+        if (user === null) {
+          navigate("/auth");
+        } else {
+          handleLogout();
+          console.log("logout");
+        }
       }}
     >
-      Logout
+      {user === null ? "Login" : "Logout"}
     </Button>
   );
 }
@@ -28,4 +33,4 @@ const styles = {
   },
 };
 
-export default LogoutButton;
+export default AuthButton;

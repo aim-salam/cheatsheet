@@ -11,7 +11,7 @@ import ColorModeSwitch from "./../Switch/ColorModeSwitch";
 import { useColorScheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useAside } from "../../contexts/AsideContext";
-import LogoutButton from "../Buttons/LogoutButton";
+import AuthButton from "../Buttons/AuthButton";
 
 function NavBar() {
   const { mode } = useColorScheme();
@@ -46,7 +46,7 @@ function NavBar() {
         <Stack flexDirection={"row"}>
           <ColorModeSwitch></ColorModeSwitch>
           <Box sx={styles.box1}>
-            <LogoutButton></LogoutButton>
+            <AuthButton></AuthButton>
           </Box>
         </Stack>
       </Stack>

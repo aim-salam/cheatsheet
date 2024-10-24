@@ -68,22 +68,21 @@ function useAuthentication() {
     // }
   };
 
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     // setAuthToken(""); // Clear token from localStorage
     auth.signOut();
   };
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log(user);
+      console.log("user", user);
       if (user) {
         setUser(user);
         navigate("/");
       } else {
         setUser(null);
-        navigate("/auth");
       }
       // setLoading(false);
     });
@@ -103,6 +102,7 @@ function useAuthentication() {
     handleLogout,
     email,
     setEmail,
+    user,
     password,
     setPassword,
   };

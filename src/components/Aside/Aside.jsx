@@ -1,10 +1,11 @@
 import { Box } from "@mui/material";
 import { useAside } from "../../contexts/AsideContext";
-import LogoutButton from "../Buttons/LogoutButton";
+import AuthButton from "../Buttons/AuthButton";
 import { useTopic } from "../../contexts/TopicContext";
 import { useColorScheme } from "@mui/material/styles";
 import { useEffect } from "react";
 import TopicList from "./TopicList";
+
 function Aside() {
   const { isAside, setIsAside } = useAside();
   const { topic, setTopic } = useTopic();
@@ -33,7 +34,7 @@ function Aside() {
       >
         <TopicList></TopicList>
         <Box sx={styles.box4}>
-          <LogoutButton></LogoutButton>
+          <AuthButton></AuthButton>
         </Box>
       </Box>
     </Box>
