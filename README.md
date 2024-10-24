@@ -66,19 +66,24 @@ Authentication and Comment Section will not work because you don't have access t
 
 2. **Pull request**:
 
-   - Make sure you have your own repository on GitHub by clicking **Fork**, and then create **a new branch**.
-   - After making changes, commit them to the new branch and push to the new branch on GitHub.
+   - Make sure you have your own repository on GitHub by clicking **Fork**.
+   - Create a new branch in your local repository.
+     ```bash
+      git checkout -b feature/my-new-feature
+     ```
+   - After making changes, commit them to the new branch.
+   - Then push. If your local repository doesn’t have the branch, it will create a new one.
    - Create a pull request to merge your changes into the production code.
    - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
 
 3. **More contributions**:
    - Synchronize your main remote repository with the production remote main repository by clicking **Sync fork**.
-   - In your local main repository, switch to main branch. Then, update to the latest codebase to stay up to date with new changes.
+   - In your local repository, switch to main branch. Then, update to the latest codebase to stay up to date with new changes.
    ```bash
    git pull
    ```
 
-   - Create a new branch for each issue.
+   - Create a new branch for each issue and repeat step 2.
 
 <br>
 <br>
