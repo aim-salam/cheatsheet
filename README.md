@@ -72,7 +72,11 @@ Authentication and Comment Section will not work because you don't have access t
       git checkout -b feature/my-new-feature
      ```
    - After making changes, commit them to the new branch.
-   - Then push. If your local repository doesn’t have the branch, it will create a new one.
+   - Then push.
+   - If your remote repository doesn’t have the current branch, create a new one.
+     ```bash
+      git push origin feature/my-new-feature
+     ```    
    - Create a pull request to merge your changes into the production code.
    - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
 
