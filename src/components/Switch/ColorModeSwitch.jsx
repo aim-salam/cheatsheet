@@ -9,7 +9,7 @@ function ColorModeSwitch() {
   }
 
   return (
-    <Stack flexDirection={"row"} alignItems={"center"}>
+    <Stack flexDirection={"row"} alignItems={"center"} marginRight={"20px"}>
       <Switch onChange={handleChange}></Switch>
       <Typography>Dark mode</Typography>
     </Stack>

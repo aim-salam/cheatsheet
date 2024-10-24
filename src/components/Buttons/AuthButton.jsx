@@ -29,7 +29,6 @@ const styles = {
   button: {
     paddingLeft: "20px",
     paddingRight: "20px",
-    marginLeft: "20px",
   },
 };
 

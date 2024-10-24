@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Button, Typography, List } from "@mui/material";
-
 import FileInputButton from "./FileInputButton";
 import TextFields from "./TextFields";
 import CommentItem from "./CommentItem";
 import useComment from "./hooks/useComment";
-
+import { useAuth } from "../../contexts/AuthContext";
+import AuthButton from "../Buttons/AuthButton";
 const CommentSection = () => {
   const {
     bookings,
@@ -26,36 +26,53 @@ const CommentSection = () => {
     setPreview,
   } = useComment();
 
+  const { user } = useAuth();
+
   return (
     <Box id="target-component" sx={styles.box1}>
-      <Typography variant="h5" mb={"20px"}>
+      <Typography variant="h5" mb={"30px"}>
         Leave Comments
       </Typography>
 
-      <TextFields
-        comment={comment}
-        setComment={setComment}
-        receiver_id={receiver_email}
-        setReceiver={setReceiver}
-        editingIndex={editingIndex}
-      ></TextFields>
+      {user === null ? (
+        <>
+          <Typography marginBottom={"10px"}>
+            Please login to leave a comment
+          </Typography>
+          {/* <AuthButton></AuthButton> */}
+        </>
+      ) : (
+        <>
+          <TextFields
+            comment={comment}
+            setComment={setComment}
+            receiver_id={receiver_email}
+            setReceiver={setReceiver}
+            editingIndex={editingIndex}
+          ></TextFields>
+          <Box sx={styles.box2}>
+            {/* <DateInputButton setTime={setTime} setDate={setDate}></DateInputButton> */}
 
-      <Box sx={styles.box2}>
-        {/* <DateInputButton setTime={setTime} setDate={setDate}></DateInputButton> */}
+            {editingIndex === null ? (
+              <FileInputButton
+                uploading={uploading}
+                progress={progress}
+                setImage={setImage}
+                preview={preview}
+                setPreview={setPreview}
+              ></FileInputButton>
+            ) : null}
+            <Button
+              variant="text"
+              onClick={handleBookingSubmit}
+              sx={styles.button}
+            >
+              {editingIndex !== null ? "Update" : "Submit"}
+            </Button>
+          </Box>
+        </>
+      )}
 
-        {editingIndex === null ? (
-          <FileInputButton
-            uploading={uploading}
-            progress={progress}
-            setImage={setImage}
-            preview={preview}
-            setPreview={setPreview}
-          ></FileInputButton>
-        ) : null}
-        <Button variant="text" onClick={handleBookingSubmit} sx={styles.button}>
-          {editingIndex !== null ? "Update" : "Submit"}
-        </Button>
-      </Box>
       <List sx={{ mt: 3 }}>
         {bookings.map((data, index) => (
           <CommentItem
