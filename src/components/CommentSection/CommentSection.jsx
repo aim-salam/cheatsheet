@@ -6,6 +6,7 @@ import CommentItem from "./CommentItem";
 import useComment from "./hooks/useComment";
 import { useAuth } from "../../contexts/AuthContext";
 import AuthButton from "../Buttons/AuthButton";
+import { useColorScheme } from "@mui/material";
 const CommentSection = () => {
   const {
     bookings,
@@ -27,6 +28,7 @@ const CommentSection = () => {
   } = useComment();
 
   const { user } = useAuth();
+  const { mode } = useColorScheme();
 
   return (
     <Box id="target-component" sx={styles.box1}>
@@ -36,7 +38,10 @@ const CommentSection = () => {
 
       {user === null ? (
         <>
-          <Typography marginBottom={"10px"}>
+          <Typography
+            backgroundColor={mode === "light" ? "#f5f5f5" : "#1e1e1e"}
+            sx={styles.typography}
+          >
             Please login to leave a comment
           </Typography>
           {/* <AuthButton></AuthButton> */}
@@ -100,6 +105,11 @@ const styles = {
     justifyContent: "space-between",
   },
   button: { backgroundColor: "#e6e3e3", color: "black", width: "100px" },
+  typography: {
+    padding: "10px 20px",
+    borderRadius: "10px",
+    marginBottom: "10px",
+  },
 };
 
 export default CommentSection;
