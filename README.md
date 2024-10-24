@@ -44,9 +44,9 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
    ```
 
-### ⚠️ Reminder:
+### ⚠️ Attention:
 
-Authentication and Comment Section will not work because you don't have access to the API_KEY.
+You may encounter different authentication and comments in production and development; this is because they have separate backends and databases.
 
 <br>
 <br>
@@ -83,7 +83,6 @@ Authentication and Comment Section will not work because you don't have access t
    ```
 
    - Create a new branch for each issue and repeat step 2.
-   - ///
 
 <br>
 <br>
