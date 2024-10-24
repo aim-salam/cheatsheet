@@ -598,7 +598,7 @@ const POSITIONING = [
     table: "Positioning",
     action: [
       {
-        text: "1. Positioning",
+        text: "Positioning",
         image_link: "",
         code: "",
         code_type: "",
@@ -657,7 +657,7 @@ const POSITIONING = [
         code: `/* current element CSS */
 position: relative;
 left: 30px;`,
-        code_type: "",
+        code_type: "css",
       },
     ],
   }),
@@ -700,7 +700,7 @@ position:relative
 /* current element */
 position: absolute;
 left: 30px;`,
-        code_type: "",
+        code_type: "css",
       },
     ],
   }),
@@ -796,7 +796,7 @@ z-index: -1`,
     table: "Positioning",
     action: [
       {
-        text: "3. Width auto",
+        text: "Width auto",
         image_link: "",
         code: "",
         code_type: "",
@@ -833,8 +833,7 @@ const FLEXBOX = [
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-display: flex;`,
+        code: `display: flex;`,
         code_type: "css",
       },
     ],
@@ -865,10 +864,9 @@ display: flex;`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-display: flex;
+        code: `display: flex;
 flex-direction: row;`,
-        code_type: "",
+        code_type: "css",
       },
     ],
   }),
@@ -898,8 +896,7 @@ flex-direction: row;`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-display: flex;
+        code: `display: flex;
 flex-direction: column;`,
         code_type: "css",
       },
