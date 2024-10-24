@@ -72,9 +72,8 @@ Authentication and Comment Section will not work because you don't have access t
    - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
 
 3. **More contributions**:
-
-   - Fetch the latest codebase to keep up with new changes.
-
+   - Synchronize your main remote repository with the production remote main repository by clicking **Sync fork**.
+   - In your local main repository, update to the latest codebase to stay up to date with new changes.
    ```bash
    git pull
    ```
