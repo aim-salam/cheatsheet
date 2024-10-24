@@ -1,6 +1,9 @@
 # Welcome to cheatsheet.cam 🎨
 
 **cheatsheet.cam** is a full-stack cheatsheet that allows you to **visualize** and easily **copy-paste** the code snippets for your projects.
+<br>
+<br>
+![Alt text](https://images.cheatsheet.cam/images/image-1729743402166.webp)
 
 <br>
 
@@ -46,8 +49,6 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
    ```
 
-5. **Stay up-to-date with the latest code**:
-   Fetch the latest codebase to keep up with new changes:
 
 ### ⚠️ Reminder:
 
