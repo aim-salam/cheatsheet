@@ -18,17 +18,17 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
 ### Steps to reproduce the project on your local machine:
 
-0. **Fork the repository**
+1. **Fork the repository**
    Make sure you have your own repository on GitHub by clicking **Fork**.
 
-2. **Download the repository**:
-   Download the repository by clicking the **Code** button, then **Download ZIP*** button:
+2. **Download the forked repository**:
+   Download the forked repository by clicking the **Code** button, then **Download ZIP*** button:
    Then, unzip the file.
 
-4. **Navigate to the project directory**:
+3. **Navigate to the project directory**:
    Open Visual Studio Code and choose the file.
 
-5. **Install dependencies**:
+4. **Install dependencies**:
    Install all required dependencies:
 
    ```bash
@@ -36,7 +36,7 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
    ```
 
-6. **Run the project**:
+5. **Run the project**:
    Run the project using:
 
    ```bash
