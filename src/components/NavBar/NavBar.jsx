@@ -20,7 +20,7 @@ function NavBar() {
     <AppBar
       sx={{
         borderBottom: 1,
-        borderBottomColor: mode === "light" ? "#ddd" : "#272727",
+        borderBottomColor: mode === "dark" ?"#272727": "#ddd" ,
         ...styles.appBar,
       }}
     >
