@@ -18,24 +18,17 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
 ### Steps to reproduce the project on your local machine:
 
-1. **Clone the repository**:
-   Download or clone the repository by clicking the clone button or running:
+0. **Fork the repository**
+   Make sure you have your own repository on GitHub by clicking **Fork**.
 
-   ```bash
-   git clone <repository-url>
+2. **Download the repository**:
+   Download the repository by clicking the **Code** button, then **Download ZIP*** button:
+   Then, unzip the file.
 
-   ```
+4. **Navigate to the project directory**:
+   Open Visual Studio Code and choose the file.
 
-2. **Navigate to the project directory**:
-   Open your terminal and `cd` into the project directory.
-
-   ```bash
-   cd <project-directory>
-   code .
-
-   ```
-
-3. **Install dependencies**:
+5. **Install dependencies**:
    Install all required dependencies:
 
    ```bash
@@ -43,11 +36,11 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
    ```
 
-4. **Build the project**:
-   Build the project using:
+6. **Run the project**:
+   Run the project using:
 
    ```bash
-   npm run build
+   npm run dev
 
    ```
 
@@ -67,7 +60,6 @@ Authentication and Comment Section will not work because you don't have access t
 
 2. **Pull request**:
 
-   - Make sure you have your own repository on GitHub by clicking **Fork**.
    - Create a new branch in your local repository.
      ```bash
       git checkout -b feature/my-new-feature
