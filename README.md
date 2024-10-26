@@ -66,7 +66,7 @@ You may encounter different data for authentication and comments in production a
    - If your remote repository doesn’t have the current branch, create a new one.
      ```bash
       git push origin feature/my-new-feature
-     ```    
+     ```
    - Create a pull request to merge your changes into the production code.
    - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
 
@@ -79,8 +79,29 @@ You may encounter different data for authentication and comments in production a
    git pull
    ```
 
-   - Create a new branch for each issue and repeat step 2.
+   - To contribute again, create a new branch.
 
 <br>
 <br>
-Thank you for contributing to cheatsheet.cam!
+
+References :
+[git remote -v](https://images.cheatsheet.cam/images/image-1729901829368.webp),
+[local new branch](https://images.cheatsheet.cam/images/image-1729903256572.webp),
+[remote new branch](https://images.cheatsheet.cam/images/image-1729904868003.webp),
+[pull request](https://images.cheatsheet.cam/images/image-1729904943743.webp)
+
+<br>
+<br>
+
+3. **Synchronize**:
+
+   - Every time you want to contribute, make sure your **main branch** is up-to-date before creating a new branch.
+   - Remote main branch : Click **Sync fork** to synchronize your main remote repository with the production code.
+   - Local main branch : In your local repository, switch to main branch. Then,
+     `bash
+      git switch main
+      git pull
+      `
+     <br>
+     <br>
+     Thank you for contributing to cheatsheet.cam!
