@@ -495,7 +495,8 @@ const MEASUREMENT_UNIT = [
         text: "",
         image_link: "",
         code: `/* 1-100*/
-50%
+width: 50%; 
+height: 50%;
 `,
         code_type: "css",
       },
@@ -542,8 +543,8 @@ const MEASUREMENT_UNIT = [
         text: "",
         image_link: "",
         code: `/* 1-100*/
-50vw
-50vh
+width: 50vw; 
+height: 50vh;
 `,
         code_type: "css",
       },
@@ -856,7 +857,7 @@ const FLEXBOX = [
       {
         text: "",
         image_link: "",
-        code: `display: flex;
+        code: `display: flex
 flex-direction: row;`,
         code_type: "css",
       },
@@ -888,7 +889,7 @@ flex-direction: row;`,
       {
         text: "",
         image_link: "",
-        code: `display: flex;
+        code: `display: flex
 flex-direction: column;`,
         code_type: "css",
       },
@@ -985,22 +986,24 @@ flex-direction: column;`,
       {
         text: "",
         image_link: "",
-        code: `display: flex;
-flex-direction: row;
-
-display: flex
+        code: `display: flex
+flex-direction: row
 justify-content: flex-start
 
 display: flex
+flex-direction: row
 justify-content: center
 
 display: flex
+flex-direction: row
 justify-content: flex-end
 
 display: flex
+flex-direction: row
 justify-content: space-evenly
 
 display: flex
+flex-direction: row
 justify-content: space-between`,
         code_type: "css",
       },
@@ -1046,16 +1049,16 @@ justify-content: space-between`,
       {
         text: "",
         image_link: "",
-        code: `display: flex;
-flex-direction: row;
-
-display: flex
+        code: `display: flex
+flex-direction: row
 align-items: flex-start
 
 display: flex
+flex-direction: row
 align-items: center
 
 display: flex
+flex-direction: row
 align-items: flex-end`,
         code_type: "css",
       },
