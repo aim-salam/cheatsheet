@@ -19,14 +19,26 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 ### Steps to reproduce the project on your local machine:
 
 1. **Fork the repository**
-   Make sure you have your own repository on GitHub by clicking **Fork**.
-
+   Click on the Fork button in the top-right corner. This creates a copy of the repository in your GitHub account.
 2. **Download the forked repository**:
-   Download the forked repository by clicking the **Code** button, then **Download ZIP** button:
-   Then, unzip the file.
+   Open terminal.
+   Change directory to Desktop or any where.
+   Clone your forked repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/cheatsheet.git
+
+   ```
 
 3. **Visual Studio Code**:
-   Open Visual Studio Code and choose the file.
+   Open the repository in VS Code.
+
+   ```bash
+   cd cheatsheet
+   code .
+   ```
+
+   #There are many ways to open a repository in VS Code.
 
 4. **Install dependencies**:
 
@@ -42,9 +54,21 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
    ```
 
-### ⚠️ Attention:
+   <img src="https://images.cheatsheet.cam/images/image-1729743402166.webp" alt="Logo" width="300" height="200">
 
-You may encounter different data for authentication and comments in production and development; this is because they have separate backends and databases.
+   ### ⚠️ Attention:
+
+   You may encounter different data for authentication and comments in production and development; this is because they have separate backends and databases.
+
+<br>
+   That's it! Your machine is running the web locally and successfully.
+   
+<br>
+<br>
+
+References:
+[Fork](https://images.cheatsheet.cam/images/image-1729901983218.webp),
+[npm i](https://images.cheatsheet.cam/images/image-1729903989708.webp)
 <br>
 <br>
 
@@ -53,31 +77,42 @@ You may encounter different data for authentication and comments in production a
 1. **Issues**:
 
    - You can see all the issues that need to be fixed in the [Issues section](https://github.com/aim-salam/cheatsheet/issues).
-   - To take an issue, comment using this format:
+   - Communicate within any issue to choose who will work on it. Preview
 
-2. **Pull request**:
+2. **Contribute**:
 
+   - After you are assigned an issue, you are ready to contribute.
+   - Before that, we need to make sure our local repository is linked with the forked remote repository:
+     So, we can push our commit.
+     ```bash
+      git remote -v
+     ```
+     If everything is okay, we can now proceed.
    - Create a new branch in your local repository.
      ```bash
-      git checkout -b feature/my-new-feature
+      git checkout -b update/example-db
      ```
-   - After making changes, commit them to the new branch.
-   - Then push.
-   - If your remote repository doesn’t have the current branch, create a new one.
+   - **It's time to code.**.
+   - Then, after making changes, stage, commit and push them to the new branch in your remote repository.
+
      ```bash
-      git push origin feature/my-new-feature
+     git add .
+     git commit -m "Updated ExampleDB : id exampleid"
+     git push origin update/example-db
      ```
+
+     ⚠️ If you have problem to push into your forked repository, please create an issue here. I'll help you learn how to fix Github credentials in your VS code.
+
    - Create a pull request to merge your changes into the production code.
+
    - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
+   - If your pull request is merged, you can delete the branch in both the local and remote repositories.
 
-3. **More contributions**:
-
-   - Synchronize your main remote repository with the production remote main repository by clicking **Sync fork**.
-   - In your local repository, switch to main branch. Then, update to the latest codebase to stay up to date with new changes.
-
-   ```bash
-   git pull
-   ```
+     ```bash
+     git switch main
+     git branch -D update/example-db
+     git push origin --delete update/example-db
+     ```
 
    - To contribute again, create a new branch.
 
