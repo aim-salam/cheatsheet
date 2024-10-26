@@ -76,8 +76,7 @@ const BOX_MODEL = [
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-  border: 5px solid #3435ff; /* width style color */
+        code: `  border: 5px solid #3435ff; /* width style color */
   border-color:  #3435ff;`,
         code_type: "css",
       },
@@ -109,8 +108,7 @@ const BOX_MODEL = [
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-  padding :10px; /* all side */
+        code: `  padding: 10px; /* all side */
   padding: 10px 20px;  /* vertical horizontal */
   padding: 10px 20px 30px 40px; /* top right bottom left */
 
@@ -324,8 +322,7 @@ overflow: auto;`,
         text: "",
         image_link: "",
         code: `/* parent element CSS */
-/* vertical horizontal */
-overflow: auto hidden;`,
+overflow: auto hidden; /* vertical horizontal */`,
         code_type: "css",
       },
     ],
@@ -390,7 +387,7 @@ const MEASUREMENT_UNIT = [
     table: "Measurement Unit",
     action: [
       {
-        text: "px",
+        text: "Pixel",
         image_link: "",
         code: "",
         code_type: "",
@@ -398,7 +395,7 @@ const MEASUREMENT_UNIT = [
     ],
     description: [
       {
-        text: "Fix",
+        text: "",
         image_link: "",
         code: "",
         code_type: "",
@@ -424,8 +421,8 @@ const MEASUREMENT_UNIT = [
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-px`,
+        code: `  width: 100px; 
+  height: 100px;`,
         code_type: "css",
       },
     ],
@@ -463,7 +460,7 @@ px`,
     table: "Measurement Unit",
     action: [
       {
-        text: "%",
+        text: "Percent",
         image_link: "",
         code: "",
         code_type: "",
@@ -497,8 +494,7 @@ px`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-/* 1-100*/
+        code: `/* 1-100*/
 50%
 `,
         code_type: "css",
@@ -511,7 +507,7 @@ px`,
     table: "Measurement Unit",
     action: [
       {
-        text: "vw,vh",
+        text: "Viewport",
         image_link: "",
         code: "",
         code_type: "",
@@ -545,8 +541,7 @@ px`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-/* 1-100*/
+        code: `/* 1-100*/
 50vw
 50vh
 `,
@@ -654,8 +649,7 @@ const POSITIONING = [
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-position: relative;
+        code: `position: relative;
 left: 30px;`,
         code_type: "css",
       },
@@ -737,8 +731,7 @@ left: 30px;`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-position: fixed;
+        code: `position: fixed;
 top: 0px;`,
         code_type: "css",
       },
@@ -784,8 +777,7 @@ top: 0px;`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-z-index: -1`,
+        code: `z-index: -1`,
         code_type: "css",
       },
     ],
@@ -993,8 +985,7 @@ flex-direction: column;`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-display: flex;
+        code: `display: flex;
 flex-direction: row;
 
 ..
@@ -1055,8 +1046,7 @@ justify-content: space-between`,
       {
         text: "",
         image_link: "",
-        code: `/* current element CSS */
-display: flex;
+        code: `display: flex;
 flex-direction: row;
 
 ..
