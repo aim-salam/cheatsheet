@@ -550,7 +550,7 @@ const MEASUREMENT_UNIT = [
     ],
     // attention: [
     //   {
-    //     text: `1. Default. Viewport height default is 0. So, ...`,
+    //     text: `1. Default. Viewport height default is 0. So, display: flex.`,
     //   },
     // ],
   }),
@@ -988,19 +988,19 @@ flex-direction: column;`,
         code: `display: flex;
 flex-direction: row;
 
-..
+display: flex
 justify-content: flex-start
 
-..
+display: flex
 justify-content: center
 
-..
+display: flex
 justify-content: flex-end
 
-..
+display: flex
 justify-content: space-evenly
 
-..
+display: flex
 justify-content: space-between`,
         code_type: "css",
       },
@@ -1049,13 +1049,13 @@ justify-content: space-between`,
         code: `display: flex;
 flex-direction: row;
 
-..
+display: flex
 align-items: flex-start
 
-..
+display: flex
 align-items: center
 
-..
+display: flex
 align-items: flex-end`,
         code_type: "css",
       },
