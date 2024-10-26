@@ -27,7 +27,7 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
           <Avatar alt="Remy Sharp" src={data.profile_url} sx={styles.avatar} />
           <Stack
             sx={{
-              backgroundColor: mode === "light" ? "#f5f5f5" : "#1e1e1e",
+              backgroundColor: mode === "dark" ? "#1e1e1e" : "#f5f5f5",
               ...styles.stack,
             }}
           >

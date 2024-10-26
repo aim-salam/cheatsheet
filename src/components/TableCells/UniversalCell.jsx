@@ -31,7 +31,7 @@ function UniversalCell({ column, data, index }) {
         ...styles.tableCell,
         borderBottom: {
           xs: "0px",
-          sm: mode === "light" ? "2px solid #EDEDED" : "2px solid #333232",
+          sm: mode === "dark" ? "2px solid #333232" : "2px solid #EDEDED",
         },
         paddingTop: { xs: column === "visual" ? "10px" : "0px", sm: "10px" },
         paddingBottom: {
@@ -67,7 +67,7 @@ function UniversalCell({ column, data, index }) {
               <SyntaxHighlighter
                 key={code}
                 language={code_type}
-                style={mode === "light" ? prism : vscDarkPlus}
+                style={mode === "dark" ? vscDarkPlus : prism}
                 customStyle={customCodeStyle}
                 showLineNumbers
               >

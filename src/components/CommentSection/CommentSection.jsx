@@ -39,7 +39,7 @@ const CommentSection = () => {
       {user === null ? (
         <>
           <Typography
-            backgroundColor={mode === "light" ? "#f5f5f5" : "#1e1e1e"}
+            backgroundColor={mode === "dark" ? "#1e1e1e" : "#f5f5f5"}
             sx={styles.typography}
           >
             Please login to leave a comment
