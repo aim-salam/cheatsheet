@@ -1,9 +1,9 @@
 import Cheatsheet from "../CheatsheetClass";
-import { BOX_MODEL } from "./Layout/CSSLayoutDB";
-import { OVERFLOW } from "./Layout/CSSOverflowDB";
-import { MEASUREMENT_UNIT } from "./Layout/CSSMeasurementUnitDB";
-import { POSITIONING } from "./Layout/CSSPositionDB";
-import { FLEXBOX } from "./Layout/CSSFlexboxDB";
+import { BOX_MODEL } from "./Layout/LayoutBoxModelDB";
+import { OVERFLOW } from "./Layout/LayoutOverflowDB";
+import { MEASUREMENT_UNIT } from "./Layout/LayoutMeasurementUnitDB";
+import { POSITIONING } from "./Layout/LayoutPositionDB";
+import { FLEXBOX } from "./Layout/LayoutFlexboxDB";
 
 export const LayoutCheatsheets = [
   ...BOX_MODEL,
