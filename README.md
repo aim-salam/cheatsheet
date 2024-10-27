@@ -19,7 +19,7 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 ### Steps to reproduce the project on your local machine:
 
 1. **Fork the repository**
-   Click on the Fork button in the top-right corner. This creates a copy of the repository in your GitHub account.
+   Click on the **Fork** button in the top-right corner. This creates a copy of the repository in your GitHub account.
 2. **Download the forked repository**:
    Open terminal.
    Change directory to Desktop or any where.
@@ -88,12 +88,12 @@ References:
       git remote -v
      ```
      If everything is okay, we can now proceed.
-   - Create a new branch in your local repository.
+   - Create a **new branch in your local repository**.
      ```bash
       git checkout -b update/example-db
      ```
    - **It's time to code.**.
-   - Then, after making changes, stage, commit and push them to the new branch in your remote repository.
+   - Then, after making changes, stage, commit and push them to the **new branch in your remote repository**.
 
      ```bash
      git add .
@@ -103,7 +103,7 @@ References:
 
      ⚠️ If you have problem to push into your forked repository, please create an issue here. I'll help you learn how to fix Github credentials in your VS code.
 
-   - Create a pull request to merge your changes into the production code.
+   - Create a **pull request** to merge your changes into the production code.
 
    - Your pull request will be visible on this [site](https://github.com/aim-salam/cheatsheet/pulls). Please wait for my response. I will either approve your code and merge it into production, or provide feedback if changes are needed.
    - If your pull request is merged, you can delete the branch in both the local and remote repositories.
