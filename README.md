@@ -16,6 +16,10 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
 ## 🖥️ Running Locally
 
+
+<img src="https://images.cheatsheet.cam/images/image-1729995290713.webp" alt="Logo" width="300">
+
+
 ### Steps to reproduce the project on your local machine:
 
 1. **Fork the repository**
@@ -54,7 +58,7 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
    ```
 
-   <img src="https://images.cheatsheet.cam/images/image-1729743402166.webp" alt="Logo" width="300" height="200">
+   <img src="https://images.cheatsheet.cam/images/image-1729743402166.webp" alt="Logo" width="300">
 
    ### ⚠️ Attention:
 
@@ -73,6 +77,8 @@ References:
 <br>
 
 ## 🤝 Collaboration
+
+   <img src="https://images.cheatsheet.cam/images/image-1729995861713.webp" alt="Logo" width="300">
 
 1. **Issues**:
 
@@ -130,6 +136,8 @@ References :
 
 3. **Synchronize**:
 
+<img src="https://images.cheatsheet.cam/images/image-1729996673092.webp" alt="Logo" width="300">
+   
    - Every time you want to contribute, make sure your **main branch** is up-to-date before creating a new branch.
    - Remote main branch : Click **Sync fork** to synchronize your main remote repository with the production code.
    - Local main branch : In your local repository, switch to main branch. Then,
