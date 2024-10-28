@@ -1,7 +1,7 @@
 import { Stack, Grid2, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import TopicTable from "../Tables/TopicTable";
-import { cheatsheets } from "../../db/cheatsheets";
+import { cheatsheets } from "../../data/cheatsheets";
 import Fuse from "fuse.js";
 import CommentSection from "../CommentSection/CommentSection";
 import { useTopic } from "../../contexts/TopicContext";
