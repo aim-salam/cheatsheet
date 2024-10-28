@@ -5,7 +5,7 @@ function SignInButton({ handleOpenSignIn }) {
   return (
     <Button
       variant="contained"
-      color="secondary"
+      color="primary"
       fullWidth
       onClick={handleOpenSignIn}
       sx={styles.button}
