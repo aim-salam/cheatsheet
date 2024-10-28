@@ -11,11 +11,11 @@ function AuthButtons({
 }) {
   return (
     <Stack sx={{ width: "250px" }}>
-      <GoogleSignInButton
+      {/* <GoogleSignInButton
         handleLoginWithGmail={handleLoginWithGmail}
       ></GoogleSignInButton>
 
-      <Typography sx={styles.typography}>or</Typography>
+      <Typography sx={styles.typography}>or</Typography> */}
 
       <SignUpButton handleOpenSignUp={handleOpenSignUp}></SignUpButton>
 
