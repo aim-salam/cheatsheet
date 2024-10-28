@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 import { topics } from "../../db/topics";
-import logo from "./../../assets/logo.jpg";
 import { useTopic } from "../../contexts/TopicContext";
 import { useAside } from "../../contexts/AsideContext";
 
@@ -42,7 +41,10 @@ function TopicList() {
                 <Avatar
                   sx={{ width: avatarSize, height: avatarSize }}
                   alt={topicName}
-                  src={imageLink || logo}
+                  src={
+                    imageLink ||
+                    "https://images.cheatsheet.cam/images/image-1730098103659.webp"
+                  }
                   variant="rounded"
                 />
               </ListItemAvatar>
