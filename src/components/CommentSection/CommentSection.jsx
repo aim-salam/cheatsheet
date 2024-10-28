@@ -104,7 +104,12 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
   },
-  button: { backgroundColor: "#e6e3e3", color: "black", width: "100px" },
+  button: {
+    backgroundColor: "#e6e3e3",
+    color: "black",
+    width: "100px",
+    height: "50px",
+  },
   typography: {
     padding: "10px 20px",
     borderRadius: "10px",
