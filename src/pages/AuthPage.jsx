@@ -68,8 +68,6 @@ const styles = {
   box1: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
   },
   box2: {
     display: "flex",

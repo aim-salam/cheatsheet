@@ -5,12 +5,12 @@ function AuthHeader() {
     <>
       <Typography
         sx={{
-          marginTop: "40px",
-          marginBottom: "40px",
+          marginTop: "80px",
           textAlign: {
             xs: "center",
             sm: "start",
           },
+          paddingRight: "20px",
         }}
         variant="h2"
         component="h2"
@@ -23,11 +23,12 @@ function AuthHeader() {
       <Typography
         sx={{
           marginTop: "40px",
-          marginBottom: "40px",
+          marginBottom: "20px",
           textAlign: {
             xs: "center",
             sm: "start",
           },
+          paddingRight: "20px",
         }}
         variant="h4"
         component="h4"

@@ -1,26 +1,35 @@
 import React from "react";
-import { CardMedia } from "@mui/material";
+import { Box, CardMedia } from "@mui/material";
+import { alignProperty } from "@mui/material/styles/cssUtils";
 
 function AuthCardMedia() {
   return (
-    <CardMedia
-      sx={styles.cardMedia}
-      component="img"
-      image="https://images.cheatsheet.cam/images/image-1730098103659.webp"
-    ></CardMedia>
+    <Box sx={styles.box}>
+      <CardMedia
+        sx={styles.cardMedia}
+        component="img"
+        image="https://images.cheatsheet.cam/images/image-1730098103659.webp"
+      ></CardMedia>
+    </Box>
   );
 }
 
 const styles = {
-  cardMedia: {
-    width: "50%",
-    height: "50%",
+  box: {
+    width: "50vw",
+    height: "100vh",
     backgroundColor: "white",
-    padding: "100px",
+    justifyContent: "center",
+    alignItems: "center",
+
     display: {
       xs: "none",
-      sm: "block",
+      sm: "flex",
     },
+  },
+  cardMedia: {
+    width: "25vw",
+    height: "25vw",
   },
 };
 
