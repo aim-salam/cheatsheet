@@ -6,7 +6,6 @@ import {
   IconButton,
   Box,
 } from "@mui/material";
-import logo from "./../../assets/logo.jpg";
 import ColorModeSwitch from "./../Switch/ColorModeSwitch";
 import { useColorScheme } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -20,7 +19,7 @@ function NavBar() {
     <AppBar
       sx={{
         borderBottom: 1,
-        borderBottomColor: mode === "dark" ?"#272727": "#ddd" ,
+        borderBottomColor: mode === "dark" ? "#272727" : "#ddd",
         ...styles.appBar,
       }}
     >
@@ -37,7 +36,13 @@ function NavBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Avatar alt="Sigma School Logo" src={logo} sizes="60px" />
+          <Avatar
+            alt="Sigma School Logo"
+            src={
+              "https://images.cheatsheet.cam/images/image-1730098103659.webp"
+            }
+            sizes="60px"
+          />
 
           <Typography fontSize={23} fontWeight={"600"} variant="h1">
             Cheatsheet
