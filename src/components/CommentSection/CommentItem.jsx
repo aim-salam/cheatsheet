@@ -36,7 +36,9 @@ function CommentItem({ data, index, handleDeleteBooking, handleEditBooking }) {
                 {data.sender_email}
               </Typography>
               <Typography fontSize={"14px"} marginBottom={"5px"}>
-                <Typography component="span">to :</Typography>
+                {data.receiver_email ? (
+                  <Typography component="span">to :</Typography>
+                ) : null}
                 <Typography component="span" color="#1f85de" fontSize={"14px"}>
                   {data.receiver_email}
                 </Typography>

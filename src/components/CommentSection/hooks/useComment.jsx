@@ -15,13 +15,17 @@ const COMMENT_URL = import.meta.env.VITE_COMMENT_URL;
 
 function useBooking() {
   const [bookings, setBookings] = useState([]);
+
   const [receiverEmail, setReceiverEmail] = useState("");
   const [comment, setComment] = useState("");
-  const [editingIndex, setEditingIndex] = useState(null);
+  const [imageURL, setImageURL] = useState(null);
+
   const [image, setImage] = useState(null);
-  const [progress, setProgress] = useState(0);
+  const [preview, setPreview] = useState(null);
   const [uploading, setUploading] = useState(false);
-  const [imageURL, setImageURL] = useState("");
+  const [progress, setProgress] = useState(0);
+
+  const [editingIndex, setEditingIndex] = useState(null);
 
   const { topic } = useTopic();
   const { user } = useAuth();
@@ -40,6 +44,7 @@ function useBooking() {
 
   const handleUploadToFirebase = () => {
     if (!image && !imageURL) return handleUploadToFirestore(imageURL);
+    if (editingIndex) return handleUploadToFirestore(imageURL);
 
     const storageRef = ref(storage, `comment_images/${image.name}`);
     const uploadTask = uploadBytesResumable(storageRef, image);
@@ -68,24 +73,19 @@ function useBooking() {
   const handleUploadToFirestore = async (image_url) => {
     if (!comment.trim()) return;
 
-    const updatedBookings = [...bookings];
-    const newData = {
-      id: uuidv4(),
-      comment,
-      receiver_email: receiverEmail,
-      date: new Date().toISOString(),
-      topic: topic.topic,
-      image_url,
-      sender_email: user.email,
-      profile_url: user.photoURL || "",
-    };
-
     if (editingIndex !== null) {
+      const updatedBookings = [...bookings];
+      const newData = {
+        ...updatedBookings[editingIndex],
+        comment,
+      };
       updatedBookings[editingIndex] = {
         ...updatedBookings[editingIndex],
         ...newData,
       };
+      console.log(updatedBookings[editingIndex]);
       setBookings(updatedBookings);
+      resetForm();
 
       try {
         await axios.put(
@@ -98,16 +98,25 @@ function useBooking() {
         setEditingIndex(null);
       }
     } else {
-      setBookings((prev) => [...prev, newData]);
+      const newData = {
+        id: uuidv4(),
+        comment,
+        receiver_email: receiverEmail,
+        date: new Date().toISOString(),
+        topic: topic.topic,
+        image_url,
+        sender_email: user.email,
+        profile_url: user.photoURL || "",
+      };
+      const updatedBookings = [...bookings, newData];
+      setBookings(updatedBookings);
+      resetForm();
       try {
         await axios.post(`${COMMENT_URL}/comment`, newData);
       } catch (error) {
         console.error("Error creating booking:", error);
       }
     }
-
-    // Clear input fields after submission
-    resetForm();
   };
 
   const handleDeleteBooking = async (index) => {
@@ -127,18 +136,23 @@ function useBooking() {
   const handleEditBooking = (index) => {
     const bookingToEdit = bookings[index];
     setComment(bookingToEdit.comment);
+    console.log(bookingToEdit);
+    console.log(bookingToEdit.receiver_email);
     setReceiverEmail(bookingToEdit.receiver_email);
     setImageURL(bookingToEdit.image_url);
+
     setEditingIndex(index);
   };
 
   const resetForm = () => {
     setComment("");
     setReceiverEmail("");
-    setImageURL("");
+    setImageURL(null);
     setImage(null);
     setUploading(false);
     setProgress(0);
+    setPreview(null);
+    setEditingIndex(null);
   };
 
   useEffect(() => {
@@ -160,6 +174,8 @@ function useBooking() {
     progress,
     uploading,
     setImage,
+    preview,
+    setPreview,
   };
 }
 

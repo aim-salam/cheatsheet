@@ -3,8 +3,8 @@ import { TextField } from "@mui/material";
 function TextFields({
   comment,
   setComment,
-  receiver_id,
-  setReceiver,
+  receiverEmail,
+  setReceiverEmail,
   editingIndex,
 }) {
   const handleDescriptionChange = (event) => {
@@ -12,7 +12,7 @@ function TextFields({
   };
 
   const handleEmailChange = (event) => {
-    setReceiver(event.target.value);
+    setReceiverEmail(event.target.value);
   };
 
   return (
@@ -29,7 +29,7 @@ function TextFields({
         fullWidth
         label="Reply to"
         variant="outlined"
-        value={receiver_id}
+        value={receiverEmail}
         onChange={handleEmailChange}
         sx={{ mb: 2 }}
         disabled={editingIndex !== null}

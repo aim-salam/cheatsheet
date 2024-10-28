@@ -11,8 +11,8 @@ const CommentSection = () => {
   const {
     bookings,
     setBookings,
-    receiver_email,
-    setReceiver,
+    receiverEmail,
+    setReceiverEmail,
     comment,
     setComment,
     editingIndex,
@@ -51,8 +51,8 @@ const CommentSection = () => {
           <TextFields
             comment={comment}
             setComment={setComment}
-            receiver_id={receiver_email}
-            setReceiver={setReceiver}
+            receiverEmail={receiverEmail}
+            setReceiverEmail={setReceiverEmail}
             editingIndex={editingIndex}
           ></TextFields>
           <Box sx={styles.box2}>
