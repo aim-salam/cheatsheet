@@ -16,9 +16,7 @@ Check out the live site: [cheatsheet.cam](https://cheatsheet.cam)
 
 ## 🖥️ Running Locally
 
-
 <img src="https://images.cheatsheet.cam/images/image-1729995290713.webp" alt="Logo" width="300">
-
 
 ### Steps to reproduce the project on your local machine:
 
@@ -145,6 +143,7 @@ References :
       git switch main
       git pull
       `
+     <br>
      <br>
      <br>
      <br>
