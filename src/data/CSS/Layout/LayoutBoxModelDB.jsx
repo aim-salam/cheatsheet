@@ -77,8 +77,8 @@ export const BOX_MODEL = [
       {
         text: "",
         image_link: "",
-        code: `  border: 5px solid #3435ff; /* width style color */
-    border-color:  #3435ff;`,
+        code: `border: 5px solid #3435ff; /* width style color */
+border-color:  #3435ff;`,
         code_type: "css",
       },
     ],
@@ -109,13 +109,13 @@ export const BOX_MODEL = [
       {
         text: "",
         image_link: "",
-        code: `  padding: 10px; /* all side */
-    padding: 10px 20px;  /* vertical horizontal */
-    padding: 10px 20px 30px 40px; /* top right bottom left */
+        code: `padding: 10px; /* all side */
+padding: 10px 20px;  /* vertical horizontal */
+padding: 10px 20px 30px 40px; /* top right bottom left */
   
-    padding-left: 10px;/* only left */
-    padding-right: 10px;/* only right */
-    padding-top: 10px;/* only top */`,
+padding-left: 10px;/* only left */
+padding-right: 10px;/* only right */
+padding-top: 10px;/* only top */`,
         code_type: "css",
       },
     ],

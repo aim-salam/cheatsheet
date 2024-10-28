@@ -26,7 +26,7 @@ export const FLEXBOX = [
       {
         text: "",
         image_link: "",
-        code: `display: flex;`,
+        code: `  display: flex;`,
         code_type: "css",
       },
     ],
@@ -57,7 +57,7 @@ export const FLEXBOX = [
       {
         text: "",
         image_link: "",
-        code: `display: flex
+        code: `  display: flex
   flex-direction: row;`,
         code_type: "css",
       },
@@ -89,7 +89,7 @@ export const FLEXBOX = [
       {
         text: "",
         image_link: "",
-        code: `display: flex
+        code: `  display: flex;
   flex-direction: column;`,
         code_type: "css",
       },
@@ -186,7 +186,7 @@ export const FLEXBOX = [
       {
         text: "",
         image_link: "",
-        code: `display: flex
+        code: `  display: flex;
   flex-direction: row
   justify-content: flex-start
   
@@ -249,7 +249,7 @@ export const FLEXBOX = [
       {
         text: "",
         image_link: "",
-        code: `display: flex
+        code: `  display: flex
   flex-direction: row
   align-items: flex-start
   

@@ -63,7 +63,7 @@ export const POSITIONING = [
       {
         text: "",
         image_link: "",
-        code: `position: relative;
+        code: `  position: relative;
   left: 30px;`,
         code_type: "css",
       },
@@ -145,7 +145,7 @@ export const POSITIONING = [
       {
         text: "",
         image_link: "",
-        code: `position: fixed;
+        code: `  position: fixed;
   top: 0px;`,
         code_type: "css",
       },

@@ -15,7 +15,7 @@ export const OVERFLOW = [
     ],
     description: [
       {
-        text: "Parent size is fixed, but children are bigger than parents = overflow.",
+        text: "The parent size is fixed, but if the children are larger than the parent, it results in overflow.",
         image_link: "",
         code: "",
         code_type: "",
@@ -57,7 +57,7 @@ export const OVERFLOW = [
       {
         text: "",
         image_link: "",
-        code: `/* parent element CSS */
+        code: `/* parent element */
   overflow: hidden;`,
         code_type: "css",
       },
@@ -89,7 +89,7 @@ export const OVERFLOW = [
       {
         text: "",
         image_link: "",
-        code: `/* parent element CSS */
+        code: `/* parent element */
   overflow: scroll;`,
         code_type: "css",
       },
@@ -128,7 +128,7 @@ export const OVERFLOW = [
       {
         text: "",
         image_link: "",
-        code: `/* parent element CSS */
+        code: `/* parent element */
   overflow: auto;`,
         code_type: "css",
       },
@@ -152,7 +152,7 @@ export const OVERFLOW = [
       {
         text: "",
         image_link: "",
-        code: `/* parent element CSS */
+        code: `/* parent element */
   overflow: auto hidden; /* vertical horizontal */`,
         code_type: "css",
       },
