@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { topics } from "../../db/topics";
+import { topics } from "../../data/topics";
 import { useTopic } from "../../contexts/TopicContext";
 import { useAside } from "../../contexts/AsideContext";
 
