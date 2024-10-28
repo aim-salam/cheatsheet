@@ -39,7 +39,11 @@ export default function FileInputButton({
 
       {uploading ? (
         <Box sx={styles.box3}>
-          <LinearProgress variant="determinate" value={progress} />
+          <LinearProgress
+            color="secondary"
+            variant="determinate"
+            value={progress}
+          />
         </Box>
       ) : null}
     </Box>
