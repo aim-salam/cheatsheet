@@ -6,10 +6,10 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#FFFFFF",
+      main: "#3435ff",
     },
     secondary: {
-      main: "#dc004e",
+      main: "#ffffff",
     },
   },
   typography: {

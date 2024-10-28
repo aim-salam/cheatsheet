@@ -6,7 +6,7 @@ function AuthCardMedia() {
     <CardMedia
       sx={styles.cardMedia}
       component="img"
-      image="https://images.cheatsheet.cam/images/state.webp"
+      image="https://images.cheatsheet.cam/images/image-1730098103659.webp"
     ></CardMedia>
   );
 }
@@ -14,7 +14,9 @@ function AuthCardMedia() {
 const styles = {
   cardMedia: {
     width: "50%",
-    backgroundColor: "#e6e3e3",
+    height: "50%",
+    backgroundColor: "white",
+    padding: "100px",
     display: {
       xs: "none",
       sm: "block",

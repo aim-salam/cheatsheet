@@ -40,4 +40,6 @@ function AuthHeader() {
   );
 }
 
+const styles = {};
+
 export default AuthHeader;
