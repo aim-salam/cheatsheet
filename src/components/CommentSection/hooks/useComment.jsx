@@ -45,7 +45,7 @@ function useBooking() {
   const handleUploadToFirebase = () => {
     if (!image && !imageURL) return handleUploadToFirestore(imageURL);
     console.log("editingIndex", editingIndex);
-    if (editingIndex) return handleUploadToFirestore(imageURL);
+    if (editingIndex !== null) return handleUploadToFirestore(imageURL);
 
     const storageRef = ref(storage, `comment_images/${image.name}`);
     const uploadTask = uploadBytesResumable(storageRef, image);
