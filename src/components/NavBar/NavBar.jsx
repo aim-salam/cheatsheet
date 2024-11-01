@@ -38,9 +38,7 @@ function NavBar() {
           </IconButton>
           <Avatar
             alt="Sigma School Logo"
-            src={
-              "https://images.cheatsheet.cam/images/image-1730098103659.webp"
-            }
+            src={"https://images.cheatsheet.cam/images/state.webp"}
             sizes="60px"
           />
 

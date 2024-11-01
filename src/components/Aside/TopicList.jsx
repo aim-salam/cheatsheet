@@ -43,7 +43,7 @@ function TopicList() {
                   alt={topicName}
                   src={
                     imageLink ||
-                    "https://images.cheatsheet.cam/images/image-1730098103659.webp"
+                    "https://images.cheatsheet.cam/images/state.webp"
                   }
                   variant="rounded"
                 />

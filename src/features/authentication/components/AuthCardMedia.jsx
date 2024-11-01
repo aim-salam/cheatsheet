@@ -8,7 +8,7 @@ function AuthCardMedia() {
       <CardMedia
         sx={styles.cardMedia}
         component="img"
-        image="https://images.cheatsheet.cam/images/image-1730098103659.webp"
+        image="https://images.cheatsheet.cam/images/state.webp"
       ></CardMedia>
     </Box>
   );
