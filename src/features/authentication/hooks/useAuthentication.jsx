@@ -25,7 +25,6 @@ function useAuthentication() {
 
   const handleSignUp = async () => {
     // Firebase sign-up logic here
-    console.log("Sign Up with:", email, password);
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -33,7 +32,6 @@ function useAuthentication() {
         password
       );
       setUser(userCredential.user);
-      console.log("Signed up successfully:", userCredential.user);
       handleCloseSignUp();
     } catch (error) {
       console.error("Error during sign up:", error);
@@ -50,7 +48,6 @@ function useAuthentication() {
         password
       );
       setUser(userCredential.user);
-      console.log("Sign In with:", email, password);
       handleCloseSignIn();
     } catch (error) {
       console.error("Error during sign in:", error);
@@ -62,7 +59,6 @@ function useAuthentication() {
     // const provider = new GoogleAuthProvider();
     // try {
     //   await signInWithPopup(auth, provider);
-    //   console.log('Logged in with Gmail');
     // } catch (error) {
     //   console.error('Error logging in with Gmail', error);
     // }
@@ -77,7 +73,6 @@ function useAuthentication() {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log("user", user);
       if (user) {
         setUser(user);
         navigate("/");

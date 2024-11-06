@@ -11,12 +11,10 @@ function AuthButton() {
       sx={styles.button}
       variant="contained"
       onClick={() => {
-        console.log(user);
         if (user === null) {
           navigate("/auth");
         } else {
           handleLogout();
-          console.log("logout");
         }
       }}
     >

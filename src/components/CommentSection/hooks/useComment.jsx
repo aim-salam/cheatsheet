@@ -44,7 +44,6 @@ function useBooking() {
 
   const handleUploadToFirebase = () => {
     if (!image && !imageURL) return handleUploadToFirestore(imageURL);
-    console.log("editingIndex", editingIndex);
     if (editingIndex !== null) return handleUploadToFirestore(imageURL);
 
     const storageRef = ref(storage, `comment_images/${image.name}`);
@@ -84,7 +83,6 @@ function useBooking() {
         ...updatedBookings[editingIndex],
         ...newData,
       };
-      console.log(updatedBookings[editingIndex]);
       setBookings(updatedBookings);
       resetForm();
 
@@ -137,8 +135,6 @@ function useBooking() {
   const handleEditBooking = (index) => {
     const bookingToEdit = bookings[index];
     setComment(bookingToEdit.comment);
-    console.log(bookingToEdit);
-    console.log(bookingToEdit.receiver_email);
     setReceiverEmail(bookingToEdit.receiver_email);
     setImageURL(bookingToEdit.image_url);
 
