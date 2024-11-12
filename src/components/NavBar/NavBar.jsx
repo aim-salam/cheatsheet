@@ -47,7 +47,6 @@ function NavBar() {
           </Typography>
         </Stack>
         <Stack flexDirection={"row"}>
-          <ColorModeSwitch></ColorModeSwitch>
           <Box sx={styles.box1}>
             <AuthButton></AuthButton>
           </Box>
