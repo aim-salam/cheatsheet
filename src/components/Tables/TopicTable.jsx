@@ -21,7 +21,7 @@ function TopicTable({ table, cheatsheets }) {
         <Typography sx={styles.typography}>{table.table}</Typography>
       </Stack>
       <TableContainer component={Paper} sx={styles.tableContainer}>
-        <Table aria-label="simple table" ref>
+        <Table aria-label="simple table">
           <TopicColumn columns={table.columns} isEditable={isEditable} />
           <TableBody>
             {rows.map((row, index) => (
